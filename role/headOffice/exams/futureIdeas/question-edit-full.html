@@ -1,0 +1,542 @@
+<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr"><!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+<!-- InstanceBeginEditable name="PageTitle" -->
+<title>{Question} ({ID}) - Drone Management Portal Administration</title>
+<!-- InstanceEndEditable -->
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<!-- Meta data -->
+<meta name="description" content="">
+<!-- Meta data-->
+<!--[if gte IE 9 | !IE ]><!-->
+<link href="../../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="stylesheet" href="../../../../GCWeb/css/theme.min.css">
+<link rel="stylesheet" href="../../../../css/cdtsapps.css">
+<link rel="stylesheet" href="../../../../css/fontawesome/css/all.css">
+<link rel="stylesheet" href="../../../../css/uav-vasp.css">
+<link rel="stylesheet" href="../../../../css/utils.css">
+<link rel="stylesheet" href="../../../../css/plugins.css">
+<!--<![endif]-->
+<!--[if lt IE 9]>
+		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
+		
+		<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
+		<script src="../js/jquery/1.11.1/jquery.min.js"></script>
+		<script src="../wet-boew/js/ie8-wet-boew.min.js"></script>
+		<![endif]-->
+<!--[if lte IE 9]>
+		
+		
+		<![endif]-->
+<noscript>
+<link rel="stylesheet" href="../../../../wet-boew/css/noscript.min.css" />
+</noscript>
+<!-- InstanceBeginEditable name="CustomJSLibraries" -->
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="CustomCSS" -->
+<link rel="stylesheet" href="../../../../js/tc/dropzone/dropzone.css" />
+<!-- InstanceEndEditable -->
+</head><body class="secondary" vocab="http://schema.org/" typeof="WebPage">
+<ul id="wb-tphp">
+  <li class="wb-slc"> <a class="wb-sl" href="#wb-cont">Skip to main content</a> </li>
+  <li class="wb-slc visible-sm visible-md visible-lg"> <a class="wb-sl" href="#wb-info">Skip to "About this Web application"</a> </li>
+</ul>
+<header role="banner">
+  <div id="wb-bnr" class="container">
+    <div class="row">
+      <div class="brand col-xs-9 col-sm-8 col-md-6">
+        <object type="image/svg+xml" tabindex="-1" data="../../../../assets/sig-blk-en.svg">
+        </object>
+        <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
+      <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
+        <h2 class="wb-inv">Language selection</h2>
+        <ul class="list-inline margin-bottom-none">
+          <li><a lang="fr" href="#">Français</a></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+  <div class="app-bar">
+    <div class="container">
+      <div class="row">
+        <section class="col-xs-12 col-sm-12">
+          <h2 class="wb-inv">Transport Canada Drone Management Portal Administration</h2>
+          <a class="app-name" href="#">Transport Canada <br>
+         Drone Management Portal</a></section>       
+      </div>
+    </div>
+  </div>
+  <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg wb-init wb-data-ajax-replace-inited wb-menu-inited wb-navcurr-inited" typeof="SiteNavigationElement">
+
+	<!-- Application templates - Sample menu -->
+	<!-- DataAjaxFragmentStart -->
+	<div class="pnl-strt container nvbar">
+		<h2 class="wb-inv">Main navigation menu</h2>
+		<div class="row">
+			<ul class="list-inline menu" role="menubar">
+				<li class=""><a href="#s1" class="item" tabindex="-1" role="menuitem" aria-haspopup="true">Accounts<span class="expicon glyphicon glyphicon-chevron-down"></span></a>
+					<ul class="sm list-unstyled" id="s1" role="menu" aria-expanded="false" aria-hidden="true">
+						<li><a href="#" tabindex="-1" role="menuitem">Search for an account</a></li>
+					</ul>
+				</li>
+
+				<li class=""><a href="#s2" class="item" tabindex="-1" role="menuitem" aria-haspopup="true">Exams<span class="expicon glyphicon glyphicon-chevron-down"></span></a>
+					<ul class="sm list-unstyled" id="s2" role="menu" aria-expanded="false" aria-hidden="true">
+						<li><a href="#" tabindex="-1" role="menuitem">Exam syllabus</a></li>
+                        <li><a href="#" tabindex="-1" role="menuitem">Manage syllabus updates</a></li>
+						<li><a href="#" tabindex="-1" role="menuitem">Exam settings</a></li>
+					</ul>
+				</li>
+                <li class=""><a href="#s3" class="item" tabindex="-1" role="menuitem" aria-haspopup="true">Reports<span class="expicon glyphicon glyphicon-chevron-down"></span></a>
+					<ul class="sm list-unstyled" id="s3" role="menu" aria-expanded="false" aria-hidden="true">
+						<li><a href="#" tabindex="-1" role="menuitem">Drone flight schools</a></li>
+						<li><a href="#" tabindex="-1" role="menuitem">List of drone makes & models</a></li>
+					</ul>
+				</li>
+                <li><a href="#" tabindex="-1" role="menuitem">Manage drone list</a></li>                                 <li><a href="#" tabindex="-1" role="menuitem">&#8226; View submitted drones</a></li>                                 <li><a href="#" tabindex="-1" role="menuitem">&#8226; Add a drone to the list</a></li>                                 <li><a href="#" tabindex="-1" role="menuitem">Manage users</a></li>                                 <li><a href="#" tabindex="-1" role="menuitem">Manage resources</a></li>
+					<ul class="sm list-unstyled" id="s4" role="menu" aria-expanded="false" aria-hidden="true">
+						
+                        <li><a href="#" tabindex="-1" role="menuitem">Manage drone list</a></li>
+                        <li><a href="#" tabindex="-1" role="menuitem">View submitted drones</a></li>
+                        <li><a href="#" tabindex="-1" role="menuitem">Add a drone to the list</a></li>
+						<li><a href="#" tabindex="-1" role="menuitem">Manage users</a></li>
+                        <li><a href="#" tabindex="-1" role="menuitem">Manage resources</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- DataAjaxFragmentEnd -->
+</nav>
+  
+  <nav role="navigation" id="wb-bc" property="breadcrumb">
+    <h2>You are here:</h2>
+    <div class="container">
+      <div class="row">
+        <ol class="breadcrumb">
+          <li><a href="#">Home</a></li>
+          <!-- InstanceBeginEditable name="Breadcrumbs" -->
+          <li><a href="#">Exams</a></li>
+          <li><a href="#">Exam syllabus</a></li>
+          <li><a href="#">{Domain name} ({ID})</a></li>
+          <li><a href="#">{Knowledge area name} ({ID})</a></li>
+          <li>{Question name - Duis finibus ac purus sagittis venenatis. Ut finibus, eros ac placerat rutrum, nulla ex laoreet felis, vitae fringilla est odio in sem. Duis urna lacus, ultrices et ornare vitae, bibendum id libero.} ({ID})</li>
+          <!-- InstanceEndEditable -->
+        </ol>
+      </div>
+    </div>
+  </nav>
+</header>
+<main role="main" property="mainContentOfPage" class="container"> <!-- InstanceBeginEditable name="Content" -->
+  <h1 property="name" id="wb-cont" class="text-truncate text-nowrap">{Question name - Duis finibus ac purus sagittis venenatis. Ut finibus, eros ac placerat rutrum, nulla ex laoreet felis, vitae fringilla est odio in sem. Duis urna lacus, ultrices et ornare vitae, bibendum id libero. } ({ID})</h1>
+  <form method="post" action="question-edit-error.html" enctype="multipart/form-data">
+    <div class="row">
+      <div class="col-md-9">
+        <p class="gc-byline">From <a href="#">{Domain}</a> within <a href="#">{Knowledge area}</a></p>
+      </div>
+      <div class="col-md-3 text-right">
+        <p> <strong>Version 2.1 - Draft</strong> </p>
+      </div>
+    </div>
+    <p>All fields marked with an asterisk (<span class="mandatory-instructions">*</span>) are mandatory when publishing.</p>
+    <div class="row">
+      <div class="col-md-6">
+        <label for="name-eng"><span class="mandatory" title="This field is required">*</span>Name - English: <span class="wb-inv">(required)</span></label>
+        <textarea id="name-eng" name="name-eng" class="form-control  width100" cols="40" rows="6" maxlength="500">Duis finibus ac purus sagittis venenatis. Ut finibus, eros ac placerat rutrum, nulla ex laoreet felis, vitae fringilla est odio in sem. Duis urna lacus, ultrices et ornare vitae, bibendum id libero. 
+          </textarea>
+      </div>
+      <div class="col-md-6">
+        <label for="name-fra"><span class="mandatory" title="This field is required">*</span> Name - French: <span class="wb-inv">(required)</span></label>
+        <textarea id="name-fra" name="name-fra" class="form-control  width100" cols="40" rows="6" maxlength="500">Duis finibus ac purus sagittis venenatis. Ut finibus, eros ac placerat rutrum, nulla ex laoreet felis, vitae fringilla est odio in sem. Duis urna lacus, ultrices et ornare vitae, bibendum id libero. 
+          </textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><span class="">Image - English:</span> <img src="../../../../img/440x248.png" width="440" height="248" class="img-rounded img-responsive mrgn-tp-sm" alt="Description of image"/>
+        <div class="mrgn-tp-md">
+          <label for="imgdesc-eng"><span class="mandatory" title="This field is required">*</span>Image description - English: <span class="wb-inv">(required)</span></label>
+          <textarea id="imgdesc-eng" name="imgdesc-eng" class="form-control  width100" cols="40" rows="2" maxlength="500">Duis finibus ac purus sagittis venenatis. 
+          </textarea>
+        </div>
+      </div>
+      <div class="col-md-6"><span class="">Image - French:</span>
+        <div id="image-french" class="mrgn-tp-sm">
+          <div class="dropzone needsclick dz-clickable">
+            <div class="dz-message needsclick"> Drop image file here or select to upload. <br>
+              <i class="fas fa-upload fa-3x text-grey opct-50 mrgn-tp-md"></i> </div>
+            <div class="fallback">
+              <input name="file" type="file" multiple />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><span class=""><span class="mandatory" title="This field is required">*</span> Answers - English: <span class="wb-inv">(required)</span></span>
+        <div class="form-group">
+          <div class="display-table">
+            <div class="display-table-row">
+              <div class="display-table-cell radio">
+                <label for="answer-1-eng">
+                  <input type="radio" name="answers" value="radio" id="answer-1-eng" checked>
+                </label>
+              </div>
+              <div class="display-table-cell width100">
+                <div class="input-group width100">
+                  <input type="text" id="answer-1-txt-eng" name="answer-1-txt-eng" size="20" class="form-control " aria-describedby="answer-1-btn-en" lang="fr" value="Nullam porta lorem eget enim cursus. ">
+                  <div class="input-group-btn">
+                    <button id="answer-1-btn-en" type="button" class="btn btn-default nowrap"><i class="fas fa-plus-square"></i> Add image</button>
+                  </div>
+                </div>
+               <div class="indicator-correct-answer"><i class="fas fa-check-square text-success"></i> This is the correct answer for this question</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="display-table">
+            <div class="display-table-row">
+              <div class="display-table-cell radio">
+                <label for="answer-2-eng">
+                  <input type="radio" name="answers" value="radio" id="answer-2-eng">
+                </label>
+              </div>
+              <div class="display-table-cell width100">
+                <div class="input-group width100">
+                  <input type="text" id="answer-2-txt-eng" name="answer-2-txt-eng" size="20" class="form-control " aria-describedby="answer-2-btn-eng" lang="fr" value="Nullam porta lorem eget enim cursus. ">
+                  <div class="input-group-btn">
+                    <button id="answer-2-btn-eng" type="button" class="btn btn-default nowrap"><i class="fas fa-plus-square"></i> Add image</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="display-table">
+            <div class="display-table-row">
+              <div class="display-table-cell radio">
+                <label for="answer-3-eng">
+                  <input type="radio" name="answers" value="radio" id="answer-3-eng">
+                </label>
+              </div>
+              <div class="display-table-cell width100">
+                <div class="input-group width100">
+                  <input type="text" id="answer-3-txt-eng" name="answer-3-txt-eng" size="20" class="form-control " aria-describedby="answer-3-btn-eng" value="Nullam porta lorem eget enim cursus. ">
+                  <div class="input-group-btn">
+                    <button id="answer-3-btn-eng" type="button" class="btn btn-default nowrap"><i class="fas fa-plus-square"></i> Add image</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="display-table">
+            <div class="display-table-row">
+              <div class="display-table-cell radio">
+                <label for="answer-4-eng">
+                  <input type="radio" name="answers" value="radio" id="answer-4-eng">
+                </label>
+              </div>
+              <div class="display-table-cell width100">
+                <div class="input-group width100">
+                  <input type="text" id="answer-4-txt-eng" name="answer-1-txt-eng" size="20" class="form-control " aria-describedby="answer-4-btn-eng" value="Nullam porta lorem eget enim cursus. ">
+                  <div class="input-group-btn">
+                    <button id="answer-4-btn-eng" type="button" class="btn btn-default nowrap"><i class="fas fa-plus-square"></i> Add image</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6"><span class="mandatory" title="This field is required">*</span> Answers - French:<span class="wb-inv">(required)</span>
+        <div class="form-group mrgn-answer-selected">
+          <div class="input-group">
+            <input type="text" id="answer-1-txt-fra" name="answer-1-txt-fra" size="20" class="form-control " aria-describedby="answer-1-btn-fra" lang="fr" value="Nullam porta lorem eget enim cursus. ">
+            <div class="input-group-btn">
+              <button id="answer-1-btn-fra" type="button" class="btn btn-default nowrap"><i class="fas fa-plus-square"></i> Add image</button>
+            </div>
+          </div>
+        </div>
+        <div class="form-group mrgn-bttm-21">
+          <div class="input-group">
+            <input type="text" id="answer-2-txt-fra" name="answer-2-txt-fra" size="20" class="form-control " aria-describedby="answer-2-btn-fra" lang="fr"  value="Etiam euismod venenatis mattis">
+            <div class="input-group-btn">
+              <button id="answer-2-btn-fra" type="button" class="btn btn-default nowrap"><i class="fas fa-plus-square"></i> Add image</button>
+            </div>
+          </div>
+        </div>
+        <div class="form-group mrgn-bttm-21">
+          <div class="input-group">
+            <input type="text" id="answer-3-txt-fra" name="answer-3-txt-fra" size="20" class="form-control " aria-describedby="answer-3-btn-fra" lang="fr"  value="Praesent tristique efficitur est ac mattis. ">
+            <div class="input-group-btn">
+              <button id="answer-3-btn-fra" type="button" class="btn btn-default nowrap"><i class="fas fa-plus-square"></i> Add image</button>
+            </div>
+          </div>
+        </div>
+        <div class="form-group mrgn-bttm-21">
+          <div class="input-group">
+            <input type="text" id="answer-4-txt-fra" name="answer-4-txt-fra" size="20" class="form-control " aria-describedby="answer-4-btn-fra" lang="fr"  value="Proin at sodales ipsum.">
+            <div class="input-group-btn">
+              <button id="answer-4-btn-fra" type="button" class="btn btn-default nowrap"><i class="fas fa-plus-square"></i> Add image</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <label for="examFeedback-eng">Exam feedback - English: <span class="fld-example">Information provided to exam takers as part of their exam results.</span></label>
+        <textarea id="examFeedback-eng" name="examFeedback-eng" class="form-control  width100" cols="40" rows="4" maxlength="500">
+          
+          </textarea>
+      </div>
+      <div class="col-md-6">
+        <label for="examFeedback-fra">Exam feedback - French: </label>
+        <br>
+        <br>
+        <textarea id="examFeedback-fra" name="examFeedback-fra" class="form-control  width100" cols="40" rows="4" maxlength="500" lang="fr">
+          
+          </textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <fieldset class="mrgn-tp-0 pddng-tp-0">
+          <legend class="medium mrgn-bttm-sm"><span class="mandatory" title="This field is required">*</span> Applies to: <span class="wb-inv">(required)</span></legend>
+          <div class="checkbox">
+            <label for="applies-sb">
+              <input type="checkbox" name="appliesTo" value="" id="applies-sb">
+              Small Basic Exam</label>
+          </div>
+          <div class="checkbox">
+            <label for="applies-sa">
+              <input type="checkbox" name="appliesTo" value="" id="applies-sa">
+              Small Advanced Exam</label>
+          </div>
+          <div class="checkbox">
+            <label for="applies-fr">
+              <input type="checkbox" name="appliesTo" value="" id="applies-fr">
+              Flight Reviewer Exam</label>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <fieldset class="mrgn-tp-0 pddng-tp-0">
+          <legend class="medium mrgn-bttm-sm"><span class="mandatory" title="This field is required">*</span> Mandatory: <span class="wb-inv">(required)</span></legend>
+          <div class="radio">
+            <label for="mandatory-yes">
+              <input type="radio" name="mandatory" value="radio" id="mandatory-yes">
+              Yes</label>
+          </div>
+          <div class="radio">
+            <label for="mandatory-no">
+              <input type="radio" name="mandatory" value="radio" id="mandatory-no" checked>
+              No</label>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <label for="difficulty"><span class="mandatory" title="This field is required">*</span> Difficulty level: <span class="wb-inv">(required)</span></label>
+        <select name="difficulty" id="difficulty" class="form-control ">
+          <option value="1" selected>Easy</option>
+          <option value="2">Moderate</option>
+          <option value="3">Challenging</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <label for="reference">Reference/source of question: <span class="fld-example">Reference to the Canadian Aviation Regulations, or other supporting materials.  This information is for internal use only and is not published.</span> </label>
+        <textarea id="reference" name="reference" class="form-control  width100" cols="40" rows="4" maxlength="500">Maecenas id convallis metus, sit amet lobortis dolor. Vivamus semper ipsum ac metus vulputate blandit at mollis felis. 
+          
+          </textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <label for="administrativeNote">Administrative notes: <span class="fld-example">Notes for internal administrative use.</span> </label>
+        <textarea id="administrativeNote" name="administrativeNote" class="form-control  width100" cols="40" rows="4" maxlength="500">
+          
+          </textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <button type="submit" class="btn btn-default pull-right"><i class="fas fa-plus-square"></i> Add question exclusion</button>
+        <h2 class="hd-section mrgn-tp-sm medium">May not be used in an exam with these questions</h2>
+        <ul>
+          <li><a href="#" class="text-truncate">{Question}</a></li>
+          <li><a href="#" class="text-truncate">{Question}</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="nav-button">
+      <!--<button type="submit" class="btn btn-success pull-right">Ready for publishing</button> -->
+      <a href="../manageSyllabusUpdates-pendingPublishing-confirmReady.html" class="btn btn-success pull-right">Ready for publishing</a>
+      <button type="submit" class="btn btn-primary">Save draft</button>
+      <a href="../previewExamQuestion.html" class="btn btn-default mrgn-lft-md">Preview</a>
+      <a href="#dlg-discard" class="btn btn-link">Discard draft</a>
+    </div>
+  </form>
+  
+  <section id="dlg-discard" class="mfp-hide modal-dialog modal-content overlay-def">
+          <header class="modal-header">
+            <h2 class="modal-title">Discard draft</h2>
+          </header>
+          <div class="modal-body">
+            <p>By continuing, this draft will be discarded and no longer available.</p>
+           
+          </div>
+          <footer class="modal-footer">
+            <a href="#" class="popup-modal-dismiss btn btn-primary pull-left">Confirm</a>
+            <a href="#" class="popup-modal-dismiss btn btn-default pull-left">Cancel</a> 
+            </footer>
+            
+    	</section>
+  <!-- InstanceEndEditable -->
+  <div class="datemod col-xs-12 mrgn-tp-lg">
+    <dl id="wb-dtmd">
+      <dt>Date modified:&#32;</dt>
+      <dd>
+        <time property="dateModified"> 
+          <!-- #BeginDate format:IS1 -->2019-10-10<!-- #EndDate --> 
+        </time>
+      </dd>
+    </dl>
+  </div>
+</main>
+<footer role="contentinfo" id="wb-info">
+  <div class="brand">
+    <div class="container">
+      <div class="row">
+        <nav class="col-md-10 ftr-urlt-lnk">
+          <!--<h2 class="wb-inv">About this Web application</h2>
+          <ul>
+            <li><a href="#">Contact information</a></li>
+            <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+            <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+          </ul> -->
+        </nav>
+        <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
+        <div class="col-xs-6 col-md-2 text-right">
+          <object type="image/svg+xml" tabindex="-1" role="img" data="../../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
+          </object>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--<footer role="contentinfo" id="wb-info">
+<nav role="navigation" class="container wb-navcurr">
+<h2 class="wb-inv">About government</h2>
+<ul class="list-unstyled colcount-sm-2 colcount-md-3">
+<li><a href="https://www.canada.ca/en/contact.html">Contact us</a></li>
+<li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
+<li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
+<li><a href="https://www.canada.ca/en/news.html">News</a></li>
+<li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
+<li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
+<li><a href="http://pm.gc.ca/eng">Prime Minister</a></li>
+<li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
+<li><a href="http://open.canada.ca/en/">Open government</a></li>
+</ul> </nav>
+<div class="brand">
+<div class="container">
+<div class="row">
+<nav class="col-md-10 ftr-urlt-lnk">
+<h2 class="wb-inv">About this site</h2>
+<ul>
+<li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
+<li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
+<li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
+<li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+<li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+</ul>
+</nav>
+<div class="col-xs-6 visible-sm visible-xs tofpg">
+<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
+</div>
+<div class="col-xs-6 col-md-2 text-right">
+<object type="image/svg+xml" tabindex="-1" role="img" data="../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
+</div>
+</div>
+</div>
+</div>
+</footer>
+--> 
+<!--[if gte IE 9 | !IE ]><!--> 
+<script src="../../../../js/jquery/2.2.4/jquery.js"></script> 
+<script src="../../../../wet-boew/js/wet-boew.min.js"></script> 
+<!--<![endif]--> 
+<!--[if lt IE 9]>
+		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
+		
+		<![endif]--> 
+<script src="../../../../GCWeb/js/theme.min.js"></script> 
+<!-- InstanceBeginEditable name="CustomJS" --> 
+<script src="../../../../js/tc/tinymce/jquery.tinymce.min.js"></script> 
+<script src="../../../../js/tc/tinymce/tinymce.min.js"></script> 
+<script src="../../../../js/tc/dropzone/dropzone.js"></script> 
+<script type="text/javascript">
+Dropzone.autoDiscover = false;
+$( document ).on( "wb-ready.wb", function( event ) {
+
+	/* Datatable */
+	$('.dataTables_filter').appendTo('.panel-datatable .panel-heading .tableFilter');
+	$('.dataTables_length').appendTo('.panel-datatable footer.panel-footer .displayOptions');
+	$('.dataTables_wrapper .bottom').appendTo('.panel-datatable footer.panel-footer .pages');
+	$('.bottom, .top').addClass('dataTables_wrapper');	
+	$('.panel-datatable footer.panel-footer').css('padding-top', '0');
+	$(".first.paginate_button, .last.paginate_button").hide();
+	$(".dataTables_filter input").addClass("form-control").css({"margin-bottom":"0px"});;
+	$(".dataTables_filter label").css({"margin-bottom":"0px"});
+	
+	$("#name-eng, #name-fra").tinymce({
+		  
+		  //language: 'fr_FR',   //For French language version
+		  menubar: false,
+		  branding: false,
+		  elementpath: false,
+		  statusbar: false,
+		  plugins: [
+			'lists fullscreen'
+		  ],
+		  toolbar: 'bold italic  |  bullist numlist outdent indent | fullscreen',
+   });
+   
+   $(".dropzone").dropzone( {
+	  	url: 'test.php',
+		method: 'post' 
+   });
+   
+    $("input[type='radio'][name='answers']").on("change", function() {
+		correctAnswerContainer = "<div class='indicator-correct-answer'></div>";
+		correctAnswerContent = "<i class='fas fa-check-square text-success'></i> This is the correct answer for this question";
+		$(".indicator-correct-answer").remove();
+		$(this).parent().parent().next().find(".input-group").after(correctAnswerContainer);
+		$(".indicator-correct-answer").hide().html(correctAnswerContent).fadeIn(500);
+   });
+	
+});
+
+
+</script> 
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

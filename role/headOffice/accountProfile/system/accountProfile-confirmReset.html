@@ -1,0 +1,839 @@
+<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr"><!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+    <!-- InstanceBeginEditable name="PageTitle" -->
+    <title>{Given name} {Family name} - Drone Management Portal Administration</title>
+    <!-- InstanceEndEditable -->
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <!-- Meta data -->
+    <meta name="description" content="">
+    <!-- Meta data-->
+    <!--[if gte IE 9 | !IE ]><!-->
+    <link href="../../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="../../../../GCWeb/css/theme.min.css">
+    <link rel="stylesheet" href="../../../../css/cdtsapps.css">
+    <link rel="stylesheet" href="../../../../css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../../../../css/uav-vasp.css">
+    <link rel="stylesheet" href="../../../../css/utils.css">
+    <link rel="stylesheet" href="../../../../css/plugins.css">
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
+		
+		<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
+		<script src="../js/jquery/1.11.1/jquery.min.js"></script>
+		<script src="../wet-boew/js/ie8-wet-boew.min.js"></script>
+		<![endif]-->
+    <!--[if lte IE 9]>
+		
+		
+		<![endif]-->
+    <noscript>
+        <link rel="stylesheet" href="../../../../wet-boew/css/noscript.min.css" />
+    </noscript>
+    <!-- InstanceBeginEditable name="CustomJSLibraries" -->
+    <!-- InstanceEndEditable -->
+    <!-- InstanceBeginEditable name="CustomCSS" -->
+    <!-- InstanceEndEditable -->
+</head>
+
+<body class="secondary" vocab="http://schema.org/" typeof="WebPage">
+    <ul id="wb-tphp">
+        <li class="wb-slc"> <a class="wb-sl" href="#wb-cont">Skip to main content</a> </li>
+        <li class="wb-slc visible-sm visible-md visible-lg"> <a class="wb-sl" href="#wb-info">Skip to "About this Web application"</a> </li>
+    </ul>
+    <header role="banner">
+        <div id="wb-bnr" class="container">
+            <div class="row">
+                <div class="brand col-xs-9 col-sm-8 col-md-6">
+                    <object type="image/svg+xml" tabindex="-1" data="../../../../assets/sig-blk-en.svg">
+                    </object>
+                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
+                <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
+                    <h2 class="wb-inv">Language selection</h2>
+                    <ul class="list-inline margin-bottom-none">
+                        <li><a lang="fr" href="#">Français</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div class="app-bar">
+            <div class="container">
+                <div class="row">
+                    <section class="col-xs-12 col-sm-12">
+                        <h2 class="wb-inv">Transport Canada Drone Management Portal Administration</h2>
+                        <a class="app-name" href="#">Transport Canada <br>
+                            Drone Management Portal</a>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg wb-init wb-data-ajax-replace-inited wb-menu-inited wb-navcurr-inited" typeof="SiteNavigationElement">
+
+            <!-- Application templates - Sample menu -->
+            <!-- DataAjaxFragmentStart -->
+            <div class="pnl-strt container nvbar">
+                <h2 class="wb-inv">Main navigation menu</h2>
+                <div class="row">
+                    <ul class="list-inline menu" role="menubar">
+                        <li class=""><a href="#s1" class="item" tabindex="-1" role="menuitem" aria-haspopup="true">Accounts<span class="expicon glyphicon glyphicon-chevron-down"></span></a>
+                            <ul class="sm list-unstyled" id="s1" role="menu" aria-expanded="false" aria-hidden="true">
+                                <li><a href="#" tabindex="-1" role="menuitem">Search for an account</a></li>
+                            </ul>
+                        </li>
+
+                        <li class=""><a href="#s2" class="item" tabindex="-1" role="menuitem" aria-haspopup="true">Exams<span class="expicon glyphicon glyphicon-chevron-down"></span></a>
+                            <ul class="sm list-unstyled" id="s2" role="menu" aria-expanded="false" aria-hidden="true">
+                                <li><a href="#" tabindex="-1" role="menuitem">Exam syllabus</a></li>
+                                <li><a href="#" tabindex="-1" role="menuitem">Manage syllabus updates</a></li>
+                                <li><a href="#" tabindex="-1" role="menuitem">Exam settings</a></li>
+                            </ul>
+                        </li>
+                        <li class=""><a href="#s3" class="item" tabindex="-1" role="menuitem" aria-haspopup="true">Reports<span class="expicon glyphicon glyphicon-chevron-down"></span></a>
+                            <ul class="sm list-unstyled" id="s3" role="menu" aria-expanded="false" aria-hidden="true">
+                                <li><a href="#" tabindex="-1" role="menuitem">Drone flight schools</a></li>
+                                <li><a href="#" tabindex="-1" role="menuitem">List of drone makes & models</a></li>
+                            </ul>
+                        </li>
+                        <li class=""><a href="#s4" class="item" tabindex="-1" role="menuitem" aria-haspopup="true">Administration <span class="expicon glyphicon glyphicon-chevron-down"></span></a>
+                            <ul class="sm list-unstyled" id="s2" role="menu" aria-expanded="false" aria-hidden="true">
+                                <li><a href="#" tabindex="-1" role="menuitem">Manage drone list</a></li>
+                                <li><a href="#" tabindex="-1" role="menuitem">&#8226; View submitted drones</a></li>
+                                <li><a href="#" tabindex="-1" role="menuitem">&#8226; Add a drone to the list</a></li>
+                                <li><a href="#" tabindex="-1" role="menuitem">Manage users</a></li>
+                                <li><a href="#" tabindex="-1" role="menuitem">Manage resources</a></li>
+                            </ul>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- DataAjaxFragmentEnd -->
+        </nav>
+
+        <nav role="navigation" id="wb-bc" property="breadcrumb">
+            <h2>You are here:</h2>
+            <div class="container">
+                <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <!-- InstanceBeginEditable name="Breadcrumbs" -->
+                        <li><a href="#">Accounts</a></li>
+                        <li><a href="#">Search for an account</a></li>
+                        <li>{Given name} {Family name}</li>
+                        <!-- InstanceEndEditable -->
+                    </ol>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main role="main" property="mainContentOfPage" class="container">
+        <!-- InstanceBeginEditable name="Content" -->
+        <h1 property="name" id="wb-cont"><i class="fa fa-user"></i> {Given name} {Family name}</h1>
+        <div class="alert alert-success mrgn-bttm-md">
+            <h2>Account reset</h2>
+            <ol class="fa-ul">
+                <li>The account has been reset and an email has been sent to {Given name} {Family name}.</li>
+            </ol>
+        </div>
+        <div class="wb-tabs">
+            <div class="tabpanels">
+                <details id="panel-accountDetails" open>
+                    <summary>Account details</summary>
+                    <h2 class="wb-inv">Account details</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <section class="panel panel-default panel-no-border">
+                                <header class="panel-heading">
+                                    <h3 class="panel-title"> Contact information </h3>
+                                </header>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="label-form">Email address:</div>
+                                            <div><a href="mailto:bergeron@gmail.com">nbergeron@gmail.com</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="label-form">Telephone number:</div>
+                                            <div>613-277-1234</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="panel panel-default">
+                                <header class="panel-heading">
+                                    <h3 class="panel-title">About this person</h3>
+                                </header>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="label-form">Date of birth:</div>
+                                            <div>January 15, 2001</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <a href="#" class="btn btn-primary"><i class="fa fa-edit"></i> Edit account details</a>
+                        </div>
+                        <div class="col-md-6">
+                            <section class="panel panel-default">
+                                <header class="panel-heading">
+                                    <h3 class="panel-title">Address</h3>
+                                </header>
+                                <div class="panel-body">
+                                    <address class="mrgn-bttm-0">
+                                        123 Elm St. <br>
+                                        Ottawa, Ontario K1K 1K1
+                                    </address>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </details>
+                <details id="panel-services">
+                    <summary>Services</summary>
+                    <h2 class="wb-inv">Services</h2>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <section class="panel panel-default panel-businessLine mrgn-bttm-md">
+                                <header class="panel-heading">
+                                    <h3 class="panel-title">Drones <strong class="display-block small">Civil Aviation Services</strong></h3>
+                                </header>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <section class="panel panel-default mrgn-bttm-md panel-service">
+                                                <header class="panel-heading">
+                                                    <h4 class="panel-title">Registrations</h4>
+                                                </header>
+                                                <div class="panel-body">
+                                                    <p class="mrgn-bttm-0">No drones have been registered.</p>
+                                                </div>
+                                                <footer class="panel-footer"></footer>
+                                            </section>
+                                            <section class="panel panel-default mrgn-bttm-md panel-service">
+                                                <header class="panel-heading">
+                                                    <h4 class="panel-title">Exams and knowledge certificates</h4>
+                                                </header>
+                                                <div class="panel-body">
+                                                    <p class="mrgn-bttm-0">No exams have been completed.</p>
+                                                </div>
+                                                <footer class="panel-footer"></footer>
+                                            </section>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <section class="panel panel-default mrgn-bttm-md panel-disabled">
+                                                <header class="panel-heading">
+                                                    <h4 class="panel-title"><i class="fas fa-ban text-danger"></i> Pilot certificate</h4>
+                                                </header>
+                                                <div class="panel-body">
+                                                    <p class="mrgn-bttm-0">An exam and flight review are required before a pilot certificate can be issued.</p>
+                                                </div>
+                                                <footer class="panel-footer"> </footer>
+                                            </section>
+                                            <section class="panel panel-default mrgn-bttm-md panel-disabled">
+                                                <header class="panel-heading">
+                                                    <h4 class="panel-title"><i class="fas fa-ban text-danger"></i> Flight reviews</h4>
+                                                </header>
+                                                <div class="panel-body">
+                                                    <p class="mrgn-bttm-0">A pilot certificate is required before flight reviews may be performed.</p>
+                                                </div>
+                                                <footer class="panel-footer"> </footer>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </details>
+                <details id="panel-activityHistory">
+                    <summary>Activity history</summary>
+                    <h2 class="wb-inv">Activity history</h2>
+
+                    <section class="panel panel-default mrgn-tp-md">
+                        <table class="table table-bordered table-hover table-condensed">
+                            <thead>
+                                <tr class="row">
+                                    <th class="col-md-3 text-right" scope="col">Date and time</th>
+                                    <th class="col-md-9" scope="col">Event</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>Flight reviewer privileges revoked</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>Flight reviewer privileges granted</p>
+                                    </td>
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>Pilot certificate <strong>PC999999999</strong> reinstated</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <span class="pill-blue pill-status pull-right" title="This event is only visible to Transport Canada staff"><i class="fas fa-eye-slash"></i> Internal-only</span>
+                                        <p>Pilot certificate <strong>PC999999999</strong> suspended</p>
+                                        <details class="pddng-bttm-0">
+                                            <summary class="small">View details</summary>
+                                            <ul class="list-group mrgn-0">
+                                                <li class="list-group-item list-group-item-info">
+                                                    <div class="display-table">
+                                                        <div class="display-table-row">
+                                                            <div class="display-table-cell">
+                                                                <div class="mrgn-rght-sm"><i class="fa fa-fw fa-file-text"></i></div>
+                                                            </div>
+                                                            <div class="display-table-row">
+                                                                <ul class="pddng-lft-0">
+                                                                    <li>Reason: {reason}</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </details>
+                                    </td>
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>Pilot certificate <strong>PC999999999</strong> issued</p>
+                                        <details class="pddng-bttm-0">
+                                            <summary class="small">View details</summary>
+                                            <ul class="list-group mrgn-0">
+                                                <li class="list-group-item list-group-item-info">
+                                                    <div class="display-table">
+                                                        <div class="display-table-row">
+                                                            <div class="display-table-cell">
+                                                                <div class="mrgn-rght-sm"><i class="fa fa-fw fa-file-text"></i></div>
+                                                            </div>
+                                                            <div class="display-table-row">
+                                                                <ul class="pddng-lft-0">
+                                                                    <li>Receipt #{999-999999-C-999999}</li>
+                                                                    <li>Transaction reference #{99999}</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </details>
+                                    </td>
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>Pilot certificate application received - pending legislation</p>
+                                    </td>
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>Flight review results ({"Pass"/"Fail"}) submitted for {Given name} {Family name} </p>
+                                    </td>
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>Flight review results ({"Pass"/"Fail"}) received from {Given name} {Family name} </p>
+                                    </td>
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>Exam for <strong>{exam name}</strong> successfully passed </p>
+                                        <details class="pddng-bttm-0">
+                                            <summary class="small">View details</summary>
+                                            <ul class="list-group mrgn-0">
+                                                <li class="list-group-item list-group-item-info">
+                                                    <div class="display-table">
+                                                        <div class="display-table-row">
+                                                            <div class="display-table-cell">
+                                                                <div class="mrgn-rght-sm"><i class="fa fa-fw fa-file-text"></i></div>
+                                                            </div>
+                                                            <div class="display-table-row">
+                                                                <ul class="pddng-lft-0">
+                                                                    <li>Overall result of {99}% - minimum of {99}% needed</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </details>
+                                    </td>
+                                </tr>
+
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>Exam for <strong>{exam name}</strong> failed </p>
+                                        <details class="pddng-bttm-0">
+                                            <summary class="small">View details</summary>
+                                            <ul class="list-group mrgn-0">
+                                                <li class="list-group-item list-group-item-info">
+                                                    <div class="display-table">
+                                                        <div class="display-table-row">
+                                                            <div class="display-table-cell">
+                                                                <div class="mrgn-rght-sm"><i class="fa fa-fw fa-file-text"></i></div>
+                                                            </div>
+                                                            <div class="display-table-row">
+                                                                <ul class="pddng-lft-0">
+                                                                    <li>Overall result of {99}% - minimum of {99}% needed</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </details>
+                                    </td>
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>Exam payment processed for <strong>{exam name}</strong> </p>
+                                        <details class="pddng-bttm-0">
+                                            <summary class="small">View details</summary>
+                                            <ul class="list-group mrgn-0">
+                                                <li class="list-group-item list-group-item-info">
+                                                    <div class="display-table">
+                                                        <div class="display-table-row">
+                                                            <div class="display-table-cell">
+                                                                <div class="mrgn-rght-sm"><i class="fa fa-fw fa-file-text"></i></div>
+                                                            </div>
+                                                            <div class="display-table-row">
+                                                                <ul class="pddng-lft-0">
+                                                                    <li>Receipt #{999-999999-C-999999}</li>
+                                                                    <li>Transaction reference #{99999}</li>
+
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </details>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>Payment failed for <strong>{exam name/"Pilot certificate"/"Drone registration"}</strong> </p>
+                                        <details class="pddng-bttm-0">
+                                            <summary class="small">View details</summary>
+                                            <ul class="list-group mrgn-0">
+                                                <li class="list-group-item list-group-item-info">
+                                                    <div class="display-table">
+                                                        <div class="display-table-row">
+                                                            <div class="display-table-cell">
+                                                                <div class="mrgn-rght-sm"><i class="fa fa-fw fa-file-text"></i></div>
+                                                            </div>
+                                                            <div class="display-table-row">
+                                                                <ul class="pddng-lft-0">
+                                                                    <li>Transaction reference #{99999}</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </details>
+                                    </td>
+                                </tr>
+
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>{make} {model} (Serial #{serial #}) deregistered</p>
+                                        <details class="pddng-bttm-0">
+                                            <summary class="small">View details</summary>
+                                            <ul class="list-group mrgn-0">
+                                                <li class="list-group-item list-group-item-info">
+                                                    <div class="display-table">
+                                                        <div class="display-table-row">
+                                                            <div class="display-table-cell">
+                                                                <div class="mrgn-rght-sm"><i class="fa fa-fw fa-file-text"></i></div>
+                                                            </div>
+                                                            <div class="display-table-row">
+                                                                <ul class="pddng-lft-0">
+                                                                    <li>Reason for deregistration: {reason}</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </details>
+                                    </td>
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>Serial number updated for {make} {model} (Registration #9999999999) </p>
+                                        <details class="pddng-bttm-0">
+                                            <summary class="small">View details</summary>
+                                            <ul class="list-group mrgn-0">
+                                                <li class="list-group-item list-group-item-info">
+                                                    <div class="display-table">
+                                                        <div class="display-table-row">
+                                                            <div class="display-table-cell">
+                                                                <div class="mrgn-rght-sm"><i class="fa fa-fw fa-file-text"></i></div>
+                                                            </div>
+                                                            <div class="display-table-row">
+                                                                <ul class="pddng-lft-0">
+                                                                    <li>Serial number changed from <strong>{9999999999}</strong> to <strong>{9999999999}</strong></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </details>
+                                    </td>
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>Drone registration submitted for {make} {model} (Serial #{serial #})</p>
+                                        <details class="pddng-bttm-0">
+                                            <summary class="small">View details</summary>
+                                            <ul class="list-group mrgn-0">
+                                                <li class="list-group-item list-group-item-info">
+                                                    <div class="display-table">
+                                                        <div class="display-table-row">
+                                                            <div class="display-table-cell">
+                                                                <div class="mrgn-rght-sm"><i class="fa fa-fw fa-file-text"></i></div>
+                                                            </div>
+                                                            <div class="display-table-row">
+                                                                <ul class="pddng-lft-0">
+                                                                    <li>Registration #C-{9999999999}</li>
+                                                                    <li>Receipt #{999-999999-C-999999}</li>
+                                                                    <li>Transaction reference #{99999}</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </details>
+                                    </td>
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>Certificates have been updated with revised account information</p>
+                                    </td>
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>Account information updated</p>
+                                        <details class="pddng-bttm-0">
+                                            <summary class="small">View details</summary>
+                                            <ul class="list-group mrgn-0">
+                                                <li class="list-group-item list-group-item-info">
+                                                    <div class="display-table">
+                                                        <div class="display-table-row">
+                                                            <div class="display-table-cell">
+                                                                <div class="mrgn-rght-sm"><i class="fa fa-fw fa-file-text"></i></div>
+                                                            </div>
+                                                            <div class="display-table-row">
+                                                                <ul class="pddng-lft-0">
+                                                                    <li>Date of birth changed from <strong>1990-01-05</strong> to <strong>1990-02-05</strong>
+                                                                    <li>Street name changed from <strong>Oak</strong> to <strong>Elm</strong></li>
+                                                                    <li>Street type changed from <strong>St.</strong> to <strong>Rd.</strong></li>
+
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </details>
+                                    </td>
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>Flight review requirements have been waived</p>
+                                    </td>
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>Your request to become a drone flight reviewer has been denied</p>
+                                        <details class="pddng-bttm-0">
+                                            <summary class="small">View details</summary>
+                                            <ul class="list-group mrgn-0">
+                                                <li class="list-group-item list-group-item-info">
+                                                    <div class="display-table">
+                                                        <div class="display-table-row">
+                                                            <div class="display-table-cell">
+                                                                <div class="mrgn-rght-sm"><i class="fa fa-fw fa-file-text"></i></div>
+                                                            </div>
+                                                            <div class="display-table-row">
+                                                                <ul class="pddng-lft-0">
+                                                                    <li>Reason: {reason}</li>
+
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </details>
+                                    </td>
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>Your request to become a drone flight reviewer has been approved</p>
+                                    </td>
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>Your request to become a drone flight reviewer has been cancelled</p>
+                                    </td>
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>Your request to become a drone flight reviewer has been received</p>
+                                    </td>
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>You declined our offer to become a drone flight reviewer</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <p>Account registration completed</p>
+                                    </td>
+                                </tr>
+
+
+
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <span class="pill-blue pill-status pull-right" title="This event is only visible to Transport Canada staff"><i class="fas fa-eye-slash"></i> Internal-only</span>
+                                        <p>Account activated</p>
+                                    </td>
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <span class="pill-blue pill-status pull-right" title="This event is only visible to Transport Canada staff"><i class="fas fa-eye-slash"></i> Internal-only</span>
+                                        <p>Account confirmation code re-sent</p>
+                                    </td>
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <span class="pill-blue pill-status pull-right" title="This event is only visible to Transport Canada staff"><i class="fas fa-eye-slash"></i> Internal-only</span>
+                                        <p>Account confirmation code sent</p>
+                                    </td>
+                                </tr>
+
+                                <tr class="row">
+                                    <td class="col-md-3 col-sm-3 col-xs-4 text-right"><abbr title="Tuesday">Tues.</abbr> July 9, 2018 - 08:38 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                    <td class="col-md-9 col-sm-12 col-xs-8">
+                                        <span class="pill-blue pill-status pull-right" title="This event is only visible to Transport Canada staff"><i class="fas fa-eye-slash"></i> Internal-only</span>
+                                        <p>Account registration started</p>
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </section>
+                </details>
+                <details id="panel-notifications">
+                    <summary>Notifications </summary>
+                    <h2 class="wb-inv">Notifications</h2>
+                    <section class="panel panel-default mrgn-tp-md">
+                        <header class="panel-heading">
+                            <div class="row">
+                                <div class="col-md-6"></div>
+                                <div class="col-md-6 text-right">
+                                    <form class="form-inline" method="get" action="accountSettings-noArchivedNotifications.html">
+                                        <label for="filter" class="display-inline hidden-xs">Display:</label>
+                                        <div class="input-group">
+                                            <select class="form-control" id="filter">
+                                                <option selected="">new notifications</option>
+                                                <option>archived notifications</option>
+                                            </select>
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default" type="submit">Go</button>
+                                            </span> </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="panel-body">
+                            <p class="mrgn-bttm-0">There are no new notifications at this time.</p>
+                        </div>
+                        <footer class="panel-footer text-right"> </footer>
+                    </section>
+
+                </details>
+                <details id="panel-system">
+                    <summary>System </summary>
+                    <h2 class="wb-inv">System</h2>
+                    <p class="mrgn-tp-md">{first name} {last name} last logged in on <strong>Wed. November 26, 2018 at 13:21 <abbr title="Eastern Standard Time">EST</abbr></strong> using <strong>{GCKey/a secure sign-in partner}</strong>.</p>
+                    <h3>Reset account</h3>
+                    <p>You may reset the account if:</p>
+                    <ul>
+                        <li>the GCKey account username has been forgotten</li>
+                        <li>the person is unable to answer their GCKey recovery questions to reset their password</li>
+                        <li>the person wishes to switch from using GCKey to using a secure sign-in partner, or vice versa</li>
+                    </ul>
+
+                    <p> An email will be sent to the person confirming their request to reset their account. They must reset their account within 4 hours of receiving the email.</p>
+
+                    <a href="#" class="btn btn-primary">Reset account</a>
+
+                </details>
+            </div>
+
+        </div>
+        <hr>
+        <a href="../welcome.html"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Search for an account</a>
+
+        <!-- InstanceEndEditable -->
+        <div class="row">
+            <div class="datemod col-xs-6 mrgn-tp-lg">
+                <dl id="wb-dtmd">
+                    <dt>Date modified:&#32;</dt>
+                    <dd>
+                        <time property="dateModified">
+                            <!-- #BeginDate format:IS1 -->2019-10-10 (V9.9.9)
+                            <!-- #EndDate -->
+                        </time>
+                    </dd>
+                </dl>
+
+            </div>
+            <div class="col-xs-6 mrgn-tp-lg">
+                <div id="cn-accnt">Transport Canada account number <div class="account-number">TC9999999999</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer role="contentinfo" id="wb-info">
+        <div class="brand">
+            <div class="container">
+                <div class="row">
+                    <nav class="col-md-10 ftr-urlt-lnk">
+                        <!--<h2 class="wb-inv">About this Web application</h2>
+          <ul>
+            <li><a href="#">Contact information</a></li>
+            <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+            <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+          </ul> -->
+                    </nav>
+                    <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
+                    <div class="col-xs-6 col-md-2 text-right">
+                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
+                        </object>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--<footer role="contentinfo" id="wb-info">
+<nav role="navigation" class="container wb-navcurr">
+<h2 class="wb-inv">About government</h2>
+<ul class="list-unstyled colcount-sm-2 colcount-md-3">
+<li><a href="https://www.canada.ca/en/contact.html">Contact us</a></li>
+<li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
+<li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
+<li><a href="https://www.canada.ca/en/news.html">News</a></li>
+<li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
+<li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
+<li><a href="http://pm.gc.ca/eng">Prime Minister</a></li>
+<li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
+<li><a href="http://open.canada.ca/en/">Open government</a></li>
+</ul> </nav>
+<div class="brand">
+<div class="container">
+<div class="row">
+<nav class="col-md-10 ftr-urlt-lnk">
+<h2 class="wb-inv">About this site</h2>
+<ul>
+<li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
+<li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
+<li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
+<li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
+<li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
+</ul>
+</nav>
+<div class="col-xs-6 visible-sm visible-xs tofpg">
+<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
+</div>
+<div class="col-xs-6 col-md-2 text-right">
+<object type="image/svg+xml" tabindex="-1" role="img" data="../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
+</div>
+</div>
+</div>
+</div>
+</footer>
+-->
+    <!--[if gte IE 9 | !IE ]><!-->
+    <script src="../../../../js/jquery/2.2.4/jquery.js"></script>
+    <script src="../../../../wet-boew/js/wet-boew.min.js"></script>
+    <!--<![endif]-->
+    <!--[if lt IE 9]>
+		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
+		
+		<![endif]-->
+    <script src="../../../../GCWeb/js/theme.min.js"></script>
+    <!-- InstanceBeginEditable name="CustomJS" -->
+    <!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>
