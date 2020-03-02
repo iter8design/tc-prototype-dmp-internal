@@ -151,6 +151,7 @@
             <h2>Attention</h2>
             <ol class="fa-ul">
                 <li><i class="fa-li fa fa-angle-right"></i>Please enter at least one search criteria.</li>
+                <li><a href="#serialNumber"><i class="fa-li fa fa-angle-right"></i>The serial number entered masy not be greater than 50 characters.</a></li>
                 <li><a href="#registrationNumber"><i class="fa-li fa fa-angle-right"></i>The registration number entered must be numeric.</a></li>
 
             </ol>
@@ -182,7 +183,7 @@
             <div class="form-group">
                 <label for="serialNumber">Serial number:</label>
 
-                <input name="serialNumber" id="serialNumber" type="text" size="25" class="form-control input-alpha-50" maxlength="50">
+                <input name="serialNumber" id="serialNumber" type="text" size="25" class="form-control input-alpha-50 fieldError" maxlength="50">
             </div>
             <div class="form-group">
                 <label for="registrationNumber">Registration number:</label>
@@ -246,6 +247,7 @@
         $(document).on("wb-ready.wb", function(event) {
 
         });
+
     </script>
     <script src="../../../../js/tc/select2-4.0.5/dist/js/select2.min.js"></script>
     <script src="../../../../js/tc/cleave/cleave.min.js"></script>
@@ -284,6 +286,7 @@
                 });
             }
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
