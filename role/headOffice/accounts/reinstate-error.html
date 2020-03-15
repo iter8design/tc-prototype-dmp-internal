@@ -1,5 +1,8 @@
-<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
-<html class="no-js" lang="en" dir="ltr"><!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
 <!--<![endif]-->
 
 <head>
@@ -7,20 +10,20 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Manage drone list - Drone Management Portal Administration</title>
+    <title>Reinstate - Drone Management Portal Administration</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
     <meta name="description" content="">
     <!-- Meta data-->
     <!--[if gte IE 9 | !IE ]><!-->
-    <link href="../../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="../../../../GCWeb/css/theme.min.css">
-    <link rel="stylesheet" href="../../../../css/cdtsapps.css">
-    <link rel="stylesheet" href="../../../../css/fontawesome/css/all.css">
-    <link rel="stylesheet" href="../../../../css/uav-vasp.css">
-    <link rel="stylesheet" href="../../../../css/utils.css">
-    <link rel="stylesheet" href="../../../../css/plugins.css">
+    <link href="../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="../../../GCWeb/css/theme.min.css">
+    <link rel="stylesheet" href="../../../css/cdtsapps.css">
+    <link rel="stylesheet" href="../../../css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../../../css/uav-vasp.css">
+    <link rel="stylesheet" href="../../../css/utils.css">
+    <link rel="stylesheet" href="../../../css/plugins.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
@@ -34,13 +37,11 @@
 		
 		<![endif]-->
     <noscript>
-        <link rel="stylesheet" href="../../../../wet-boew/css/noscript.min.css" />
+        <link rel="stylesheet" href="../../../wet-boew/css/noscript.min.css" />
     </noscript>
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
     <!-- InstanceBeginEditable name="CustomCSS" -->
-    <link rel="stylesheet" type="text/css" href="../../../../js/tc/select2-4.0.5/dist/css/select2.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../js/tc/select2-4.0.5/dist/css/select2-bootstrap.css" />
     <!-- InstanceEndEditable -->
 </head>
 
@@ -53,7 +54,7 @@
         <div id="wb-bnr" class="container">
             <div class="row">
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
-                    <object type="image/svg+xml" tabindex="-1" data="../../../../assets/sig-blk-en.svg">
+                    <object type="image/svg+xml" tabindex="-1" data="../../../assets/sig-blk-en.svg">
                     </object>
                     <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
                 <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
@@ -75,8 +76,7 @@
                 </div>
             </div>
         </div>
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../../../includes/menus/menu-headOffice.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
-
+        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../../includes/menus/menu-headOffice.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
 
         <nav role="navigation" id="wb-bc" property="breadcrumb">
             <h2>You are here:</h2>
@@ -85,8 +85,10 @@
                     <ol class="breadcrumb">
                         <li><a href="#">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
-                        <li><a href="#">Administration</a></li>
-                        <li>Manage drone list</li>
+                        <li><a href="#">Accounts</a></li>
+                        <li><a href="#">Search for an account</a></li>
+                        <li><a href="#">Nate Bergeron</a></li>
+                        <li>Reinstate</li>
                         <!-- InstanceEndEditable -->
                     </ol>
                 </div>
@@ -95,56 +97,61 @@
     </header>
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont"><i class="fas fa-paper-plane"></i> Manage drone list</h1>
+        <h1 property="name" id="wb-cont"><i class="fas fa-address-card"></i> Reinstate</h1>
         <div class="alert alert-danger mrgn-bttm-md">
             <h2>Attention</h2>
             <ol class="fa-ul">
-                <li><a href="#makeModelList"><i class="fa-li fa fa-angle-right"></i>Please select a drone.</a></li>
 
+                <li><a href="#note"><i class="fa-li fa fa-angle-right"></i>The reason entered for reinstatement may not be greater than 500 characters.</a></li>
             </ol>
         </div>
-        <p>Select a drone to view the available information:</p>
-        <form method="get" action="manageDroneList-viewSelected-rated.html">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="input-group">
-                        <label for="makeModelList" class="display-block wb-inv">Make/model list:</label>
-                        <select class="form-control display-block fieldError" id="makeModelList" name="makeModelList">
-                            <option value="0" selected="selected">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
-                            <option value="1">Aeryon Labs - Skyranger</option>
-                            <option value="5">Draganfly - Commander</option>
-                            <option value="4">Draganfly - Guardian</option>
-                            <option value="2">Draganfly - X4ES</option>
-                            <option value="3">Draganfly - X4P</option>
-                            <option value="6">Epoc Unmanned - Stryder</option>
-                            <option value="7">Indro Robotics - Scout Mk III</option>
-                            <option value="8">Infinit Jib - Surveyor 630</option>
-                            <option value="9">Kesprey - Drone 1.0</option>
-                            <option value="10">Lockheed Martin - Indago 2</option>
-                            <option value="11">Lockheed Martin - Indago 3</option>
-                            <option value="12">Microdrones Canada - MD4-1000</option>
-                            <option value="13">SenseFly SA - ebee</option>
-                            <option value="14">SenseFly SA - ebee+</option>
-                            <option value="15">SenseFly SA - Albris</option>
-                            <option value="16">Silent Falcon UAS Technologies - Silent Falcon</option>
-                        </select>
-                        <span class="input-group-btn" id="suffix">
-                            <button type="submit" class="btn btn-default">Go</button>
-                        </span></div>
+        <p>All fields marked with an asterisk (<span class="mandatory-instructions">*</span>) are mandatory.</p>
+        <form action="reinstate-error.html" method="get">
+            <fieldset class="mrgn-tp-sm mrgn-bttm-sm">
+                <legend class="medium"><span class="mandatory">*</span>Which of the following are you reinstating? <span class="wb-inv">(required)</span> </legend>
+                <div class="radio">
+                    <label for="basic">
+                        <input type="radio" name="ratings" value="radio" id="basic" checked>
+                        Basic Operations</label>
                 </div>
+                <div class="radio">
+                    <label for="adv">
+                        <input type="radio" name="ratings" value="radio" id="adv">
+                        Basic and Advanced Operations</label>
+                </div>
+                <div class="radio">
+                    <label for="flightReviewer">
+                        <input type="radio" name="ratings" value="radio" id="flightReviewer">
+                        Basic and Advanced Operations with a flight reviewer rating</label>
+                </div>
+            </fieldset>
+            <div class="form-group">
+                <label for="note">Please indicate the reason for reinstatement. This information will be potentially used for administrative and enforcement purposes and will not be shared with the individual.</label>
+                <textarea id="note" name="note" cols="40" maxlength="500" class="form-control full-width fieldError"> </textarea>
             </div>
+            <p>You will need to notify the individual of the reinstatement and the changes to their pilot certificate.</p>
+            <div class="nav-button">
+                <button class="btn btn-primary" type="submit">Reinstate </button>
+                <a href="#" class="btn btn-link">Cancel</a> </div>
         </form>
         <!-- InstanceEndEditable -->
-        <div class="datemod col-xs-12 mrgn-tp-lg">
-            <dl id="wb-dtmd">
-                <dt>Date modified:&#32;</dt>
-                <dd>
-                    <time property="dateModified">
-                        <!-- #BeginDate format:IS1 -->2019-10-10
-                        <!-- #EndDate -->
-                    </time>
-                </dd>
-            </dl>
+        <div class="row">
+            <div class="datemod col-xs-6 mrgn-tp-lg">
+                <dl id="wb-dtmd">
+                    <dt>Date modified:&#32;</dt>
+                    <dd>
+                        <time property="dateModified">
+                            <!-- #BeginDate format:IS1 -->2019-10-10 (V9.9.9)
+                            <!-- #EndDate -->
+                        </time>
+                    </dd>
+                </dl>
+
+            </div>
+            <div class="col-xs-6 mrgn-tp-lg">
+                <div id="cn-accnt">Transport Canada account number <div class="account-number">TC9999999999</div>
+                </div>
+            </div>
         </div>
     </main>
     <footer role="contentinfo" id="wb-info">
@@ -161,7 +168,7 @@
                     </nav>
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
                     <div class="col-xs-6 col-md-2 text-right">
-                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
+                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
                         </object>
                     </div>
                 </div>
@@ -207,50 +214,17 @@
 </footer>
 -->
     <!--[if gte IE 9 | !IE ]><!-->
-    <script src="../../../../js/jquery/2.2.4/jquery.js"></script>
-    <script src="../../../../wet-boew/js/wet-boew.min.js"></script>
+    <script src="../../../js/jquery/2.2.4/jquery.js"></script>
+    <script src="../../../wet-boew/js/wet-boew.min.js"></script>
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
 		
 		<![endif]-->
-    <script src="../../../../GCWeb/js/theme.min.js"></script>
+    <script src="../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
-    <script type="text/javascript" src="../../../../js/tc/select2-4.0.5/dist/js/select2.min.js"></script>
-    <script>
-        $(document).on("wb-ready.wb", function(event) {
-            var txtNoResultsFound = "No results found.";
-
-            $(".showHide").hide();
-
-            $('#makeModelList').select2({
-                /* ajax: {
-			url: "/public/includes/makeModel.json",
-			dataType: 'json',
-			delay: 250,
-			cache: true
-		  },
-		  processResults: function (data) {
-			  // Tranforms the top-level key of the response object from 'items' to 'results'
-			  return {
-				results: data.items
-			  };
-			},
-		  placeholder: 'Search for a make/model...',
-		  escapeMarkup: function (markup) { return markup; }, // let our custom formatter work  */
-                theme: "bootstrap",
-                minimumInputLength: 1,
-                "language": {
-                    "noResults": function() {
-                        return txtNoResultsFound;
-                    }
-                },
-                escapeMarkup: function(markup) {
-                    return markup;
-                }
-            });
-        });
-    </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>

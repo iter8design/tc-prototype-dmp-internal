@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="en" dir="ltr">
@@ -10,7 +10,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Add drone - Drone Management Portal Administration</title>
+    <title>Edit drone - Drone Management Portal Administration</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -86,9 +86,9 @@
                     <ol class="breadcrumb">
                         <li><a href="#">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
-                        <li><a href="#">Administration</a></li>
+                        <li><a href="#">Drones</a></li>
                         <li><a href="#">Manage drone list</a></li>
-                        <li>Add drone</li>
+                        <li>Edit drone</li>
                         <!-- InstanceEndEditable -->
                     </ol>
                 </div>
@@ -97,45 +97,21 @@
     </header>
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont"><i class="fas fa-plane"></i> Add drone</h1>
-        <div class="alert alert-danger mrgn-bttm-md">
-            <h2>Attention</h2>
-            <ol class="fa-ul">
-                <li><a href="#make"><i class="fa-li fa fa-angle-right"></i>Please enter the make.</a></li>
-                <li><a href="#make"><i class="fa-li fa fa-angle-right"></i>The make entered may not be greater than 100 characters.</a></li>
-                <li><a href="#model"><i class="fa-li fa fa-angle-right"></i>Please enter the model.</a></li>
-                <li><a href="#model"><i class="fa-li fa fa-angle-right"></i>The model entered may not be greater than 100 characters.</a></li>
-                <li><a href="#type"><i class="fa-li fa fa-angle-right"></i>Please select the type.</a></li>
-                <li><a href="#mtow"><i class="fa-li fa fa-angle-right"></i>Please enter the maximum takeoff weight.</a></li>
-                <li><a href="#mtow"><i class="fa-li fa fa-angle-right"></i>The maximum takeoff weight entered is not valid</a></li>
-                <li><a href="#mtow"><i class="fa-li fa fa-angle-right"></i>The maximum takeoff weight entered may only include up to 2 decimal points.</a></li>
-                <li><a href="#mtow"><i class="fa-li fa fa-angle-right"></i>The maximum takeoff weight entered may not exceed 25 kilograms.</a></li>
-                <li><a href="#mtow"><i class="fa-li fa fa-angle-right"></i>The maximum takeoff weight entered may not be less than 0.25 kilograms.</a></li>
-                <li><i class="fa-li fa fa-angle-right"></i>Because a manufacturer declaration has been submitted, please select at least one safety assurance rating.</li>
-                <li><i class="fa-li fa fa-angle-right"></i>Because the <strong>Over people, within 16.4ft (5m)</strong> rating was selected, <strong>Near people, within 100ft (30m) to 16.4ft (5m)</strong> must also be selected.</li>
-                <li><a href="#declarationDate"><i class="fa-li fa fa-angle-right"></i>Please enter the declaration date.</a></li>
-                <li><a href="#declarationDate"><i class="fa-li fa fa-angle-right"></i>The declaration date entered must be in the YYYY-MM-DD format.</a></li>
-                <li><a href="#declarationDate"><i class="fa-li fa fa-angle-right"></i>The declaration date entered may not be in the future.</a></li>
-                <li><a href="#declarationDate"><i class="fa-li fa fa-angle-right"></i>The declaration date entered may only occur after January 9, 2018.</a></li>
-                <li><a href="#tcRDIMS"><i class="fa-li fa fa-angle-right"></i>The Transport Canada RDIMS number must be 8 digits long.</a></li>
-                <li><a href="#atsNumber"><i class="fa-li fa fa-angle-right"></i>The <abbr title="Activity Tracking System">ATS</abbr> number entered must be in the 99-99-99999999 format.</a></li>
-                <li><i class="fa-li fa fa-angle-right"></i>The make/model entered has already been added to the drone list.</li>
-            </ol>
-        </div>
+        <h1 property="name" id="wb-cont"><i class="fas fa-plane"></i> Edit drone</h1>
         <p>Please enter the following drone information. All fields marked with an asterisk (<span class="mandatory-instructions">*</span>) are mandatory.</p>
-        <form action="manageDroneList-viewSelected-confirmAdded.html" method="get">
+        <form method="get" action="manageDroneList-viewSelected-confirmUpdated.html">
             <div class="form-group">
                 <label for="make"><span class="mandatory" title="This field is mandatory.">*</span> Make: <strong class="required wb-inv">(required)</strong></label>
-                <input type="text" id="make" name="make" size="30" class="form-control fieldError">
+                <input type="text" id="make" name="make" size="30" class="form-control" value="DJI">
             </div>
             <div class="form-group">
                 <label for="model"><span class="mandatory" title="This field is mandatory.">*</span> Model: <strong class="required wb-inv">(required)</strong></label>
-                <input type="text" id="model" name="model" size="30" class="form-control fieldError">
+                <input type="text" id="model" name="model" size="30" class="form-control" value="Phantom 4">
             </div>
             <div class="form-group">
                 <label for="type" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Type: <strong class="required wb-inv">(required)</strong> </label>
-                <select class="form-control display-block fieldError" id="type" name="type">
-                    <option value="0" selected="selected">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
+                <select class="form-control display-block" id="type" name="type">
+                    <option value="0" selected>&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
                     <option value="1">Fixed-wing</option>
                     <option value="2">Hybrid</option>
                     <option value="3">Lighter-than-air</option>
@@ -145,9 +121,8 @@
             <div class="form-group">
                 <label for="mtow" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Maximum takeoff weight: <strong class="required wb-inv">in kilograms (required)</strong> </label>
                 <div class="input-group">
-                    <input type="text" id="mtow" name="mtow" size="5" class="form-control text-right fieldError" aria-describedby="suffix" style="width: auto;">
-                    <span class="input-group-addon" id="suffix" style="width: auto;">kilograms (kg)</span>
-                </div>
+                    <input type="text" id="mtow" name="mtow" size="5" class="form-control text-right" aria-describedby="suffix" style="width: auto;" value="1.39">
+                    <span class="input-group-addon" id="suffix" style="width: auto;">kilograms (kg)</span> </div>
             </div>
             <div class="form-group">
                 <div class="checkbox ">
@@ -159,64 +134,78 @@
                 <div class="col-md-12">
                     <section class="panel panel-default bg-grey mrgn-lft-lg mrgn-rght-lg">
                         <div class="panel-body">
-                            <h2 class="hd-section"><span class="mandatory" title="This field is mandatory">*</span> <abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> safety assurance declaration</h2>
+                            <h2 class="hd-section"><abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> safety assurance declaration</h2>
                             <div class="form-group">
                                 <fieldset>
                                     <legend class="wb-inv"><span class="mandatory" title="This field is mandatory">*</span> <abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> safety assurance declaration</legend>
                                     <div class="checkbox">
-                                        <input name="safeRating" id="controlledAirspace" type="checkbox" value="">
+                                        <input name="safeRating" id="controlledAirspace" type="checkbox" value="" checked>
                                         <label for="controlledAirspace">Controlled airspace</label>
                                     </div>
                                     <div class="checkbox">
                                         <input name="safeRating" id="near" type="checkbox" value="">
-                                        <label for="near">
-                                            Near people, within 100 <abbr title="feet">ft</abbr> (30 <abbr title="meters">m</abbr>) to 16.4 <abbr title="feet">ft</abbr> (5 <abbr title="meters">m</abbr>)</label>
+                                        <label for="near"> Near people, within 100 <abbr title="feet">ft</abbr> (30 <abbr title="meters">m</abbr>) to 16.4 <abbr title="feet">ft</abbr> (5 <abbr title="meters">m</abbr>)</label>
                                     </div>
                                     <div class="checkbox">
                                         <input name="safeRating" id="over" type="checkbox" value="">
-                                        <label for="over">
-                                            Over people, within 16.4 <abbr title="feet">ft</abbr> (5 <abbr title="meters">m</abbr>)</label>
+                                        <label for="over"> Over people, within 16.4 <abbr title="feet">ft</abbr> (5 <abbr title="meters">m</abbr>)</label>
                                     </div>
                                 </fieldset>
                             </div>
                             <div class="form-group">
                                 <label for="declarationDate" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Date of declaration (<abbr title="4 digit year, 2 digit month, 2 digit day">YYYY-MM-DD</abbr>): <strong class="required wb-inv">(required)</strong></label>
-                                <input type="text" id="declarationDate" name="declarationDate" size="10" class="form-control display-inline input-date fieldError">
+                                <input type="text" id="declarationDate" name="declarationDate" size="10" class="form-control display-inline input-date" value="2018-12-03">
                             </div>
-                            <h2 class="hd-section">Office use</h2>
+                            <h3 class="hd-section">Office use</h3>
                             <div class="form-group">
                                 <label for="tcRDIMS"><span class="mandatory" title="This field is mandatory.">*</span> Transport Canada RDIMS number: <strong class="required wb-inv">(required)</strong></label>
                                 <div class="form-inline">
-                                    <input type="text" id="tcRDIMS" name="tcRDIMS" size="10" class="form-control fieldError input-numeric-8">
-                                    <a href="#" data-url-root="http://mytc/rdims/" class="small mrgn-lft-md"><i class="fas fa-external-link mrgn-rght-sm"></i>View Manufacturer <abbr title="Remotely Piloted Aircraft System">RPAS</abbr> Safety Assurance Declaration (RDIMS)</a> </div>
+                                    <input type="text" id="tcRDIMS" name="tcRDIMS" size="10" class="form-control input-numeric-8" value="4983293">
+                                    <a href="#" data-url-root="http://mytc/rdims/" class="small mrgn-lft-md" id="link-rdims" target="_blank"><i class="fas fa-external-link mrgn-rght-sm"></i>View Manufacturer <abbr title="Remotely Piloted Aircraft System">RPAS</abbr> Safety Assurance Declaration (RDIMS)</a> </div>
                             </div>
-
                             <div class="form-group">
                                 <label for="atsNumber"><abbr title="Activity tracking system">ATS</abbr> number (99-99-99999999):</label>
                                 <div class="input-group"> <span class="input-group-addon" id="prefix">ATS -</span>
-                                    <input type="text" id="atsNumber" name="atsNumber" size="14" maxlength="14" class="form-control input-custom-ats fieldError" aria-describedby="prefix" style="width: auto;" />
+                                    <input type="text" id="atsNumber" name="atsNumber" size="14" maxlength="14" class="form-control input-custom-ats" aria-describedby="prefix" style="width: auto;" />
                                 </div>
                             </div>
-
-
                         </div>
                     </section>
                 </div>
             </div>
+
+            <div class="alert alert-info">
+                <p>There are <strong>46</strong> drones of this type currently registered. By continuing, all certificates of registration will be updated accordingly. </p>
+            </div>
             <div class="nav-button">
-                <button type="submit" class="btn btn-primary">Add drone</button>
+                <a href="#dlg-notification" class="btn btn-primary wb-lbx" id="btnSubmit">Submit</a>
                 <a href="#" class="btn btn-link mrgn-lft-md">Cancel</a> </div>
         </form>
-
         <hr>
         <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Manage drone list</a>
+
+        <section id="dlg-notification" class="mfp-hide modal-dialog modal-content overlay-def lbx-modal width40">
+            <header class="modal-header">
+                <h2 class="modal-title">Schedule an email?</h2>
+            </header>
+            <div class=" modal-body">
+                <p>Would you like us to schedule an email notification to the <strong>46</strong> registrants of this drone to inform them of the changes you've made? </p>
+                <p>This will encourage registrants to reprint their certificates of registration and may not be needed depending on the type of change being made.</p>
+            </div>
+
+            <footer class="modal-footer">
+                <button type="submit" class="btn btn-primary pull-left">Schedule an email</button>
+                <button type="submit" class="btn btn-default pull-left">Do not schedule an email</button>
+                <a href="#" class="popup-modal-dismiss btn btn-link pull-left">Let me think about this...</a> </footer>
+        </section>
+
         <!-- InstanceEndEditable -->
         <div class="datemod col-xs-12 mrgn-tp-lg">
             <dl id="wb-dtmd">
                 <dt>Date modified:&#32;</dt>
                 <dd>
                     <time property="dateModified">
-                        <!-- #BeginDate format:IS1 -->2018-12-18
+                        <!-- #BeginDate format:IS1 -->2018-11-21
                         <!-- #EndDate -->
                     </time>
                 </dd>
@@ -244,44 +233,7 @@
             </div>
         </div>
     </footer>
-    <!--<footer role="contentinfo" id="wb-info">
-<nav role="navigation" class="container wb-navcurr">
-<h2 class="wb-inv">About government</h2>
-<ul class="list-unstyled colcount-sm-2 colcount-md-3">
-<li><a href="https://www.canada.ca/en/contact.html">Contact us</a></li>
-<li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
-<li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
-<li><a href="https://www.canada.ca/en/news.html">News</a></li>
-<li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
-<li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
-<li><a href="http://pm.gc.ca/eng">Prime Minister</a></li>
-<li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
-<li><a href="http://open.canada.ca/en/">Open government</a></li>
-</ul> </nav>
-<div class="brand">
-<div class="container">
-<div class="row">
-<nav class="col-md-10 ftr-urlt-lnk">
-<h2 class="wb-inv">About this site</h2>
-<ul>
-<li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
-<li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
-<li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
-<li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
-<li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
-</ul>
-</nav>
-<div class="col-xs-6 visible-sm visible-xs tofpg">
-<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
-</div>
-<div class="col-xs-6 col-md-2 text-right">
-<object type="image/svg+xml" tabindex="-1" role="img" data="../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
-</div>
-</div>
-</div>
-</div>
-</footer>
--->
+
     <!--[if gte IE 9 | !IE ]><!-->
     <script src="../../../../js/jquery/2.2.4/jquery.js"></script>
     <script src="../../../../wet-boew/js/wet-boew.min.js"></script>
@@ -318,6 +270,11 @@
                 }
 
             });
+
+            $("#btnSubmit").on("click", function(event) {
+                event.preventDefault();
+                $(this).prepend("<i class='fas fa-circle-notch fa-spin mrgn-rght-sm'></i><span class='wb-inv'>Please wait a moment...</span>").attr('disabled', true);
+            });
         });
 
         // Attach a datepicker to the above input element
@@ -339,7 +296,6 @@
             blocks: [8],
             numericOnly: true
         });
-
 
         new Cleave('.input-custom-ats', {
             blocks: [2, 2, 8],

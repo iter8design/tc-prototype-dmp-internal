@@ -85,6 +85,7 @@
                     <ol class="breadcrumb">
                         <li><a href="#">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
+                        <li><a href="#">Accounts</a></li>
                         <li><a href="#">Search for an account</a></li>
                         <li><a href="#">Nate Bergeron</a></li>
                         <li>Issue refund</li>
@@ -97,16 +98,10 @@
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fas fa-usd-square mrgn-rght-sm"></i> Issue refund </h1>
-        <div class="alert alert-success mrgn-bttm-md">
-            <h2>Success</h2>
-            <ol class="fa-ul">
-                <li>Your refund request has been successfully submitted and is being processed.</li>
-            </ol>
-        </div>
         <form action="#" method="get">
             <div class="wb-tabs">
                 <div class="tabpanels">
-                    <details id="panel-available">
+                    <details id="panel-available" open>
                         <summary>Available refunds</summary>
 
 
@@ -140,7 +135,13 @@
                                             <th scope="col" class="text-right width15">Amount</th>
                                         </tr>
                                     </thead>
-
+                                    <tr>
+                                        <td class="text-center"><input type="checkbox" id="t1" name="transactions" value="" /></td>
+                                        <td class="text-center text-nowrap">2019-07-04 09:43 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                        <td class=""><label for="t1"><a href="#">Drone registration (C-9999999999)</a></label><br> {Make / model} {SN: 9999999999}</td>
+                                        <td class="text-center"><a href="#dlg_transactionDetails" class="wb-lbx"><i class="fa fa-info-circle" title="Transaction details for {Make/model} {SN: 9999999999}"></i></a></td>
+                                        <td class="text-right mrgn-rght-md"><span class="mrgn-rght-md">$5.00</span></td>
+                                    </tr>
                                     <tr>
                                         <td class="text-center"><input type="checkbox" id="t3" name="transactions" value="" /></td>
                                         <td class="text-center text-nowrap">2019-05-04 18:01 <abbr title="Eastern Standard Time">EST</abbr></td>
@@ -175,63 +176,16 @@
 
                     </details>
 
-                    <details id="panel-processed" open>
+                    <details id="panel-processed">
                         <summary>Refunds requested</summary>
-                        <section class="panel panel-default panel-datatable">
-                            <header class="panel-heading pddng-tp-0">
-                                <div class="row">
-                                    <div class="col-md-6"> </div>
-                                    <div class="col-md-6 text-right text-left-sm text-left-xs">
-                                        <div class="form-inline">
-                                            <div class="form-group mrgn-bttm-0 mrgn-rght-sm pddng-panel-heading-tp">
-                                                <div class="tableFilter"></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <section>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="mrgn-tp-md">No refunds have been requested.</p>
                                 </div>
-                            </header>
-                            <div class="table-responsive">
-                                <table class="wb-tables table table-hover table-bordered dataTable" data-wb-tables='
-        {"info" : false, "filter" : false, "paging": false, "order" : [[0,"desc"]],"columnDefs": [{ "orderable" : false, "targets":[3] },{"searchable" : false, "targets": []}],
-
-"language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]}
-        '>
-                                    <thead>
-                                        <tr>
-
-                                            <th scope="col" class="text-center width20">Date/time <br>
-                                                <abbr title="4 digit year, 2 digit month, 2 digit day, 2 digit hour, 2 digit minutes">(YYYY-MM-DD HH:MM)</abbr></th>
-                                            <th scope="col" class="text-center width5">Refund request #</th>
-                                            <th scope="col" class="text-center width40">Services</th>
-
-                                            <th scope="col" class="text-center width5">Transaction details</th>
-
-                                            <th scope="col" class="text-right width15">Amount</th>
-                                            <th scope="col" class="text-right width25">Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tr>
-
-                                        <td class="text-center text-nowrap">2019-07-04 09:43 <abbr title="Eastern Standard Time">EST</abbr></td>
-                                        <td class="text-center text-nowrap">9999999999</td>
-                                        <td class="">
-                                            <ul>
-                                                <li>Drone registration (C-9999999999)</li>
-                                                <li>Pilot Certificate - Advanced Operations (PC999999999)</li>
-                                                <li>Small Advanced Exam (EA9999999999)</li>
-                                            </ul>
-                                        </td>
-                                        <td class="text-center"><a href="#dlg_transactionDetails" class="wb-lbx"><i class="fa fa-info-circle" title="Transaction details for {Make/model} {SN: 9999999999}"></i></a></td>
-                                        <td class="text-right mrgn-rght-md"><span class="mrgn-rght-md">$5.00</span></td>
-                                        <td class="nowrap"><i class="fas fa-exclamation-circle text-yellow"></i> Pending approval</td>
-                                    </tr>
-
-
-                                </table>
                             </div>
-                            <footer class="panel-footer mrgn-0">
 
-                            </footer>
+
                         </section>
                     </details>
                 </div>

@@ -1,5 +1,8 @@
-<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
-<html class="no-js" lang="en" dir="ltr"><!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
 <!--<![endif]-->
 
 <head>
@@ -7,7 +10,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Manage drone list - Drone Management Portal Administration</title>
+    <title>View submitted drones - Drone Management Portal Administration</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -39,8 +42,6 @@
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
     <!-- InstanceBeginEditable name="CustomCSS" -->
-    <link rel="stylesheet" type="text/css" href="../../../../js/tc/select2-4.0.5/dist/css/select2.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../js/tc/select2-4.0.5/dist/css/select2-bootstrap.css" />
     <!-- InstanceEndEditable -->
 </head>
 
@@ -85,9 +86,9 @@
                     <ol class="breadcrumb">
                         <li><a href="#">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
-                        <li><a href="#">Administration</a></li>
-                        <li>Manage drone list</li>
-                        <!-- InstanceEndEditable -->
+                        <li><a href="#">Drones</a></li>
+                        <li><a href="#">Manage drone list</a></li>
+                        <li>View submitted drones</li> <!-- InstanceEndEditable -->
                     </ol>
                 </div>
             </div>
@@ -95,80 +96,67 @@
     </header>
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont"><i class="fas fa-paper-plane"></i> Manage drone list</h1>
+        <h1 property="name" id="wb-cont"><i class="fas fa-paper-plane"></i> View submitted drones</h1>
         <div class="alert alert-success mrgn-bttm-md">
             <h2>Success</h2>
             <ol class="fa-ul">
                 <li><i class="fa-li fa fa-angle-right"></i> {make} {model} drone has been successfully added to the list of published drones.</li>
             </ol>
         </div>
-        <p>Select a drone to view the available information:</p>
-        <form method="get" action="#">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="input-group">
-                        <label for="makeModelList" class="display-block wb-inv">Make/model list:</label>
-                        <select class="form-control display-block" id="makeModelList" name="makeModelList">
-                            <option value="0" selected="selected">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
-                            <optgroup label="Published">
-                                <option value="1">Aeryon Labs - Skyranger</option>
-                                <option value="17" selected>DJI Phantom 4</option>
-                                <option value="5">Draganfly - Commander</option>
-                                <option value="4">Draganfly - Guardian</option>
-                                <option value="2">Draganfly - X4ES</option>
-                                <option value="3">Draganfly - X4P</option>
-                                <option value="6">Epoc Unmanned - Stryder</option>
-                                <option value="7">Indro Robotics - Scout Mk III</option>
-                                <option value="8">Infinit Jib - Surveyor 630</option>
-                                <option value="9">Kesprey - Drone 1.0</option>
-                                <option value="10">Lockheed Martin - Indago 2</option>
-                                <option value="11">Lockheed Martin - Indago 3</option>
-                                <option value="12">Microdrones Canada - MD4-1000</option>
-                                <option value="13">SenseFly SA - ebee</option>
-                                <option value="14">SenseFly SA - ebee+</option>
-                                <option value="15">SenseFly SA - Albris</option>
-                                <option value="16">Silent Falcon UAS Technologies - Silent Falcon</option>
-                            </optgroup>
-                            <optgroup label="Excluded">
-                                <option>Acme - Flyby Drone</option>
-                            </optgroup>
-                        </select>
-                        <span class="input-group-btn" id="suffix">
-                            <button type="submit" class="btn btn-default">Go</button>
-                        </span></div>
+        <p>There are <strong>2</strong> submitted drones that require review:</p>
+        <form action="" method="get">
+            <section class="panel panel-default panel-datatable">
+                <header class="panel-heading pddng-tp-0">
+                    <div class="row">
+                        <div class="col-md-6"> </div>
+                        <div class="col-md-6 text-right text-left-sm text-left-xs">
+                            <div class="form-inline">
+                                <div class="form-group mrgn-bttm-0 mrgn-rght-sm pddng-panel-heading-tp">
+                                    <div class="tableFilter"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="table-responsive">
+                    <table class="wb-tables table table-hover table-bordered" data-wb-tables='
+        {"info" : false, "filter" : true, "order" : [[3,"desc"]],"columnDefs": [{ "orderable" : false, "targets":[] },{"searchable" : false, "targets": []}],
+"language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]}'>
+                        <thead>
+                            <tr>
+                                <th scope="col" class="width40">Make/model</th>
+                                <th scope="col" class="width10">Type</th>
+                                <th scope="col" class="width30">Maximum takeoff weight</th>
+                                <th scope="col" class="width15 text-center">Date submitted<br>
+                                    <abbr title="4 digit year, 2 digit month, 2 digit day">(YYYY-MM-DD)</abbr></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><label for="d2">DJI Fantom 4</label></td>
+                                <td>Rotary wing</td>
+                                <td>250 grams up to and including 25 kilograms</td>
+                                <td class="text-center">2018-10-10</td>
+                            </tr>
+                            <tr>
+                                <td><label for="d3">DJI Fantom Four</label></td>
+                                <td>Rotary wing</td>
+                                <td>250 grams up to and including 25 kilograms</td>
+                                <td class="text-center">2018-10-10</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
+                <footer class="panel-footer">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-6 pddng-tp-sm pages"> </div>
+                        <div class="col-md-6 col-xs-12 text-right text-left-sm text-left-xs displayOptions"></div>
+                    </div>
+                </footer>
+            </section>
         </form>
-        <h2 class="hd-section">DJI Phantom 4</h2>
-        <p>This is a <strong class="text-lowercase">rotary wing</strong> drone with a maximum takeoff weight of <strong>1.39 kilograms (kg)</strong>.</p>
-        <h3 class="hd-section"><abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> safety assurance declaration</h3>
-        <ul class="list-unstyled lst-spcd mrgn-tp-md">
-            <li><i class="fas fa-check-square fa-1h5x text-green mrgn-lft-md"></i> Controlled airspace</li>
-            <li><i class="fas fa-check-square fa-1h5x text-green mrgn-lft-md"></i> Near people, within 100 <abbr title="feet">ft</abbr> (30 <abbr title="meters">m</abbr>) to 16.4 <abbr title="feet">ft</abbr> (5 <abbr title="meters">m</abbr>)</li>
-            <li><i class="fas fa-check-square fa-1h5x text-green mrgn-lft-md"></i> Over people, within 16.4 <abbr title="feet">ft</abbr> (5 <abbr title="meters">m</abbr>)</li>
-        </ul>
-
-        <div class="row">
-            <div class="col-md-12">
-                <p>Declared on Wednesday, October 25, 2018 <br>
-                    <a href="http://mytc/rdims/99999999" target="_blank"><i class="fa fa-external-link mrgn-rght-sm"></i>View Manufacturer <abbr title="Remotely Piloted Aircraft System">RPAS</abbr> Safety Assurance Declaration (<abbr title="Records, Document and Information Management System">RDIMS</abbr>)</i></a>
-
-                </p>
-                <!-- Only display if ATS number is entered -->
-                <p> <abbr title="Activity Tracking System">ATS</abbr>-99-99-99999999</p>
-            </div>
-        </div>
-        <div class="nav-button"><a href="editDrone.html" class="btn btn-primary">Edit</a> <a href="#dlg-removeWarning" class="btn btn-default mrgn-lft-md wb-lbx">Remove from list</a> </div>
-        <section id="dlg-removeWarning" class="mfp-hide modal-dialog modal-content overlay-def">
-            <header class="modal-header">
-                <h2 class="modal-title">Remove from list</h2>
-            </header>
-            <div class="modal-body">
-                <p>This drone will be removed from the list. As a result, the public will no longer be able to select this drone for registration.</p>
-                <p>Existing registrations will not be affected.</p>
-            </div>
-            <footer class="modal-footer"> <a href="manageDroneList-confirmRemoved.html" class="btn btn-primary pull-left">Remove from list</a> <a href="#" class="btn btn-link mrgn-lft-md popup-modal-dismiss pull-left">Cancel</a> </footer>
-        </section>
+        <hr>
+        <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Manage drone list</a>
         <!-- InstanceEndEditable -->
         <div class="datemod col-xs-12 mrgn-tp-lg">
             <dl id="wb-dtmd">
@@ -251,41 +239,26 @@
 		<![endif]-->
     <script src="../../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
-    <script type="text/javascript" src="../../../../js/tc/select2-4.0.5/dist/js/select2.min.js"></script>
-    <script>
+    <script type="text/javascript">
         $(document).on("wb-ready.wb", function(event) {
-            var txtNoResultsFound = "No results found.";
-
-            $(".showHide").hide();
-
-            $('#makeModelList').select2({
-                /* ajax: {
-			url: "/public/includes/makeModel.json",
-			dataType: 'json',
-			delay: 250,
-			cache: true
-		  },
-		  processResults: function (data) {
-			  // Tranforms the top-level key of the response object from 'items' to 'results'
-			  return {
-				results: data.items
-			  };
-			},
-		  placeholder: 'Search for a make/model...',
-		  escapeMarkup: function (markup) { return markup; }, // let our custom formatter work  */
-                theme: "bootstrap",
-                minimumInputLength: 1,
-                "language": {
-                    "noResults": function() {
-                        return txtNoResultsFound;
-                    }
-                },
-                escapeMarkup: function(markup) {
-                    return markup;
-                }
+            /* Datatable */
+            $('.dataTables_filter').appendTo('.panel-datatable .panel-heading .tableFilter');
+            $('.dataTables_length').appendTo('.panel-datatable footer.panel-footer .displayOptions');
+            $('.dataTables_wrapper .bottom').appendTo('.panel-datatable footer.panel-footer .pages');
+            $('.bottom, .top').addClass('dataTables_wrapper');
+            $('.panel-datatable footer.panel-footer').css('padding-top', '0');
+            $(".first.paginate_button, .last.paginate_button").hide();
+            $(".dataTables_filter input").addClass("form-control").css({
+                "margin-bottom": "0px"
+            });;
+            $(".dataTables_filter label").css({
+                "margin-bottom": "0px"
             });
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>

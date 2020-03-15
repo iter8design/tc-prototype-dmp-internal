@@ -1,3 +1,4 @@
+=
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
 <!--[if gt IE 8]><!-->
@@ -87,7 +88,7 @@
                     <ol class="breadcrumb">
                         <li><a href="#">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
-                        <li><a href="#">Administration</a></li>
+                        <li><a href="#">Drones</a></li>
                         <li>Manage drone list</li>
                         <!-- InstanceEndEditable -->
                     </ol>
@@ -99,7 +100,7 @@
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fas fa-paper-plane"></i> Manage drone list</h1>
         <p>Select a drone to view the available information:</p>
-        <form method="get" action="#">
+        <form method="get" action="manageDroneList-viewSelected-unrated.html">
             <div class="row">
                 <div class="col-md-6">
                     <div class="input-group">
@@ -153,12 +154,22 @@
         <p>This is a <strong class="text-lowercase">rotary wing</strong> drone with a maximum takeoff weight of <strong>1.39 kilograms (kg)</strong>.</p>
         <h3 class="hd-section"><abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> safety assurance declaration</h3>
         <ul class="list-unstyled lst-spcd mrgn-tp-md">
-            <li><i class="fas fa-times-circle fa-1h5x text-danger mrgn-lft-md"></i> Controlled airspace</li>
-            <li><i class="fas fa-times-circle fa-1h5x text-danger mrgn-lft-md"></i> Near people, within 100 <abbr title="feet">ft</abbr> (30 <abbr title="meters">m</abbr>) to 16.4 <abbr title="feet">ft</abbr> (5 <abbr title="meters">m</abbr>)</li>
-            <li><i class="fas fa-times-circle fa-1h5x text-danger mrgn-lft-md"></i> Over people, within 16.4 <abbr title="feet">ft</abbr> (5 <abbr title="meters">m</abbr>)</li>
+            <li><i class="fas fa-check-square fa-1h5x text-green mrgn-lft-md"></i> Controlled airspace</li>
+            <li><i class="fas fa-check-square fa-1h5x text-green mrgn-lft-md"></i> Near people, within 100 <abbr title="feet">ft</abbr> (30 <abbr title="meters">m</abbr>) to 16.4 <abbr title="feet">ft</abbr> (5 <abbr title="meters">m</abbr>)</li>
+            <li><i class="fas fa-check-square fa-1h5x text-green mrgn-lft-md"></i> Over people, within 16.4 <abbr title="feet">ft</abbr> (5 <abbr title="meters">m</abbr>)</li>
         </ul>
 
-        <div class="nav-button mrgn-tp-md"><a href="#" class="btn btn-primary">Edit</a> <a href="#dlg-removeWarning" class="btn btn-default mrgn-lft-md wb-lbx">Remove from list</a> </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>Declared on Wednesday, October 25, 2018 <br>
+                    <a href="http://mytc/rdims/99999999" target="_blank"><i class="fa fa-external-link mrgn-rght-sm"></i>View Manufacturer <abbr title="Remotely Piloted Aircraft System">RPAS</abbr> Safety Assurance Declaration (<abbr title="Records, Document and Information Management System">RDIMS</abbr>)</i></a>
+
+                </p>
+                <!-- Only display if ATS number is entered -->
+                <p> <abbr title="Activity Tracking System">ATS</abbr>-99-99-99999999</p>
+            </div>
+        </div>
+        <div class="nav-button"><a href="editDrone.html" class="btn btn-primary">Edit</a> <a href="#dlg-removeWarning" class="btn btn-default mrgn-lft-md wb-lbx">Remove from list</a> </div>
         <section id="dlg-removeWarning" class="mfp-hide modal-dialog modal-content overlay-def">
             <header class="modal-header">
                 <h2 class="modal-title">Remove from list</h2>
@@ -167,7 +178,7 @@
                 <p>This drone will be removed from the list. As a result, the public will no longer be able to select this drone for registration.</p>
                 <p>Existing registrations will not be affected.</p>
             </div>
-            <footer class="modal-footer"> <a href="#" class="btn btn-primary pull-left">Remove from list</a> <a href="#" class="btn btn-link mrgn-lft-md popup-modal-dismiss pull-left">Cancel</a> </footer>
+            <footer class="modal-footer"> <a href="manageDroneList-confirmRemoved.html" class="btn btn-primary pull-left">Remove from list</a> <a href="#" class="btn btn-link mrgn-lft-md popup-modal-dismiss pull-left">Cancel</a> </footer>
         </section>
         <!-- InstanceEndEditable -->
         <div class="datemod col-xs-12 mrgn-tp-lg">
@@ -175,7 +186,7 @@
                 <dt>Date modified:&#32;</dt>
                 <dd>
                     <time property="dateModified">
-                        <!-- #BeginDate format:IS1 -->2018-11-21
+                        <!-- #BeginDate format:IS1 -->2018-11-23
                         <!-- #EndDate -->
                     </time>
                 </dd>
@@ -285,6 +296,7 @@
                 }
             });
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>

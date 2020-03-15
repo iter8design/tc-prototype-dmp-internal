@@ -1,5 +1,8 @@
-<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
-<html class="no-js" lang="en" dir="ltr"><!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en" dir="ltr">
+<!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
 <!--<![endif]-->
 
 <head>
@@ -7,20 +10,20 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>View submitted drones - Drone Management Portal Administration</title>
+    <title>Suspend - Drone Management Portal Administration</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
     <meta name="description" content="">
     <!-- Meta data-->
     <!--[if gte IE 9 | !IE ]><!-->
-    <link href="../../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="../../../../GCWeb/css/theme.min.css">
-    <link rel="stylesheet" href="../../../../css/cdtsapps.css">
-    <link rel="stylesheet" href="../../../../css/fontawesome/css/all.css">
-    <link rel="stylesheet" href="../../../../css/uav-vasp.css">
-    <link rel="stylesheet" href="../../../../css/utils.css">
-    <link rel="stylesheet" href="../../../../css/plugins.css">
+    <link href="../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="../../../GCWeb/css/theme.min.css">
+    <link rel="stylesheet" href="../../../css/cdtsapps.css">
+    <link rel="stylesheet" href="../../../css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../../../css/uav-vasp.css">
+    <link rel="stylesheet" href="../../../css/utils.css">
+    <link rel="stylesheet" href="../../../css/plugins.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
@@ -34,7 +37,7 @@
 		
 		<![endif]-->
     <noscript>
-        <link rel="stylesheet" href="../../../../wet-boew/css/noscript.min.css" />
+        <link rel="stylesheet" href="../../../wet-boew/css/noscript.min.css" />
     </noscript>
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
@@ -51,7 +54,7 @@
         <div id="wb-bnr" class="container">
             <div class="row">
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
-                    <object type="image/svg+xml" tabindex="-1" data="../../../../assets/sig-blk-en.svg">
+                    <object type="image/svg+xml" tabindex="-1" data="../../../assets/sig-blk-en.svg">
                     </object>
                     <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
                 <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
@@ -75,7 +78,6 @@
         </div>
         <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../../../includes/menus/menu-headOffice.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
 
-
         <nav role="navigation" id="wb-bc" property="breadcrumb">
             <h2>You are here:</h2>
             <div class="container">
@@ -83,9 +85,11 @@
                     <ol class="breadcrumb">
                         <li><a href="#">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
-                        <li><a href="#">Administration</a></li>
-                        <li><a href="#">Manage drone list</a></li>
-                        <li>View submitted drones</li> <!-- InstanceEndEditable -->
+                        <li><a href="#">Accounts</a></li>
+                        <li><a href="#">Search for an account</a></li>
+                        <li><a href="#">Nate Bergeron</a></li>
+                        <li>Suspend</li>
+                        <!-- InstanceEndEditable -->
                     </ol>
                 </div>
             </div>
@@ -93,78 +97,72 @@
     </header>
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont"><i class="fas fa-paper-plane"></i> View submitted drones</h1>
-        <div class="alert alert-success mrgn-bttm-md">
-            <h2>Success</h2>
-            <ol class="fa-ul">
-                <li><i class="fa-li fa fa-angle-right"></i> {make} {model} drone has been successfully added to the list of published drones.</li>
-            </ol>
-        </div>
-        <p>There are <strong>2</strong> submitted drones that require review:</p>
-        <form action="" method="get">
-            <section class="panel panel-default panel-datatable">
-                <header class="panel-heading pddng-tp-0">
-                    <div class="row">
-                        <div class="col-md-6"> </div>
-                        <div class="col-md-6 text-right text-left-sm text-left-xs">
-                            <div class="form-inline">
-                                <div class="form-group mrgn-bttm-0 mrgn-rght-sm pddng-panel-heading-tp">
-                                    <div class="tableFilter"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </header>
-                <div class="table-responsive">
-                    <table class="wb-tables table table-hover table-bordered" data-wb-tables='
-        {"info" : false, "filter" : true, "order" : [[3,"desc"]],"columnDefs": [{ "orderable" : false, "targets":[] },{"searchable" : false, "targets": []}],
-"language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]}'>
-                        <thead>
-                            <tr>
-                                <th scope="col" class="width40">Make/model</th>
-                                <th scope="col" class="width10">Type</th>
-                                <th scope="col" class="width30">Maximum takeoff weight</th>
-                                <th scope="col" class="width15 text-center">Date submitted<br>
-                                    <abbr title="4 digit year, 2 digit month, 2 digit day">(YYYY-MM-DD)</abbr></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><label for="d2">DJI Fantom 4</label></td>
-                                <td>Rotary wing</td>
-                                <td>250 grams up to and including 25 kilograms</td>
-                                <td class="text-center">2018-10-10</td>
-                            </tr>
-                            <tr>
-                                <td><label for="d3">DJI Fantom Four</label></td>
-                                <td>Rotary wing</td>
-                                <td>250 grams up to and including 25 kilograms</td>
-                                <td class="text-center">2018-10-10</td>
-                            </tr>
-                        </tbody>
-                    </table>
+        <h1 property="name" id="wb-cont"><i class="fas fa-address-card"></i> Suspend </h1>
+        <p>All fields marked with an asterisk (<span class="mandatory-instructions">*</span>) are mandatory.</p>
+        <form action="suspend-error.html" method="get">
+            <fieldset class="mrgn-tp-sm mrgn-bttm-sm">
+                <legend class="medium">Which of the following are you suspending? <span class="wb-inv">(required)</span>
+
+                </legend>
+                <div class="radio">
+                    <label for="all">
+                        <input type="radio" name="ratings" value="radio" id="all" checked>
+                        Basic Operations
+                        <span class="fld-example">If applicable, <strong>Advanced Operations</strong> and <strong>Flight reviewer rating</strong> will also be suspended.</span>
+                    </label>
                 </div>
-                <footer class="panel-footer">
-                    <div class="row">
-                        <div class="col-md-6 col-xs-6 pddng-tp-sm pages"> </div>
-                        <div class="col-md-6 col-xs-12 text-right text-left-sm text-left-xs displayOptions"></div>
-                    </div>
-                </footer>
-            </section>
+                <div class="radio">
+                    <label for="adv">
+                        <input type="radio" name="ratings" value="radio" id="adv">
+                        Advanced Operations
+                        <span class="fld-example"><strong>Basic Operations</strong> will remain in effect for this individual. If applicable, <strong>Flight reviewer rating</strong> will also be suspended.</span></label>
+                </div>
+                <div class="radio">
+                    <label for="flightReviewer" class="text-muted">
+                        <input type="radio" name="ratings" value="radio" id="flightReviewer" disabled>
+                        Flight reviewer rating
+                        <span class="fld-example"><strong>Advanced Operations</strong> will remain in effect for this individual.</span></label>
+                </div>
+            </fieldset>
+            <div class="form-group">
+                <label for="reason"><span class="mandatory">*</span>Reason for suspension: <span class="wb-inv">(required)</span></label>
+                <select id="reason" name="reason" class="form-control display-block">
+                    <option value="0">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
+                    <option value="">Aviation record issue</option>
+                    <option value="">Ceased to meet the qualifications/fulfill the conditions</option>
+                    <option value="">Contravention of regulation, notice, order, security measure or emergency direction</option>
+                    <option value="">Default in payment for assessed penalty</option>
+                    <option value="">Incompetence</option>
+                    <option value="">Threat to aviation safety or security</option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="reason">Please provide any additional information needed to support the reason for suspension. This information will be potentially used for administrative and enforcement purposes only and will not be shared with the individual.</label>
+                <textarea id="reason" name="reason" cols="40" maxlength="500" class="form-control full-width"> </textarea>
+            </div>
+            <p>You will need to notify the individual of the suspension.</p>
+
+            <div class="nav-button"> <button class="btn btn-primary" type"submit">Suspend</button> <a href="#" class="btn btn-link">Cancel</a> </div>
         </form>
-        <hr>
-        <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Manage drone list</a>
         <!-- InstanceEndEditable -->
-        <div class="datemod col-xs-12 mrgn-tp-lg">
-            <dl id="wb-dtmd">
-                <dt>Date modified:&#32;</dt>
-                <dd>
-                    <time property="dateModified">
-                        <!-- #BeginDate format:IS1 -->2018-12-18
-                        <!-- #EndDate -->
-                    </time>
-                </dd>
-            </dl>
+        <div class="row">
+            <div class="datemod col-xs-6 mrgn-tp-lg">
+                <dl id="wb-dtmd">
+                    <dt>Date modified:&#32;</dt>
+                    <dd>
+                        <time property="dateModified">
+                            <!-- #BeginDate format:IS1 -->2019-10-10 (V9.9.9)
+                            <!-- #EndDate -->
+                        </time>
+                    </dd>
+                </dl>
+
+            </div>
+            <div class="col-xs-6 mrgn-tp-lg">
+                <div id="cn-accnt">Transport Canada account number <div class="account-number">TC9999999999</div>
+                </div>
+            </div>
         </div>
     </main>
     <footer role="contentinfo" id="wb-info">
@@ -181,7 +179,7 @@
                     </nav>
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
                     <div class="col-xs-6 col-md-2 text-right">
-                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
+                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
                         </object>
                     </div>
                 </div>
@@ -227,32 +225,17 @@
 </footer>
 -->
     <!--[if gte IE 9 | !IE ]><!-->
-    <script src="../../../../js/jquery/2.2.4/jquery.js"></script>
-    <script src="../../../../wet-boew/js/wet-boew.min.js"></script>
+    <script src="../../../js/jquery/2.2.4/jquery.js"></script>
+    <script src="../../../wet-boew/js/wet-boew.min.js"></script>
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
 		
 		<![endif]-->
-    <script src="../../../../GCWeb/js/theme.min.js"></script>
+    <script src="../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
-    <script type="text/javascript">
-        $(document).on("wb-ready.wb", function(event) {
-            /* Datatable */
-            $('.dataTables_filter').appendTo('.panel-datatable .panel-heading .tableFilter');
-            $('.dataTables_length').appendTo('.panel-datatable footer.panel-footer .displayOptions');
-            $('.dataTables_wrapper .bottom').appendTo('.panel-datatable footer.panel-footer .pages');
-            $('.bottom, .top').addClass('dataTables_wrapper');
-            $('.panel-datatable footer.panel-footer').css('padding-top', '0');
-            $(".first.paginate_button, .last.paginate_button").hide();
-            $(".dataTables_filter input").addClass("form-control").css({
-                "margin-bottom": "0px"
-            });;
-            $(".dataTables_filter label").css({
-                "margin-bottom": "0px"
-            });
-        });
-    </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>
