@@ -44,6 +44,9 @@
     <!-- InstanceBeginEditable name="CustomCSS" -->
     <link rel="stylesheet" type="text/css" href="../../../../js/tc/bootstrap3-editable/css/bootstrap-editable.css">
     <!-- InstanceEndEditable -->
+    <style>
+
+    </style>
 </head>
 
 <body class="secondary" vocab="http://schema.org/" typeof="WebPage">
@@ -122,20 +125,20 @@
                             <form method="get" action="manageResources-error.html">
                                 <table class="table table-striped small">
 
-                                    <th class="width20 text-top" scope="col"><label for="resourceKey" class="fnt-wght-bld">Resource key</label>
+                                    <th class="width30 text-top" scope="col"><label for="resourceKey" class="fnt-wght-bld">Resource key</label>
 
                                         <input name="resourceKey" id="resourceKey" size="15" type="text" class="form-control full-width">
                                     </th>
-                                    <th class="width25 text-top" scope="col"><label for="contentEng" class="fnt-wght-bld">Content - English</label>
+                                    <th class="width20 text-top" scope="col"><label for="contentEng" class="fnt-wght-bld">Content - English</label>
                                         <textarea name="contentEng" id="contentEng" cols="40" rows="2" class="form-control full-width"></textarea>
 
                                     </th>
-                                    <th class="width25 text-top" scope="col"><label for="contentFre" class="fnt-wght-bld">Content - French</label>
+                                    <th class="width20 text-top" scope="col"><label for="contentFre" class="fnt-wght-bld">Content - French</label>
 
                                         <textarea name="contentFre" id="contentFre" cols="40" rows="2" class="form-control full-width"></textarea>
 
                                     </th>
-                                    <th class="width5 text-top" scope="col"><label for="status" class="fnt-wght-bld">Status</label>
+                                    <th class="width10 text-top" scope="col"><label for="status" class="fnt-wght-bld">Status</label>
                                         <select class="form-control" id="status">
                                             <option select>&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
                                             <option>Active</option>
@@ -144,21 +147,21 @@
                                             <option>Inactive</option>
                                         </select>
                                     </th>
-                                    <th class="width8 text-top text-center" scope="col">Action
+                                    <th class="width10 text-top text-center" scope="col">Action <br>
                                         <button class="btn btn-primary btn-sm mrgn-tp-sm text-cente text-nowrap" type="submit"><i class="fas fa-plus-square"></i> Add</button>
                                     </th>
                                     <tbody>
                                         <tr class="textFilter-target">
                                             <td class="textFilter-match text-wordwrap">ResourceKey1LongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLongLong</td>
-                                            <td><a href="#" data-container="body" class="editable editable-textarea textFilter-match">English value</a></td>
-                                            <td><a href="#" data-container="body" class="editable editable-textarea textFilter-match">French value</a></td>
+                                            <td><a href="#" data-container="body" class="editable editable-textarea textFilter-match text-wordwrap">English value</a></td>
+                                            <td><a href="#" data-container="body" class="editable editable-textarea textFilter-match text-wordwrap">French value</a></td>
                                             <td><i class="fas fa-circle text-green  mrgn-rght-sm"></i><a href="#" data-container="body" class="editable editable-select"> Active</a></td>
                                             <td class="text-center"></td>
                                         </tr>
                                         <tr class="textFilter-target">
-                                            <td class="textFilter-match">ResourceKey2</td>
-                                            <td><a href="#" data-container="body" class="editable editable-textarea textFilter-match">English value</a></td>
-                                            <td><a href="#" data-container="body" class="editable editable-textarea textFilter-match">French value</a></td>
+                                            <td class="textFilter-match text-wordwrap">ResourceKey2</td>
+                                            <td><a href="#" data-container="body" class="editable editable-textarea textFilter-match text-wordwrap">English value</a></td>
+                                            <td><a href="#" data-container="body" class="editable editable-textarea textFilter-match text-wordwrap">French value</a></td>
                                             <td><i class="fas fa-circle text-danger mrgn-rght-sm"></i><a href="#" data-container="body" class="editable editable-select">Inactive</a></td>
                                             <td class="text-center"></td>
                                         </tr>
@@ -326,6 +329,7 @@
             });
 
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
