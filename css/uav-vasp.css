@@ -4,6 +4,10 @@ main {
     font-size: 16px;
 }
 
+.container {
+    width: 90%;
+}
+
 #wb-bc a {
     padding: 0px 0px;
 }
