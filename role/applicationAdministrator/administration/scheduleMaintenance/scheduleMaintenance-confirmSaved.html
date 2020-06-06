@@ -126,13 +126,13 @@
                 <legend class="wb-inv">Schedule a maintenance period</legend>
                 <div class="radio">
                     <label for="noMaintenance">
-                        <input type="radio" name="maintenance" value="radio" id="noMaintenance" checked>
+                        <input type="radio" name="maintenance" value="radio" id="noMaintenance">
                         No maintenance period is currently scheduled.</label>
                 </div>
 
                 <div class="radio">
                     <label for="maintenance">
-                        <input type="radio" name="maintenance" value="radio" id="maintenance">
+                        <input type="radio" name="maintenance" value="radio" id="maintenance" checked>
                         Schedule an upcoming maintenance period beginning on:</label>
                 </div>
                 <div class="form-group mrgn-lft-lg showHide" id="maintenancePeriod">
@@ -206,8 +206,8 @@
                         <label for="numberHours" class="mrgn-lft-md mrgn-rght-md">for <span class="wb-inv">a duration of (in hours):</span></label>
                         <div class="input-group">
                             <select id="numberHours" name="numberHours" class="form-control" aria-describedby="suffix-hours">
-                                <option val="" selected>&nbsp;</option>
-                                <option>1</option>
+                                <option>0</option>
+                                <option selected>1</option>
                                 <option>2</option>
                                 <option>3</option>
                                 <option>4</option>
@@ -222,7 +222,21 @@
 
                             </select>
 
-                            <span class="input-group-addon" id="suffix-hours">hours</span>
+                            <span class="input-group-addon" id="suffix-hours">hour(s)</span>
+                        </div>
+
+                        <label for="numberMinutes" class="mrgn-lft-md mrgn-rght-md">and <span class="wb-inv">a duration of (in minutes):</span></label>
+                        <div class="input-group">
+                            <select id="numberMinutes" name="numberMinutes" class="form-control" aria-describedby="suffix-minutes">
+                                <option val="">&nbsp;</option>
+                                <option selected>0</option>
+                                <option>15</option>
+                                <option>30</option>
+                                <option>45</option>
+
+                            </select>
+
+                            <span class="input-group-addon" id="suffix-minutes">minutes</span>
                         </div>
 
                     </div>
@@ -299,6 +313,10 @@
                 $("#date").val("");
                 $("#numberHours, #time").val("option:first").val();
             });
+
+            if ($('#maintenance').is(':checked')) {
+                $("#maintenancePeriod").show();
+            }
 
         });
 

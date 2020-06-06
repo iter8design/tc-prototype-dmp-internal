@@ -200,8 +200,8 @@
                         <label for="numberHours" class="mrgn-lft-md mrgn-rght-md">for <span class="wb-inv">a duration of (in hours):</span></label>
                         <div class="input-group">
                             <select id="numberHours" name="numberHours" class="form-control" aria-describedby="suffix-hours">
-                                <option val="" selected>&nbsp;</option>
-                                <option>1</option>
+                                <option>0</option>
+                                <option selected>1</option>
                                 <option>2</option>
                                 <option>3</option>
                                 <option>4</option>
@@ -216,7 +216,21 @@
 
                             </select>
 
-                            <span class="input-group-addon" id="suffix-hours">hours</span>
+                            <span class="input-group-addon" id="suffix-hours">hour(s)</span>
+                        </div>
+
+                        <label for="numberMinutes" class="mrgn-lft-md mrgn-rght-md">and <span class="wb-inv">a duration of (in minutes):</span></label>
+                        <div class="input-group">
+                            <select id="numberMinutes" name="numberMinutes" class="form-control" aria-describedby="suffix-minutes">
+                                <option val="">&nbsp;</option>
+                                <option selected>0</option>
+                                <option>15</option>
+                                <option>30</option>
+                                <option>45</option>
+
+                            </select>
+
+                            <span class="input-group-addon" id="suffix-minutes">minutes</span>
                         </div>
 
                     </div>
@@ -280,19 +294,23 @@
     <!-- InstanceBeginEditable name="CustomJS" -->
     <script type="text/javascript">
         $(document).on("wb-ready.wb", function(event) {
-            $(".showHide").hide();
+$(".showHide").hide();
 
-            $("#maintenance").on("click", function() {
-                $("#maintenancePeriod").fadeIn(300);
-                $("#date").focus();
-                datePickerController.show("date");
-            });
+$("#maintenance").on("click", function() {
+$("#maintenancePeriod").fadeIn(300);
+$("#date").focus();
+datePickerController.show("date");
+});
 
-            $("#noMaintenance").on("click", function() {
-                $("#maintenancePeriod").hide();
-                $("#date").val("");
-                $("#numberHours, #time").val("option:first").val();
-            });
+$("#noMaintenance").on("click", function() {
+$("#maintenancePeriod").hide();
+$("#date").val("");
+$("#numberHours, #time").val("option:first").val();
+});
+
+if ($('#maintenance').is(':checked')) {
+$("#maintenancePeriod").show();
+}
 
         });
 

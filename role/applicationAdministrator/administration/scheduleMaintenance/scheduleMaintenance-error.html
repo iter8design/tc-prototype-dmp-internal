@@ -122,7 +122,7 @@
                 <li><a href="#date"><i class="fa-li fa fa-angle-right"></i>The maintenance date entered must be in the YYYY-MM-DD format.</a></li>
 
                 <li><a href="#time"><i class="fa-li fa fa-angle-right"></i>Please select the maintenance time.</a></li>
-                <li><a href="#numberHours"><i class="fa-li fa fa-angle-right"></i>Please select the maintenance duration.</a></li>
+                <li><i class="fa-li fa fa-angle-right"></i>The maintenance duration must be at least 15 minutes long.</li>
 
             </ol>
         </div>
@@ -206,9 +206,7 @@
                                 <option>23:30</option>
 
                             </select>
-                            <span class="input-group-addon" id="suffix-timezone">
-                                <abbr title="Eastern Standard Time">EST</abbr>/<abbr title="Eastern Daylight Time">EDT</abbr>
-                            </span>
+                            <span class="input-group-addon" id="suffix-timezone"><abbr title="Eastern Standard Time">EST</abbr>/<abbr title="Eastern Daylight Time">EDT</abbr></span>
                         </div>
 
 
@@ -216,7 +214,7 @@
                         <label for="numberHours" class="mrgn-lft-md mrgn-rght-md">for <span class="wb-inv">a duration of (in hours):</span></label>
                         <div class="input-group">
                             <select id="numberHours" name="numberHours" class="form-control fieldError" aria-describedby="suffix-hours">
-                                <option selected>&nbsp;</option>
+                                <option selected>0</option>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -232,7 +230,21 @@
 
                             </select>
 
-                            <span class="input-group-addon" id="suffix-hours">hours</span>
+                            <span class="input-group-addon" id="suffix-hours">hour(s)</span>
+                        </div>
+
+                        <label for="numberMinutes" class="mrgn-lft-md mrgn-rght-md">and <span class="wb-inv">a duration of (in minutes):</span></label>
+                        <div class="input-group">
+                            <select id="numberMinutes" name="numberMinutes" class="form-control fieldError" aria-describedby="suffix-minutes">
+
+                                <option selected>0</option>
+                                <option>15</option>
+                                <option>30</option>
+                                <option>45</option>
+
+                            </select>
+
+                            <span class="input-group-addon" id="suffix-minutes">minutes</span>
                         </div>
 
                     </div>
@@ -297,14 +309,23 @@
     <script type="text/javascript">
         $(document).on("wb-ready.wb", function(event) {
 
+            $(".showHide").hide();
+
             $("#maintenance").on("click", function() {
                 $("#maintenancePeriod").fadeIn(300);
+                $("#date").focus();
+                datePickerController.show("date");
             });
 
             $("#noMaintenance").on("click", function() {
                 $("#maintenancePeriod").hide();
+                $("#date").val("");
+                $("#numberHours, #time").val("option:first").val();
             });
 
+            if ($('#maintenance').is(':checked')) {
+                $("#maintenancePeriod").show();
+            }
         });
 
         // Attach a datepicker to the above input element
