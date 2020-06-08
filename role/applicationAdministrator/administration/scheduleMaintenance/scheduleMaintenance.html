@@ -115,7 +115,7 @@
 
         <p>To schedule a maintenance period, indicate the date, time and duration below. A notification will be displayed to users starting <strong>48 hours</strong> in advance of the maintenance period, and will disable all services <strong>2 hours</strong> in advance to prevent the interruption of exams in progress or payments in progress. When the maintenance period begins, all users will be logged off and redirected accordingly.</p>
 
-        <form action="" method="get">
+        <form action="scheduleMaintenance-error.html" method="get">
             <fieldset class="mrgn-tp-0">
                 <legend class="wb-inv">Schedule a maintenance period</legend>
                 <div class="radio">
@@ -200,9 +200,7 @@
                         <label for="numberHours" class="mrgn-lft-md mrgn-rght-md">for <span class="wb-inv">a duration of (in hours):</span></label>
                         <div class="input-group">
                             <select id="numberHours" name="numberHours" class="form-control" aria-describedby="suffix-hours">
-                                <option>0</option>
-                                <option selected>1</option>
-                                <option>2</option>
+                                <option selected>2</option>
                                 <option>3</option>
                                 <option>4</option>
                                 <option>5</option>
@@ -222,7 +220,6 @@
                         <label for="numberMinutes" class="mrgn-lft-md mrgn-rght-md">and <span class="wb-inv">a duration of (in minutes):</span></label>
                         <div class="input-group">
                             <select id="numberMinutes" name="numberMinutes" class="form-control" aria-describedby="suffix-minutes">
-                                <option val="">&nbsp;</option>
                                 <option selected>0</option>
                                 <option>15</option>
                                 <option>30</option>
@@ -294,23 +291,23 @@
     <!-- InstanceBeginEditable name="CustomJS" -->
     <script type="text/javascript">
         $(document).on("wb-ready.wb", function(event) {
-$(".showHide").hide();
+            $(".showHide").hide();
 
-$("#maintenance").on("click", function() {
-$("#maintenancePeriod").fadeIn(300);
-$("#date").focus();
-datePickerController.show("date");
-});
+            $("#maintenance").on("click", function() {
+                $("#maintenancePeriod").fadeIn(300);
+                $("#date").focus();
+                datePickerController.show("date");
+            });
 
-$("#noMaintenance").on("click", function() {
-$("#maintenancePeriod").hide();
-$("#date").val("");
-$("#numberHours, #time").val("option:first").val();
-});
+            $("#noMaintenance").on("click", function() {
+                $("#maintenancePeriod").hide();
+                $("#date").val("");
+                $("#numberHours, #time").val("option:first").val();
+            });
 
-if ($('#maintenance').is(':checked')) {
-$("#maintenancePeriod").show();
-}
+            if ($('#maintenance').is(':checked')) {
+                $("#maintenancePeriod").show();
+            }
 
         });
 

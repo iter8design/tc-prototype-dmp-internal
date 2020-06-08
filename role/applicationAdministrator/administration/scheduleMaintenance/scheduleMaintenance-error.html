@@ -117,19 +117,23 @@
 
                 <li><a href="#date"><i class="fa-li fa fa-angle-right"></i>Please enter the maintenance date.</a></li>
 
+
                 <li><a href="#date"><i class="fa-li fa fa-angle-right"></i>The maintenance date entered may not occur in the past.</a></li>
 
                 <li><a href="#date"><i class="fa-li fa fa-angle-right"></i>The maintenance date entered must be in the YYYY-MM-DD format.</a></li>
 
                 <li><a href="#time"><i class="fa-li fa fa-angle-right"></i>Please select the maintenance time.</a></li>
-                <li><i class="fa-li fa fa-angle-right"></i>The maintenance duration must be at least 15 minutes long.</li>
+
+                <li><a href="#time"><i class="fa-li fa fa-angle-right"></i>The maintenance start time entered may not begin in the past.</a></li>
+
+                <li><i class="fa-li fa fa-angle-right"></i>The maintenance duration must be at least 2 hours long to allow existing exams to be completed.</li>
 
             </ol>
         </div>
 
         <p>To schedule a maintenance period, indicate the date, time and duration below. A notification will be displayed to users starting <strong>48 hours</strong> in advance of the maintenance period, and will disable all services <strong>2 hours</strong> in advance to prevent the interruption of exams in progress or payments in progress. When the maintenance period begins, all users will be logged off and redirected accordingly.</p>
 
-        <form action="" method="get">
+        <form action="scheduleMaintenance-confirmSaved.html" method="get">
             <fieldset class="mrgn-tp-0">
                 <legend class="wb-inv">Schedule a maintenance period</legend>
                 <div class="radio">
@@ -214,9 +218,7 @@
                         <label for="numberHours" class="mrgn-lft-md mrgn-rght-md">for <span class="wb-inv">a duration of (in hours):</span></label>
                         <div class="input-group">
                             <select id="numberHours" name="numberHours" class="form-control fieldError" aria-describedby="suffix-hours">
-                                <option selected>0</option>
-                                <option>1</option>
-                                <option>2</option>
+                                <option selected>2</option>
                                 <option>3</option>
                                 <option>4</option>
                                 <option>5</option>
@@ -343,6 +345,7 @@
             delimiter: '-',
             datePattern: ['Y', 'm', 'd']
         });
+
     </script>
 
     });
