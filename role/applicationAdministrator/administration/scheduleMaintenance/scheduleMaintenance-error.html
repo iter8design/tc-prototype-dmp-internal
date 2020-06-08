@@ -125,9 +125,6 @@
                 <li><a href="#time"><i class="fa-li fa fa-angle-right"></i>Please select the maintenance time.</a></li>
 
                 <li><a href="#time"><i class="fa-li fa fa-angle-right"></i>The maintenance start time entered may not begin in the past.</a></li>
-
-                <li><i class="fa-li fa fa-angle-right"></i>The maintenance duration must be at least 2 hours long to allow existing exams to be completed.</li>
-
             </ol>
         </div>
 
@@ -218,7 +215,9 @@
                         <label for="numberHours" class="mrgn-lft-md mrgn-rght-md">for <span class="wb-inv">a duration of (in hours):</span></label>
                         <div class="input-group">
                             <select id="numberHours" name="numberHours" class="form-control fieldError" aria-describedby="suffix-hours">
-                                <option selected>2</option>
+                                <option>0</option>
+                                <option selected>1</option>
+                                <option>2</option>
                                 <option>3</option>
                                 <option>4</option>
                                 <option>5</option>
