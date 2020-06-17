@@ -363,6 +363,130 @@ textarea.fieldError,
     min-width: 20px;
 }
 
+#panelbar .list-group {
+    margin-bottom: 0px;
+}
+
+#panelbar .list-group > .list-group-item.note {
+    display: table;
+    border-top: 1px dotted #ddd;
+    border-right: none;
+    border-bottom: 1px dotted #ddd;
+    border-left: none;
+    width: 100%;
+}
+
+#panelbar .list-group > .list-group-item.note:first-child {
+    border-top: none;
+}
+
+#panelbar .list-group > .list-group-item.note:last-child {
+    border-bottom: none;
+}
+
+#panelbar .list-group > .list-group-item.note.note-permanent {
+    background: #eff7ff;
+    color: #31708f;
+    transition-duration: 1s;
+}
+
+#panelbar .list-group > .list-group-item.note.note-default {
+    background: #ffc;
+    color: #8a6d3b;
+    transition-duration: 1s;
+}
+
+#panelbar .list-group > .list-group-item.note.note-delete {
+    background: #f3e9e8;
+    color: #000;
+    transition-duration: 1s;
+    border-left: 4px solid #d3080c;
+    padding-left: 11px;
+}
+
+#panelbar .list-group > .list-group-item.note > .note-icon {
+    display: table-cell;
+    padding-right: 5px;
+    font-size: 14px;
+    vertical-align: top;
+    width: 30px;
+}
+
+#panelbar .list-group > .list-group-item.note.note-delete > .note-confirm {
+    border-bottom: 1px dotted #fff;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+}
+
+#panelbar .list-group > .list-group-item.note.note-default > .note-icon > i.fa-comment {
+    color: #fbd850;
+}
+
+#panelbar .list-group > .list-group-item.note.note-delete > .note-icon > i.fa-trash {
+    color: #d3080c;
+}
+
+#panelbar .list-group > .list-group-item.note > .note-content {
+    padding-right: 5px;
+}
+
+#panelbar .list-group > .list-group-item.note > .note-content > .note-text {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+#panelbar .list-group > .list-group-item.note > .note-content > .note-info {
+    font-size: 12px;
+}
+
+#panelbar .list-group > .list-group-item.note .note-buttons {
+    font-size: 12px;
+}
+
+#panelbar .list-group > .list-group-item.note .note-buttons i {
+    margin-right: 3px;
+}
+
+#panelbar .list-group > .list-group-item.note .note-buttons ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 5px;
+}
+
+#panelbar .list-group > .list-group-item.note .note-buttons ul li {
+    display: inline;
+    padding-right: 15px;
+}
+
+
+#panelbar .editable-click {
+    border-bottom: none !important;
+}
+
+#panelbar .editable-buttons {
+    display: block;
+}
+
+#panelbar .note-permanent .note-text .editable-note::before,
+#panelbar .note-default .note-text .editable-note::before {
+    content: open-quote;
+}
+
+#panelbar .note-permanent .note-text .editable-note::after,
+#panelbar .note-default .note-text .editable-note::after {
+    content: close-quote;
+}
+
+#panelbar textarea.form-control {
+    width: 100%;
+    background-color: #fff;
+}
+
+#panelbar .editableform .control-group {
+    width: 100%;
+}
+
 #syllabus-basicAdv div,
 #syllabus-flightReviewer div {
     padding: 3px;
@@ -455,6 +579,15 @@ details.alert[open].alert-info {
     font-size: 16px;
     float: right;
     font-weight: normal;
+}
+
+.info-text {
+    font-size: 12px;
+    margin-bottom: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
 
 .indicator-correct-answer {

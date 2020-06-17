@@ -619,6 +619,10 @@ tr.separator-bttm th {
     color: #999;
 }
 
+.text-blue {
+    color: #284162;
+}
+
 
 .text-yellow {
     color: #ffcc33;
@@ -640,10 +644,6 @@ tr.separator-bttm th {
 
 .text-green {
     color: #060;
-}
-
-.text-blue {
-    color: #06C;
 }
 
 .text-red {
