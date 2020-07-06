@@ -10,7 +10,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Allow exam retake - Drone Management Portal Administration</title>
+    <title>Retake/extend time - Drone Management Portal Administration</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -103,7 +103,7 @@
                         <li><a href="#">Search for an account</a></li>
                         <li><a href="#">{Given name} {Family name}</a></li>
                         <li><a href="#">View exam results</a></li>
-                        <li>Allow exam retake</li>
+                        <li>Retake/extend time</li>
                         <!-- InstanceEndEditable -->
                     </ol>
                 </div>
@@ -112,28 +112,18 @@
     </header>
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont"><i class="fas fa-circle-notch mrgn-rght-sm"></i> Allow exam retake </h1>
-        <div class="alert alert-danger mrgn-bttm-md">
-            <h2>Attention</h2>
-            <ol class="fa-ul">
-                <li><a href="#reason"><i class="fa-li fa fa-angle-right"></i>Please select a reason for the exam retake.</a></li>
-
-                <li><a href="#note"><i class="fa-li fa fa-angle-right"></i>The additional information entered may not be greater than 500 characters.</a></li>
-
-            </ol>
-        </div>
-        <p>Please provide the reason and any supporting information for the request to retake the exam. All fields marked with an asterisk (<span class="mandatory-instructions">*</span>) are mandatory.</p>
-        <form action="viewExamResults-confirmRetake.html" method="get">
+        <h1 property="name" id="wb-cont"><i class="fas fa-circle-notch mrgn-rght-sm"></i> Retake/extend time </h1>
+        <p>Please provide the reason and any supporting information for the request to retake or extend the exam time. All fields marked with an asterisk (<span class="mandatory-instructions">*</span>) are mandatory.</p>
+        <form action="allowRetake-error.html" method="get">
 
             <div class="form-group">
-                <label for="reason"><span class="mandatory">*</span>Reason for exam retake: <span class="wb-inv">(required)</span></label>
-                <select id="reason" name="reason" class="form-control display-block fieldError">
+                <label for="reason"><span class="mandatory">*</span>Reason for request: <span class="wb-inv">(required)</span></label>
+                <select id="reason" name="reason" class="form-control display-block">
                     <option value="0">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
                     <option value="">Health issue</option>
                     <option value="">Internet/power outage</option>
-
                     <option value="">Service outage with Transport Canada</option>
-                    <option value="">Other special circumstances</option>
+                    <option value="">Other special accomodations</option>
 
                 </select>
             </div>
@@ -142,26 +132,13 @@
 
                 </legend>
                 <div class="radio">
-                    <label for="lastQuestionCustomTime">
-                        <input type="radio" name="resumeOptions" value="radio" id="lastQuestionCustomTime" checked>
-                        Resume the exam with a time remaining of:
+                    <label for="extendTime">
+                        <input type="radio" name="resumeOptions" value="radio" id="extendTime" checked>
+                        Extend the time remaining for the current exam by:
                         <div class="input-group mrgn-tp-sm">
                             <label for="timeRemaining" class="wb-inv"></label>
-                            <select class="form-control" id="timeRemaining" aria-describedby="suffix">
-                                <option value="4">4</option>
-                                <option value="9">9</option>
-                                <option value="14">14</option>
-                                <option value="19">19</option>
-                                <option value="24">24</option>
-                                <option value="29">29</option>
-                                <option value="34">34</option>
-                                <option value="39">39</option>
-                                <option value="44">44</option>
-                                <option value="49">49</option>
-                                <option value="54">54</option>
-                                <option value="59">59</option>
-                                <option value="60">60</option>
-                            </select>
+                            <input type="text" size="3" class="form-control input-numeric-3" id="timeRemaining" aria-describedby="suffix">
+
                             <span class="input-group-addon" id="suffix" style="width: auto;">minutes</span>
                         </div>
                     </label>
@@ -174,13 +151,14 @@
                     </label>
                 </div>
             </fieldset>
+
             <div class="form-group">
-                <label for="note">Please provide any additional information needed to support this request. This information will be potentially used for administrative only and will not be shared with the individual.</label>
-                <textarea id="note" name="reason" cols="40" maxlength="500" class="form-control full-width fieldError"> </textarea>
+                <label for="reason">Please provide any additional information needed to support this request. This information will be potentially used for administrative only and will not be shared with the individual.</label>
+                <textarea id="reason" name="reason" cols="40" maxlength="500" class="form-control full-width"> </textarea>
             </div>
             <p>By continuing, an e-mail will be sent to the individual to notify them that they may start or resume their exam without requiring payment.</p>
 
-            <div class="nav-button"> <button class="btn btn-primary" type"submit">Allow exam retake</button> <a href="#" class="btn btn-link">Cancel</a> </div>
+            <div class="nav-button"> <button class="btn btn-primary" type"submit">Retake/extend time</button> <a href="#" class="btn btn-link">Cancel</a> </div>
         </form>
         <!-- InstanceEndEditable -->
         <div class="row">
@@ -207,12 +185,6 @@
             <div class="container">
                 <div class="row">
                     <nav class="col-md-10 ftr-urlt-lnk">
-                        <!--<h2 class="wb-inv">About this Web application</h2>
-          <ul>
-            <li><a href="#">Contact information</a></li>
-            <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
-            <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
-          </ul> -->
                     </nav>
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
                     <div class="col-xs-6 col-md-2 text-right">
@@ -223,44 +195,7 @@
             </div>
         </div>
     </footer>
-    <!--<footer role="contentinfo" id="wb-info">
-<nav role="navigation" class="container wb-navcurr">
-<h2 class="wb-inv">About government</h2>
-<ul class="list-unstyled colcount-sm-2 colcount-md-3">
-<li><a href="https://www.canada.ca/en/contact.html">Contact us</a></li>
-<li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
-<li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
-<li><a href="https://www.canada.ca/en/news.html">News</a></li>
-<li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
-<li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
-<li><a href="http://pm.gc.ca/eng">Prime Minister</a></li>
-<li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
-<li><a href="http://open.canada.ca/en/">Open government</a></li>
-</ul> </nav>
-<div class="brand">
-<div class="container">
-<div class="row">
-<nav class="col-md-10 ftr-urlt-lnk">
-<h2 class="wb-inv">About this site</h2>
-<ul>
-<li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
-<li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
-<li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
-<li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
-<li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
-</ul>
-</nav>
-<div class="col-xs-6 visible-sm visible-xs tofpg">
-<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
-</div>
-<div class="col-xs-6 col-md-2 text-right">
-<object type="image/svg+xml" tabindex="-1" role="img" data="../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
-</div>
-</div>
-</div>
-</div>
-</footer>
--->
+
     <!--[if gte IE 9 | !IE ]><!-->
     <script src="../../../js/jquery/2.2.4/jquery.js"></script>
     <script src="../../../wet-boew/js/wet-boew.min.js"></script>
@@ -271,6 +206,22 @@
 		<![endif]-->
     <script src="../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
+
+    <script src="../../../js/tc/cleave/cleave.min.js"></script>
+
+    <script>
+        $(document).on("wb-ready.wb", function(event) {
+
+
+
+            if ($(".input-numeric-3").length) {
+                new Cleave('.input-numeric-3', {
+                    blocks: [3],
+                    numericOnly: true
+                });
+            }
+        });
+    </script>
     <!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd -->
