@@ -115,7 +115,7 @@
         <div class="alert alert-success mrgn-bttm-md">
             <h2>Success</h2>
             <ol class="fa-ul">
-                <li>{exam type} may now be retaken. {An email has been sent to the individual with instructions on how to take the exam again./ Please inform the individual that they may now take the exam again.}</li>
+                <li>{exam type} may now be retaken. An email has been sent to the individual with instructions on how to take the exam again.</li>
             </ol>
         </div>
         <p>The following exams have been completed or previously started. Select the exam to view the exam results.</p>
@@ -148,46 +148,54 @@
                         </tr>
                     </thead>
                     <tr>
-                        <td>Small Advanced</td>
-                        <td class="text-center text-nowrap" data-order="2018-12-02">&nbsp;</td>
-                        <td class=""><i class="fas fa-times-square text-danger"></i> Not started</td>
-                        <td class="text-center">&nbsp;</td>
-                    </tr>
-                    <tr>
                         <td><a href="viewExamResults-selectedExam-pass.html">Small Advanced</a></td>
-                        <td class="text-center text-nowrap" data-order="2018-07-04">2018-07-04</td>
+                        <td class="text-center text-nowrap">2018-07-04</td>
                         <td class=""><i class="fas fa-check-square text-green"></i> Passed</td>
                         <td class="">&nbsp;</td>
                     </tr>
                     <tr>
                         <td><a href="viewExamResults-selectedExam-fail.html">Small Advanced</a></td>
-                        <td class="text-center text-nowrap" data-order="2018-07-02">2018-07-02</td>
+                        <td class="text-center text-nowrap">2018-07-02</td>
                         <td class=""><i class="fas fa-times-square text-danger"></i> Failed (Out of time)</td>
-                        <td class="text-center"><a href="#dlg-retakeReason" class="wb-lbx"><i class="fas fa-sticky-note mrgn-rght-sm"></i>Retake granted</a></td>
-
-                        <section id="dlg-retakeReason" class="mfp-hide modal-dialog modal-content overlay-def">
-                            <header class="modal-header">
-                                <h2 class="modal-title">Retake request information</h2>
-                            </header>
-                            <div class="modal-body">
-                                <div class="form-group">
-                                    <span class="label-form">Reason:</span>
-                                    <p>Service outage with Transport Canada</p>
+                        <td class="text-center"><a href="#dlg-retakeReason" class="wb-lbx"><i class="fas fa-sticky-note mrgn-rght-sm"></i>Retake granted</a>
+                            <section id="dlg-retakeReason" class="mfp-hide modal-dialog modal-content overlay-def">
+                                <header class="modal-header">
+                                    <h2 class="modal-title">Retake request information</h2>
+                                </header>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <span class="label-form">Reason:</span>
+                                        <p>Service outage with Transport Canada</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <span class="label-form">Resume options</span>
+                                        <p>Resume existing exam with a total time remaining of <strong>14 minutes, 15 seconds</strong>. This includes an extra 10 minutes added.</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <span class="label-form">Administrative note:</span>
+                                        <p>Nunc et dolor nec tellus finibus pretium nec a massa. Aenean at est nibh. Proin placerat bibendum elit, vel posuere ex commodo eu. Etiam viverra augue arcu, eu condimentum felis sollicitudin id. Nullam porta lorem eget enim cursus, a ultricies turpis consectetur. Fusce sed varius nulla. </p>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <span class="label-form">Resume options</span>
-                                    <p>Resume existing exam with a total time remaining of <strong>14 minutes, 15 seconds</strong>. <br> This includes an extra 10 minutes added.</p>
-                                </div>
-                                <div class="form-group">
-                                    <span class="label-form">Administrative note:</span>
-                                    <p>Nunc et dolor nec tellus finibus pretium nec a massa. Aenean at est nibh. Proin placerat bibendum elit, vel posuere ex commodo eu. Etiam viverra augue arcu, eu condimentum felis sollicitudin id. Nullam porta lorem eget enim cursus, a ultricies turpis consectetur. Fusce sed varius nulla. </p>
-                                </div>
-                            </div>
-                        </section>
+                            </section>
+                        </td>
                     </tr>
                     <tr>
+                        <td><a href="viewExamResults-selectedExam-fail.html">Small Advanced</a></td>
+                        <td class="text-center text-nowrap">2018-07-02</td>
+                        <td class=""><i class="fas fa-spinner text-blue"></i> In progress</td>
+                        <td class="text-center"><a href="retakeExtendTime.html"><i class="fas fa-circle-notch mrgn-rght-sm"></i>Retake/extend time</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="viewExamResults-selectedExam-fail.html">Small Advanced</a></td>
+                        <td class="text-center text-nowrap">2018-07-02</td>
+                        <td class=""><i class="fas fa-exclamation-circle text-yellow"></i> Not started</td>
+                        <td class="text-center"><a href="retakeExtendTime-examNotStarted.html"><i class="fas fa-circle-notch mrgn-rght-sm"></i>Extend time</a></td>
+                    </tr>
+
+
+                    <tr>
                         <td><a href="#">Flight Reviewer Exam</a></td>
-                        <td class="text-center text-nowrap" data-order="2018-12-01">2018-12-01</td>
+                        <td class="text-center text-nowrap">2018-12-01</td>
                         <td class=""><i class="fas fa-check-square text-green"></i> Passed</td>
                         <td class="">&nbsp;</td>
                     </tr>
@@ -310,6 +318,7 @@
                 "margin-bottom": "0px"
             });
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
