@@ -115,7 +115,7 @@
             <h2>Attention</h2>
             <ol class="fa-ul">
                 <li><a href="#user"><i class="fa-li fa fa-angle-right"></i>Please enter the username of the person you wish to add.</a></li>
-                <li><a href="#user"><i class="fa-li fa fa-angle-right"></i>Please the region this person works in.</a></li>
+
                 <li><a href="#user"><i class="fa-li fa fa-angle-right"></i>The username entered is not valid.</a></li>
                 <li><i class="fa-li fa fa-angle-right"></i>Please select at least one security role to assign.</li>
                 <li><i class="fa-li fa fa-angle-right"></i>In order for <strong>{role name}</strong> to be assigned, <strong>{role name}</strong> must also be selected.</li>
@@ -126,12 +126,7 @@
                 <label for="user" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Enter the name and/or username of the person you wish to add:</label>
                 <input name="user" id="user" class="form-control fieldError" type="text" size="25" required>
             </div>
-            <div class="form-group">
-                <label for="region" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>What region does this person work in?</label>
-                <select id="region" class="form-control fieldError">
-                    <option>&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
-                </select>
-            </div>
+
             <h2 class="hd-section">Security roles to assign:</h2>
             <p>If you know the job that this person will be performing, we can <a href="#dlg-suggestRoles" class="wb-lbx">suggest the right security roles for you</a>.</p>
 
@@ -143,22 +138,21 @@
                     <fieldset class="mrgn-0">
                         <legend class="medium">What job is this person performing?</legend>
 
-
                         <div class="radio">
                             <label for="r1">
                                 <input type="radio" id="r1" name="r1" value="r1" checked>
-                                Canadian aviation inspector
+                                Inspector
                             </label>
                         </div>
                         <div class="radio">
                             <label for="r1">
                                 <input type="radio" id="r2" name="r2" value="r2">
-                                Service desk
+                                Program support
                             </label>
                         </div>
                         <div class="radio">
                             <label for="r1">
-                                <input type="radio" id="r2" name="r2" value="r2">
+                                <input type="radio" id="r3" name="r3" value="r3">
                                 System administrator
                             </label>
                         </div>
