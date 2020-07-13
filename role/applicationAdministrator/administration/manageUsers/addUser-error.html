@@ -118,7 +118,12 @@
 
                 <li><a href="#user"><i class="fa-li fa fa-angle-right"></i>The username entered is not valid.</a></li>
                 <li><i class="fa-li fa fa-angle-right"></i>Please select at least one security role to assign.</li>
-                <li><i class="fa-li fa fa-angle-right"></i>In order for <strong>{role name}</strong> to be assigned, <strong>{role name}</strong> must also be selected.</li>
+                <li><i class="fa-li fa fa-angle-right"></i>In order for <strong>{role name}</strong> to be assigned, the following roles must also be selected:
+                    <ul>
+                        <li>{Role name}</li>
+                        <li>{Role name}</li>
+                    </ul>
+                </li>
             </ol>
         </div>
         <form method="get" action="manageUsers-confirmAdded.html" novalidate>
@@ -173,7 +178,7 @@
                         <div class="checkbox">
                             <label for="s1">
                                 <input type="checkbox" name="s1" id="s1">
-                                Search and view operator accounts</label>
+                                Search and view accounts</label>
                         </div>
                         <div class="checkbox">
                             <label for="s2">
@@ -188,48 +193,111 @@
                         <div class="checkbox">
                             <label for="s4">
                                 <input type="checkbox" name="s4" id="s4">
-                                Suspend/reinstate pilot certificates</label>
+                                Manage drone registrations</label>
                         </div>
                         <div class="checkbox">
                             <label for="s5">
                                 <input type="checkbox" name="s5" id="s5">
-                                Manage drone flight school affiliations</label>
+                                Reset account access</label>
                         </div>
                         <div class="checkbox">
                             <label for="s6">
                                 <input type="checkbox" name="s6" id="s6">
-                                Reset account access</label>
+                                Issue refund</label>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="well">
-                        <h3 class="medium mrgn-tp-sm">Exams and reports</h3>
                         <div class="checkbox">
                             <label for="s7">
                                 <input type="checkbox" name="s7" id="s7">
-                                View exam syllabus</label>
+                                Merge account</label>
                         </div>
                         <div class="checkbox">
                             <label for="s8">
                                 <input type="checkbox" name="s8" id="s8">
-                                View reports</label>
+                                Suspend/reinstate pilot certificates</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="s9">
+                                <input type="checkbox" name="s9" id="s9">
+                                Manage drone flight school affiliations</label>
+                        </div>
+
+                        <div class="checkbox">
+                            <label for="s10">
+                                <input type="checkbox" name="s10" id="s10">
+                                Manage account access</label>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="well">
-                        <h3 class="medium mrgn-tp-sm">Administration</h3>
+                        <h3 class="medium mrgn-tp-sm">Drones</h3>
                         <div class="checkbox">
-                            <label for="s9">
-                                <input type="checkbox" name="s9" id="s9">
+                            <label for="s11">
+                                <input type="checkbox" name="s11" id="s11">
                                 Manage drone list</label>
                         </div>
                         <div class="checkbox">
-                            <label for="s10">
-                                <input type="checkbox" name="s10" id="s10">
-                                Manage users and system settings</label>
+                            <label for="s12">
+                                <input type="checkbox" name="s12" id="s12">
+                                Search registered drones</label>
                         </div>
+                        <div class="checkbox">
+                            <label for="s13">
+                                <input type="checkbox" name="s13" id="s13">
+                                View published drone makes & models</label>
+                        </div>
+                    </div>
+
+                    <div class="well">
+                        <h3 class="medium mrgn-tp-sm">Exams</h3>
+                        <div class="checkbox">
+                            <label for="s14">
+                                <input type="checkbox" name="s14" id="s14">
+                                View exam syllabus</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="s15">
+                                <input type="checkbox" name="s15" id="s15">
+                                Edit exam syllabus</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="s16">
+                                <input type="checkbox" name="s16" id="s16">
+                                Manage syllabus updates</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="s17">
+                                <input type="checkbox" name="s17" id="s17">
+                                View exam settings</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="well">
+                        <h3 class="medium mrgn-tp-sm">Administration</h3>
+                        <div class="checkbox">
+                            <label for="s18">
+                                <input type="checkbox" name="s18" id="s18">
+                                Manage users</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="s19">
+                                <input type="checkbox" name="s19" id="s19">
+                                Schedule maintenance</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="s20">
+                                <input type="checkbox" name="s20" id="s20">
+                                Monitor notifications</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="s21">
+                                <input type="checkbox" name="s21" id="s21">
+                                Manage resources</label>
+                        </div>
+
                     </div>
                 </div>
             </div>
