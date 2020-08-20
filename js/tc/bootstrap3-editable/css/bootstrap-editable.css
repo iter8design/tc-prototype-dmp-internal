@@ -3,15 +3,17 @@
 * http://github.com/vitalets/x-editable
 * Copyright (c) 2013 Vitaliy Potapov; Licensed MIT */
 .editableform {
-    margin-bottom: 0; /* overwrites bootstrap margin */
+    margin-bottom: 0;
+    /* overwrites bootstrap margin */
 }
 
 .editableform .control-group {
-    margin-bottom: 0; /* overwrites bootstrap margin */
-    white-space: nowrap; /* prevent wrapping buttons on new line */
-    line-height: 20px; /* overwriting bootstrap line-height. See #133 */
-	width: 100%;
-	position: relative;
+    margin-bottom: 0;
+    /* overwrites bootstrap margin */
+    white-space: nowrap;
+    /* prevent wrapping buttons on new line */
+    line-height: 20px;
+    /* overwriting bootstrap line-height. See #133 */
 }
 
 /* 
@@ -19,11 +21,12 @@
   See: https://github.com/vitalets/x-editable/issues/393
 */
 .editableform .form-control {
-    width: 100%;
+    width: auto;
 }
 
 .editable-buttons {
-    display: inline-block; /* should be inline to take effect of parent's white-space: nowrap */
+    display: inline-block;
+    /* should be inline to take effect of parent's white-space: nowrap */
     vertical-align: top;
     margin-left: 7px;
     /* inline-block emulation for IE7*/
@@ -39,9 +42,12 @@
 
 .editable-input {
     vertical-align: top;
-    display: inline-block; /* should be inline to take effect of parent's white-space: nowrap */
-    width: 100%; /* bootstrap-responsive has width: 100% that breakes layout */
-    white-space: normal; /* reset white-space decalred in parent*/
+    display: inline-block;
+    /* should be inline to take effect of parent's white-space: nowrap */
+    width: auto;
+    /* bootstrap-responsive has width: 100% that breakes layout */
+    white-space: normal;
+    /* reset white-space decalred in parent*/
     /* display-inline emulation for IE7*/
     zoom: 1;
     *display: inline;
@@ -49,10 +55,6 @@
 
 .editable-buttons .editable-cancel {
     margin-left: 7px;
-}
-
-.editable-buttons .editable-submit, .editable-buttons .editable-cancel {
-	z-index: auto;	
 }
 
 /*for jquery-ui buttons need set height to look more pretty*/
@@ -87,8 +89,6 @@
 .editable-error {
     color: red;
 }
-
-
 
 /* ---- For specific types ---- */
 
@@ -154,25 +154,29 @@
 }
 
 .editable-container.editable-popup {
-    max-width: none !important; /* without this rule poshytip/tooltip does not stretch */
+    max-width: none !important;
+    /* without this rule poshytip/tooltip does not stretch */
 }
 
 .editable-container.popover {
-    width: auto; /* without this rule popover does not stretch */
+    width: auto;
+    /* without this rule popover does not stretch */
 }
 
 .editable-container.editable-inline {
     display: inline-block;
     vertical-align: middle;
-    width: 100%;
+    width: auto;
     /* inline-block emulation for IE7*/
     zoom: 1;
     *display: inline;
 }
 
 .editable-container.ui-widget {
-    font-size: inherit; /* jqueryui widget font 1.1em too big, overwrite it */
-    z-index: 9990; /* should be less than select2 dropdown z-index to close dropdown first when click */
+    font-size: inherit;
+    /* jqueryui widget font 1.1em too big, overwrite it */
+    z-index: 9990;
+    /* should be less than select2 dropdown z-index to close dropdown first when click */
 }
 
 .editable-click,
@@ -190,7 +194,9 @@ a.editable-click.editable-disabled:hover {
     border-bottom: none;
 }
 
-.editable-empty, .editable-empty:hover, .editable-empty:focus {
+.editable-empty,
+.editable-empty:hover,
+.editable-empty:focus {
     font-style: italic;
     color: #DD1144;
     /* border-bottom: none; */
@@ -198,7 +204,7 @@ a.editable-click.editable-disabled:hover {
 }
 
 .editable-unsaved {
-    /* font-weight: bold; */
+    font-weight: bold;
 }
 
 .editable-unsaved:after {
