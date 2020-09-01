@@ -142,11 +142,22 @@
                     <h2 class="wb-inv">Account access</h2>
                     <p class="mrgn-tp-md">The following people have access to this account:</p>
                     <section class="panel panel-default panel-datatable">
+                        <header class="panel-heading pddng-tp-0">
+                            <div class="row">
 
+                                <div class="col-md-12 text-right text-left-sm text-left-xs">
+                                    <div class="form-inline">
+                                        <div class="form-group mrgn-bttm-0 mrgn-rght-sm pddng-panel-heading-tp">
+                                            <div class="tableFilter"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
                         <div class="table-responsive">
-                            <table class="wb-tables table table-hover table-bordered" data-wb-tables='
-        {"info" : false, "filter" : false, "paging": false, "order" : [[0,"asc"]],"columnDefs": [{ "orderable" : false, "targets":[3] },{"searchable" : false, "targets": []}],
-"language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthChange": false}'>
+                            <table class="wb-tables table table-hover table-bordered" data-wb-tables='{"info" : false, "filter" : true, "paging": true, "order" : [[0,"asc"]],"columnDefs": [{ "orderable" : true, "targets":[0,1,2] },{"searchable" : true, "targets": [0]}],
+
+"language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Find a person...</span>", "searchPlaceholder" : "Find a person...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching people found"},"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]}'>
                                 <thead>
                                     <tr>
                                         <th scope="col" class="width40">Contact information</th>
@@ -184,7 +195,7 @@
                                     <td>Drone registrations only</td>
 
                                     <td class="nowrap">Never</td>
-                                    <td class="text-center nowrap"><a href="#dlg_edit" class=" btn btn-primary btn-sm"><i class="fas fa-user-edit mrgn-rght-sm"></i>Edit</a> <a href="#dlg_remove" class="wb-lbx btn btn-default btn-sm"><i class="fas fa-user-times mrgn-rght-sm"></i>Remove</a></td>
+                                    <td class="text-center nowrap"><a href="#" class="btn btn-primary btn-sm"><i class="fas fa-user-edit mrgn-rght-sm"></i>Edit</a> <a href="#" class="btn btn-default btn-sm"><i class="fas fa-user-times mrgn-rght-sm"></i>Remove</a></td>
                                 </tr>
                                 <tbody>
 
@@ -213,7 +224,7 @@
 
         <section id="dlg_edit" class="mfp-hide modal-dialog modal-content overlay-def">
             <header class="modal-header">
-                <h2 class="modal-title">Edit account access</h2>
+                <h2 class="modal-title">Edit account access for Paul Davies</h2>
             </header>
             <form method="get" action="#" id="frmEditAccountAccess">
                 <div class="modal-body">
@@ -221,17 +232,6 @@
                     <section>
                         <div class="container-fluid">
                             <p class="separator-bttm pddng-bttm-md">All fields are mandatory.</p>
-
-                            <h3>Paul Davies</h3>
-                            <!--<div class="form-group">
-                                <label for="firstName">First (given) name:</label>
-                                <input name="firstName" type="text" id="firstName" value="Paul" size="35" maxlength="50" class="form-control" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="lastName">Last (family) name:</label>
-                                <input name="lastName" type="text" id="lastName" value="Davies" size="35" maxlength="50" class="form-control" />
-                            </div> -->
                             <div class="form-group">
                                 <label for="title">Position title:</label>
                                 <input name="title" type="text" id="title" value="Operations Manager" size="35" maxlength="50" class="form-control" />
@@ -250,21 +250,19 @@
                                 </div>
                             </div>
 
-
-                            <!-- Options are disabled if the individual is the last one with full access on the account -->
                             <div class="form-group">
                                 <fieldset class="mrgn-tp-sm">
                                     <legend class="medium">Type of access:</legend>
                                     <div class="radio mrgn-lft-md">
                                         <label for="individual">
-                                            <input type="radio" name="accessType" value="radio" checked disabled>
+                                            <input type="radio" name="accessType" value="radio" checked>
                                             Full
                                             <span class="fld-example">Full access to the account, including account information and invitations</span>
                                         </label>
                                     </div>
                                     <div class="radio mrgn-lft-md">
                                         <label for="built">
-                                            <input type="radio" name="accessType" value="radio" disabled>
+                                            <input type="radio" name="accessType" value="radio">
                                             Drone registrations only
                                             <span class="fld-example">May register drones, make changes to drones registrations and deregister drones only.</span>
                                         </label>
@@ -345,13 +343,24 @@
 		<![endif]-->
     <script src="../../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
+    <script src="../../../../js/tc/cleave/cleave.min.js"></script>
     <script src="../../../../js/tc/bootstrap/tooltip.js"></script>
     <script src="../../../../js/tc/bootstrap/popover.js"></script>
-    <script src="../../../../js/tc/cleave/cleave.min.js"></script>
-    <script src="../../../../js/tc/intl-tel-input/js/intlTelInput-jquery.js"></script>
-    <script src="../../../../js/tc/intl-tel-input/js/utils.js"></script>
     <script>
         $(document).on("wb-ready.wb", function(event) {
+            /* Datatable */
+            $('.dataTables_filter').appendTo('.panel-datatable .panel-heading .tableFilter');
+            $('.dataTables_length').appendTo('.panel-datatable footer.panel-footer .displayOptions');
+            $('.dataTables_wrapper .bottom').appendTo('.panel-datatable footer.panel-footer .pages');
+            $('.bottom, .top').addClass('dataTables_wrapper');
+            $('.panel-datatable footer.panel-footer').css('padding-top', '0');
+            $(".first.paginate_button, .last.paginate_button").hide();
+            $(".dataTables_filter input").addClass("form-control").css({
+                "margin-bottom": "0px"
+            });;
+            $(".dataTables_filter label").css({
+                "margin-bottom": "0px"
+            });
 
             $('[data-toggle="popover"]').popover({
                 html: true,
@@ -360,21 +369,13 @@
                 placement: 'bottom'
             })
 
-            $("#btnSave").on("click", function(event) {
-                $("input[type='text'], input[type='email'], input[type='tel']").addClass('fieldError');
 
-                if ($(".modal-body .alert").length == 0) {
-                    $(".modal-body").prepend(" <div class='alert alert-danger'><h2>Attention</h2><ol class='fa-ul'><li><i class='fa-li fa fa-angle-right'></i><a href='#'>Please enter the position title.</a></li><li><i class='fa-li fa fa-angle-right'></i><a href='#'>Please enter the email address.</a></li><li><i class='fa-li fa fa-angle-right'></i><a href='#'>The email address entered is not valid.<li><i class='fa-li fa fa-angle-right'></i><a href='#'>Please enter the telephone number.</a></li></ol></div>");
-                }
-                return false;
-            });
-
-            //Cancel button pressed	
-            $("#btnCancel").on("click", function(event) {
-                $(".modal-body input").removeClass("fieldError");
-                $(".modal-body .alert").remove();
+            $(document).on('keypress', $('input[type="search"]'), function() {
+                $(".wb-tabs").removeClass("wb-eqht wb-eqht-inited");
+                $(".tabpanels").css("min-height", 0);
             });
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
