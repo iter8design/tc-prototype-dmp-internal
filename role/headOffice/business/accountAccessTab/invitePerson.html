@@ -10,20 +10,20 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>{BU - Drone Management Portal Administration</title>
+    <title>Invite a person - Drone Management Portal Administration</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
     <meta name="description" content="">
     <!-- Meta data-->
     <!--[if gte IE 9 | !IE ]><!-->
-    <link href="../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="../../../GCWeb/css/theme.min.css">
-    <link rel="stylesheet" href="../../../css/cdtsapps.css">
-    <link rel="stylesheet" href="../../../css/fontawesome/css/all.css">
-    <link rel="stylesheet" href="../../../css/uav-vasp.css">
-    <link rel="stylesheet" href="../../../css/utils.css">
-    <link rel="stylesheet" href="../../../css/plugins.css">
+    <link href="../../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="../../../../GCWeb/css/theme.min.css">
+    <link rel="stylesheet" href="../../../../css/cdtsapps.css">
+    <link rel="stylesheet" href="../../../../css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../../../../css/uav-vasp.css">
+    <link rel="stylesheet" href="../../../../css/utils.css">
+    <link rel="stylesheet" href="../../../../css/plugins.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
@@ -37,7 +37,7 @@
 		
 		<![endif]-->
     <noscript>
-        <link rel="stylesheet" href="../../../wet-boew/css/noscript.min.css" />
+        <link rel="stylesheet" href="../../../../wet-boew/css/noscript.min.css" />
     </noscript>
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
@@ -54,7 +54,7 @@
         <div id="wb-bnr" class="container">
             <div class="row">
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
-                    <object type="image/svg+xml" tabindex="-1" data="../../../assets/sig-blk-en.svg">
+                    <object type="image/svg+xml" tabindex="-1" data="../../../../assets/sig-blk-en.svg">
                     </object>
                     <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
                 <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
@@ -90,7 +90,7 @@
                 </nav>
             </div>
         </div>
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../includes/menus/menu-headOffice.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
+        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../../includes/menus/menu-headOffice.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
         <nav role="navigation" id="wb-bc" property="breadcrumb">
             <h2>You are here:</h2>
             <div class="container">
@@ -100,7 +100,8 @@
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
                         <li><a href="#">Accounts</a></li>
                         <li><a href="#">Search for an account</a></li>
-                        <li>{Operating name} - {Legal name} (BN999999999)</li>
+                        <li><a href="#">{Operating name} - {Legal name} (BN999999999)</a></li>
+                        <li>Invite a person</li>
                         <!-- InstanceEndEditable -->
                     </ol>
                 </div>
@@ -110,8 +111,8 @@
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fas fa-envelope"></i> Invite a person</h1>
-        <form name="registerUA-step1" method="get" action="accountSettings-accountAccessTab.html">
-            <p>We will send an e-mail to the following person to provide them access to your account:</p>
+        <form method="get" action="invitePerson-error.html">
+            <p>We will send an e-mail to the following person to provide them access to this account:</p>
             <div class="form-group">
                 <label for="firstName"><span class="mandatory" title="This field is mandatory">*</span>First (given) name:</label>
                 <input name="firstName" type="text" id="firstName" value="" size="35" maxlength="50" class="form-control" />
@@ -200,7 +201,7 @@
                     </nav>
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
                     <div class="col-xs-6 col-md-2 text-right">
-                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
+                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
                         </object>
                     </div>
                 </div>
@@ -208,22 +209,23 @@
         </div>
     </footer>
     <!--[if gte IE 9 | !IE ]><!-->
-    <script src="../../../js/jquery/2.2.4/jquery.js"></script>
-    <script src="../../../wet-boew/js/wet-boew.min.js"></script>
+    <script src="../../../../js/jquery/2.2.4/jquery.js"></script>
+    <script src="../../../../wet-boew/js/wet-boew.min.js"></script>
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
 		
 		<![endif]-->
-    <script src="../../../GCWeb/js/theme.min.js"></script>
+    <script src="../../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
-    <script src="../../../js/tc/datePicker-master/js/datepicker.js"></script>
-    <script src="../../../js/tc/cleave/cleave.min.js"></script>
+    <script src="../../../../js/tc/datePicker-master/js/datepicker.js"></script>
+    <script src="../../../../js/tc/cleave/cleave.min.js"></script>
     <script>
         $(document).on("wb-ready.wb", function(event) {
 
 
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
