@@ -591,21 +591,6 @@
                 placement: 'bottom'
             })
 
-            $("#btnSave").on("click", function(event) {
-                $("input[type='text'], input[type='email'], input[type='tel']").addClass('fieldError');
-
-                if ($(".modal-body .alert").length == 0) {
-                    $(".modal-body").prepend(" <div class='alert alert-danger'><h2>Attention</h2><ol class='fa-ul'><li><i class='fa-li fa fa-angle-right'></i><a href='#'>Please enter the position title.</a></li><li><i class='fa-li fa fa-angle-right'></i><a href='#'>Please enter the email address.</a></li><li><i class='fa-li fa fa-angle-right'></i><a href='#'>The email address entered is not valid.<li><i class='fa-li fa fa-angle-right'></i><a href='#'>Please enter the telephone number.</a></li></ol></div>");
-                }
-                return false;
-            });
-
-            //Cancel button pressed	
-            $("#btnCancel").on("click", function(event) {
-                $(".modal-body input").removeClass("fieldError");
-                $(".modal-body .alert").remove();
-            });
-
             $("#phone").intlTelInput({
                 initialCountry: "ca",
                 preferredCountries: ["ca", "us"],
