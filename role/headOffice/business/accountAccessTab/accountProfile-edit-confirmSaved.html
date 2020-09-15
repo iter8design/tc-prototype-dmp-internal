@@ -112,6 +112,12 @@
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fa fa-building"></i> {Operating name} - {Legal name} (BN999999999)</h1>
+        <div class="alert alert-success">
+            <h2>Success</h2>
+            <ol class="fa-ul">
+                <li><i class="fa-li fa fa-angle-right"></i>Account access for <strong>Linda Hall</strong> has been successfully updated.</li>
+            </ol>
+        </div>
         <div class="wb-tabs">
             <div class="tabpanels">
                 <details id="panel-accountDetails" open>
@@ -195,7 +201,7 @@
                                     <td>Drone registrations only</td>
 
                                     <td class="nowrap">Never</td>
-                                    <td class="text-center nowrap"><a href="#dlg_edit" class="wb-lbx btn btn-primary btn-sm"><i class="fas fa-user-edit mrgn-rght-sm"></i>Edit</a> <a href="#dlg_remove" class="wb-lbx btn btn-default btn-sm"><i class="fas fa-user-times mrgn-rght-sm"></i>Remove</a>
+                                    <td class="text-center nowrap"><a href="#" class="btn btn-primary btn-sm"><i class="fas fa-user-edit mrgn-rght-sm"></i>Edit</a> <a href="#" class="btn btn-default btn-sm"><i class="fas fa-user-times mrgn-rght-sm"></i>Remove</a>
                                         <br><a href="#" class="btn btn-link btn-sm mrgn-tp-sm"><i class="fas fa-inbox-in mrgn-rght-sm"></i>Resend invitation</a>
                                     </td>
                                 </tr>
@@ -290,7 +296,7 @@
             </div>
             <footer class="modal-footer">
 
-                <a href="accountProfile-edit-confirmRemoved.html" class="btn btn-primary pull-left">Confirm removal</a> <a href="#" class="btn btn-link popup-modal-dismiss pull-left">Cancel</a>
+                <a href="#" class="btn btn-primary popup-modal-dismiss pull-left">Confirm removal</a> <a href="#" class="btn btn-link popup-modal-dismiss pull-left">Cancel</a>
             </footer>
         </section>
         <hr>
@@ -369,36 +375,7 @@
                 trigger: 'click hover',
                 container: 'main',
                 placement: 'bottom'
-            });
-
-            $("#btnSave").on("click", function(event) {
-                $("input[type='text'], input[type='email'], input[type='tel']").addClass('fieldError');
-
-                if ($(".modal-body .alert").length == 0) {
-                    $(".modal-body").prepend(" <div class='alert alert-danger'><h2>Attention</h2><ol class='fa-ul'><li><i class='fa-li fa fa-angle-right'></i><a href='#title'>Please enter the position title.</a></li><li><i class='fa-li fa fa-angle-right'></i><a href='#title'>The position title entered may not be greater than 50 characters.</a></li><li><i class='fa-li fa fa-angle-right'></i><a href='#phone'>Please enter the telephone number.</a></li><li><i class='fa-li fa fa-angle-right'></i><a href='#phone'>The telephone number entered must be in the 999-999-9999 format.</a></li><li><i class='fa-li fa fa-angle-right'></i><a href='#phone_ext'>The telephone number extension entered must be numeric.</a></li><li><i class='fa-li fa fa-angle-right'></i><a href='#phone_ext'>The telephone number extension entered may not be more than 8 digits long.</a></li><li><i class='fa-li fa fa-angle-right'></i><a href='#email'>Please enter the email address.</a></li><li><i class='fa-li fa fa-angle-right'></i><a href='#email'>The email address entered is not valid.</li><li><i class='fa-li fa fa-angle-right'></i><a href='#email'>The email address entered may not be greater than 150 characters.</li></ol></div>");
-                }
-                return false;
-            });
-            
-            if ($(".input-phone-extension").length) {
-                new Cleave('.input-phone-extension', {
-                    blocks: [8],
-                    numericOnly: true
-                });
-            }
-
-            if ($(".input-numeric-9").length) {
-                new Cleave('.input-numeric-9', {
-                    blocks: [9],
-                    numericOnly: true
-                });
-            }
-
-            //Cancel button pressed	
-            $("#btnCancel").on("click", function(event) {
-                $(".modal-body input").removeClass("fieldError");
-                $(".modal-body .alert").remove();
-            });
+            })
 
 
             $(document).on('keypress', $('input[type="search"]'), function() {
