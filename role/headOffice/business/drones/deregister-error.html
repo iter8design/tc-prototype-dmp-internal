@@ -113,7 +113,14 @@
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fas fa-unlink"></i> Deregister</h1>
-        <form action="deregister-error.html" method="get">
+        <div class="alert alert-danger mrgn-bttm-md">
+            <h2>Attention</h2>
+            <ol class="fa-ul">
+                <li><a href="#reason"><i class="fa-li fa fa-angle-right"></i>Please indicate the reason you are deregistering these drones.</a></li>
+                <li><a href="#note"><i class="fa-li fa fa-angle-right"></i>The additional information entered may not be greater than 500 characters.</a></li>
+            </ol>
+        </div>
+        <form action="#" method="get">
             <p>The following <strong>2</strong> drones will be deregistered:</p>
             <ul>
                 <li>DJI Phantom 4 Advanced
@@ -138,7 +145,7 @@
                         <option value="8">Withdrawn from service</option>
                         <optgroup label="--- Internal use only ---">
 
-
+ 
                             <option value="">Business amalgamated or ceased operations</option>
                             <option value="5">Lost (60 days or longer)</option>
                             <option value="">Owner no longer qualified under section 901.04</option>
@@ -152,7 +159,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="note">Please provide any additional information needed to support the deregistration. This information will be potentially used for administrative and enforcement purposes only and will not be shared with the individual.</label>
-                        <textarea id="note" name="note" cols="40" maxlength="500" class="form-control full-width"> </textarea>
+                        <textarea id="note" name="note" cols="40" maxlength="500" class="form-control full-width fieldError"> </textarea>
                     </div>
                 </div>
             </div>
