@@ -17,13 +17,13 @@
     <meta name="description" content="">
     <!-- Meta data-->
     <!--[if gte IE 9 | !IE ]><!-->
-    <link href="../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="../../../GCWeb/css/theme.min.css">
-    <link rel="stylesheet" href="../../../css/cdtsapps.css">
-    <link rel="stylesheet" href="../../../css/fontawesome/css/all.css">
-    <link rel="stylesheet" href="../../../css/uav-vasp.css">
-    <link rel="stylesheet" href="../../../css/utils.css">
-    <link rel="stylesheet" href="../../../css/plugins.css">
+    <link href="../../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="../../../../GCWeb/css/theme.min.css">
+    <link rel="stylesheet" href="../../../../css/cdtsapps.css">
+    <link rel="stylesheet" href="../../../../css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../../../../css/uav-vasp.css">
+    <link rel="stylesheet" href="../../../../css/utils.css">
+    <link rel="stylesheet" href="../../../../css/plugins.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
@@ -37,7 +37,7 @@
 		
 		<![endif]-->
     <noscript>
-        <link rel="stylesheet" href="../../../wet-boew/css/noscript.min.css" />
+        <link rel="stylesheet" href="../../../../wet-boew/css/noscript.min.css" />
     </noscript>
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
@@ -54,7 +54,7 @@
         <div id="wb-bnr" class="container">
             <div class="row">
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
-                    <object type="image/svg+xml" tabindex="-1" data="../../../assets/sig-blk-en.svg">
+                    <object type="image/svg+xml" tabindex="-1" data="../../../../assets/sig-blk-en.svg">
                     </object>
                     <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
                 <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
@@ -90,8 +90,7 @@
                 </nav>
             </div>
         </div>
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../includes/menus/menu-headOffice.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
-
+        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../../includes/menus/menu-headOffice.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
 
         <nav role="navigation" id="wb-bc" property="breadcrumb">
             <h2>You are here:</h2>
@@ -102,7 +101,7 @@
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
                         <li><a href="#">Accounts</a></li>
                         <li><a href="#">Search for an account</a></li>
-                        <li><a href="#">{First name} {Last name}</a></li>
+                        <li><a href="#">{Operating name} - {Legal name} (BN999999999)</a></li>
                         <li>View drones</li>
                         <!-- InstanceEndEditable -->
                     </ol>
@@ -123,7 +122,7 @@
         <form action="#" method="get">
             <div class="wb-tabs">
                 <div class="tabpanels">
-                    <details id="panel-registered">
+                    <details id="panel-registered" open>
                         <summary>Registered</summary>
                         <p class="mrgn-tp-md">{<strong>3</strong>/no} drones are currently registered. Select a registration number to view the registration information. To deregister a drone, select the aircraft and press the <strong>Deregister</strong> button.</p>
                         <section class="panel panel-default panel-datatable">
@@ -185,7 +184,7 @@
                                         <!-- Denoted as a link for prototype purposes only 
                                         <button class="btn btn-primary mrgn-tp-md" type="submit">Deregister</button>-->
                                         <a href="deregister.html" class="btn btn-primary mrgn-tp-md" type="submit">Deregister</a>
-                                        <a href="transfer.html" class="btn btn-default mrgn-tp-md" type="submit">Transfer</a>
+                                        <a href="transfer-oneIndividual.html" class="btn btn-default mrgn-tp-md" type="submit">Transfer</a>
 
                                     </div>
                                     <div class="col-md-4 col-xs-6 pddng-tp-sm pages text-center"> </div>
@@ -194,7 +193,7 @@
                             </footer>
                         </section>
                     </details>
-                    <details id="panel-deregistered" open>
+                    <details id="panel-deregistered">
                         <summary>Deregistered</summary>
                         <p class="mrgn-tp-md">The following drones were deregistered and are no longer operational:</p>
                         <section class="panel panel-default panel-datatable">
@@ -242,7 +241,7 @@
             </div>
         </form>
         <hr>
-        <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to {First name} {Last name} </a>
+        <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to {Operating name} - {Legal name} (BN999999999)</a>
 
         <!-- InstanceEndEditable -->
         <div class="row">
@@ -283,14 +282,14 @@
     </footer>
 
     <!--[if gte IE 9 | !IE ]><!-->
-    <script src="../../../js/jquery/2.2.4/jquery.js"></script>
-    <script src="../../../wet-boew/js/wet-boew.min.js"></script>
+    <script src="../../../../js/jquery/2.2.4/jquery.js"></script>
+    <script src="../../../../wet-boew/js/wet-boew.min.js"></script>
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
 		
 		<![endif]-->
-    <script src="../../../GCWeb/js/theme.min.js"></script>
+    <script src="../../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
     <script>
         $(document).on("wb-ready.wb", function(event) {

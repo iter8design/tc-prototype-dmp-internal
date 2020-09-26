@@ -17,13 +17,13 @@
     <meta name="description" content="">
     <!-- Meta data-->
     <!--[if gte IE 9 | !IE ]><!-->
-    <link href="../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="../../../GCWeb/css/theme.min.css">
-    <link rel="stylesheet" href="../../../css/cdtsapps.css">
-    <link rel="stylesheet" href="../../../css/fontawesome/css/all.css">
-    <link rel="stylesheet" href="../../../css/uav-vasp.css">
-    <link rel="stylesheet" href="../../../css/utils.css">
-    <link rel="stylesheet" href="../../../css/plugins.css">
+    <link href="../../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="../../../../GCWeb/css/theme.min.css">
+    <link rel="stylesheet" href="../../../../css/cdtsapps.css">
+    <link rel="stylesheet" href="../../../../css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../../../../css/uav-vasp.css">
+    <link rel="stylesheet" href="../../../../css/utils.css">
+    <link rel="stylesheet" href="../../../../css/plugins.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
@@ -37,7 +37,7 @@
 		
 		<![endif]-->
     <noscript>
-        <link rel="stylesheet" href="../../../wet-boew/css/noscript.min.css" />
+        <link rel="stylesheet" href="../../../../wet-boew/css/noscript.min.css" />
     </noscript>
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
@@ -54,7 +54,7 @@
         <div id="wb-bnr" class="container">
             <div class="row">
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
-                    <object type="image/svg+xml" tabindex="-1" data="../../../assets/sig-blk-en.svg">
+                    <object type="image/svg+xml" tabindex="-1" data="../../../../assets/sig-blk-en.svg">
                     </object>
                     <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
                 <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
@@ -90,8 +90,7 @@
                 </nav>
             </div>
         </div>
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../includes/menus/menu-headOffice.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
-
+        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../../includes/menus/menu-headOffice.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
 
         <nav role="navigation" id="wb-bc" property="breadcrumb">
             <h2>You are here:</h2>
@@ -102,7 +101,7 @@
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
                         <li><a href="#">Accounts</a></li>
                         <li><a href="#">Search for an account</a></li>
-                        <li><a href="#">{First name} {Last name}</a></li>
+                        <li><a href="#">{Operating name} - {Legal name} (BN999999999)</a></li>
                         <li><a href="#">View drones</a></li>
                         <li>Transfer</li>
                         <!-- InstanceEndEditable -->
@@ -114,8 +113,14 @@
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fas fa-sync-alt"></i> Transfer</h1>
+        <div class="alert alert-danger mrgn-bttm-md">
+            <h2>Attention</h2>
+            <ol class="fa-ul">
+                <li><a href="#note"><i class="fa-li fa fa-angle-right"></i>The additional information entered may not be greater than 500 characters.</a></li>
+            </ol>
+        </div>
         <form action="transfer-error.html" method="get">
-            <p>The following <strong>2</strong> drones will be transferred to <strong>Acme Drone Company ({Acme Legal name})</strong>:</p>
+            <p>The following <strong>2</strong> drones will be transferred to <strong>John Doe</strong>:</p>
             <ul>
                 <li>DJI Phantom 4 Advanced
                     <div class="display-block small">Serial #: DJK293882711233331 <br /> Registration #C-2839482198</div>
@@ -125,40 +130,56 @@
                 </li>
             </ul>
 
-
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="note">Please provide any additional information needed to support the transfer. This information will be potentially used for administrative and enforcement purposes only and will not be shared with the individual.</label>
-                        <textarea id="note" name="note" cols="40" maxlength="500" class="form-control full-width"> </textarea>
+                        <textarea id="note" name="note" cols="40" maxlength="500" class="form-control full-width fieldError"> </textarea>
                     </div>
                 </div>
             </div>
 
             <p>By continuing, the certificates of registration for these drones will be updated accordingly.</p>
+
+
             <div class="nav-button">
-                <a href="transfer-error.html" class="btn btn-primary">Transfer ownership</a>
+                <a href="viewDrones-confirmTransferred.html" class="btn btn-primary">Transfer ownership</a>
                 <a href="#" class="btn btn-link mrgn-lft-md">Cancel</a> </div>
         </form>
-        <hr>
-        <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to View drones </a>
-
         <!-- InstanceEndEditable -->
         <div class="row">
-            <div class="datemod col-xs-6 mrgn-tp-lg">
+            <div class="datemod col-xs-12 col-md-6 mrgn-tp-lg">
                 <dl id="wb-dtmd">
                     <dt>Date modified:&#32;</dt>
                     <dd>
                         <time property="dateModified">
-                            <!-- #BeginDate format:IS1 -->2019-10-10
+                            <!-- #BeginDate format:IS1 -->2019-10-17 <span class="version">(V9.9.9)</span>
                             <!-- #EndDate -->
                         </time>
-                        <span class="version">(V9.9.9)</span>
                     </dd>
                 </dl>
 
             </div>
-            <div class="col-xs-6 mrgn-tp-lg">
+            <div class="col-xs-12 col-md-6 mrgn-tp-lg">
+                <div id="cn-accnt">Transport Canada account number <div class="account-number">TC9999999999</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="datemod col-xs-12 col-md-6 mrgn-tp-lg">
+                <dl id="wb-dtmd">
+                    <dt>Date modified:&#32;</dt>
+                    <dd>
+                        <time property="dateModified">
+                            <!-- #BeginDate format:IS1 -->2019-10-17 <span class="version">(V9.9.9)</span>
+                            <!-- #EndDate -->
+                        </time>
+                    </dd>
+                </dl>
+
+            </div>
+            <div class="col-xs-12 col-md-6 mrgn-tp-lg">
                 <div id="cn-accnt">Transport Canada account number <div class="account-number">TC9999999999</div>
                 </div>
             </div>
@@ -170,31 +191,43 @@
             <div class="container">
                 <div class="row">
                     <nav class="col-md-10 ftr-urlt-lnk">
+                        <h2 class="wb-inv">About this Web application</h2>
+                        <ul>
+                            <li><a href="#">Contact information</a></li>
+                            <li><a href="../termsConditions.html">Terms and conditions</a></li>
+                            <li><a href="../privacy.html">Privacy</a></li>
+                        </ul>
                     </nav>
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
                     <div class="col-xs-6 col-md-2 text-right">
-                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
+                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
                         </object>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-
     <!--[if gte IE 9 | !IE ]><!-->
-    <script src="../../../js/jquery/2.2.4/jquery.js"></script>
-    <script src="../../../wet-boew/js/wet-boew.min.js"></script>
+    <script src="../../../../js/jquery/2.2.4/jquery.js"></script>
+    <script src="../../../../wet-boew/js/wet-boew.min.js"></script>
     <!--<![endif]-->
     <!--[if lt IE 9]>
-		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
+		<script src="../../../../wet-boew/js/ie8-wet-boew2.min.js"></script>
 		
 		<![endif]-->
-    <script src="../../../GCWeb/js/theme.min.js"></script>
+    <script src="../../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
-    <script>
+    <script src="../../../../js/tc/bootstrap/tooltip.js"></script>
+    <script src="../../../../js/tc/bootstrap/popover.js"></script>
+    <script src="../../../../js/tc/bootstrap/dropdown.js"></script>
+    <script src="../../../../js/tc/bootstrap3-editable/js/bootstrap-editable.js"></script>
+    <script type="text/javascript">
         $(document).on("wb-ready.wb", function(event) {
 
-
+            $('.editable').editable({
+                showbuttons: true,
+                placement: 'right'
+            });
         });
     </script>
     <!-- InstanceEndEditable -->

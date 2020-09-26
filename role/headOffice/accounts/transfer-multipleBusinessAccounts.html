@@ -103,7 +103,8 @@
                         <li><a href="#">Accounts</a></li>
                         <li><a href="#">Search for an account</a></li>
                         <li><a href="#">{First name} {Last name}</a></li>
-                        <li>View drones</li>
+                        <li><a href="#">View drones</a></li>
+                        <li>Transfer</li>
                         <!-- InstanceEndEditable -->
                     </ol>
                 </div>
@@ -133,6 +134,16 @@
 
                 </select>
             </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="note">Please provide any additional information needed to support the transfer. This information will be potentially used for administrative and enforcement purposes only and will not be shared with the individual.</label>
+                        <textarea id="note" name="note" cols="40" maxlength="500" class="form-control full-width"> </textarea>
+                    </div>
+                </div>
+            </div>
+
             <p>By continuing, the certificates of registration for these drones will be updated accordingly.</p>
 
 
@@ -141,7 +152,7 @@
                 <a href="#" class="btn btn-link mrgn-lft-md">Cancel</a> </div>
         </form>
         <hr>
-        <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to {First name} {Last name} </a>
+        <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to View drones</a>
 
         <!-- InstanceEndEditable -->
         <div class="row">
@@ -193,25 +204,6 @@
     <!-- InstanceBeginEditable name="CustomJS" -->
     <script>
         $(document).on("wb-ready.wb", function(event) {
-
-            /* Datatable */
-            $('.dataTables_filter').appendTo('.panel-datatable .panel-heading .tableFilter');
-            $('.dataTables_length').appendTo('.panel-datatable footer.panel-footer .displayOptions');
-            $('.dataTables_wrapper .bottom').appendTo('.panel-datatable footer.panel-footer .pages');
-            $('.bottom, .top').addClass('dataTables_wrapper');
-            $('.panel-datatable footer.panel-footer').css('padding-top', '0');
-            $(".first.paginate_button, .last.paginate_button").hide();
-            $(".dataTables_filter input").addClass("form-control").css({
-                "margin-bottom": "0px"
-            });;
-            $(".dataTables_filter label").css({
-                "margin-bottom": "0px"
-            });
-
-            $(document).on('keypress', $('input[type="search"]'), function() {
-                $(".wb-tabs").removeClass("wb-eqht wb-eqht-inited");
-                $(".tabpanels").css("min-height", 0);
-            });
 
 
         });
