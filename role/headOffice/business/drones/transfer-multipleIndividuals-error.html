@@ -103,7 +103,7 @@
                         <li><a href="#">Search for an account</a></li>
                         <li><a href="#">{Operating name} - {Legal name} (BN999999999)</a></li>
                         <li><a href="#">View drones</a></li>
-                        <li>Deregister</li>
+                        <li>Transfer</li>
                         <!-- InstanceEndEditable -->
                     </ol>
                 </div>
@@ -121,7 +121,7 @@
 
             </ol>
         </div>
-        <form action="deregister-error.html" method="get">
+        <form action="viewDrones-confirmTransferred.html" method="get">
             <p>The following <strong>2</strong> drones will be transferred to <strong>John Doe</strong>:</p>
             <ul>
                 <li>DJI Phantom 4 Advanced
@@ -136,7 +136,7 @@
                 <br>
                 <select name="type" id="transferee" class="form-control fieldError">
                     <option value="0" selected="selected">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
-                    <option selected>Doe, Joe</option>
+                    <option>Doe, Joe</option>
                     <option>Doe, Jane</option>
 
                 </select>
@@ -212,7 +212,6 @@
                 placement: 'right'
             });
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
