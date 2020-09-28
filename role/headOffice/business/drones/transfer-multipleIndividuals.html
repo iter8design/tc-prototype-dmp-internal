@@ -124,15 +124,27 @@
                 </li>
             </ul>
             <div class="form-group">
-                <label for="type">Select the individual to which these drones should be transferred:</label>
+
+                <label for="transferee"><span class="mandatory" title="This field is mandatory.">*</span>Select the individual to which these drones should be transferred: <span class="wb-inv">(required)</span></label>
                 <br>
-                <select name="type" id="type" class="form-control">
+                <select name="transferee" id="transferee" class="form-control">
                     <option value="0" selected="selected">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
                     <option>Doe, Joe</option>
                     <option>Doe, Jane</option>
 
                 </select>
             </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="note">Please provide any additional information needed to support the transfer. This information will be potentially used for administrative and enforcement purposes only and will not be shared with the individual.</label>
+                        <textarea id="note" name="note" cols="40" maxlength="500" class="form-control full-width"> </textarea>
+                    </div>
+                </div>
+            </div>
+
+
             <p>By continuing, the certificates of registration for these drones will be updated accordingly.</p>
 
 
@@ -147,9 +159,10 @@
                     <dt>Date modified:&#32;</dt>
                     <dd>
                         <time property="dateModified">
-                            <!-- #BeginDate format:IS1 -->2019-10-17 <span class="version">(V9.9.9)</span>
+                            <!-- #BeginDate format:IS1 -->2019-10-17
                             <!-- #EndDate -->
                         </time>
+                        <span class="version">(V9.9.9)</span>
                     </dd>
                 </dl>
 
@@ -204,6 +217,7 @@
                 placement: 'right'
             });
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
