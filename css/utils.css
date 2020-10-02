@@ -1,7 +1,3 @@
-/*------------------------------------*\
-    Line heights
-\*------------------------------------*/
-
 .ln-hght-md {
     line-height: 60px;
 }
@@ -14,12 +10,8 @@
     line-height: 40px;
 }
 
-/*------------------------------------*\
-    Widths
-\*------------------------------------*/
-
 .width100 {
-    width: 100%
+    width: 100%;
 }
 
 .width95 {
@@ -130,10 +122,6 @@
     width: 1%;
 }
 
-/*------------------------------------*\
-    Margins
-\*------------------------------------*/
-
 .mrgn-0 {
     margin: 0;
 }
@@ -162,12 +150,8 @@
     margin-left: 20px;
 }
 
-.mrgn-rght-md {
-    margin-right: 10px;
-}
-
 .mrgn-auto {
-    margin: auto auto;
+    margin: auto;
 }
 
 .mrgn-panel-heading-bttm {
@@ -181,14 +165,6 @@
 .mrgn-panel-heading-lft {
     margin-left: 10px;
 }
-
-.mrgn-panel-heading-rght {
-    margin-right: 10px;
-}
-
-/*------------------------------------*\
-    Padding
-\*------------------------------------*/
 
 .pddng-0 {
     padding: 0;
@@ -242,10 +218,6 @@
     padding-top: 5px;
 }
 
-.pddng-tp-md {
-    padding-top: 10px;
-}
-
 .pddng-bttm-0 {
     padding-bottom: 0;
 }
@@ -258,10 +230,6 @@
     padding-bottom: 10px;
 }
 
-.pddng-panel-heading-tp {
-    padding-top: 10px;
-}
-
 .pddng-panel-heading-lft {
     padding-left: 15px;
 }
@@ -270,33 +238,29 @@
     padding-right: 15px;
 }
 
-/*------------------------------------*\
-    Borders
-\*------------------------------------*/
-
 .brdr-0 {
     border: none;
-    border-width: 0px;
+    border-width: 0;
 }
 
 .brdr-tp-0 {
     border-top: none;
-    border-top-width: 0px;
+    border-top-width: 0;
 }
 
 .brdr-rght-0 {
     border-right: none;
-    border-right-width: 0px;
+    border-right-width: 0;
 }
 
 .brdr-bttm-0 {
     border-bottom: none;
-    border-bottom-width: 0px;
+    border-bottom-width: 0;
 }
 
 .brdr-lft-0 {
     border-left: none;
-    border-left-width: 0px;
+    border-left-width: 0;
 }
 
 .brdr-rds-tp-lft {
@@ -324,27 +288,27 @@
 }
 
 .brdr-rds-tp-lft-0 {
-    -webkit-border-top-left-radius: 0px;
-    -moz-border-radius-topleft: 0px;
-    border-top-left-radius: 0px;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius-topleft: 0;
+    border-top-left-radius: 0;
 }
 
 .brdr-rds-tp-rght-0 {
-    -webkit-border-top-right-radius: 0px;
-    -moz-border-radius-topright: 0px;
-    border-top-right-radius: 0px;
+    -webkit-border-top-right-radius: 0;
+    -moz-border-radius-topright: 0;
+    border-top-right-radius: 0;
 }
 
 .brdr-rds-bttm-rght-0 {
-    -webkit-border-bottom-right-radius: 0px;
-    -moz-border-radius-bottomright: 0px;
-    border-bottom-right-radius: 0px;
+    -webkit-border-bottom-right-radius: 0;
+    -moz-border-radius-bottomright: 0;
+    border-bottom-right-radius: 0;
 }
 
 .brdr-rds-bttm-lft-0 {
-    -webkit-border-bottom-left-radius: 0px;
-    -moz-border-radius-bottomleft: 0px;
-    border-bottom-left-radius: 0px;
+    -webkit-border-bottom-left-radius: 0;
+    -moz-border-radius-bottomleft: 0;
+    border-bottom-left-radius: 0;
 }
 
 .separator-bttm,
@@ -354,17 +318,12 @@ tr.separator-bttm th {
 }
 
 .border-bottom {
-    border-bottom: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDD;
 }
 
 .border-top {
-    border-top: 1px solid #DDDDDD;
+    border-top: 1px solid #DDD;
 }
-
-
-/*------------------------------------*\
-    Display
-\*------------------------------------*/
 
 .display-block {
     display: block;
@@ -390,10 +349,6 @@ tr.separator-bttm th {
     display: table-cell;
 }
 
-/*------------------------------------*\
-    Overflow & positioning
-\*------------------------------------*/
-
 .overflow-auto {
     overflow: auto;
 }
@@ -411,103 +366,6 @@ tr.separator-bttm th {
     z-index: 1;
 }
 
-/*------------------------------------*\
-    Text alignment
-\*------------------------------------*/
-
-.text-top {
-    vertical-align: top;
-}
-
-.table.text-top > tbody > tr > td,
-.table.text-top > tbody > tr > th,
-.table.text-top > tfoot > tr > td,
-.table.text-top > tfoot > tr > th,
-.table.text-top > thead > tr > td,
-.table.text-top > thead > tr > th,
-.table > tbody.text-top > tr > td,
-.table > tbody.text-top > tr > th,
-.table > tfoot.text-top > tr > td,
-.table > tfoot.text-top > tr > th,
-.table > thead.text-top > tr > td,
-.table > thead.text-top > tr > th,
-.table > tbody > tr.text-top > td,
-.table > tbody > tr.text-top > th,
-.table > tfoot > tr.text-top > td,
-.table > tfoot > tr.text-top > th,
-.table > thead > tr.text-top > td,
-.table > thead > tr.text-top > th,
-.table > tbody > tr > td.text-top,
-.table > tbody > tr > th.text-top,
-.table > tfoot > tr > td.text-top,
-.table > tfoot > tr > th.text-top,
-.table > thead > tr > td.text-top,
-.table > thead > tr > th.text-top {
-    vertical-align: top;
-}
-
-.text-middle {
-    vertical-align: middle;
-}
-
-.table.text-middle > tbody > tr > td,
-.table.text-middle > tbody > tr > th,
-.table.text-middle > tfoot > tr > td,
-.table.text-middle > tfoot > tr > th,
-.table.text-middle > thead > tr > td,
-.table.text-middle > thead > tr > th,
-.table > tbody.text-middle > tr > td,
-.table > tbody.text-middle > tr > th,
-.table > tfoot.text-middle > tr > td,
-.table > tfoot.text-middle > tr > th,
-.table > thead.text-middle > tr > td,
-.table > thead.text-middle > tr > th,
-.table > tbody > tr.text-middle > td,
-.table > tbody > tr.text-middle > th,
-.table > tfoot > tr.text-middle > td,
-.table > tfoot > tr.text-middle > th,
-.table > thead > tr.text-middle > td,
-.table > thead > tr.text-middle > th,
-.table > tbody > tr > td.text-middle,
-.table > tbody > tr > th.text-middle,
-.table > tfoot > tr > td.text-middle,
-.table > tfoot > tr > th.text-middle,
-.table > thead > tr > td.text-middle,
-.table > thead > tr > th.text-middle {
-    vertical-align: middle;
-}
-
-.text-bottom {
-    vertical-align: bottom;
-}
-
-.table.text-bottom > tbody > tr > td,
-.table.text-bottom > tbody > tr > th,
-.table.text-bottom > tfoot > tr > td,
-.table.text-bottom > tfoot > tr > th,
-.table.text-bottom > thead > tr > td,
-.table.text-bottom > thead > tr > th,
-.table > tbody.text-bottom > tr > td,
-.table > tbody.text-bottom > tr > th,
-.table > tfoot.text-bottom > tr > td,
-.table > tfoot.text-bottom > tr > th,
-.table > thead.text-bottom > tr > td,
-.table > thead.text-bottom > tr > th,
-.table > tbody > tr.text-bottom > td,
-.table > tbody > tr.text-bottom > th,
-.table > tfoot > tr.text-bottom > td,
-.table > tfoot > tr.text-bottom > th,
-.table > thead > tr.text-bottom > td,
-.table > thead > tr.text-bottom > th,
-.table > tbody > tr > td.text-bottom,
-.table > tbody > tr > th.text-bottom,
-.table > tfoot > tr > td.text-bottom,
-.table > tfoot > tr > th.text-bottom,
-.table > thead > tr > td.text-bottom,
-.table > thead > tr > th.text-bottom {
-    vertical-align: bottom;
-}
-
 .text-truncate {
     max-width: 100%;
     overflow: hidden;
@@ -518,10 +376,6 @@ tr.separator-bttm th {
 .text-upper {
     text-transform: uppercase;
 }
-
-/*------------------------------------*\
-    Font sizing/style
-\*------------------------------------*/
 
 .xxlarge,
 .xxlarge .form-control {
@@ -554,11 +408,11 @@ tr.separator-bttm th {
 }
 
 .fnt-wght-nrml {
-    font-weight: normal;
+    font-weight: 400;
 }
 
 .fnt-wght-bld {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .fnt-styl-itlc {
@@ -574,18 +428,15 @@ tr.separator-bttm th {
 }
 
 .text-wordwrap {
-    white-space: -moz-pre-wrap !important;
-    white-space: -webkit-pre-wrap;
-    white-space: -pre-wrap white-space: -0-pre-wrap;
-    white-space: pre-wrap;
+    white-space: 0 !important;
     word-wrap: break-word;
     word-break: break-all;
-    white-space: normal;
+    overflow-wrap: break-word;
+    -ms-word-break: break-all;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
 }
-
-/*------------------------------------*\
-    Text color
-\*------------------------------------*/
 
 .text-approved {
     color: #8a61a2;
@@ -607,12 +458,12 @@ tr.separator-bttm th {
     color: #78ccff;
 }
 
-.text-successBright {
+.text-successbright {
     color: #04AC00;
 }
 
 .text-green {
-    color: #093;
+    color: #060;
 }
 
 .text-grey {
@@ -623,9 +474,8 @@ tr.separator-bttm th {
     color: #284162;
 }
 
-
 .text-yellow {
-    color: #ffcc33;
+    color: #fc3;
 }
 
 .text-shadow {
@@ -636,14 +486,8 @@ tr.separator-bttm th {
     color: #FFF;
 }
 
-
 .text-info {
     color: #1C538C;
-}
-
-
-.text-green {
-    color: #060;
 }
 
 .text-red {
@@ -653,10 +497,6 @@ tr.separator-bttm th {
 .text-orange {
     color: #FC0;
 }
-
-/*------------------------------------*\
-    Background color
-\*------------------------------------*/
 
 .bg-default {
     background-color: #f5f5f5;
@@ -687,87 +527,45 @@ tr.separator-bttm th {
 }
 
 .bg-grdnt-hrztl-grey {
-    background: rgb(229, 229, 229);
-    /* Old browsers */
-    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U1ZTVlNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-    background: -moz-linear-gradient(left, rgba(229, 229, 229, 1) 0%, rgba(255, 255, 255, 1) 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(229, 229, 229, 1)), color-stop(100%, rgba(255, 255, 255, 1)));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left, rgba(229, 229, 229, 1) 0%, rgba(255, 255, 255, 1) 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left, rgba(229, 229, 229, 1) 0%, rgba(255, 255, 255, 1) 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(left, rgba(229, 229, 229, 1) 0%, rgba(255, 255, 255, 1) 100%);
-    /* IE10+ */
-    background: linear-gradient(to right, rgba(229, 229, 229, 1) 0%, rgba(255, 255, 255, 1) 100%);
-    /* W3C */
+    background: linear-gradient(to right, rgba(229, 229, 229, 1) 0 rgba(255, 255, 255, 1) 100%;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e5e5e5', endColorstr='#ffffff', GradientType=1);
-    /* IE6-8 */
 }
 
 .bg-grdnt-hrztl-grey-rvrs {
-    background: rgb(252, 252, 252);
-    /* Old browsers */
-    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZjZmNmYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-    background: -moz-linear-gradient(left, rgba(252, 252, 252, 1) 0%, rgba(229, 229, 229, 1) 100%);
-    /* FF3.6-15 */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(252, 252, 252, 1)), color-stop(100%, rgba(229, 229, 229, 1)));
-    /* Chrome4-9,Safari4-5 */
-    background: -webkit-linear-gradient(left, rgba(252, 252, 252, 1) 0%, rgba(229, 229, 229, 1) 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: -o-linear-gradient(left, rgba(252, 252, 252, 1) 0%, rgba(229, 229, 229, 1) 100%);
-    /* Opera 11.10-11.50 */
-    background: -ms-linear-gradient(left, rgba(252, 252, 252, 1) 0%, rgba(229, 229, 229, 1) 100%);
-    /* IE10 preview */
-    background: linear-gradient(to right, rgba(252, 252, 252, 1) 0%, rgba(229, 229, 229, 1) 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: linear-gradient(to right, rgba(252, 252, 252, 1) 0 rgba(229, 229, 229, 1) 100%;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#e5e5e5', GradientType=1);
-    /* IE6-8 */
 }
 
 .bg-grdnt-vrtcl-blue {
-    background: rgb(213, 226, 237);
-    /* Old browsers */
-    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIxNyUiIHN0b3AtY29sb3I9IiNkNWUyZWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSI5OSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-    background: -moz-linear-gradient(top, rgba(213, 226, 237, 1) 17%, rgba(255, 255, 255, 1) 99%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(17%, rgba(213, 226, 237, 1)), color-stop(99%, rgba(255, 255, 255, 1)));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, rgba(213, 226, 237, 1) 17%, rgba(255, 255, 255, 1) 99%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, rgba(213, 226, 237, 1) 17%, rgba(255, 255, 255, 1) 99%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, rgba(213, 226, 237, 1) 17%, rgba(255, 255, 255, 1) 99%);
-    /* IE10+ */
-    background: linear-gradient(to bottom, rgba(213, 226, 237, 1) 17%, rgba(255, 255, 255, 1) 99%);
-    /* W3C */
+    background: linear-gradient(to bottom, rgba(213, 226, 237, 1) 17% rgba(255, 255, 255, 1) 99%;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d5e2ed', endColorstr='#ffffff', GradientType=0);
-    /* IE6-8 */
 }
 
 .bg-grdnt-vrtcl-dark-blue {
-    background: rgb(66, 109, 148);
-    /* Old browsers */
-    background: -moz-linear-gradient(top, rgba(66, 109, 148, 1) 0%, rgba(123, 158, 189, 1) 98%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(66, 109, 148, 1)), color-stop(98%, rgba(123, 158, 189, 1)));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, rgba(66, 109, 148, 1) 0%, rgba(123, 158, 189, 1) 98%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, rgba(66, 109, 148, 1) 0%, rgba(123, 158, 189, 1) 98%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, rgba(66, 109, 148, 1) 0%, rgba(123, 158, 189, 1) 98%);
-    /* IE10+ */
-    background: linear-gradient(to bottom, rgba(66, 109, 148, 1) 0%, rgba(123, 158, 189, 1) 98%);
-    /* W3C */
+    background: linear-gradient(to bottom, rgba(66, 109, 148, 1) 0 rgba(123, 158, 189, 1) 98%;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#426d94', endColorstr='#7b9ebd', GradientType=0);
-    /* IE6-9 */
 }
 
 .bg-success {
     background-color: #FFC !important;
+}
+
+.mrgn-rght-md, .mrgn-panel-heading-rght {
+    margin-right: 10px;
+}
+
+.pddng-tp-md, .pddng-panel-heading-tp {
+    padding-top: 10px;
+}
+
+.text-top, .table.text-top > tbody > tr > td, .table.text-top > tbody > tr > th, .table.text-top > tfoot > tr > td, .table.text-top > tfoot > tr > th, .table.text-top > thead > tr > td, .table.text-top > thead > tr > th, .table > tbody.text-top > tr > td, .table > tbody.text-top > tr > th, .table > tfoot.text-top > tr > td, .table > tfoot.text-top > tr > th, .table > thead.text-top > tr > td, .table > thead.text-top > tr > th, .table > tbody > tr.text-top > td, .table > tbody > tr.text-top > th, .table > tfoot > tr.text-top > td, .table > tfoot > tr.text-top > th, .table > thead > tr.text-top > td, .table > thead > tr.text-top > th, .table > tbody > tr > td.text-top, .table > tbody > tr > th.text-top, .table > tfoot > tr > td.text-top, .table > tfoot > tr > th.text-top, .table > thead > tr > td.text-top, .table > thead > tr > th.text-top {
+    vertical-align: top;
+}
+
+.text-middle, .table.text-middle > tbody > tr > td, .table.text-middle > tbody > tr > th, .table.text-middle > tfoot > tr > td, .table.text-middle > tfoot > tr > th, .table.text-middle > thead > tr > td, .table.text-middle > thead > tr > th, .table > tbody.text-middle > tr > td, .table > tbody.text-middle > tr > th, .table > tfoot.text-middle > tr > td, .table > tfoot.text-middle > tr > th, .table > thead.text-middle > tr > td, .table > thead.text-middle > tr > th, .table > tbody > tr.text-middle > td, .table > tbody > tr.text-middle > th, .table > tfoot > tr.text-middle > td, .table > tfoot > tr.text-middle > th, .table > thead > tr.text-middle > td, .table > thead > tr.text-middle > th, .table > tbody > tr > td.text-middle, .table > tbody > tr > th.text-middle, .table > tfoot > tr > td.text-middle, .table > tfoot > tr > th.text-middle, .table > thead > tr > td.text-middle, .table > thead > tr > th.text-middle {
+    vertical-align: middle;
+}
+
+.text-bottom, .table.text-bottom > tbody > tr > td, .table.text-bottom > tbody > tr > th, .table.text-bottom > tfoot > tr > td, .table.text-bottom > tfoot > tr > th, .table.text-bottom > thead > tr > td, .table.text-bottom > thead > tr > th, .table > tbody.text-bottom > tr > td, .table > tbody.text-bottom > tr > th, .table > tfoot.text-bottom > tr > td, .table > tfoot.text-bottom > tr > th, .table > thead.text-bottom > tr > td, .table > thead.text-bottom > tr > th, .table > tbody > tr.text-bottom > td, .table > tbody > tr.text-bottom > th, .table > tfoot > tr.text-bottom > td, .table > tfoot > tr.text-bottom > th, .table > thead > tr.text-bottom > td, .table > thead > tr.text-bottom > th, .table > tbody > tr > td.text-bottom, .table > tbody > tr > th.text-bottom, .table > tfoot > tr > td.text-bottom, .table > tfoot > tr > th.text-bottom, .table > thead > tr > td.text-bottom, .table > thead > tr > th.text-bottom {
+    vertical-align: bottom;
 }
