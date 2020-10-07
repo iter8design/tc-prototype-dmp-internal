@@ -533,7 +533,7 @@
                     <section class="panel panel-default panel-datatable mrgn-tp-md">
                         <div class="table-responsive">
                             <table class="wb-tables table table-hover table-bordered table-condensed small" data-wb-tables='
-        {"info" : false, "filter" : false, "order" : [[0,"asc"]],"columnDefs": [{ "orderable" : false, "targets":[] },{"searchable" : false, "targets": []}], "lengthChange" : false,
+        {"info" : false, "filter" : false, "order" : [[0,"asc"]],"columnDefs": [{ "orderable" : false, "targets":[] },{"searchable" : false, "targets": []}], "lengthChange" : true,
 
 "language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]}'>
                                 <thead>
@@ -662,7 +662,9 @@
                         </div>
                         <footer class="panel-footer">
                             <div class="row">
-                                <div class="col-md-12 pddng-tp-sm pages"> </div>
+                                <div class="col-md-8 pddng-tp-sm pages"> </div>
+                                <div class="col-md-4 col-xs-12 text-right text-left-sm text-left-xs displayOptions">
+                                </div>
                             </div>
                         </footer>
                     </section>
@@ -821,6 +823,11 @@
             $('.dataTables_wrapper .bottom').each(function() {
                 $(this).appendTo($(this).parent().parent().next('footer').find('.pages'));
             });
+
+            $('.dataTables_wrapper .top').each(function() {
+                $(this).appendTo($(this).parent().parent().next('footer').find('.displayOptions'));
+            });
+
             $('.bottom, .top').addClass('dataTables_wrapper');
             $('.panel-datatable footer.panel-footer').css('padding-top', '0');
             $(".first.paginate_button, .last.paginate_button").hide();
@@ -835,7 +842,6 @@
                 $(".fieldError").removeClass("fieldError");
             }
         }); */
-
     </script>
     <!-- InstanceEndEditable -->
 </body>

@@ -531,7 +531,7 @@
                     <section class="panel panel-default panel-datatable mrgn-tp-md">
                         <div class="table-responsive">
                             <table class="wb-tables table table-hover table-bordered table-condensed small" data-wb-tables='
-        {"info" : false, "filter" : false, "order" : [[0,"desc"]],"columnDefs": [{ "orderable" : false, "targets":[0] },{"searchable" : false, "targets": [0]}], "lengthChange" : false,"language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]}'>
+        {"info" : false, "filter" : false, "order" : [[0,"desc"]],"columnDefs": [{ "orderable" : false, "targets":[0] },{"searchable" : false, "targets": [0]}], "lengthChange" : true,"language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]}'>
                                 <thead>
                                     <tr>
                                         <th scope="col" class="width25">Name</th>
@@ -771,7 +771,9 @@
                         </div>
                         <footer class="panel-footer">
                             <div class="row">
-                                <div class="col-md-12 pddng-tp-sm pages"> </div>
+                                <div class="col-md-8 pddng-tp-sm pages"> </div>
+                                <div class="col-md-4 col-xs-12 text-right text-left-sm text-left-xs displayOptions">
+                                </div>
                             </div>
                         </footer>
                     </section>
@@ -784,7 +786,7 @@
                     <section class="panel panel-default panel-datatable mrgn-tp-md">
                         <div class="table-responsive">
                             <table class="wb-tables table table-hover table-bordered table-condensed small" data-wb-tables='
-        {"info" : false, "filter" : false, "order" : [[0,"asc"]],"columnDefs": [{ "orderable" : false, "targets":[] },{"searchable" : false, "targets": []}], "lengthChange" : false,
+        {"info" : false, "filter" : false, "order" : [[0,"asc"]],"columnDefs": [{ "orderable" : false, "targets":[] },{"searchable" : false, "targets": []}], "lengthChange" : true,
 
 "language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]}'>
                                 <thead>
@@ -913,7 +915,9 @@
                         </div>
                         <footer class="panel-footer">
                             <div class="row">
-                                <div class="col-md-12 pddng-tp-sm pages"> </div>
+                                <div class="col-md-8 pddng-tp-sm pages"> </div>
+                                <div class="col-md-4 col-xs-12 text-right text-left-sm text-left-xs displayOptions">
+                                </div>
                             </div>
                         </footer>
                     </section>
@@ -943,12 +947,7 @@
             <div class="container">
                 <div class="row">
                     <nav class="col-md-10 ftr-urlt-lnk">
-                        <!--<h2 class="wb-inv">About this Web application</h2>
-          <ul>
-            <li><a href="#">Contact information</a></li>
-            <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
-            <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
-          </ul> -->
+
                     </nav>
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
                     <div class="col-xs-6 col-md-2 text-right">
@@ -1072,9 +1071,17 @@
             $('.dataTables_wrapper .bottom').each(function() {
                 $(this).appendTo($(this).parent().parent().next('footer').find('.pages'));
             });
+
+            $('.dataTables_wrapper .top').each(function() {
+                $(this).appendTo($(this).parent().parent().next('footer').find('.displayOptions'));
+            });
+
+
+
             $('.bottom, .top').addClass('dataTables_wrapper');
             $('.panel-datatable footer.panel-footer').css('padding-top', '0');
             $(".first.paginate_button, .last.paginate_button").hide();
+
 
         });
 
