@@ -75,8 +75,16 @@ thead tr {
 }
 
 
-.alert > :first-child {
-    margin-left: 1.4em;
+alert > :first-child:before {
+    margin-left: -1.4em;
+}
+
+alert-danger .fa-ul,
+.alert-success .fa-ul,
+.alert-warning .fa-ul,
+.alert-info .fa-ul {
+    margin-left: 1.6em;
+    margin-bottom: 0;
 }
 
 .datemod {
