@@ -232,6 +232,7 @@
                                         <div class="form-group">
                                             <label for="country">Country: </label>
                                             <select class="form-control" name="country" id="country">
+                                                <option data-code="ALL" selected="selected" value="">All countries</option>
                                                 <option data-code="AF" value="Afghanistan">Afghanistan</option>
                                                 <option data-code="AX" value="Aland Islands">Åland Islands</option>
                                                 <option data-code="AL" value="Albania">Albania</option>
@@ -269,7 +270,7 @@
                                                 <option data-code="BI" value="Burundi">Burundi</option>
                                                 <option data-code="KH" value="Cambodia">Cambodia</option>
                                                 <option data-code="CM" value="Republic of Cameroon">Cameroon</option>
-                                                <option data-code="CA" selected="selected" value="Canada" selected>Canada</option>
+                                                <option data-code="CA" value="Canada">Canada</option>
                                                 <option data-code="CV" value="Cape Verde">Cape Verde</option>
                                                 <option data-code="BQ" value="Bonaire, Sint Eustatius and Saba">Caribbean Netherlands</option>
                                                 <option data-code="KY" value="Cayman Islands">Cayman Islands</option>
@@ -484,7 +485,7 @@
                                             </div>
 
 
-                                            <div class="form-group">
+                                            <!--<div class="form-group">
                                                 <label for="province">Province/territory: </label>
                                                 <select name="province" id="province" class="form-control" autocomplete="address-level2">
                                                     <option selected value="">&lsaquo;&lsaquo;&lsaquo; Select &rsaquo;&rsaquo;&rsaquo;</option>
@@ -502,11 +503,12 @@
                                                     <option>Saskatchewan</option>
                                                     <option>Yukon</option>
                                                 </select>
-                                            </div>
+                                            </div>-->
                                             <div class="form-group">
-                                                <label for="postal">Postal code (X9X 9X9): <span class="wb-invisible">Format: letter digit letter digit letter digit</span> </label>
-                                                <input name="postal" type="text" id="postal" title="Format: X9X 9X9" value="" size="7" maxlength="7" class="form-control input-postal" autocomplete="postal-code" />
+                                                <label for="postal-zip">Postal/ZIP code: </label>
+                                                <input name="postal-zip" type="text" id="postal-zip" value="" size="10" maxlength="10" class="form-control" autocomplete="postal-code" />
                                             </div>
+
                                         </div>
                                     </div>
                                 </section>
@@ -614,9 +616,10 @@
                 var countryCd = $(this).find("option:selected").data("code");
 
                 //For prototype purposes, any country other than Canada/US will use the same format
-                if ((countryCd != "CA") && (countryCd != "US") && (countryCd != "VA")) {
+                if ((countryCd != "CA") && (countryCd != "US") && (countryCd != "VA") && countryCd != "ALL") {
                     countryCd = "AF";
                 }
+
 
                 $("#cn-country-selection").fadeOut('300', function() {
 
