@@ -204,8 +204,8 @@
                         </div>
                     </details>
                     <details id="panel-addressContact">
-                        <summary>Address/contact information</summary>
-                        <h2 class="wb-inv">Address/contact information</h2>
+                        <summary>Contact information</summary>
+                        <h2 class="wb-inv">Contact information</h2>
                         <div class="row">
                             <div class="col-md-6">
                                 <section class="panel panel-default panel-no-border">
@@ -239,6 +239,9 @@
                                     </div>
                                 </section>
 
+
+                            </div>
+                            <div class="col-md-6">
                                 <section class="panel panel-default panel-no-border">
                                     <header class="panel-heading">
                                         <h2 class="panel-title"> Business information </h2>
@@ -256,7 +259,7 @@
                                     </div>
                                 </section>
                             </div>
-                            <div class="col-md-6">
+                            <!--<div class="col-md-6">
                                 <section class="panel panel-default">
                                     <header class="panel-heading">
                                         <h2 class="panel-title">Address</h2>
@@ -540,10 +543,10 @@
                                         </div>
                                     </div>
                                 </section>
-                            </div>
+                            </div>-->
                         </div>
                         <div class="nav-button">
-                            <button class="btn btn-primary" type="submit">Search <span class="wb-inv"> by address/contact information"</span></button>
+                            <button class="btn btn-primary" type="submit">Search <span class="wb-inv"> by contact information"</span></button>
                             <button class="btn btn-default mrgn-lft-lg" type="reset">Clear</button>
                         </div>
                     </details>
@@ -640,7 +643,7 @@
 
             });
 
-            $("#country").on("change", function() {
+            /* $("#country").on("change", function() {
                 var countryCd = $(this).find("option:selected").data("code");
 
                 //For prototype purposes, any country other than Canada/US will use the same format
@@ -691,17 +694,8 @@
                     numericOnly: true
                 });
 
-            }
+            } */
         });
-
-        /* 
-        $(document).on("wb-updated.wb-tabs", ".wb-tabs", function(event, $newPanel) {
-            if ($("#wb-cont").next("div.alert").length) {
-                //If there's an error or confirmation message displayed, remove it and clear the field error highlighting
-                $("#wb-cont").next("div.alert").remove();
-                $(".fieldError").removeClass("fieldError");
-            }
-        }); */
     </script>
     <!-- InstanceEndEditable -->
 </body>
