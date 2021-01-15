@@ -465,7 +465,7 @@
                                     </div>
                                 </li>
                             </ul>
-                           
+
                         </section>
                     </section>
 
@@ -514,9 +514,9 @@
                                 <div class="panel-body">
                                     <div class="form-group">
                                         <span class="label-upper">Address:</span><br>
-                                        <address>
+                                        <address class="mrgn-bttm-0">
                                             9999 5th Avenue E <br>
-                                            New York, New York 99999<br>
+                                            New York, NY 99999<br>
                                             United States
                                         </address>
                                     </div>
@@ -529,7 +529,7 @@
                         </div>
                         <div class="col-md-6 ">
 
-                            <div class="panel panel-default panel-account ">
+                            <div class="panel panel-default panel-account hght-inhrt">
                                 <div class="panel-heading">
 
                                     <h3 class="mrgn-tp-sm"><i class="fa fa-building opct-50 mrgn-rght-sm"></i><a href="#">9999999 Canada Inc.</a></h3>
@@ -541,7 +541,7 @@
                                     </div>
                                     <div class="form-group">
                                         <span class="label-upper">Address:</span><br>
-                                        <address>
+                                        <address class="mrgn-bttm-0">
                                             123 Elm Street <br>
                                             Ottawa, ON K1K 1K1
                                         </address>
@@ -593,7 +593,7 @@
             <div class="container">
                 <div class="row">
                     <nav class="col-md-10 ftr-urlt-lnk">
-                       
+
                     </nav>
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
                     <div class="col-xs-6 col-md-2 text-right">
@@ -621,7 +621,6 @@
     <!-- InstanceBeginEditable name="CustomJS" -->
 
     <script type="text/javascript">
-        
         function initPinUnpinNotes(element) {
             var txtPin = "Pin";
             var txtUnpin = "Unpin";
@@ -631,16 +630,15 @@
             var htmlUnpin = "<i class='fal fa-thumbtack'></i>" + txtPin;
             if (element.find("i").hasClass("fas")) {
                 element.html(htmlUnpin);
-                element.parent().parent().parent().parent().parent().removeClass("note-permanent").addClass("note-default").attr("title",txtUnpinnedNote).children(".note-icon").children("i").removeClass("fa-comment-alt-exclamation").addClass("fa-comment");			
+                element.parent().parent().parent().parent().parent().removeClass("note-permanent").addClass("note-default").attr("title", txtUnpinnedNote).children(".note-icon").children("i").removeClass("fa-comment-alt-exclamation").addClass("fa-comment");
 
-            }
-            else {
+            } else {
                 element.html(htmlPin);
-                element.parent().parent().parent().parent().parent().removeClass("note-default").addClass("note-permanent").attr("title",txtPinnedNote ).children(".note-icon").children("i").removeClass("fa-comment").addClass("fa-comment-alt-exclamation");
+                element.parent().parent().parent().parent().parent().removeClass("note-default").addClass("note-permanent").attr("title", txtPinnedNote).children(".note-icon").children("i").removeClass("fa-comment").addClass("fa-comment-alt-exclamation");
             }
         }
-        
-        
+
+
         $(document).on("wb-ready.wb", function(event) {
             //Hide note actions initially
             $(".note-buttons").hide();
@@ -757,8 +755,8 @@
                 e.preventDefault();
                 $(this).parents('.note').find(".editable-note").editable('toggle');
             });
-            
-            
+
+
             var msgCharacterCountExceeded = "You'll need to shorten your note as you've reached the character limit";
             var msgCharactersLeft = " characters left";
             $("textarea").after("<div id='charCount' class='small pull-right' aria-live='polite'>&nbsp;</div>")
@@ -781,7 +779,6 @@
                     $("#charCount").html("&nbsp;");
             });
         });
-
     </script>
 
     <!-- InstanceEndEditable -->
