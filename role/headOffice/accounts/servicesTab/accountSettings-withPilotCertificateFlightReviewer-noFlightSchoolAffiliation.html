@@ -268,11 +268,9 @@
                 <details id="panel-notifications">
                     <summary>Notifications</summary>
 
-                    </section>
 
                 </details>
             </div>
-        </div>
         </div>
         <hr>
         <a href="../welcome.html"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Home</a>
@@ -334,15 +332,6 @@
         $(document).on("wb-ready.wb", function(event) {
             $('#flightSchool').select2({
                 theme: "bootstrap"
-            });
-
-
-            $("#cn-notifications input[type=checkbox]").on("click", function(event) {
-                if ($(this).prop("checked")) {
-                    $(this).parent().parent().parent().addClass("highlight-yellow");
-                } else {
-                    $(this).parent().parent().parent().removeClass("highlight-yellow");
-                }
             });
 
             var txtIntro = "<p>This individual is affiliated with the following drone flight schools:</p>";

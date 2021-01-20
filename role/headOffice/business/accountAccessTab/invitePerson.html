@@ -223,7 +223,20 @@
     <script>
         $(document).on("wb-ready.wb", function(event) {
 
+            if ($(".input-phone").length) {
+                new Cleave('.input-phone', {
+                    delimiter: '-',
+                    blocks: [3, 3, 4],
+                    numericOnly: true
+                });
+            }
 
+            if ($(".input-phone-extension").length) {
+                new Cleave('.input-phone-extension', {
+                    blocks: [5],
+                    numericOnly: true
+                });
+            }
         });
 
     </script>

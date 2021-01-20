@@ -262,7 +262,7 @@
                                 <label for="phone">Telephone number:</label>
                                 <div class="form-group form-inline">
                                     <input name="phone" type="tel" id="phone" value="613-747-2447" size="14" maxlength="17" class="form-control input-phone" />
-                                    <input name="phone_extension" id="phone_ext" type="text" size="8" class="form-control input-phone-extension" autocomplete="tel-extension" maxlength="8" title="Telephone number extension" placeholder="Ext." value="5992">
+                                    <input name="phone_extension" id="phone_ext" type="text" size="8" class="form-control input-phone-extension" autocomplete="tel-extension" maxlength="5" title="Telephone number extension" placeholder="Ext." value="5992">
                                 </div>
                             </div>
 
@@ -394,16 +394,17 @@
                 return false;
             });
 
-            if ($(".input-phone-extension").length) {
-                new Cleave('.input-phone-extension', {
-                    blocks: [8],
+            if ($(".input-phone").length) {
+                new Cleave('.input-phone', {
+                    delimiter: '-',
+                    blocks: [3, 3, 4],
                     numericOnly: true
                 });
             }
 
-            if ($(".input-numeric-9").length) {
-                new Cleave('.input-numeric-9', {
-                    blocks: [9],
+            if ($(".input-phone-extension").length) {
+                new Cleave('.input-phone-extension', {
+                    blocks: [5],
                     numericOnly: true
                 });
             }
@@ -420,6 +421,7 @@
                 $(".tabpanels").css("min-height", 0);
             });
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>

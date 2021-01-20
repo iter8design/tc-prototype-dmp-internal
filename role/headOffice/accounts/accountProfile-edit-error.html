@@ -217,7 +217,7 @@
 
                                             <div class="form-group form-inline">
                                                 <input name="phone" type="tel" id="phone" value="613-747-2447" size="14" maxlength="17" class="form-control input-phone fieldError" />
-                                                <input name="phone_extension" id="phone_ext" type="text" size="8" class="form-control input-phone-extension" autocomplete="tel-extension" maxlength="8" title="Telephone number extension" placeholder="Ext." value="5992">
+                                                <input name="phone_extension" id="phone_ext" type="text" size="8" class="form-control input-phone-extension" autocomplete="tel-extension" maxlength="5" title="Telephone number extension" placeholder="Ext." value="5992">
                                             </div>
 
                                         </div>
@@ -705,7 +705,7 @@
 
             if ($(".input-phone-extension").length) {
                 new Cleave('.input-phone-extension', {
-                    blocks: [8],
+                    blocks: [5],
                     numericOnly: true
                 });
             }
@@ -753,6 +753,7 @@
 
 
         });
+
     </script>
 
     <!-- InstanceEndEditable -->
