@@ -205,7 +205,7 @@
 
                                                     <div class="form-group">
                                                         <label for='flightSchool'>Select from one of the following drone flight schools:</label>
-                                                        <select name="flightSchool" id="flightSchool" class="form-control">
+                                                        <select name="flightSchool" id="flightSchool" class="form-control width-full" style="width:100%">
                                                             <option value="">&lsaquo;&lsaquo;&lsaquo; Select &rsaquo;&rsaquo;&rsaquo;</option>
                                                             <option>Holly Heights Hover School</option>
                                                         </select>
@@ -233,28 +233,6 @@
                             </section>
                         </div>
                     </div>
-
-
-                    <section id="dlg-relatedAccounts" class="mfp-hide modal-dialog modal-content overlay-def">
-                        <header class="modal-header">
-                            <h2 class="modal-title">Related accounts & information</h2>
-                        </header>
-                        <div class="modal-body">
-                            <p>If you operate under a special flight operations certificate (SFOC), please provide it below.</p>
-
-                            <div class="form-group">
-                                <label for="sfoc">Special flight operations certificate (SFOC) #:</label>
-                                <input type="text" size="20" maxlength="20" id="sfoc" class="form-control">
-
-                            </div>
-
-                        </div>
-                        <footer class="modal-footer">
-                            <button type="submit" class="btn btn-primary pull-left">Submit</button>
-                            <a href="#" class="popup-modal-dismiss btn btn-default pull-left">Cancel</a>
-                        </footer>
-
-                    </section>
 
 
                 </details>
@@ -331,7 +309,7 @@
     <script>
         $(document).on("wb-ready.wb", function(event) {
             $('#flightSchool').select2({
-                theme: "bootstrap"
+                theme: 'bootstrap'
             });
 
             var txtIntro = "<p>This individual is affiliated with the following drone flight schools:</p>";
