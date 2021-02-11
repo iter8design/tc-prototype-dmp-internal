@@ -108,7 +108,7 @@
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fas fa-cog"></i> Exam settings</h1>
-        <p>The following exam types are available along with their current settings. Select the exam type to make changes or to view a sample exam, press the <strong>View sample</strong> button.</p>
+        <p>The following exam types are available along with their current settings: </p>
         <div class="table-responsive">
             <table class="table table-condensed table-comparison">
                 <thead>
@@ -116,28 +116,29 @@
                         <th></th>
                         <th scope="col" class="text-center"><a href="#">Small Basic Exam</a></th>
                         <th scope="col" class="text-center"><a href="#">Small Advanced Exam</a></th>
+                        <th scope="col" class="text-center"><a href="#">Complex Exam</a></th>
                         <th scope="col" class="text-center"><a href="#">Flight Reviewer Exam</a></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tbl-sctn-hdr">
-                        <td>
+                        <td colspan="5">
                             <h2>Overall</h2>
                         </td>
-                        <td class="text-center"><a href="#" class="btn btn-primary mrgn-tp-sm mrgn-bttm-sm nowrap" title="View sample exam for Urban/rural (very small operations)" target="_blank">View sample <span class="wb-inv">Small Basic Exam</span><i class="fas fa-external-link mrgn-lft-sm"></i></a></td>
-                        <td class="text-center"><a href="#" class="btn btn-primary mrgn-tp-sm mrgn-bttm-sm nowrap" title="View sample exam for Rural (limited operations)">View sample <span class="wb-inv">Small Advanced Exam</span> <i class="fas fa-external-link mrgn-lft-sm"></i></a></td>
-                        <td class="text-center"><a href="#" class="btn btn-primary mrgn-tp-sm mrgn-bttm-sm nowrap" title="View sample exam  for Urban (complex operations)">View sample <span class="wb-inv">Flight Reviewer Exam</span><i class="fas fa-external-link mrgn-lft-sm"></i></a></td>
+
                     </tr>
                     <tr>
                         <th scope="row">Duration (minutes)</th>
                         <td class="text-center">60 minutes</td>
                         <td class="text-center">60 minutes</td>
                         <td class="text-center">90 minutes</td>
+                        <td class="text-center">90 minutes</td>
                     </tr>
                     <tr>
                         <th scope="row">Minimum passing grade (%)</th>
                         <td class="text-center">60%</td>
                         <td class="text-center">60%</td>
+                        <td class="text-center">80%</td>
                         <td class="text-center">90%</td>
                     </tr>
                     <tr>
@@ -147,9 +148,10 @@
                         <td class="text-center">24 hours</td>
                         <td class="text-center">24 hours</td>
                         <td class="text-center">24 hours</td>
+                        <td class="text-center">24 hours</td>
                     </tr>
                     <tr class="tbl-sctn-hdr">
-                        <td colspan="4">
+                        <td colspan="5">
                             <h2>Exam generation</h2>
                         </td>
                     </tr>
@@ -157,6 +159,7 @@
                         <th scope="row">Total number of questions on the exam</th>
                         <td class="text-center">25</td>
                         <td class="text-center">30</td>
+                        <td class="text-center">50</td>
                         <td class="text-center">50</td>
                     </tr>
                     <tr>
@@ -170,14 +173,18 @@
                         <td class="text-center">
                             <div class="pill-red"><a href="#" data-toggle="popover" title="Difficulty breakdown" data-content="<ul><li class='text-nowrap'>0% easy</li><li class='text-nowrap'>40% moderate</li><li class='text-nowrap'>60% challenging</li></ul>">Challenging</a><span class="wb-inv">Difficulty breakdown: 0% easy, 40% moderate, 60% challenging</span></div>
                         </td>
+                        <td class="text-center">
+                            <div class="pill-red"><a href="#" data-toggle="popover" title="Difficulty breakdown" data-content="<ul><li class='text-nowrap'>0% easy</li><li class='text-nowrap'>40% moderate</li><li class='text-nowrap'>60% challenging</li></ul>">Challenging</a><span class="wb-inv">Difficulty breakdown: 0% easy, 40% moderate, 60% challenging</span></div>
+                        </td>
                     </tr>
                     <tr>
-                        <td colspan="4">
+                        <td colspan="5">
                             <h3>Domains</h3>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">Use domain weighting factor <span class="fld-example">Weighting of each domain used as part of the calculation of random exams.</span></th>
+                        <td class="text-center"><i class="fas fa-times-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                         <td class="text-center"><i class="fas fa-times-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                         <td class="text-center"><i class="fas fa-times-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                         <td class="text-center"><i class="fas fa-times-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
@@ -187,9 +194,11 @@
                         <td class="text-center"><i class="fas fa-times-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                         <td class="text-center"><i class="fas fa-times-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                         <td class="text-center"><i class="fas fa-times-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
+                        <td class="text-center"><i class="fas fa-times-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                     </tr>
                     <tr>
                         <th scope="row">Use domain size factor <span class="fld-example">The relative importance of the domain based on the number of knowledge areas within it</span></th>
+                        <td class="text-center"><i class="fas fa-times-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                         <td class="text-center"><i class="fas fa-times-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                         <td class="text-center"><i class="fas fa-times-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                         <td class="text-center"><i class="fas fa-times-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
@@ -199,14 +208,16 @@
                         <td class="text-center"><i class="fas fa-check-square text-green" title="Yes"></i> <span class="wb-inv">Yes</span></td>
                         <td class="text-center"><i class="fas fa-check-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                         <td class="text-center"><i class="fas fa-check-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
+                        <td class="text-center"><i class="fas fa-check-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                     </tr>
                     <tr>
-                        <td colspan="4">
+                        <td colspan="5">
                             <h3>Knowledge areas</h3>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">Use knowledge area factor <span class="fld-example">Weighting of each knowledge area used as part of the calculation of random exams.</span></th>
+                        <td class="text-center"><i class="fas fa-times-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                         <td class="text-center"><i class="fas fa-times-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                         <td class="text-center"><i class="fas fa-times-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                         <td class="text-center"><i class="fas fa-times-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
@@ -216,9 +227,11 @@
                         <td class="text-center"><i class="fas fa-times-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                         <td class="text-center"><i class="fas fa-times-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                         <td class="text-center"><i class="fas fa-times-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
+                        <td class="text-center"><i class="fas fa-times-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                     </tr>
                     <tr>
                         <th scope="row">Use knowledge area size factor <span class="fld-example">The relative importance of the knowledge area based on the number of questions within it</span></th>
+                        <td class="text-center"><i class="fas fa-check-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                         <td class="text-center"><i class="fas fa-check-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                         <td class="text-center"><i class="fas fa-check-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                         <td class="text-center"><i class="fas fa-check-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
@@ -228,9 +241,10 @@
                         <td class="text-center"><i class="fas fa-check-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                         <td class="text-center"><i class="fas fa-check-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                         <td class="text-center"><i class="fas fa-check-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
+                        <td class="text-center"><i class="fas fa-check-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                     </tr>
                     <tr>
-                        <td colspan="4">
+                        <td colspan="5">
                             <h3>Questions</h3>
                         </td>
                     </tr>
@@ -239,6 +253,7 @@
                         <td class="text-center"><i class="fas fa-check-square text-green" title="Yes"></i> <span class="wb-inv">Yes</span></td>
                         <td class="text-center"><i class="fas fa-check-square text-green" title="Yes"></i> <span class="wb-inv">Yes</span>
                         </td>
+                        <td class="text-center"><i class="fas fa-check-square text-green" title="Yes"></i> <span class="wb-inv">Yes</span></td>
                         <td class="text-center"><i class="fas fa-check-square text-green" title="Yes"></i> <span class="wb-inv">Yes</span></td>
                     </tr>
                     <tr>
@@ -260,9 +275,11 @@
                             </section>
                         </td>
                         <td class="text-center"><i class="fas fa-times-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
+                        <td class="text-center"><i class="fas fa-times-square text-red" title="No"></i> <span class="wb-inv">No</span></td>
                     </tr>
                     <tr>
                         <th scope="row">Apply question difficulty rating <span class="fld-example">Randomize the difficulty of level of questions on the exam.</span></th>
+                        <td class="text-center"><i class="fas fa-check-square text-green" title="Yes"></i> <span class="wb-inv">Yes</span></td>
                         <td class="text-center"><i class="fas fa-check-square text-green" title="Yes"></i> <span class="wb-inv">Yes</span></td>
                         <td class="text-center"><i class="fas fa-check-square text-green" title="Yes"></i> <span class="wb-inv">Yes</span></td>
                         <td class="text-center"><i class="fas fa-check-square text-green" title="Yes"></i> <span class="wb-inv">Yes</span></td>
@@ -272,9 +289,10 @@
                         <td class="text-center"><i class="fas fa-check-square text-green" title="Yes"></i> <span class="wb-inv">Yes</span></td>
                         <td class="text-center"><i class="fas fa-check-square text-green" title="Yes"></i> <span class="wb-inv">Yes</span></td>
                         <td class="text-center"><i class="fas fa-check-square text-green" title="Yes"></i> <span class="wb-inv">Yes</span></td>
+                        <td class="text-center"><i class="fas fa-check-square text-green" title="Yes"></i> <span class="wb-inv">Yes</span></td>
                     </tr>
                     <tr class="tbl-sctn-hdr">
-                        <td colspan="4">
+                        <td colspan="5">
                             <h2>Pre/post exam</h2>
                         </td>
                     </tr>
@@ -283,20 +301,23 @@
                         <td class="text-center">None</td>
                         <td class="text-center">None</td>
                         <td class="text-center">None</td>
+                        <td class="text-center">None</td>
                     </tr>
                     <tr>
                         <th scope="row">Number of sample questions after completing an exam</th>
-                        <td class="text-center">1 question</td>
-                        <td class="text-center">2 questions</td>
-                        <td class="text-center">2 questions</td>
+                        <td class="text-center">None</td>
+                        <td class="text-center">None</td>
+                        <td class="text-center">None</td>
+                        <td class="text-center">None</td>
                     </tr>
                     <tr class="tbl-sctn-hdr">
-                        <td colspan="4">
+                        <td colspan="5">
                             <h2>Answer categories</h2>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">Minimum spread of answer categories (%)<span class="fld-example">The minimum % of answers that can fall within an individual answer category over the course of the entire exam.</span></th>
+                        <td class="text-center">15%</td>
                         <td class="text-center">15%</td>
                         <td class="text-center">15%</td>
                         <td class="text-center">15%</td>
@@ -306,9 +327,11 @@
                         <td class="text-center">30%</td>
                         <td class="text-center">30%</td>
                         <td class="text-center">30%</td>
+                        <td class="text-center">30%</td>
                     </tr>
                     <tr>
                         <th scope="row">Maximum number of repeated answers in a row<span class="fld-example">Over subsequent questions, the maximum number of times the same answer category can be selected.</span></th>
+                        <td class="text-center">3</td>
                         <td class="text-center">3</td>
                         <td class="text-center">3</td>
                         <td class="text-center">3</td>
