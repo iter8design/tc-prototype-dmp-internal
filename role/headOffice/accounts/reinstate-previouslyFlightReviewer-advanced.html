@@ -118,7 +118,7 @@
                 <legend class="medium"><span class="mandatory">*</span>Which of the following are you reinstating? <span class="wb-inv">(required)</span> </legend>
                 <div class="radio">
                     <label for="basic">
-                        <input type="radio" name="ratings" value="radio" id="basic" checked>
+                        <input type="radio" name="ratings" value="radio" id="basic">
                         Basic Operations</label>
                 </div>
                 <div class="radio">
@@ -127,9 +127,21 @@
                         Basic and Advanced Operations</label>
                 </div>
                 <div class="radio">
-                    <label for="flightReviewer">
-                        <input type="radio" name="ratings" value="radio" id="flightReviewer">
+                    <label for="complex">
+                        <input type="radio" name="ratings" value="radio" id="complex" disabled>
+                        Basic, Advanced Operations & Complex Operations</label>
+                </div>
+
+                <div class="radio">
+                    <label for="flightReviewer-adv">
+                        <input type="radio" name="ratings" value="radio" id="flightReviewer-adv" checked>
                         Basic and Advanced Operations with a flight reviewer rating</label>
+                </div>
+
+                <div class="radio">
+                    <label for="flightReviewer-complex">
+                        <input type="radio" name="ratings" value="radio" id="flightReviewer-complex" disabled>
+                        Basic, Advanced Operations & Complex Operations with a flight reviewer rating</label>
                 </div>
             </fieldset>
             <div class="form-group">

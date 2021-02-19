@@ -134,7 +134,9 @@
                                         <optgroup label="Exam results">
                                             <option value="4" data-prefix="EB">Small Basic Exam</option>
                                             <option value="5" data-prefix="EA">Small Advanced Exam</option>
+                                            <option value="7" data-prefix="EC">Complex Exam</option>
                                             <option value="6" data-prefix="EE">Flight Reviewer Exam</option>
+
                                         </optgroup>
 
                                     </select>
@@ -558,7 +560,7 @@
         $(document).on("wb-ready.wb", function(event) {
 
 
-            $("#phone").intlTelInput({
+            /* $("#phone").intlTelInput({
                 initialCountry: "ca",
                 preferredCountries: ["ca", "us"],
                 formatOnInit: true,
@@ -570,9 +572,9 @@
                     }
 
                 }
-            });
+            }); */
 
-            /* Apply input masks */
+            /* Apply input masks
             if ($(".input-numeric-10").length) {
                 new Cleave('.input-numeric-10', {
                     delimiter: '',
@@ -580,6 +582,7 @@
                     numericOnly: true
                 });
             }
+             */
 
 
 
@@ -649,6 +652,7 @@
 
             }*/
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>

@@ -233,6 +233,58 @@
                 </ul>
             </li>
             <li class="mrgn-0">
+                <div class="small pull-right"><a href="#"><i class="fas fa-plus-square mrgn-rght-sm"></i>Expand all <span class="wb-inv">Complex operations</span></a> <a href="#" class="mrgn-lft-md"><i class="fas fa-minus-square mrgn-rght-sm"></i>Collapse all <span class="wb-inv">Complex operations</span></a></div>
+                <h2 class="hd-section">Complex operations</h2>
+                <ul id="syllabus-complex">
+                    <li data-uid="1">
+                        <div><a href="#">
+                                Domain 1
+                            </a></div>
+                    </li>
+                    <li data-uid="2">
+                        <div><a href="#">
+                                Domain 2
+                            </a></div>
+                        <ul>
+                            <li data-uid="21">
+                                <div><a href="#">Knowledge area 1</a></div>
+                            </li>
+                            <li data-uid="22">
+                                <div><a href="#">Knowledge area 2</a></div>
+                                <ul>
+                                    <li data-uid="221">
+                                        <div><a href="#">Knowledge area 3</a></div>
+                                    </li>
+                                    <li data-uid="222">
+                                        <div><a href="#">Knowledge area 4</a></div>
+                                    </li>
+                                    <li data-uid="223">
+                                        <div><a href="#">Knowledge area 5</a></div>
+                                        <ul>
+                                            <li data-uid="2231">
+                                                <div><a href="#">Knowledge area 6</a></div>
+                                            </li>
+                                            <li data-uid="2232">
+                                                <div><a href="#">Knowledge area 7</a></div>
+                                            </li>
+                                            <li data-uid="2233">
+                                                <div><a href="#">Knowledge area 8</a></div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li data-uid="224">
+                                        <div><a href="#">Knowledge area 6</a></div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-uid="3">
+                        <div><a href="#">Domain 3</a></div>
+                    </li>
+                </ul>
+            </li>
+            <li class="mrgn-0">
                 <div class="small pull-right"><a href="#"><i class="fas fa-plus-square mrgn-rght-sm"></i>Expand all <span class="wb-inv">Flight reviewer</span></a> <a href="#" class="mrgn-lft-md"><i class="fas fa-minus-square mrgn-rght-sm"></i>Collapse all <span class="wb-inv">Flight reviewer</span></a></div>
                 <h2 class="hd-section">Flight reviewer</h2>
                 <ul id="syllabus-flightReviewer">
@@ -407,7 +459,7 @@
                 };
             })(jQuery, window);
 
-            $("#syllabus-basicAdv li, #syllabus-flightReviewer").contextMenu({
+            $("#syllabus-basicAdv li, #syllabus-complex, #syllabus-flightReviewer").contextMenu({
                 menuSelector: "#ctxtmenu-syllabus",
                 menuSelected: function(invokedOn, selectedMenu) {
 
@@ -487,6 +539,7 @@
 
             }
         })(jQuery);
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
