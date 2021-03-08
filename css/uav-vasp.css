@@ -121,6 +121,13 @@ textarea.fieldError,
     margin-bottom: 3px;
 }
 
+.highlight-yellow,
+.table-striped > tbody > tr.highlight-yellow,
+.table > tbody > tr.highlight-yellow {
+    background-color: #ffffef;
+}
+
+
 .input-group-addon {
     padding: 6px 14px;
 }
