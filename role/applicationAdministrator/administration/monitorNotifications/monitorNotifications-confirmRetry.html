@@ -113,10 +113,10 @@
         <div class="alert alert-success mrgn-bttm-md">
             <h2>Success</h2>
             <ol class="fa-ul">
-                <li>The notification will be resent to all remaining recipients.</li>
+                <li>The email notification will be resent to all remaining recipients.</li>
             </ol>
         </div>
-        <p>The following email notifications have been queued for sending within the last <strong>30</strong> days. Select the notification to view further details.</p>
+        <p>The following email notifications have been queued for sending. Select the notification to view further details.</p>
         <form action="" method="get">
             <section class="panel panel-default panel-datatable">
                 <header class="panel-heading pddng-tp-0">
@@ -173,7 +173,7 @@
                                 <td class="text-center">150</td>
                                 <td class="text-center">200</td>
                                 <td><i class="fas fa-exclamation-square text-danger mrgn-rght-sm"></i>Incomplete</td>
-                                <td class="text-center"><a href="#" class="btn btn-primary">Retry</a></td>
+                                <td class="text-center"><a href="monitorNotifications-confirmRetry.html" class="btn btn-primary btn-sm"><i class="fas fa-sync mrgn-rght-sm"></i>Retry</a></td>
                             </tr>
                             <tr>
                                 <td>2019-09-20 14:32 <abbr title="Eastern Standard Time">EST</abbr></td>
@@ -198,7 +198,18 @@
             </section>
         </form>
 
+        <section id="dlg_delete" class="mfp-hide modal-dialog modal-content overlay-def">
+            <header class="modal-header">
+                <h2 class="modal-title">Delete this email notification?</h2>
+            </header>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this email notification?</p>
+            </div>
+            <footer class="modal-footer">
 
+                <a href="monitorNotifications-confirmDeleted.html" class="btn btn-primary pull-left">Delete</a> <a href="#" class="btn btn-link popup-modal-dismiss pull-left">Cancel</a>
+            </footer>
+        </section>
 
         <!-- InstanceEndEditable -->
         <div class="datemod col-xs-12 mrgn-tp-lg">

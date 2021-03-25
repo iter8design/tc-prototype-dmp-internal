@@ -10,20 +10,20 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Drone make/model list update - {Make} {Model} - Drone Management Portal Administration</title>
+    <title>Monitor email notifications - Drone Management Portal Administration</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
     <meta name="description" content="">
     <!-- Meta data-->
     <!--[if gte IE 9 | !IE ]><!-->
-    <link href="../../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
-    <link rel="stylesheet" href="../../../../GCWeb/css/theme.min.css">
-    <link rel="stylesheet" href="../../../../css/cdtsapps.css">
-    <link rel="stylesheet" href="../../../../css/fontawesome/css/all.css">
-    <link rel="stylesheet" href="../../../../css/uav-vasp.css">
-    <link rel="stylesheet" href="../../../../css/utils.css">
-    <link rel="stylesheet" href="../../../../css/plugins.css">
+    <link href="../../../../../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="../../../../../GCWeb/css/theme.min.css">
+    <link rel="stylesheet" href="../../../../../css/cdtsapps.css">
+    <link rel="stylesheet" href="../../../../../css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../../../../../css/uav-vasp.css">
+    <link rel="stylesheet" href="../../../../../css/utils.css">
+    <link rel="stylesheet" href="../../../../../css/plugins.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
@@ -37,7 +37,7 @@
 		
 		<![endif]-->
     <noscript>
-        <link rel="stylesheet" href="../../../../wet-boew/css/noscript.min.css" />
+        <link rel="stylesheet" href="../../../../../wet-boew/css/noscript.min.css" />
     </noscript>
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
@@ -55,7 +55,7 @@
         <div id="wb-bnr" class="container">
             <div class="row">
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
-                    <object type="image/svg+xml" tabindex="-1" data="../../../../assets/sig-blk-en.svg">
+                    <object type="image/svg+xml" tabindex="-1" data="../../../../../assets/sig-blk-en.svg">
                     </object>
                     <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
                 <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
@@ -101,8 +101,7 @@
                         <li><a href="#">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
                         <li><a href="#">Administration</a></li>
-                        <li><a href="#">Monitor email notifications</a></li>
-                        <li>Drone make/model list update - {Make} {Model} </li><!-- InstanceEndEditable -->
+                        <li>Monitor email notifications</li> <!-- InstanceEndEditable -->
                     </ol>
                 </div>
             </div>
@@ -110,28 +109,19 @@
     </header>
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont"><i class="fas fa-envelope"></i> Drone make/model list update - {Make} {Model} </h1>
-        <div class="alert alert-danger mrgn-bttm-md">
-            <h2>Attention</h2>
+        <h1 property="name" id="wb-cont"><i class="fas fa-inbox-out"></i> Monitor email notifications</h1>
+        <div class="alert alert-success mrgn-bttm-md">
+            <h2>Success</h2>
             <ol class="fa-ul">
-
-                <li><i class="fa-li fa fa-angle-right"></i>An error occurred while starting the selected notification - please try again in a few minutes.</li>
-                <li><i class="fa-li fa fa-angle-right"></i>An error occurred while retrying the selected notification - please try again in a few minutes.</li>
+                <li>The email notification has been successfully deleted.</li>
             </ol>
         </div>
-        <p>The following is the list of recipients for this email notification:</p>
-
-
-
+        <p>The following email notifications have been queued for sending. Select the notification to view further details.</p>
         <form action="" method="get">
             <section class="panel panel-default panel-datatable">
                 <header class="panel-heading pddng-tp-0">
                     <div class="row">
-                        <div class="col-md-6">
-                            <h2 class="wb-inv mrgn-tp-sm">Recipients</h2>
-                            <div class="mrgn-tp-md mrgn-bttm-sm"><strong class="large mrgn-rght-md"><i class="fas fa-exclamation-square text-danger mrgn-rght-sm"></i>Incomplete</strong>(<a href="#dlg-viewNotification" class="wb-lbx">View email notification</a>)</div>
-                            <a href="#" class="btn btn-primary"><i class="fas fa-sync mrgn-rght-sm"></i>Retry</a>
-                        </div>
+                        <div class="col-md-6"> </div>
                         <div class="col-md-6 text-right text-left-sm text-left-xs">
                             <div class="form-inline">
                                 <div class="form-group mrgn-bttm-0 mrgn-rght-sm pddng-panel-heading-tp">
@@ -143,40 +133,56 @@
                 </header>
                 <div class="table-responsive">
                     <table class="wb-tables table table-hover table-bordered" data-wb-tables='
-        {"info" : false, "filter" : true, "order" : [[3,"asc"]],"columnDefs": [{ "orderable" : false, "targets":[] },{"searchable" : false, "targets": [0,1]}],
-"language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthMenu": [[10, 25, 50, -1], [100,250,500, "All"]]}'>
+        {"stateSave": true, "info" : false, "filter" : true, "order" : [[0,"desc"]],"columnDefs": [{ "orderable" : false, "targets":[6] },{"searchable" : false, "targets": [0,2,3,4,5]}],
+"language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]}'>
                         <thead>
                             <tr>
+                                <th scope="col" class="width10 text-nowrap" scope="col">Date scheduled <br> <abbr title="4 digit year, 2 digit month, 2 digit day 2 digit hour, 2 digit minute">(YYYY-MM-DD HH:MM)</abbr></th>
+                                <th scope="col" class="width30" scope="col">Type of notification</th>
 
-                                <th scope="col" class="width30" scope="col">Recipient</th>
-
-                                <th scope="col" class="width30 text-center" scope="col">Email</th>
-
-                                <th scope="col" class="width20 text-center" scope="col">Status</th>
-                                <th scope="col" class="width10 text-nowrap" scope="col">Date sent <br> <abbr title="4 digit year, 2 digit month, 2 digit day 2 digit hour, 2 digit minute">(YYYY-MM-DD HH:MM)</abbr></th>
-
-
+                                <th scope="col" class="width5 text-center" scope="col">Sent</th>
+                                <th scope="col" class="width5 text-center" scope="col">Remaining</th>
+                                <th scope="col" class="width5 text-center" scope="col">Total</th>
+                                <th scope="col" class="width15" scope="col">Status</th>
+                                <th scope="col" class="width15 text-center" scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-
-
-                                <td>John Doe</td>
-                                <td>user@domain.com</td>
-
-                                <td><i class="fas fa-check-square text-green mrgn-rght-sm"></i>Sent</td>
                                 <td>2019-09-20 14:32 <abbr title="Eastern Standard Time">EST</abbr></td>
-
+                                <td><a href="#">Drone make/model list update <br> {Make} {Model}</a></td>
+                                <td class="text-center">43</td>
+                                <td class="text-center">23</td>
+                                <td class="text-center">66</td>
+                                <td><i class="fas fa-sync fa-spin text-blue  mrgn-rght-sm"></i>In progress</td>
+                                <td class="text-center"></td>
                             </tr>
-
                             <tr>
-
-
-                                <td>Jane Doe</td>
-                                <td>user@domain.com</td>
-                                <td><i class="fas fa-exclamation-square text-danger mrgn-rght-sm"></i>Not sent</td>
-                                <td></td>
+                                <td>2019-09-20 14:32 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                <td><a href="#">Drone make/model list update <br> {Make} {Model}</a></td>
+                                <td class="text-center">0</td>
+                                <td class="text-center">144</td>
+                                <td class="text-center">144</td>
+                                <td><i class="fas fa-sync fa-spin text-blue  mrgn-rght-sm"></i>In progress</td>
+                                <td class="text-center"></td>
+                            </tr>
+                            <tr>
+                                <td>2019-09-20 14:32 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                <td><a href="#">Drone make/model list update <br> {Make} {Model}</a></td>
+                                <td class="text-center">50</td>
+                                <td class="text-center">150</td>
+                                <td class="text-center">200</td>
+                                <td><i class="fas fa-exclamation-square text-danger mrgn-rght-sm"></i>Incomplete</td>
+                                <td class="text-center"><a href="monitorNotifications-confirmRetry.html" class="btn btn-primary btn-sm"><i class="fas fa-sync mrgn-rght-sm"></i>Retry</a></td>
+                            </tr>
+                            <tr>
+                                <td>2019-09-20 14:32 <abbr title="Eastern Standard Time">EST</abbr></td>
+                                <td><a href="#">Drone make/model list update <br> {Make} {Model}</a></td>
+                                <td class="text-center">876</td>
+                                <td class="text-center">0</td>
+                                <td class="text-center">876</td>
+                                <td><i class="fas fa-check-square text-green  mrgn-rght-sm"></i>Complete</td>
+                                <td class="text-center"></td>
                             </tr>
 
                         </tbody>
@@ -190,24 +196,20 @@
                     </div>
                 </footer>
             </section>
-
-            <section id="dlg-viewNotification" class="mfp-hide modal-dialog modal-content overlay-def">
-                <header class="modal-header">
-                    <h2 class="modal-title">{Subject line - Etiam convallis velit tincidunt erat accumsan, et bibendum lacus gravida. }</h2>
-                </header>
-                <div class="modal-body">
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce adipiscing risus vel pellentesque facilisis. Donec euismod aliquam tincidunt. Pellentesque ornare lectus quis lobortis rhoncus. Aenean vulputate ultrices congue. Donec vel risus in metus tempus faucibus. Morbi urna eros, ultricies sit amet est nec, pharetra fringilla mauris. Etiam convallis velit tincidunt erat accumsan, et bibendum lacus gravida.</p>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In adipiscing vitae felis vitae pretium. Proin feugiat turpis magna, eu commodo sapien commodo id. Proin at vulputate felis, a venenatis leo. Curabitur pulvinar purus sit amet mi hendrerit, in sollicitudin erat adipiscing. Suspendisse vulputate rutrum ligula et facilisis. Vivamus sollicitudin consectetur diam, quis porta dolor. In dictum odio in velit aliquet commodo. Duis nec malesuada orci. Aenean eu interdum est, at ullamcorper neque. Sed eu justo blandit, tempor ante a, consequat diam. Aenean nec nisl vulputate, blandit nunc id, vulputate turpis. Sed rutrum turpis eu leo viverra elementum.</p>
-                </div>
-
-
-                <footer class="modal-footer"><a href="#" class="popup-modal-dismiss btn btn-default pull-left">Close</a> </footer>
-            </section>
         </form>
-        <hr>
-        <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Monitor email notifications</a>
 
+        <section id="dlg_delete" class="mfp-hide modal-dialog modal-content overlay-def">
+            <header class="modal-header">
+                <h2 class="modal-title">Delete this email notification?</h2>
+            </header>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this email notification?</p>
+            </div>
+            <footer class="modal-footer">
+
+                <a href="monitorNotifications-confirmDeleted.html" class="btn btn-primary pull-left">Delete</a> <a href="#" class="btn btn-link popup-modal-dismiss pull-left">Cancel</a>
+            </footer>
+        </section>
 
         <!-- InstanceEndEditable -->
         <div class="datemod col-xs-12 mrgn-tp-lg">
@@ -227,16 +229,11 @@
             <div class="container">
                 <div class="row">
                     <nav class="col-md-10 ftr-urlt-lnk">
-                        <!--<h2 class="wb-inv">About this Web application</h2>
-          <ul>
-            <li><a href="#">Contact information</a></li>
-            <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
-            <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
-          </ul> -->
+
                     </nav>
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
                     <div class="col-xs-6 col-md-2 text-right">
-                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
+                        <object type="image/svg+xml" tabindex="-1" role="img" data="../../../../../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada">
                         </object>
                     </div>
                 </div>
@@ -245,14 +242,14 @@
     </footer>
 
     <!--[if gte IE 9 | !IE ]><!-->
-    <script src="../../../../js/jquery/2.2.4/jquery.js"></script>
-    <script src="../../../../wet-boew/js/wet-boew.min.js"></script>
+    <script src="../../../../../js/jquery/2.2.4/jquery.js"></script>
+    <script src="../../../../../wet-boew/js/wet-boew.min.js"></script>
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
 		
 		<![endif]-->
-    <script src="../../../../GCWeb/js/theme.min.js"></script>
+    <script src="../../../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
 
     <script type="text/javascript">
