@@ -200,16 +200,16 @@
 
         <section id="dlg-notification" class="mfp-hide modal-dialog modal-content overlay-def lbx-modal width40">
             <header class="modal-header">
-                <h2 class="modal-title">Schedule an email?</h2>
+                <h2 class="modal-title">Send an email?</h2>
             </header>
             <div class=" modal-body">
-                <p>Would you like us to schedule an email notification to the <strong>46</strong> registrants of this drone to inform them of the changes you've made? </p>
+                <p>Would you like us to send an email notification to the <strong>46</strong> registrants of this drone to inform them of the changes you've made? </p>
                 <p>This will encourage registrants to reprint their certificates of registration and may not be needed depending on the type of change being made.</p>
             </div>
 
             <footer class="modal-footer">
-                <button type="submit" class="btn btn-primary pull-left">Schedule an email</button>
-                <button type="submit" class="btn btn-default pull-left">Do not schedule an email</button>
+                <button type="submit" class="btn btn-primary pull-left">Send email now</button>
+                <button type="submit" class="btn btn-default pull-left">Schedule email for later</button>
                 <a href="#" class="popup-modal-dismiss btn btn-link pull-left">Let me think about this...</a> </footer>
         </section>
 
@@ -285,10 +285,10 @@
 
             });
 
-            $("#btnSubmit").on("click", function(event) {
+            /* $("#btnSubmit").on("click", function(event) {
                 event.preventDefault();
                 $(this).prepend("<i class='fas fa-circle-notch fa-spin mrgn-rght-sm'></i><span class='wb-inv'>Please wait a moment...</span>").attr('disabled', true);
-            });
+            }); */
         });
 
         // Attach a datepicker to the above input element
