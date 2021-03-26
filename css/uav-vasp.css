@@ -606,6 +606,13 @@ details.alert[open].alert-info {
     margin-right: 10px;
 }
 
+.drone-description {
+    padding-top: 2px;
+    font-size: 80%;
+    color: #666;
+}
+
+
 .fa-1h5x {
     font-size: 1.8em;
 }
