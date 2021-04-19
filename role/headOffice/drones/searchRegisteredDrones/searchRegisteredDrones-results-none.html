@@ -227,6 +227,8 @@
 		  placeholder: 'Search for a make/model...',
 		  escapeMarkup: function (markup) { return markup; }, // let our custom formatter work  */
                 theme: "bootstrap",
+                allowClear: true,
+                placeholder: "<<< Select >>>",
                 minimumInputLength: 1,
                 escapeMarkup: function(markup) {
                     return markup;
@@ -245,7 +247,6 @@
             }
 
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
