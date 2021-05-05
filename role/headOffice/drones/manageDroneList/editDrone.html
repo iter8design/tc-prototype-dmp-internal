@@ -129,7 +129,7 @@
                     <option value="1">Fixed-wing</option>
                     <option value="2">Hybrid</option>
                     <option value="3">Lighter-than-air</option>
-                    <option value="4">Rotary wing</option>
+                    <option value="4" selected>Rotary wing</option>
                 </select>
             </div>
             <div class="form-group">
@@ -285,10 +285,18 @@
 
             });
 
-            /* $("#btnSubmit").on("click", function(event) {
+            $("#btnSubmit").on("click", function(event) {
                 event.preventDefault();
-                $(this).prepend("<i class='fas fa-circle-notch fa-spin mrgn-rght-sm'></i><span class='wb-inv'>Please wait a moment...</span>").attr('disabled', true);
-            }); */
+                var txtWaiting = "Please wait a moment...";
+                $(this).prepend("<i class='fas fa-circle-notch fa-spin mrgn-rght-sm'></i><span class='wb-inv'>" + txtWaiting + "</span>").attr('disabled', true);
+            });
+
+
+        });
+
+        $(".wb-lbx").on("mfpClose", function(event) {
+            $("#btnSubmit i, #btnSubmit span").remove();
+            $("#btnSubmit").attr('disabled', false);
         });
 
         // Attach a datepicker to the above input element
@@ -316,6 +324,7 @@
             delimiter: '-',
             numericOnly: true
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
