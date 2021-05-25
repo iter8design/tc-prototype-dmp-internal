@@ -194,24 +194,29 @@
             <div class="nav-button">
                 <a href="#dlg-notification" class="btn btn-primary wb-lbx" id="btnSubmit">Submit</a>
                 <a href="#" class="btn btn-link mrgn-lft-md">Cancel</a> </div>
+
+            <hr>
+            <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Manage drone list</a>
+
+            <section id="dlg-notification" class="mfp-hide modal-dialog modal-content overlay-def lbx-modal width40">
+                <header class="modal-header">
+                    <h2 class="modal-title">Send an email?</h2>
+                </header>
+                <div class=" modal-body">
+                    <p>Would you like us to send an email notification to the <strong>46</strong> registrants of this drone to inform them of the changes you've made? </p>
+                    <p>This will encourage registrants to reprint their certificates of registration and may not be needed depending on the type of change being made.</p>
+                </div>
+
+                <footer class="modal-footer">
+                    <!-- <button type="submit" class="btn btn-primary pull-left">Send email now</button>
+                    <button type="button" class="btn btn-default pull-left">Schedule email for later</button>
+                    -->
+                    <a href="manageDroneList-viewSelected-confirmUpdated.html" class="btn btn-primary pull-left">Send email now</a>
+                    <a href="manageDroneList-viewSelected-confirmUpdated.html" class="btn btn-default pull-left">Schedule email for later</a>
+                    <a href="#" class="popup-modal-dismiss btn btn-link pull-left">Let me think about this...</a> </footer>
+            </section>
+
         </form>
-        <hr>
-        <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Manage drone list</a>
-
-        <section id="dlg-notification" class="mfp-hide modal-dialog modal-content overlay-def lbx-modal width40">
-            <header class="modal-header">
-                <h2 class="modal-title">Send an email?</h2>
-            </header>
-            <div class=" modal-body">
-                <p>Would you like us to send an email notification to the <strong>46</strong> registrants of this drone to inform them of the changes you've made? </p>
-                <p>This will encourage registrants to reprint their certificates of registration and may not be needed depending on the type of change being made.</p>
-            </div>
-
-            <footer class="modal-footer">
-                <button type="submit" class="btn btn-primary pull-left">Send email now</button>
-                <button type="submit" class="btn btn-default pull-left">Schedule email for later</button>
-                <a href="#" class="popup-modal-dismiss btn btn-link pull-left">Let me think about this...</a> </footer>
-        </section>
 
         <!-- InstanceEndEditable -->
         <div class="datemod col-xs-12 mrgn-tp-lg">
@@ -324,7 +329,6 @@
             delimiter: '-',
             numericOnly: true
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
