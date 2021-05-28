@@ -128,7 +128,8 @@ textarea.fieldError,
 }
 
 
-.input-group-addon {
+.input-group-addon,
+.input-group-btn .btn {
     padding: 6px 14px;
 }
 
@@ -316,8 +317,8 @@ textarea.fieldError,
     position: fixed;
     top: 100px;
     right: 0px;
-    min-width: 240px;
-    width: 240px;
+    min-width: 285px;
+    width: 285px;
     background-color: #eee;
     z-index: 1;
     font-size: 14px;
