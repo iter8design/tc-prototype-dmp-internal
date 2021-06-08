@@ -242,11 +242,12 @@ table.dataTable thead .sorting_desc .sorting-icons:after {
 }
 
 select.fieldError + .select2-container--bootstrap .select2-selection.select2-selection--single,
-select.fieldError + .select2-container--bootstrap .select2-selection.select2-selection--single {
+select.fieldError + .select2-container--bootstrap .select2-selection.select2-selection--single,
+select.input-validation-error + .select2-container--bootstrap .select2-selection.select2-selection--single,
+select.input-validation-error + .select2-container--bootstrap .select2-selection.select2-selection--single {
     background-color: #faf3f3;
     border-color: #a94442;
 }
-
 
 /*------------------------------------*\
     X-EDITABLE

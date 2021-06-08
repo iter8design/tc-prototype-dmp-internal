@@ -349,7 +349,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <label for="reference">Reference/source of question: <span class="fld-example">Reference to the Canadian Aviation Regulations, or other supporting materials. This information is for internal use only and is not published.</span> </label>
-                    <textarea id="reference" name="reference" class="form-control  width100" cols="40" rows="4" maxlength="500">
+                    <textarea id="reference" name="reference" class="form-control  width100 fieldError" cols="40" rows="4" maxlength="500">
 
           </textarea>
                 </div>
@@ -382,6 +382,7 @@
             <div class="nav-button">
                 <a href="manageSyllabusUpdates-pendingPublishing-confirmReady.html" class="btn btn-success pull-right">Ready for publishing</a>
                 <button type="submit" class="btn btn-primary">Add question</button>
+                <a href="knowledgeArea.html" class="btn btn-default mrgn-lft-md">Cancel</a>
             </div>
         </form>
 
@@ -443,6 +444,7 @@
                 plugins: [
                     'lists fullscreen'
                 ],
+                body_class: "fieldError",
                 toolbar: 'bold italic  |  bullist numlist outdent indent | fullscreen',
             });
 
@@ -482,7 +484,10 @@
                 }
             });
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>
