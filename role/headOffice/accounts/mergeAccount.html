@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
-<!--[if gt IE 8]><!-->
+<!--[if gt IE 8]>
+<!-->
 <html class="no-js" lang="en" dir="ltr">
 <!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
 <!--<![endif]-->
@@ -10,7 +11,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Merge account - Drone Management Portal Administration</title>
+    <title>Merge accounts - Drone Management Portal Administration</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -56,7 +57,8 @@
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
                     <object type="image/svg+xml" tabindex="-1" data="../../../assets/sig-blk-en.svg">
                     </object>
-                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
+                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
+                </div>
                 <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
                     <h2 class="wb-inv">Language selection</h2>
                     <ul class="list-inline margin-bottom-none">
@@ -103,7 +105,7 @@
                         <li><a href="#">Accounts</a></li>
                         <li><a href="#">Search for an account</a></li>
                         <li><a href="#">{First name} {Last name}</a></li>
-                        <li>Merge account</li>
+                        <li>Merge accounts</li>
                         <!-- InstanceEndEditable -->
                     </ol>
                 </div>
@@ -112,73 +114,218 @@
     </header>
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont"><i class="fas fa-code-merge"></i> Merge account</h1>
-        <p>Account <strong>TC9999999999</strong> (<strong>pdavies@gmail.com</strong>) will be merged into <strong>TC8888888888</strong> (<strong>pdavies@hotmail.com</strong>) and will be accessible using <strong>GCKey</strong>. When you're ready, press the <strong>Merge account</strong> button.</p>
+        <h1 property="name" id="wb-cont"><i class="fas fa-code-merge"></i> Merge accounts</h1>
+        <p>Here's what going to happen. Review the information for each account to ensure you are merging the correct ones. When you're ready, press the <strong>Merge accounts</strong> button.</p>
 
         <form action="accountProfile-confirmMerged.html" method="get">
 
-            <h2 class="hd-section">Merged account summary (TC9999999999)</h2>
 
-           
-            <h3>Drones</h3>
-            <section class="well">
-                <div class="row">
-                    <div class="col-md-1 col-xs-4"><img class="img-responsive" src="../../../img/drone.svg" /></div>
-                    <div class="col-md-2 col-xs-4 mrgn-tp-md"><span class="xxlarge">8</span> registered drones</div>
-                    <div class="col-md-2 col-xs-4 mrgn-tp-md"><span class="xxlarge">2</span> deregistered drones</div>
 
-                </div>
-            </section>
+            <table id="tbl-merge" class="table table-condensed">
+                <caption class="wb-inv">Summary of the resulting account after merging account TC8888888888 into TC9999999999</caption>
 
-            <h3>Exams</h3>
-            
-            <section class="well">
-                <div class="row">
-                    <div class="col-md-1 col-xs-4"><img class="img-responsive" src="../../../img/exam.svg"/></div>
-                    <div class="col-md-2 col-xs-4 mrgn-tp-md"><span class="xxlarge">1</span> Small Basic Exam</div>
-                    <div class="col-md-2 col-xs-4 mrgn-tp-md"><span class="xxlarge">2</span> Small Advanced Exams</div>
+                <thead>
+                    <tr>
+                        <th colspan="4" class="title">
+                            <h2 class="mrgn-tp-md">Summary</h2>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="text-center width30"></th>
+                        <th scope="col" class="width20 large">Source</th>
+                        <th scope="col" class="width20 large">Target</th>
+                        <th scope="col" class="width30 large result">Result</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-                </div>
-            </section>
+                    <tr>
+                        <th scope="row">Account number</th>
+                        <td>TC8888888888</td>
+                        <td>TC9999999999</td>
+                        <td>TC9999999999</td>
+                    </tr>
 
-            <h3>Pilot certificate</h3>
-            
-             <section class="well">
-                <div class="row">
-                    <div class="col-md-1 col-xs-4"><img class="img-responsive" src="../../../img/certificate.svg"/></div>
-                    <div class="col-md-11 col-xs-8 mrgn-tp-md"><strong>Paul Davies</strong> will hold a <strong>Pilot Certificate - Advanced Operations</strong></div>
-                </div>
-            </section>
-            
+                    <tr>
+                        <th scope="row">Account holder</th>
+                        <td>Paul F Davies</td>
+                        <td>Paul F Daviees</td>
+                        <td>Paul F Daviees</td>
+                    </tr>
 
-            <h3>Flight reviews & affiliations</h3>
-            
-            <section class="well">
-                <div class="row">
-                    <div class="col-md-1 col-xs-4"><img class="img-responsive" src="../../../img/flightReview.svg"/></div>
-                    <div class="col-md-2 col-xs-4 mrgn-tp-md"><span class="xxlarge">24</span> flight reviews</div>
-                    <div class="col-md-2 col-xs-4 mrgn-tp-md"><span class="xxlarge">2</span> flight affiliations</div>
-                </div>
-            </section>
+                    <tr>
+                        <th scope="row">Sign-in method</th>
+                        <td>GCKey</td>
+                        <td>Sign-in Partner</td>
+                        <td>Sign-in Partner</td>
+                    </tr>
 
-            <h3>Business accounts</h3>
-            
-            <section class="well">
-                <div class="row">
-                    <div class="col-md-1 col-xs-4"><img class="img-responsive" src="../../../img/briefcase.svg"/></div>
-                    <div class="col-md-11 col-xs-8 mrgn-tp-md">
-                        <div><span class="xxlarge">24</span> business accounts with full access</div>
-                        <div class="mrgn-tp-sm"><i class="fas fa-exclamation-circle text-yellow mrgn-rght-sm"></i> 1 business account link will be removed for security reasons.</div>
-                    
-                    </div>
-                   
-                </div>
-            </section>
+
+                    <tr class="tbl-sctn-hdr">
+                        <td colspan="3">
+                            <h3>Contact information</h3>
+                        </td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">E-mail</th>
+                        <td>pdavies@gmail.com</td>
+                        <td>pdavies@hotmail.com</td>
+                        <td>pdavies@gmail.com</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Telephone</th>
+                        <td>613-999-9999 ext. 4988</td>
+                        <td>613-777-7777</td>
+                        <td>613-777-7777</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Address</th>
+                        <td>
+                            <address>123 Elm St. <br> Ottawa, ON K1K 1K1</address>
+                        </td>
+                        <td>
+                            <address>123 Elm St. <br> Ottawa, ON K1K 1K1</address>
+                        </td>
+                        <td>
+                            <address>123 Elm St. <br> Ottawa, ON K1K 1K1</address>
+                        </td>
+                    </tr>
+
+                    <tr class="tbl-sctn-hdr">
+                        <td colspan="3">
+                            <h3>About this person</h3>
+                        </td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Citizenship</th>
+                        <td>Canadian citizen or permanent resident of Canada</td>
+                        <td>Canadian citizen or permanent resident of Canada</td>
+                        <td>Canadian citizen or permanent resident of Canada</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Date of birth</th>
+                        <td>January 15, 2001</td>
+                        <td>January 15, 2001</td>
+                        <td>January 15, 2001</td>
+                    </tr>
+
+
+
+                    <tr class="tbl-sctn-hdr">
+                        <td colspan="3">
+                            <h3>Services</h3>
+                        </td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Pilot certificate</th>
+                        <td>Advanced Operations with flight reviewer rating</td>
+                        <td>Advanced Operations</td>
+                        <td>Advanced Operations with flight reviewer rating</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Drones</th>
+                        <td>
+                            <p><span class="xlarge">8</span> registered drone(s) <br> <span class="xlarge">1</span> deregistered drone(s)</p>
+                        </td>
+                        <td></td>
+                        <td>
+                            <p class="mrgn-bttm-0"><span class="xlarge">8</span> registered drone(s) <br> <span class="xlarge">1</span> deregistered drone(s)</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Exams</th>
+                        <td>
+                            <p><span class="xlarge">1</span> Small Advanced Exam <br> <span class="xlarge">2</span> Flight Reviewer Exams</p>
+                        </td>
+                        <td>
+                            <p><span class="xlarge">1</span> Small Advanced Exam</p>
+                        </td>
+                        <td>
+                            <p><span class="xlarge">2</span> Small Advanced Exam <br> <span class="xlarge">2</span> Flight Reviewer Exams</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Flight reviews & affiliations</th>
+                        <td>
+                            <p><span class="xlarge">24</span> flight reviews <br> <span class="xlarge">2</span> flight school affiliations</p>
+                        </td>
+                        <td></td>
+                        <td>
+                            <p><span class="xlarge">24</span> flight reviews <br> <span class="xlarge">2</span> flight school affiliations</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Business accounts</th>
+                        <td>
+                            <p><span class="xlarge">3</span> business accounts linked</p>
+                        </td>
+                        <td></td>
+                        <td>
+                            <p><span class="xlarge">2</span> business accounts linked <br>
+                                <i class="fa fa-exclamation-triangle mrgn-rght-sm text-yellow"></i><span class="small">1 business account link will be removed for security reasons</span>
+                            </p>
+                        </td>
+                    </tr>
+
+
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" class="footer">&nbsp;</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+
 
             <p>Once the merge is completed, the old account (TC9999999999) will be removed and will no longer be accessible.</p>
             <div class="nav-button">
-                <a href="accountProfile-confirmMerged.html" class="btn btn-primary">Merge account</a>
-                <a href="#" class="btn btn-link mrgn-lft-md">Cancel</a> </div>
+                <a href="#dlg-warning" class="btn btn-primary wb-lbx">Merge accounts</a>
+                <a href="#" class="btn btn-link mrgn-lft-md">Cancel</a>
+            </div>
+
+
+
+            <section id="dlg-warning" class="mfp-hide modal-dialog modal-content overlay-def lbx-modal width40">
+                <header class="modal-header">
+                    <h2 class="modal-title">Warning</h2>
+                </header>
+                <div class=" modal-body">
+                    <p>Merging an account may not be undone. Please ensure you've verified each account involved and that the resulting account services are correct before continuing.</p>
+                    
+                    <section class="cn-certification">
+                <div class="display-table-row vertical-align">
+                    <div class="display-table-cell text-nowrap">
+                        <input name="certification" id="certification" type="checkbox" value="" class="mrgn-bttm-md">
+                    </div>
+                    <div class="display-table-cell">
+                        <label for="certification" class="display-inline ">The account information has been verified and is correct.</label>
+                    </div>
+                </div>
+            </section>
+
+                </div>
+
+                <footer class="modal-footer">
+                    <a href="accountProfile-confirmMerged.html" class="btn btn-primary pull-left disabled" id="btnMerge">Merge accounts</a>
+                    <a href="#" class="popup-modal-dismiss btn btn-link pull-left">Let me check again...</a>
+                </footer>
+            </section>
+
         </form>
 
         <!-- InstanceEndEditable -->
@@ -188,7 +335,7 @@
                     <dt>Date modified:&#32;</dt>
                     <dd>
                         <time property="dateModified">
-                            <!-- #BeginDate format:IS1 -->2019-10-10
+                            <!-- #BeginDate format:IS1 -->2021-06-11
                             <!-- #EndDate -->
                         </time>
                         <span class="version">(V9.9.9)</span>
@@ -231,9 +378,17 @@
     <!-- InstanceBeginEditable name="CustomJS" -->
     <script>
         $(document).on("wb-ready.wb", function(event) {
-
+                $("#certification").on("click", function() {
+                    if ($("#certification").is(":checked")) {
+                        $("#btnMerge").removeClass("disabled");
+                    }
+                    else {
+                       $("#btnMerge").addClass("disabled");
+                    }
+                });
 
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>

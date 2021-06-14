@@ -378,6 +378,62 @@ textarea.fieldError,
     margin-top: 5px;
 }
 
+#tbl-merge {
+    border-radius: 10px;
+    padding-right: 20px;
+    border-collapse: collapse;
+}
+
+#tbl-merge th {
+    font-weight: normal;
+    border-bottom: none;
+}
+
+#tbl-merge thead tr {
+    border-bottom: none;
+}
+
+#tbl-merge tbody tr:hover {
+    background-color: #ffffef;
+}
+
+
+#tbl-merge tr.tbl-sctn-hdr,
+#tbl-merge tr.tbl-sctn-hdr:hover {
+    background-color: #f5f5f5;
+}
+
+#tbl-merge .footer {
+    background-color: #eee;
+}
+
+#tbl-merge thead th.result {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: -10px -0px 0px rgba(0, 0, 0, 0.2), -5px -5px 5px rgba(0, 0, 0, 0.1);
+    background: #dbedfe;
+    padding-left: 20px;
+}
+
+
+#tbl-merge tbody td:last-child:not([colspan]) {
+    /* position: relative; */
+    background: #dbedfe;
+    border-top: none;
+    border-bottom: none;
+    padding-left: 20px;
+
+    box-shadow: -10px 0 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.table tbody tr:last-child td:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1), -5px 0px 5px rgba(0, 0, 0, 0.1), 5px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
 #ctxtmenu-syllabus {
     display: none;
     position: fixed;
