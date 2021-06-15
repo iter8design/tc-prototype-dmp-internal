@@ -56,7 +56,8 @@
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
                     <object type="image/svg+xml" tabindex="-1" data="../../../assets/sig-blk-en.svg">
                     </object>
-                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
+                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
+                </div>
                 <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
                     <h2 class="wb-inv">Language selection</h2>
                     <ul class="list-inline margin-bottom-none">
@@ -218,44 +219,46 @@
 
         <section class="panel panel-default" id="cn-mrg-accnt">
             <header class="panel-heading">
-<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
                 <h2 class="mrgn-tp-sm large">Merge account</h2>
             </header>
 
-            <div class="panel-body bg-default">
+            <form action="accountProfile-mergeAccountPanelOpen-error.html" method="get">
+                <div class="panel-body bg-default">
 
 
-                <h3 class="mrgn-tp-sm">You are merging:</h3>
+                    <h3 class="mrgn-tp-sm">You are merging:</h3>
 
-                <div class="form-group">
+                    <div class="form-group">
 
-                    <label for="tcNumber-source" class="wb-inv">Transport Canada account number source:</label>
-                    <div class="input-group" id="cn-accnt-source"> <span class="input-group-addon" id="prefix-source">TC</span>
-                        <input type="text" class="form-control input-numeric-10" aria-describedby="prefix-source" name="tcNumber-source" id="tcNumber-source" size="10" maxlength="10" value="9999999999" disabled>
-                         <span class="input-group-btn">
-                            <button id="btnReverse" class="btn btn-default" type="button" title="Change merge direction"><i class="fas fa-exchange-alt fa-rotate-90"></i><span class="wb-inv">Change merge direction</span></button>  
-                        </span>
+                        <label for="tcNumber-source" class="wb-inv">Transport Canada account number source:</label>
+                        <div class="input-group" id="cn-accnt-source"> <span class="input-group-addon" id="prefix-source">TC</span>
+                            <input type="text" class="form-control input-numeric-10" aria-describedby="prefix-source" name="tcNumber-source" id="tcNumber-source" size="10" maxlength="10" value="9999999999" disabled>
+                            <span class="input-group-btn">
+                                <button id="btnReverse" class="btn btn-default" type="button" title="Change merge direction"><i class="fas fa-exchange-alt fa-rotate-90"></i><span class="wb-inv">Change merge direction</span></button>
+                            </span>
+                        </div>
                     </div>
-                </div>
 
 
 
-                <h3>Into the following account:</h3>
-                <div class="form-group">
+                    <h3>Into the following account:</h3>
+                    <div class="form-group">
 
-                    <label for="tcNumber-target" class="wb-inv">Transport Canada account number that you wish to merge into:</label>
-                    <div class="input-group" id="cn-accnt-target"> <span class="input-group-addon" id="prefix-target">TC</span>
-                        <input type="text" class="form-control input-numeric-10" aria-describedby="prefix-target" name="tcNumber-target" id="tcNumber-target" size="10" maxlength="10">
-                        <span class="input-group-btn">
-                            <button id="btnSearch" class="btn btn-default" type="button" title="Search for this account"><i class="fas fa-search"></i><span class="wb-inv">Search for this account</span></button>  
-                        </span>
+                        <label for="tcNumber-target" class="wb-inv">Transport Canada account number that you wish to merge into:</label>
+                        <div class="input-group" id="cn-accnt-target"> <span class="input-group-addon" id="prefix-target">TC</span>
+                            <input type="text" class="form-control input-numeric-10" aria-describedby="prefix-target" name="tcNumber-target" id="tcNumber-target" size="10" maxlength="10">
+                            <span class="input-group-btn">
+                                <button id="btnSearch" class="btn btn-default" type="button" title="Search for this account"><i class="fas fa-search"></i><span class="wb-inv">Search for this account</span></button>
+                            </span>
 
+                        </div>
                     </div>
+
+
                 </div>
-
-
-            </div>
-            <footer class="panel-footer"><button class="btn btn-primary disabled" id="btnContinue">Continue</button> <a href="#" class="btn btn-link">Cancel</a></footer>
+                <footer class="panel-footer"><button class="btn btn-primary disabled" id="btnContinue">Continue</button> <a href="#" class="btn btn-link">Cancel</a></footer>
+            </form>
         </section>
 
 
@@ -288,7 +291,7 @@
             <div class="container">
                 <div class="row">
                     <nav class="col-md-10 ftr-urlt-lnk">
-                      
+
                     </nav>
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
                     <div class="col-xs-6 col-md-2 text-right">
@@ -310,33 +313,34 @@
 		<![endif]-->
     <script src="../../../GCWeb/js/theme.min.js"></script>
     <script src="../../../js/tc/bootstrap/dropdown.js"></script>
-     <script src="../../../js/tc/cleave/cleave.min.js"></script>
+    <script src="../../../js/tc/cleave/cleave.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
 
     <script type="text/javascript">
         $(document).on("wb-ready.wb", function(event) {
-                $("#btnReverse").on("click", function() {
-                    var source = $("#cn-accnt-source").html();
-                    var target = $("#cn-accnt-target").html();
-                    $("#cn-accnt-source").html(target);
-                    $("#cn-accnt-target").html(source);
+            $("#btnReverse").on("click", function() {
+                var source = $("#cn-accnt-source").html();
+                var target = $("#cn-accnt-target").html();
+                $("#cn-accnt-source").html(target);
+                $("#cn-accnt-target").html(source);
+            });
+
+            if ($(".input-numeric-10").length) {
+                new Cleave('.input-numeric-10', {
+                    blocks: [10],
+                    numericOnly: true
                 });
-                                                         
-                if ($(".input-numeric-10").length) {
-                    new Cleave('.input-numeric-10', {
-                        blocks: [10],
-                        numericOnly: true
-                    });
+            }
+
+            $(".input-numeric-10").on('keypress', function() {
+                if ($(this).val().length == 10) {
+                    $("#btnContinue").removeClass("disabled");
+                } else {
+                    $("#btnContinue").addClass("disabled");
                 }
-                                                         
-                $(".input-numeric-10").on('keypress', function() {
-                    if ($(this).val().length == 10) {
-                        $("#btnContinue").removeClass("disabled");
-                    } else {
-                        $("#btnContinue").addClass("disabled");  
-                    }
-                });
+            });
         });
+
     </script>
 
     <!-- InstanceEndEditable -->

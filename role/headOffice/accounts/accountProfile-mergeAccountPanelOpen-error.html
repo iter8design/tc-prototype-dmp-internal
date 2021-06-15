@@ -56,7 +56,8 @@
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
                     <object type="image/svg+xml" tabindex="-1" data="../../../assets/sig-blk-en.svg">
                     </object>
-                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
+                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
+                </div>
                 <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
                     <h2 class="wb-inv">Language selection</h2>
                     <ul class="list-inline margin-bottom-none">
@@ -222,50 +223,53 @@
                 <h2 class="mrgn-tp-sm large">Merge account</h2>
             </header>
 
-            <div class="panel-body bg-default">
+            <form action="mergeAccount.html" method="get">
+                <div class="panel-body bg-default">
 
-                <div class="alert alert-danger mrgn-bttm-md">
-                    <h2>Attention</h2>
-                    <ol class="fa-ul">
+                    <div class="alert alert-danger mrgn-bttm-md">
+                        <h2>Attention</h2>
+                        <ol class="fa-ul">
 
-                        <li><a href="#tcNumber-target"><i class="fa-li fa fa-angle-right"></i>The Transport Canada account number entered is for a business account and may not be merged.</a></li>
-                    </ol>
-                </div>
-
-
-
-                <h3 class="mrgn-tp-sm">You are merging:</h3>
-
-
-                <div class="form-group">
-
-                    <label for="tcNumber-source" class="wb-inv">Transport Canada account number source:</label>
-                    <div class="input-group" id="cn-accnt-source"> <span class="input-group-addon" id="prefix-source">TC</span>
-                        <input type="text" class="form-control input-numeric-10" aria-describedby="prefix-source" name="tcNumber-source" id="tcNumber-source" size="10" maxlength="10" value="9999999999" disabled>
-                        <span class="input-group-btn">
-                            <button id="btnReverse" class="btn btn-default" type="button" title="Change merge direction"><i class="fas fa-exchange-alt fa-rotate-90"></i><span class="wb-inv">Change merge direction</span></button>
-                        </span>
+                            <li><a href="#tcNumber-target"><i class="fa-li fa fa-angle-right"></i>The Transport Canada account number entered is for a business account and may not be merged.</a></li>
+                        </ol>
                     </div>
-                </div>
 
 
 
-                <h3>Into the following account:</h3>
-                <div class="form-group">
 
-                    <label for="tcNumber-target" class="wb-inv">Transport Canada account number that you wish to merge into:</label>
-                    <div class="input-group" id="cn-accnt-target"> <span class="input-group-addon" id="prefix-target">TC</span>
-                        <input type="text" class="form-control input-numeric-10 fieldError" aria-describedby="prefix-target" name="tcNumber-target" id="tcNumber-target" size="10" maxlength="10">
-                        <span class="input-group-btn">
-                            <button id="btnSearch" class="btn btn-default" type="button" title="Search for this account"><i class="fas fa-search"></i><span class="wb-inv">Search for this account</span></button>
-                        </span>
+                    <h3 class="mrgn-tp-sm">You are merging:</h3>
 
+
+                    <div class="form-group">
+
+                        <label for="tcNumber-source" class="wb-inv">Transport Canada account number source:</label>
+                        <div class="input-group" id="cn-accnt-source"> <span class="input-group-addon" id="prefix-source">TC</span>
+                            <input type="text" class="form-control input-numeric-10" aria-describedby="prefix-source" name="tcNumber-source" id="tcNumber-source" size="10" maxlength="10" value="9999999999" disabled>
+                            <span class="input-group-btn">
+                                <button id="btnReverse" class="btn btn-default" type="button" title="Change merge direction"><i class="fas fa-exchange-alt fa-rotate-90"></i><span class="wb-inv">Change merge direction</span></button>
+                            </span>
+                        </div>
                     </div>
+
+
+
+                    <h3>Into the following account:</h3>
+                    <div class="form-group">
+
+                        <label for="tcNumber-target" class="wb-inv">Transport Canada account number that you wish to merge into:</label>
+                        <div class="input-group" id="cn-accnt-target"> <span class="input-group-addon" id="prefix-target">TC</span>
+                            <input type="text" class="form-control input-numeric-10 fieldError" aria-describedby="prefix-target" name="tcNumber-target" id="tcNumber-target" size="10" maxlength="10">
+                            <span class="input-group-btn">
+                                <button id="btnSearch" class="btn btn-default" type="button" title="Search for this account"><i class="fas fa-search"></i><span class="wb-inv">Search for this account</span></button>
+                            </span>
+
+                        </div>
+                    </div>
+
+
                 </div>
-
-
-            </div>
-            <footer class="panel-footer"><button class="btn btn-primary disabled">Continue</button> <a href="#" class="btn btn-link">Cancel</a></footer>
+                <footer class="panel-footer"><button class="btn btn-primary disabled">Continue</button> <a href="#" class="btn btn-link">Cancel</a></footer>
+            </form>
         </section>
 
 
@@ -324,7 +328,8 @@
 
     <script type="text/javascript">
         $(document).on("wb-ready.wb", function(event) {
-            $("#btnReverse").on("click", function() {\
+            $("#btnReverse").on("click", function() {
+                \
                 var source = $("#cn-accnt-source").html();
                 consoloe.log(source);
                 var target = $("#cn-accnt-target").html();
@@ -334,6 +339,7 @@
 
 
         });
+
     </script>
 
     <!-- InstanceEndEditable -->

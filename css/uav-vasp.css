@@ -426,7 +426,7 @@ textarea.fieldError,
     box-shadow: -10px 0 0px 0px rgba(0, 0, 0, 0.2);
 }
 
-.table tbody tr:last-child td:last-child {
+#tbl-merge tbody tr:last-child td:last-child {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1), -5px 0px 5px rgba(0, 0, 0, 0.1), 5px 0px 5px rgba(0, 0, 0, 0.1);
