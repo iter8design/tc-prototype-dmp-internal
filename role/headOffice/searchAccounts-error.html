@@ -130,8 +130,8 @@
                 <li><a href="#referenceNumber"><i class="fa-li fa fa-angle-right"></i>Please enter the business number.</a></li>
                 <!-- NEW -->
                 <li><a href="#referenceNumber"><i class="fa-li fa fa-angle-right"></i>The business number entered must be 9 digits long.</a></li>
-                <li><i class="fa-li fa fa-angle-right"></i>Please enter at least one other search criteria in addition to the country.</li>
-                <li><i class="fa-li fa fa-angle-right"></i>When searching by province, please indicate the city.</li>
+                <li><i class="fa-li fa fa-angle-right"></i>Please enter at least one other search criteria.</li>
+                <!-- <li><i class="fa-li fa fa-angle-right"></i>When searching by province, please indicate the city.</li> -->
                 <li><a href="#givenName"><i class="fa-li fa fa-angle-right"></i>The first (given) name entered may not be greater than 50 characters.</a></li>
                 <li><a href="#middleInitials"><i class="fa-li fa fa-angle-right"></i>The middle name/initials entered may not be greater than 50 characters.</a></li>
                 <li><a href="#familyName"><i class="fa-li fa fa-angle-right"></i>The last (family) name entered may not be greater than 50 characters.</a></li>
@@ -143,16 +143,16 @@
                 <!-- NEW -->
                 <li><a href="#streetNumber"><i class="fa-li fa fa-angle-right"></i>The address entered may not be greater than 250 characters.</a></li>
                 <!-- MODIFIED -->
-                <li><a href="#addressLine2"><i class="fa-li fa fa-angle-right"></i>The P.O. Box, apartment, suite, unit, building, floor, etc. entered may not be greater than 250 characters.</a></li>
+                <!-- <li><a href="#addressLine2"><i class="fa-li fa fa-angle-right"></i>The P.O. Box, apartment, suite, unit, building, floor, etc. entered may not be greater than 250 characters.</a></li> -->
 
 
                 <li><a href="#city"><i class="fa-li fa fa-angle-right"></i>The city entered may not be greater than 75 characters.</a></li>
 
-                <li><a href="#postalCode"><i class="fa-li fa fa-angle-right"></i>The postal code entered must be in the X9X 9X9 format.</a></li>
+                <!-- <li><a href="#postalCode"><i class="fa-li fa fa-angle-right"></i>The postal code entered must be in the X9X 9X9 format.</a></li> -->
                 <!-- NEW -->
-                <li><a href="#zip"><i class="fa-li fa fa-angle-right"></i>The ZIP code entered may not be greater than 9 characters.</a></li>
+                <!-- <li><a href="#zip"><i class="fa-li fa fa-angle-right"></i>The ZIP code entered may not be greater than 9 characters.</a></li> -->
                 <!-- NEW -->
-                <li><a href="#postal-zip"><i class="fa-li fa fa-angle-right"></i>The postal/ZIP code entered may not be greater than 10 characters.</a></li>
+                <!-- <li><a href="#postal-zip"><i class="fa-li fa fa-angle-right"></i>The postal/ZIP code entered may not be greater than 10 characters.</a></li> -->
                 <!-- NEW -->
                 <li><a href="#businessName"><i class="fa-li fa fa-angle-right"></i>The legal/operating name entered may not be greater than 150 characters.</a></li>
 
@@ -260,7 +260,7 @@
                                     </div>
                                 </section>
                             </div>
-                            <!--<div class="col-md-6">
+                            <div class="col-md-6">
                                 <section class="panel panel-default">
                                     <header class="panel-heading">
                                         <h2 class="panel-title">Address</h2>
@@ -276,15 +276,15 @@
 
                                         </div>
 
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <label for="addressLine2"><abbr title="Post office">P.O.</abbr> Box, apartment, suite, unit, building, floor, etc.
                                             </label>
                                             <input type="text" id="addressLine2" size="100" maxlength="250" class="form-control width100 fieldError">
-                                        </div>
+                                        </div> -->
                                         <div class="form-group">
                                             <label for="country">Country: </label>
                                             <select class="form-control" name="country" id="country">
-                                                <option data-code="ALL" selected="selected" value="">All countries</option>
+                                                <option data-code="ALL" value="">All countries</option>
                                                 <option data-code="AF" value="Afghanistan">Afghanistan</option>
                                                 <option data-code="AX" value="Aland Islands">Åland Islands</option>
                                                 <option data-code="AL" value="Albania">Albania</option>
@@ -322,7 +322,7 @@
                                                 <option data-code="BI" value="Burundi">Burundi</option>
                                                 <option data-code="KH" value="Cambodia">Cambodia</option>
                                                 <option data-code="CM" value="Republic of Cameroon">Cameroon</option>
-                                                <option data-code="CA" value="Canada">Canada</option>
+                                                <option data-code="CA" selected="selected" value="Canada">Canada</option>
                                                 <option data-code="CV" value="Cape Verde">Cape Verde</option>
                                                 <option data-code="BQ" value="Bonaire, Sint Eustatius and Saba">Caribbean Netherlands</option>
                                                 <option data-code="KY" value="Cayman Islands">Cayman Islands</option>
@@ -533,18 +533,18 @@
                                         <div id="cn-country-selection">
                                             <div class="form-group">
                                                 <label for="city">City: </label>
-                                                <input name="city" type="text" size="25" maxlength="75" id="city" value="" class="form-control" autocomplete="address-level2" />
+                                                <input name="city" type="text" size="25" maxlength="75" id="city" value="" class="form-control fieldError" autocomplete="address-level2" />
                                             </div>
-
+<!-- 
                                             <div class="form-group">
                                                 <label for="postal-zip">Postal/ZIP code: </label>
                                                 <input name="postal-zip" type="text" id="postal-zip" value="" size="10" maxlength="10" class="form-control" autocomplete="postal-code" />
-                                            </div>
+                                            </div> -->
 
                                         </div>
                                     </div>
                                 </section>
-                            </div>-->
+                            </div>
                         </div>
                         <div class="nav-button">
                             <button class="btn btn-primary" type="submit">Search <span class="wb-inv"> by contact information"</span></button>
