@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
-<!--[if gt IE 8]><!-->
+<!--[if gt IE 8]>
+<!-->
 <html class="no-js" lang="en" dir="ltr">
 <!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
 <!--<![endif]-->
@@ -27,14 +28,14 @@
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
-		
+
 		<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
 		<script src="../js/jquery/1.11.1/jquery.min.js"></script>
 		<script src="../wet-boew/js/ie8-wet-boew.min.js"></script>
 		<![endif]-->
     <!--[if lte IE 9]>
-		
-		
+
+
 		<![endif]-->
     <noscript>
         <link rel="stylesheet" href="../../../../wet-boew/css/noscript.min.css" />
@@ -42,6 +43,8 @@
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
     <!-- InstanceBeginEditable name="CustomCSS" -->
+    <link rel="stylesheet" type="text/css" href="../../../../js/tc/select2-4.0.5/dist/css/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../js/tc/select2-4.0.5/dist/css/select2-bootstrap.css" />
     <!-- InstanceEndEditable -->
 </head>
 
@@ -56,7 +59,8 @@
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
                     <object type="image/svg+xml" tabindex="-1" data="../../../../assets/sig-blk-en.svg">
                     </object>
-                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
+                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
+                </div>
                 <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
                     <h2 class="wb-inv">Language selection</h2>
                     <ul class="list-inline margin-bottom-none">
@@ -113,8 +117,17 @@
         <h1 property="name" id="wb-cont"><i class="fas fa-user-plus"></i> Add user</h1>
         <form method="get" action="addUser-error.html" novalidate>
             <div class="form-group">
-                <label for="user" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Enter the name and/or username of the person you wish to add:</label>
-                <input name="user" id="user" class="form-control" type="text" size="25" required>
+                <label for="user" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Enter and select the name and/or username of the person you wish to add:</label>
+
+                <!--<input name="user" id="user" class="form-control" type="text" size="25" required> -->
+                <select class="form-control display-block" id="user" name="user" style="width: 50%">
+
+                    <option value="0" selected="selected">Search by name/username...</option>
+                    <!-- This list should be empty and fetched dynamically from LDAP -->
+                    <option value="1">Dickson, Holly (dicksoh)</option>
+                    <option value="2">Khouri, Peter (khourip)</option>
+                    <option value="3">Wang, Xia (wangx)</option>
+                </select>
             </div>
 
             <h2 class="hd-section">Security roles to assign:</h2>
@@ -126,33 +139,52 @@
                 </header>
                 <div class="modal-body">
                     <fieldset class="mrgn-0">
-                        <legend class="medium">What job is this person performing?</legend>
+                        <legend class="medium"><span class="mandatory" title="This field is mandatory">*</span> What job will this person be performing?</legend>
 
 
                         <div class="radio">
                             <label for="r1">
-                                <input type="radio" id="r1" name="r1" value="r1" checked>
+                                <input type="radio" id="r1" name="job" value="r1" data-roles="r100,r102,r107,r201,r202,r300,r301,r302,r303">
+                                Exam Administrator
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label for="r2">
+                                <input type="radio" id="r2" name="job" value="r2" data-roles="r100,r102,r106,r201,r202,r300">
                                 Inspector
                             </label>
                         </div>
                         <div class="radio">
-                            <label for="r1">
-                                <input type="radio" id="r2" name="r2" value="r2">
-                                Program support
+                            <label for="r3">
+                                <input type="radio" id="r3" name="job" value="r3" data-roles="r100,r101,r102,r103,r104,r105,r106,r107,r108,r200,r201,r202">
+                                Program Support - Headquarters
                             </label>
                         </div>
                         <div class="radio">
-                            <label for="r1">
-                                <input type="radio" id="r3" name="r3" value="r3">
-                                System administrator
+                            <label for="r4">
+                                <input type="radio" id="r4" name="job" value="r4" data-roles="r100,r101,r102,r103,r104,r201,r202">
+                                Program Support - Regional
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label for="r5">
+                                <input type="radio" id="r5" name="job" value="r5" data-roles="r100,r102,r201,r202">
+                                Regulatory Oversight
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label for="r6">
+                                <input type="radio" id="r6" name="job" value="r6" data-roles="r100,r101,r102,r103,r104,r105,r106,r107,r108,r200,r201,r202,r300,r301,r302,r303,r400,r401,r402,r403">
+                                System Administrator
                             </label>
                         </div>
 
 
                     </fieldset>
+
                 </div>
                 <footer class="modal-footer">
-                    <button type="submit" class="btn btn-primary pull-left popup-modal-dismiss">Suggest security roles</button>
+                    <button type="submit" class="btn btn-primary pull-left popup-modal-dismiss" id="btnSuggest">Suggest security roles</button>
                     <a href="#" class="popup-modal-dismiss btn btn-default pull-left">Cancel</a>
                 </footer>
 
@@ -163,54 +195,49 @@
                     <div class="well">
                         <h3 class="medium mrgn-tp-sm">Account management</h3>
                         <div class="checkbox">
-                            <label for="s1">
-                                <input type="checkbox" name="s1" id="s1">
+                            <label for="r100">
+                                <input type="checkbox" name="role" id="r100">
                                 Search and view accounts</label>
                         </div>
                         <div class="checkbox">
-                            <label for="s2">
-                                <input type="checkbox" name="s2" id="s2">
+                            <label for="r101">
+                                <input type="checkbox" name="role" id="r101">
                                 Edit account details</label>
                         </div>
                         <div class="checkbox">
-                            <label for="s3">
-                                <input type="checkbox" name="s3" id="s3">
+                            <label for="r102">
+                                <input type="checkbox" name="role" id="r102">
                                 View account services</label>
                         </div>
                         <div class="checkbox">
-                            <label for="s4">
-                                <input type="checkbox" name="s4" id="s4">
+                            <label for="r103">
+                                <input type="checkbox" name="role" id="r103">
                                 Manage drone registrations</label>
                         </div>
                         <div class="checkbox">
-                            <label for="s5">
-                                <input type="checkbox" name="s5" id="s5">
+                            <label for="r104">
+                                <input type="checkbox" name="role" id="r104">
                                 Reset account access</label>
                         </div>
                         <div class="checkbox">
-                            <label for="s6">
-                                <input type="checkbox" name="s6" id="s6">
-                                Issue refund</label>
+                            <label for="r105">
+                                <input type="checkbox" name="role" id="r105">
+                                Retake/extend exam time</label>
                         </div>
                         <div class="checkbox">
-                            <label for="s7">
-                                <input type="checkbox" name="s7" id="s7">
-                                Merge account</label>
-                        </div>
-                        <div class="checkbox">
-                            <label for="s8">
-                                <input type="checkbox" name="s8" id="s8">
+                            <label for="r106">
+                                <input type="checkbox" name="role" id="r106">
                                 Suspend/reinstate pilot certificates</label>
                         </div>
                         <div class="checkbox">
-                            <label for="s9">
-                                <input type="checkbox" name="s9" id="s9">
+                            <label for="r107">
+                                <input type="checkbox" name="role" id="r107">
                                 Manage drone flight school affiliations</label>
                         </div>
 
                         <div class="checkbox">
-                            <label for="s10">
-                                <input type="checkbox" name="s10" id="s10">
+                            <label for="r108">
+                                <input type="checkbox" name="role" id="r108">
                                 Manage account access</label>
                         </div>
                     </div>
@@ -219,18 +246,18 @@
                     <div class="well">
                         <h3 class="medium mrgn-tp-sm">Drones</h3>
                         <div class="checkbox">
-                            <label for="s11">
-                                <input type="checkbox" name="s11" id="s11">
+                            <label for="r200">
+                                <input type="checkbox" name="role" id="r200">
                                 Manage drone list</label>
                         </div>
                         <div class="checkbox">
-                            <label for="s12">
-                                <input type="checkbox" name="s12" id="s12">
+                            <label for="r201">
+                                <input type="checkbox" name="role" id="r201">
                                 Search registered & deregistered drones</label>
                         </div>
                         <div class="checkbox">
-                            <label for="s13">
-                                <input type="checkbox" name="s13" id="s13">
+                            <label for="r202">
+                                <input type="checkbox" name="role" id="r202">
                                 View published drone makes & models</label>
                         </div>
                     </div>
@@ -238,23 +265,23 @@
                     <div class="well">
                         <h3 class="medium mrgn-tp-sm">Exams</h3>
                         <div class="checkbox">
-                            <label for="s14">
-                                <input type="checkbox" name="s14" id="s14">
+                            <label for="r300">
+                                <input type="checkbox" name="role" id="r300">
                                 View exam syllabus</label>
                         </div>
                         <div class="checkbox">
-                            <label for="s15">
-                                <input type="checkbox" name="s15" id="s15">
+                            <label for="r301">
+                                <input type="checkbox" name="role" id="r301">
                                 Edit exam syllabus</label>
                         </div>
                         <div class="checkbox">
-                            <label for="s16">
-                                <input type="checkbox" name="s16" id="s16">
-                                Manage syllabus updates</label>
+                            <label for="r302">
+                                <input type="checkbox" name="role" id="r302">
+                                Manage exam syllabus updates</label>
                         </div>
                         <div class="checkbox">
-                            <label for="s17">
-                                <input type="checkbox" name="s17" id="s17">
+                            <label for="r303">
+                                <input type="checkbox" name="role" id="r303">
                                 View exam settings</label>
                         </div>
                     </div>
@@ -265,23 +292,23 @@
                     <div class="well">
                         <h3 class="medium mrgn-tp-sm">Administration</h3>
                         <div class="checkbox">
-                            <label for="s18">
-                                <input type="checkbox" name="s18" id="s18">
+                            <label for="r400">
+                                <input type="checkbox" name="role" id="r400">
                                 Manage users</label>
                         </div>
                         <div class="checkbox">
-                            <label for="s19">
-                                <input type="checkbox" name="s19" id="s19">
+                            <label for="r401">
+                                <input type="checkbox" name="role" id="r401">
                                 Schedule maintenance</label>
                         </div>
                         <div class="checkbox">
-                            <label for="s20">
-                                <input type="checkbox" name="s20" id="s20">
+                            <label for="r402">
+                                <input type="checkbox" name="role" id="r402">
                                 Monitor notifications</label>
                         </div>
                         <div class="checkbox">
-                            <label for="s21">
-                                <input type="checkbox" name="s21" id="s21">
+                            <label for="r403">
+                                <input type="checkbox" name="role" id="r403">
                                 Manage resources</label>
                         </div>
 
@@ -290,7 +317,8 @@
             </div>
             <div class="nav-button">
                 <button class="btn btn-primary" type="submit">Add user</button>
-                <a href="#" class="btn btn-link mrgn-lft-md">Cancel</a> </div>
+                <a href="#" class="btn btn-link mrgn-lft-md">Cancel</a>
+            </div>
         </form>
         <!-- InstanceEndEditable -->
         <div class="datemod col-xs-12 mrgn-tp-lg">
@@ -310,12 +338,7 @@
             <div class="container">
                 <div class="row">
                     <nav class="col-md-10 ftr-urlt-lnk">
-                        <!--<h2 class="wb-inv">About this Web application</h2>
-          <ul>
-            <li><a href="#">Contact information</a></li>
-            <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
-            <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
-          </ul> -->
+
                     </nav>
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
                     <div class="col-xs-6 col-md-2 text-right">
@@ -326,67 +349,67 @@
             </div>
         </div>
     </footer>
-    <!--<footer role="contentinfo" id="wb-info">
-<nav role="navigation" class="container wb-navcurr">
-<h2 class="wb-inv">About government</h2>
-<ul class="list-unstyled colcount-sm-2 colcount-md-3">
-<li><a href="https://www.canada.ca/en/contact.html">Contact us</a></li>
-<li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
-<li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
-<li><a href="https://www.canada.ca/en/news.html">News</a></li>
-<li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
-<li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
-<li><a href="http://pm.gc.ca/eng">Prime Minister</a></li>
-<li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
-<li><a href="http://open.canada.ca/en/">Open government</a></li>
-</ul> </nav>
-<div class="brand">
-<div class="container">
-<div class="row">
-<nav class="col-md-10 ftr-urlt-lnk">
-<h2 class="wb-inv">About this site</h2>
-<ul>
-<li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
-<li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
-<li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
-<li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
-<li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
-</ul>
-</nav>
-<div class="col-xs-6 visible-sm visible-xs tofpg">
-<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
-</div>
-<div class="col-xs-6 col-md-2 text-right">
-<object type="image/svg+xml" tabindex="-1" role="img" data="../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
-</div>
-</div>
-</div>
-</div>
-</footer>
--->
+
     <!--[if gte IE 9 | !IE ]><!-->
     <script src="../../../../js/jquery/2.2.4/jquery.js"></script>
     <script src="../../../../wet-boew/js/wet-boew.min.js"></script>
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
-		
+
 		<![endif]-->
     <script src="../../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
+    <script type="text/javascript" src="../../../../js/tc/select2-4.0.5/dist/js/select2.min.js"></script>
     <script type="text/javascript">
-        $(document).on("wb-ready.wb", function(event) { <
-                    script type = "text/javascript" >
-                        $(document).on("wb-ready.wb", function(event) {
-                            $("#btnSuggestions").on("click", function() {
-                                console.log("Check off roles associated with the selected job.")
-                            });
+        $(document).on("wb-ready.wb", function(event) {
+
+            $("#user").focus();
+            $("#btnSuggest").on("click", function() {
+                //Clear all previously selected values
+                $("input[name=role]").prop('checked', false);
+
+                // Check off all the default roles for the job
+                console.log($('input[name=job]:checked').data("roles").split(","));
+                var defaultRoles = $('input[name=job]:checked').data("roles").split(",");
+                console.log(defaultRoles);
+                for (var index in defaultRoles) {
+                    $('#' + defaultRoles[index] + '').prop('checked', true);
+                }
 
 
-                        });
+            });
+
+            var txtNoResultsFound = "No users found.";
+
+            $('#user').select2({
+                /* ajax: {
+			url: "/public/includes/users.json",
+			dataType: 'json',
+			delay: 250,
+			cache: true
+		  },
+		  processResults: function (data) {
+			  // Tranforms the top-level key of the response object from 'items' to 'results'
+			  return {
+				results: data.items
+			  };
+			},
+		  placeholder: 'Search for a user...',
+		  escapeMarkup: function (markup) { return markup; }, // let our custom formatter work  */
+                theme: "bootstrap",
+                minimumInputLength: 1,
+                "language": {
+                    "noResults": function() {
+                        return txtNoResultsFound;
+                    }
+                },
+                escapeMarkup: function(markup) {
+                    return markup;
+                }
+            });
+        });
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>

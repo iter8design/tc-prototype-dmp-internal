@@ -59,23 +59,10 @@ table.dataTable thead .sorting_asc .sorting-icons:before {
     color: #000;
 }
 
-table.dataTable thead th.sorting_asc:after {
-    font-family: 'Font Awesome 5 Pro';
-    content: "\f0de";
-    color: #000;
-}
-
-table.dataTable thead .sorting_desc .sorting-icons:after {
+table.dataTable thead .sorting_desc .sorting-icons:before {
     content: "\f0dd";
     color: #000;
 }
-
-table.dataTable thead th.sorting_desc:after {
-    font-family: 'Font Awesome 5 Pro';
-    content: "\f0dd";
-    color: #000;
-}
-
 
 table.dataTable thead th {
     background-color: #eee;
