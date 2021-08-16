@@ -117,7 +117,7 @@
         <h1 property="name" id="wb-cont"><i class="fas fa-user-plus"></i> Add user</h1>
         <form method="get" action="addUser-error.html" novalidate>
             <div class="form-group">
-                <label for="user" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Enter and select the name and/or username of the person you wish to add:</label>
+                <label for="user" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Select the person you wish to add:</label>
 
                 <!--<input name="user" id="user" class="form-control" type="text" size="25" required> -->
                 <select class="form-control display-block" id="user" name="user" style="width: 50%">
@@ -234,12 +234,6 @@
                                 <input type="checkbox" name="role" id="r107">
                                 Manage drone flight school affiliations</label>
                         </div>
-
-                        <div class="checkbox">
-                            <label for="r108">
-                                <input type="checkbox" name="role" id="r108">
-                                Manage account access</label>
-                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -304,7 +298,7 @@
                         <div class="checkbox">
                             <label for="r402">
                                 <input type="checkbox" name="role" id="r402">
-                                Monitor notifications</label>
+                                Monitor email notifications</label>
                         </div>
                         <div class="checkbox">
                             <label for="r403">
@@ -364,7 +358,6 @@
     <script type="text/javascript">
         $(document).on("wb-ready.wb", function(event) {
 
-            $("#user").focus();
             $("#btnSuggest").on("click", function() {
                 //Clear all previously selected values
                 $("input[name=role]").prop('checked', false);
@@ -381,7 +374,6 @@
             });
 
             var txtNoResultsFound = "No users found.";
-
             $('#user').select2({
                 /* ajax: {
 			url: "/public/includes/users.json",

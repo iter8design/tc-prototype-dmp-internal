@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
-<!--[if gt IE 8]><!-->
+<!--[if gt IE 8]>
+<!-->
 <html class="no-js" lang="en" dir="ltr">
 <!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
 <!--<![endif]-->
@@ -58,7 +59,8 @@
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
                     <object type="image/svg+xml" tabindex="-1" data="../../../../assets/sig-blk-en.svg">
                     </object>
-                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
+                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
+                </div>
                 <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
                     <h2 class="wb-inv">Language selection</h2>
                     <ul class="list-inline margin-bottom-none">
@@ -147,7 +149,8 @@
                                 <div class="form-inline">
                                     <div class="input-group">
                                         <input type="text" id="mtow" name="mtow" size="5" class="form-control text-right" aria-describedby="suffix" style="width: auto;">
-                                        <span class="input-group-addon" id="suffix" style="width: auto;">kilograms (kg)</span> </div>
+                                        <span class="input-group-addon" id="suffix" style="width: auto;">kilograms (kg)</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -189,13 +192,13 @@
                     </section>
                     <section class="panel panel-default">
                         <header class="panel-heading">
-                            <h2 class="panel-title">Exclude from list</h2>
+                            <h2 class="panel-title">Unpublish from drone list</h2>
                         </header>
                         <div class="panel-body">
-                            <p>If this drone does not warrant being added to the list at this time, select <strong>Exclude from list</strong> to remove the drone from further consideration.</p>
+                            <p>If this drone does not warrant being added to the list at this time, select <strong>Unpublish from drone list</strong> to remove the drone from further consideration.</p>
                         </div>
                         <footer class="panel-footer">
-                            <button type="submit" class="btn btn-default">Exclude from drone list</button>
+                            <button type="submit" class="btn btn-default">Unpublish from drone list</button>
                         </footer>
                     </section>
                 </div>
@@ -216,7 +219,8 @@
             <footer class="modal-footer">
                 <button type="submit" class="btn btn-primary pull-left">Send email now</button>
                 <button type="submit" class="btn btn-default pull-left">Schedule email for later</button>
-                <a href="#" class="popup-modal-dismiss btn btn-link pull-left">Let me think about this...</a> </footer>
+                <a href="#" class="popup-modal-dismiss btn btn-link pull-left">Let me think about this...</a>
+            </footer>
         </section>
 
         <!-- InstanceEndEditable -->
@@ -288,7 +292,7 @@
                 minimumInputLength: 1,
                 "language": {
                     "noResults": function() {
-                        return "No results found - add the drone to the list or exclude it.";
+                        return "No results found";
                     }
                 },
                 escapeMarkup: function(markup) {
@@ -299,10 +303,7 @@
 
 
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
