@@ -140,40 +140,30 @@
 
                         <div class="radio">
                             <label for="r1">
-                                <input type="radio" id="r1" name="job" value="r1" data-roles="r100,r102,r107,r201,r202,r300,r301,r302,r303">
+                                <input type="radio" id="r1" name="job" value="r1" data-roles="r100,r101,r102,r107,r200,r201,r300,r301,r302,r303">
                                 Exam Administrator
                             </label>
                         </div>
                         <div class="radio">
-                            <label for="r2">
-                                <input type="radio" id="r2" name="job" value="r2" data-roles="r100,r102,r106,r201,r202,r300">
-                                Inspector
+                            <label for="r6">
+                                <input type="radio" id="r6" name="job" value="r6" data-roles="r100,r101,r102,r103,r104,r105,r106,r107,r200,r201,r202,r300,r301,r302,r303,r400,r401,r402">
+                                Program Administrator
                             </label>
                         </div>
-                        <div class="radio">
-                            <label for="r3">
-                                <input type="radio" id="r3" name="job" value="r3" data-roles="r100,r101,r102,r103,r104,r105,r106,r107,r108,r200,r201,r202">
-                                Program Support - Headquarters
-                            </label>
-                        </div>
+
                         <div class="radio">
                             <label for="r4">
-                                <input type="radio" id="r4" name="job" value="r4" data-roles="r100,r101,r102,r103,r104,r201,r202">
-                                Program Support - Regional
+                                <input type="radio" id="r4" name="job" value="r4" data-roles="r100,r101,r102,r103,r104,r105,r200,r201">
+                                Program Support
                             </label>
                         </div>
                         <div class="radio">
                             <label for="r5">
-                                <input type="radio" id="r5" name="job" value="r5" data-roles="r100,r102,r201,r202">
+                                <input type="radio" id="r5" name="job" value="r5" data-roles="r100,r102,r200,r201">
                                 Regulatory Oversight
                             </label>
                         </div>
-                        <div class="radio">
-                            <label for="r6">
-                                <input type="radio" id="r6" name="job" value="r6" data-roles="r100,r101,r102,r103,r104,r105,r106,r107,r108,r200,r201,r202,r300,r301,r302,r303,r400,r401,r402,r403">
-                                System Administrator
-                            </label>
-                        </div>
+
 
 
                     </fieldset>
@@ -197,37 +187,37 @@
                         </div>
                         <div class="checkbox">
                             <label for="r101">
-                                <input type="checkbox" name="role" id="r101">
+                                <input type="checkbox" name="role" id="r101" data-dependencies='r100'>
                                 Edit account details</label>
                         </div>
                         <div class="checkbox">
                             <label for="r102">
-                                <input type="checkbox" name="role" id="r102">
+                                <input type="checkbox" name="role" id="r102" data-dependencies='r100'>
                                 View account services</label>
                         </div>
                         <div class="checkbox">
                             <label for="r103">
-                                <input type="checkbox" name="role" id="r103">
+                                <input type="checkbox" name="role" id="r103" data-dependencies='r100,r102'>
                                 Manage drone registrations</label>
                         </div>
                         <div class="checkbox">
                             <label for="r104">
-                                <input type="checkbox" name="role" id="r104">
+                                <input type="checkbox" name="role" id="r104" data-dependencies='r100,r102'>
                                 Reset account access</label>
                         </div>
                         <div class="checkbox">
                             <label for="r105">
-                                <input type="checkbox" name="role" id="r105">
+                                <input type="checkbox" name="role" id="r105" data-dependencies='r100,r102'>
                                 Retake/extend exam time</label>
                         </div>
                         <div class="checkbox">
                             <label for="r106">
-                                <input type="checkbox" name="role" id="r106">
+                                <input type="checkbox" name="role" id="r106" data-dependencies='r100,r102'>
                                 Suspend/reinstate pilot certificates</label>
                         </div>
                         <div class="checkbox">
                             <label for="r107">
-                                <input type="checkbox" name="role" id="r107">
+                                <input type="checkbox" name="role" id="r107" data-dependencies='r100,r102'>
                                 Manage drone flight school affiliations</label>
                         </div>
                     </div>
@@ -235,20 +225,21 @@
                 <div class="col-md-4">
                     <div class="well">
                         <h3 class="medium mrgn-tp-sm">Drones</h3>
-                        <div class="checkbox">
-                            <label for="r200">
-                                <input type="checkbox" name="role" id="r200">
-                                Manage drone list</label>
-                        </div>
+
                         <div class="checkbox">
                             <label for="r201">
-                                <input type="checkbox" name="role" id="r201">
+                                <input type="checkbox" name="role" id="r200">
                                 Search registered & deregistered drones</label>
                         </div>
                         <div class="checkbox">
                             <label for="r202">
-                                <input type="checkbox" name="role" id="r202">
+                                <input type="checkbox" name="role" id="r201">
                                 View published drone makes & models</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="r200">
+                                <input type="checkbox" name="role" id="r202">
+                                Manage drone list</label>
                         </div>
                     </div>
 
@@ -261,12 +252,12 @@
                         </div>
                         <div class="checkbox">
                             <label for="r301">
-                                <input type="checkbox" name="role" id="r301">
+                                <input type="checkbox" name="role" id="r301" data-dependencies='r300'>
                                 Edit exam syllabus</label>
                         </div>
                         <div class="checkbox">
                             <label for="r302">
-                                <input type="checkbox" name="role" id="r302">
+                                <input type="checkbox" name="role" id="r302" data-dependencies='r300,r301'>
                                 Manage exam syllabus updates</label>
                         </div>
                         <div class="checkbox">
@@ -348,12 +339,7 @@
             <div class="container">
                 <div class="row">
                     <nav class="col-md-10 ftr-urlt-lnk">
-                        <!--<h2 class="wb-inv">About this Web application</h2>
-          <ul>
-            <li><a href="#">Contact information</a></li>
-            <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
-            <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
-          </ul> -->
+
                     </nav>
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
                     <div class="col-xs-6 col-md-2 text-right">
@@ -383,13 +369,22 @@
                 $("input[name=role]").prop('checked', false);
 
                 // Check off all the default roles for the job
-                console.log($('input[name=job]:checked').data("roles").split(","));
                 var defaultRoles = $('input[name=job]:checked').data("roles").split(",");
-                console.log(defaultRoles);
                 for (var index in defaultRoles) {
                     $('#' + defaultRoles[index] + '').prop('checked', true);
                 }
 
+
+            });
+
+            $("input[name=role]").on("click", function() {
+                //Check for role dependencies and select those roles
+                if ($(this).prop('checked')) {
+                    var roleDependencies = $(this).data("dependencies").split(",");
+                    for (var index in roleDependencies) {
+                        $('#' + roleDependencies[index] + '').prop('checked', true);
+                    }
+                }
 
             });
         });
