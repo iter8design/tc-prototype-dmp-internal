@@ -130,7 +130,7 @@
                                 <li><a href="issueRefund.html"><i class="fas fa-usd-square mrgn-rght-sm"></i>Issue a refund</a></li>
                                 <li><a href="#"><i class="fa fa-code-merge mrgn-rght-sm"></i>Merge with another account</a></li>
                                 <li class="divider"></li>
-                                <li><a href="deleteAccount.html"><i class="fa fa-code-merge mrgn-rght-sm"></i>Delete</a></li>
+                                <li class="disabled" data-toggle="popover" data-placement="left" data-content="This account may not be deleted as one or more documents have been issued to the account holder.  If this account is a duplicate, please merge the account instead to maintain the account history."><a href="deleteAccount.html"><i class="fa fa-trash mrgn-rght-sm"></i>Delete</a></li>
                             </ul>
                         </div>
                     </div>
@@ -410,161 +410,15 @@
                 </details>
                 <details id="panel-notes">
                     <summary>Notes <span class="badge">3</span></summary>
-                    <h2 class="wb-inv">Notes </h2>
-                    <section class="panel panel-default mrgn-tp-md">
-                        <section class="panel-body" id="panelbar">
-                            <div class="form-group">
-                                <label for="note" class="wb-invisible">Add note</label>
-                                <textarea class="form-control width100" id="note" rows="3" maxlength="500" aria-describedby="charCount"></textarea>
-                                <button class="btn btn-primary mrgn-tp-md" role="button">Add note</button>
-                            </div>
-                            <div class="info-text">Notes are displayed in the language in which they were entered.</div>
-                            <ul class="list-group">
-                                <li class="list-group-item note note-permanent">
-                                    <div class="note-icon"><i class="fa fa-fw fa-comment-alt-exclamation fa-flip-horizontal" title="Pinned note"></i></div>
-                                    <div class="note-content">
-                                        <div class="note-text"><span class="editable-note" data-type="textarea" data-pk="1">Praesent euismod blandit nunc. Duis a iaculis velit. Duis mollis ultricies elit vel rutrum. Pellentesque luctus dolor id nulla hendrerit, id suscipit est accumsan.</span></div>
-                                        <div class="note-info">Written by Terry Newman on <abbr title="Wednesday">Wed.</abbr> September 25, 2020 - 18:12 <abbr title="Eastern Standard Time">EST</abbr></div>
-                                        <div class="note-buttons">
-                                            <ul>
-                                                <li><a href="#" class="note-action-edit"><i class="fas fa-pencil"></i>Edit</a></li>
-                                                <li><a href="#" class="note-action-toggle-pin"><i class="fas fa-thumbtack"></i>Unpin</a></li>
-                                                <li><a href="#" class="note-action-delete"><i class="fas fa-trash "></i>Delete</a></li>
-                                            </ul>
-                                        </div>
-                                </li>
-                                <li class="list-group-item note note-default">
-                                    <div class="note-icon"><i class="fa fa-fw fa-comment fa-flip-horizontal" title="Unpinned note"></i></div>
-                                    <div class="note-content">
-                                        <div class="note-text"><span class="editable-note" data-type="textarea" data-pk="2">Quisque et interdum est. Mauris nibh libero, malesuada eget viverra eget, molestie et mauris.</span></div>
-                                        <div class="note-info">Written by John Doe on <abbr title="Tuesday">Tues.</abbr> September 24, 2020 - 15:23 <abbr title="Eastern Standard Time">EST</abbr></div>
-                                        <div class="note-buttons">
-                                            <ul>
-                                                <li><a href="#" class="note-action-edit"><i class="fas fa-pencil"></i>Edit</a></li>
-                                                <li><a href="#" class="note-action-toggle-pin"><i class="fal fa-thumbtack"></i>Pin</a></li>
-                                                <li><a href="#" class="note-action-delete"><i class="fas fa-trash"></i>Delete</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item note note-default">
-                                    <div class="note-icon"><i class="fa fa-fw fa-comment fa-flip-horizontal" title="Unpinned note"></i></div>
-                                    <div class="note-content">
-                                        <div class="note-text"><span class="editable-note" data-type="textarea" data-pk="3">Pellentesque quis placerat leo. Sed scelerisque, magna sed consequat auctor, ligula dolor fringilla arcu, sed viverra nisi quam ut justo. </span></div>
-                                        <div class="note-info">Written by John Doe on <abbr title="Tuesday">Tues.</abbr> September 24, 2020 - 11:13 <abbr title="Eastern Standard Time">EST</abbr></div>
-                                        <div class="note-buttons">
-                                            <ul>
-                                                <li><a href="#" class="note-action-edit"><i class="fas fa-pencil"></i>Edit</a></li>
-                                                <li><a href="#" class="note-action-toggle-pin"><i class="fal fa-thumbtack"></i>Pin</a></li>
-                                                <li><a href="#" class="note-action-delete"><i class="fas fa-trash"></i>Delete</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item note note-default">
-                                    <div class="note-icon"><i class="fa fa-fw fa-comment fa-flip-horizontal" title="Unpinned note"></i></div>
-                                    <div class="note-content">
-                                        <div class="note-text"><span class="editable-note" data-type="textarea" data-pk="4">Vestibulum viverra erat ac tempus gravida. Fusce ut commodo ligula, sed venenatis odio. In id efficitur tellus. Pellentesque iaculis sed purus nec faucibus. </span></div>
-                                        <div class="note-info">Written by John Doe on <abbr title="Tuesday">Tues.</abbr> September 24, 2020 - 9:01 <abbr title="Eastern Standard Time">EST</abbr></div>
-                                        <div class="note-buttons">
-                                            <ul>
-                                                <li><a href="#" class="note-action-edit"><i class="fas fa-pencil"></i>Edit</a></li>
-                                                <li><a href="#" class="note-action-toggle-pin"><i class="fal fa-thumbtack"></i>Pin</a></li>
-                                                <li><a href="#" class="note-action-delete"><i class="fas fa-trash"></i>Delete</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-
-                        </section>
-                    </section>
 
                 </details>
                 <details id="panel-notifications">
                     <summary>Notifications </summary>
-                    <h2 class="wb-inv">Notifications</h2>
-                    <section class="panel panel-default mrgn-tp-md">
-                        <header class="panel-heading">
-                            <div class="row">
-                                <div class="col-md-6"></div>
-                                <div class="col-md-6 text-right">
-                                    <form class="form-inline" method="get" action="accountSettings-noArchivedNotifications.html">
-                                        <label for="filter" class="display-inline hidden-xs">Display:</label>
-                                        <div class="input-group">
-                                            <select class="form-control" id="filter">
-                                                <option selected="">current notifications</option>
-                                                <option>archived notifications</option>
-                                            </select>
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-default" type="submit">Go</button>
-                                            </span>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </header>
-                        <div class="panel-body">
-                            <p class="mrgn-bttm-0">There are no current notifications at this time.</p>
-                        </div>
-                        <footer class="panel-footer text-right"> </footer>
-                    </section>
+
                 </details>
                 <details id="panel-relatedAccounts">
                     <summary>Related accounts <span class="badge">2</span> </summary>
-                    <h2 class="wb-inv">Related accounts</h2>
-                    <p class="mrgn-tp-md">This individual has access to the following accounts: </p>
-                    <div class="row wb-eqht">
 
-                        <div class="col-md-6 ">
-
-                            <div class="panel panel-default panel-account hght-inhrt ">
-                                <div class="panel-heading">
-
-                                    <h3 class="mrgn-tp-sm"><i class="fa fa-building opct-50 mrgn-rght-sm"></i><a href="#">Acme Widget company</a></h3>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="form-group">
-                                        <span class="label-upper">Address:</span><br>
-                                        <address class="mrgn-bttm-0">
-                                            9999 5th Avenue E <br>
-                                            New York, NY 99999<br>
-                                            United States
-                                        </address>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-                        </div>
-                        <div class="col-md-6 ">
-
-                            <div class="panel panel-default panel-account hght-inhrt">
-                                <div class="panel-heading">
-
-                                    <h3 class="mrgn-tp-sm"><i class="fa fa-building opct-50 mrgn-rght-sm"></i><a href="#">9999999 Canada Inc.</a></h3>
-                                </div>
-                                <div class="panel-body">
-
-                                    <div class="form-group"><span class="label-upper">Operating as:</span> <br>
-                                        Indiana Drones Inc.
-                                    </div>
-                                    <div class="form-group">
-                                        <span class="label-upper">Address:</span><br>
-                                        <address class="mrgn-bttm-0">
-                                            123 Elm Street <br>
-                                            Ottawa, ON K1K 1K1
-                                        </address>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-                        </div>
-                    </div>
                 </details>
                 <details id="panel-system">
                     <summary>System </summary>
@@ -632,166 +486,18 @@
     <script src="../../../js/tc/bootstrap3-editable/js/bootstrap-editable.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
 
-    <script type="text/javascript">
-        function initPinUnpinNotes(element) {
-            var txtPin = "Pin";
-            var txtUnpin = "Unpin";
-            var txtPinnedNote = "Pinned note";
-            var txtUnpinnedNote = "Unpinned note";
-            var htmlPin = "<i class='fas fa-thumbtack'></i>" + txtUnpin;
-            var htmlUnpin = "<i class='fal fa-thumbtack'></i>" + txtPin;
-            if (element.find("i").hasClass("fas")) {
-                element.html(htmlUnpin);
-                element.parent().parent().parent().parent().parent().removeClass("note-permanent").addClass("note-default").attr("title", txtUnpinnedNote).children(".note-icon").children("i").removeClass("fa-comment-alt-exclamation").addClass("fa-comment");
-
-            } else {
-                element.html(htmlPin);
-                element.parent().parent().parent().parent().parent().removeClass("note-default").addClass("note-permanent").attr("title", txtPinnedNote).children(".note-icon").children("i").removeClass("fa-comment").addClass("fa-comment-alt-exclamation");
-            }
-        }
-
-
+    <script>
         $(document).on("wb-ready.wb", function(event) {
-            //Hide note actions initially
-            $(".note-buttons").hide();
 
-            //Setup the AJAX call to bring in additional notes
-            $("#lnk-view-more-notes").on("click", function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                //AJAX call here
-                $.ajax({
-                    type: "GET",
-                    url: "includes/notes.html", //Empty example - "includes/empty.html"
-                    dataType: 'html',
-                    cache: false,
-                    success: function(content) {
-
-                        if (content) {
-                            var appendElement = $("#panelbar").find(".list-group");
-                            $(content).appendTo(appendElement).css("opacity", 0.25).animate({
-                                opacity: 1
-                            }, 200, function() {
-
-                            });
-
-                            //Reattach editable action to new content
-                            $(content).find(".editable-note").editable({
-                                toggle: 'manual',
-                                selector: 'a.note-action-edit'
-                            });
-                        } else {
-                            $("#cn-btn-view-more").hide();
-                        }
-                    }
-                });
-            });
-
-            //Display the actions available for notes when hovering over them
-            $("#panelbar").on("mouseenter", ".note", function() {
-                $(this).find(".note-buttons").fadeIn(300);
-            });
-
-            $("#panelbar").on("mouseleave", ".note", function() {
-                $(this).find(".note-buttons").hide();
-            });
-
-            //Allow pinning/unpinning actions for notes
-            $("#panelbar").on("click", "a.note-action-toggle-pin", function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                initPinUnpinNotes($(this));
-            });
-
-            var txtYes = "Yes";
-            var txtNo = "No";
-            var cnfrmDeleteHtmlTemplate = "<li class='list-group-item note note-default note-delete'><div class='note-icon'><i class='fa fa-fw fa-trash' title='Delete this note?'></i></div><div class='note-confirm'>Are you sure you wish to delete this note?<div class='note-confirm-actions'><a href='#' class='btn btn-primary btn-sm btn-yes'><i class='glyphicon glyphicon-ok'></i> Yes</a> <a href='#' class='btn btn-default btn-sm btn-no'><i class='glyphicon glyphicon-remove'></i> No</a></div></div><div class='note-content'></div></li>"
-
-            var txtDelete = "Delete note";
-            //Allow deleting of notes
-            $("#panelbar").on("click", "a.note-action-delete", function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-
-                var template = $(cnfrmDeleteHtmlTemplate);
-                var originalNote = $(this).parents(".note").clone();
-                var copyNote = originalNote.clone();
-                console.log(originalNote);
-                $("#panelbar").data("originalNote", originalNote);
-
-
-                $(copyNote).find('.note-buttons').unwrap().remove();
-                $(copyNote).find('.note-icon').remove();
-
-
-                template.find(".note-content").append($(copyNote).html());
-                $(this).parents(".note").replaceWith($(template));
-            });
-
-            $("#panelbar").on("click", "a.btn-yes", function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                $(this).parents('.note').remove();
-            });
-
-            $("#panelbar").on("click", "a.btn-no", function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-
-                $(this).parents(".note").replaceWith($("#panelbar").data("originalNote"));
-            });
-
-            // Allow for inline editting of notes
-            $.fn.editable.defaults.mode = 'inline';
-
-            $("#panelbar .editable-note").editable({
-                url: '/post',
-                toggle: 'manual',
-                selector: 'a.note-action-edit',
-                validate: function(value) {
-                    if ($.trim(value).length > 500) {
-                        return 'The note entered may not be greater than 500 characters.';
-                    }
-                },
-                error: function(response, newValue) {
-                    return 'An error occurred saving the note.  Please try again.';
-                }
-            }).on('shown', function(e, editable) {
-                setTimeout(function() {
-                    $(".editable-input").find("input:first").focus();
-                }, 50);
-            });
-
-            $("#panelbar").on("click", "a.note-action-edit", function(e) {
-                e.stopPropagation();
-                e.preventDefault();
-                $(this).parents('.note').find(".editable-note").editable('toggle');
-            });
-
-
-            var msgCharacterCountExceeded = "You'll need to shorten your note as you've reached the character limit";
-            var msgCharactersLeft = " characters left";
-            $("textarea").after("<div id='charCount' class='small pull-right' aria-live='polite'>&nbsp;</div>")
-
-            $("textarea").on("keyup focus", function() {
-                var max = 500;
-                var len = $(this).val().length;
-                if (len > max) {
-                    $(this).addClass("fieldError");
-                    $("#charCount").html("<i class='fas fa-exclamation-circle text-red mrgn-rght-sm'></i>" + msgCharacterCountExceeded);
-                } else {
-                    var char = max - len;
-                    $(this).removeClass("fieldError");
-                    $("#charCount").html("<i class='fas fa-info-circle text-blue mrgn-rght-sm'></i>" + char + " " + msgCharactersLeft);
-                }
-
-            }).on("focusout", function() {
-                var len = $(this).val().length;
-                if (len == 0)
-                    $("#charCount").html("&nbsp;");
-            });
+            /* Tooltips */
+            $('[data-toggle="popover"]').popover({
+                "html": true,
+                "trigger": 'click hover'
+            })
         });
     </script>
+
+
 
     <!-- InstanceEndEditable -->
 </body>

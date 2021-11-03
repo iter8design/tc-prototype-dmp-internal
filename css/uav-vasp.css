@@ -669,6 +669,10 @@ details.alert[open].alert-info {
     color: #666;
 }
 
+.dropdown-menu .disabled {
+    opacity: 70%;
+}
+
 
 .fa-1h5x {
     font-size: 1.8em;
