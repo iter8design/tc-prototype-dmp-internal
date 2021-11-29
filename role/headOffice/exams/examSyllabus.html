@@ -153,38 +153,38 @@
                                     </a></div>
                                 <ul>
                                     <li>
-                                        <div><a href="#">
+                                        <div data-menu="true"><a href="#">
                                                 Knowledge area 3</a></div>
                                     </li>
                                     <li>
-                                        <div><a href="#">
+                                        <div data-menu="true"><a href="#">
                                                 Knowledge area 4
                                             </a></div>
                                     </li>
                                     <li>
-                                        <div><a href="#">
+                                        <div data-menu="true"><a href="#">
                                                 Knowledge area 5
                                             </a></div>
                                         <ul>
-                                            <li>
+                                            <li data-type="qstn">
                                                 <div><a href="question-publishedVersion.html">
                                                         Question 1
                                                     </a></div>
                                             </li>
-                                            <li>
-                                                <div><a href="#">
-                                                        Question 1
+                                            <li data-type="qstn">
+                                                <div><a href="question-draftVersion.html">
+                                                        Question 1 <span class="label label-warning small mrgn-lft-md">Draft</span>
                                                     </a></div>
                                             </li>
-                                            <li>
-                                                <div><a href="#">
-                                                        Question 1
+                                            <li data-type="qstn">
+                                                <div><a href="question-readyForPublishing.html">
+                                                        Question 1 <span class="label label-success small mrgn-lft-md">Ready for publishing</span>
                                                     </a></div>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <div><a href="#">
+                                        <div data-menu="true"><a href="#">
                                                 Knowledge area 6
                                             </a></div>
                                     </li>
@@ -230,7 +230,7 @@
                         </ul>
                     </li>
                     <li>
-                        <div><a href="#">Domain 8</a><span class="label label-warning small mrgn-lft-md">Draft</span></div>
+                        <div><a href="#">Domain 8</a></div>
                     </li>
                 </ul>
             </li>
@@ -366,9 +366,9 @@
 
         <ul id="ctxtmenu-syllabus" class="dropdown-menu" role="menu">
             <li><a tabindex="-1" href="question-add.html"><i class="fas fa-file-plus mrgn-rght-sm"></i>Add question</a></li>
-            <li role="separator" class="divider"></li>
+            <!--<li role="separator" class="divider"></li>
             <li><a tabindex="-1" href="question-edit.html"><i class="fas fa-edit mrgn-rght-sm"></i>Edit</a></li>
-            <!--<li><a tabindex="-1" href="#"><i class="fas fa-clone mrgn-rght-sm"></i>Copy</a></li>
+            <li><a tabindex="-1" href="#"><i class="fas fa-clone mrgn-rght-sm"></i>Copy</a></li>
             <li><a tabindex="-1" href="#"><i class="fas fa-arrows mrgn-rght-sm"></i>Move</a></li>-->
         </ul>
 
@@ -447,6 +447,7 @@
 
 
                                 });
+                            /* window.setTimeout($menu.hide(), 5000); */
 
                             return false;
                         });
@@ -461,7 +462,7 @@
                 };
             })(jQuery, window);
 
-            $("#syllabus-basicAdv li, #syllabus-complex, #syllabus-flightReviewer").contextMenu({
+            $("#syllabus-basicAdv li [data-menu=true], #syllabus-complex li [data-menu=true], #syllabus-flightReviewer li [data-menu=true").contextMenu({
                 menuSelector: "#ctxtmenu-syllabus",
                 menuSelected: function(invokedOn, selectedMenu) {
 
@@ -484,10 +485,14 @@
 
                     }
                     console.log("ID to perform the action on:" + uid);
+
                 }
             });
 
-            $("#syllabus-basicAdv li, #syllabus-flightReviewer").sortable();
+            /*  $("#syllabus-basicAdv li[data-type!='qstn']").css("background-color", "#000");
+
+             /* $("# syllabus - basicAdv li[data - type != 'qstn'], #syllabus - flightReviewer li[data - type != 'qstn']
+             ").sortable(); */
 
 
 
@@ -497,6 +502,7 @@
             $("#ctxtmenu-syllabus").fadeOut(100);
         });
 
+        /* For drag & drop only
         (function($) {
             $.fn.drags = function(opt) {
 
@@ -540,7 +546,7 @@
                 });
 
             }
-        })(jQuery);
+        })(jQuery); */
     </script>
     <!-- InstanceEndEditable -->
 </body>

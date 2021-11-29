@@ -650,6 +650,14 @@ details.alert[open].alert-info {
     background-color: #dbedfe;
 }
 
+.badge.badge-published {
+    background-color: #28a745;
+}
+
+.badge.badge-unpublished {
+    background-color: #ffc107;
+}
+
 .cn-certification {
     background-color: #ffffcc;
     padding: 10px;
