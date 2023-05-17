@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
-<!--[if gt IE 8]><!-->
+<!--[if gt IE 8]>
+<!-->
 <html class="no-js" lang="en" dir="ltr">
 <!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
 <!--<![endif]-->
@@ -37,7 +38,7 @@
 		
 		<![endif]-->
     <noscript>
-        <link rel="stylesheet" href="../../../../wet-boew/css/noscript.min.css" />
+        <link rel="stylesheet" href="../../../../wet-boew/css/noscript.min.css">
     </noscript>
     <!-- InstanceBeginEditable name="CustomJSLibraries" -->
     <!-- InstanceEndEditable -->
@@ -50,7 +51,7 @@
         <li class="wb-slc"> <a class="wb-sl" href="#wb-cont">Skip to main content</a> </li>
         <li class="wb-slc visible-sm visible-md visible-lg"> <a class="wb-sl" href="#wb-info">Skip to "About this Web application"</a> </li>
     </ul>
-    <header role="banner">
+    <header>
         <div id="wb-bnr" class="container">
             <div class="row">
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
@@ -79,7 +80,7 @@
         </div>
         <div class="app-bar-mb">
             <div class="container visible-xs-block hidden-print">
-                <nav role="navigation">
+                <nav>
                     <!-- Adjust the following depending on search and/or menu settings -->
                     <h2 class="wb-inv">Search and menu</h2>
                     <ul class="app-list-main list-unstyled">
@@ -91,9 +92,9 @@
                 </nav>
             </div>
         </div>
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../../includes/menus/menu-headOffice.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
+        <nav id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../../includes/menus/menu-headOffice.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
 
-        <nav role="navigation" id="wb-bc" property="breadcrumb">
+        <nav id="wb-bc" property="breadcrumb">
             <h2>You are here:</h2>
             <div class="container">
                 <div class="row">
@@ -110,7 +111,7 @@
             </div>
         </nav>
     </header>
-    <main role="main" property="mainContentOfPage" class="container">
+    <main property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fas fa-drone"></i> View drones</h1>
         <div class="alert alert-danger mrgn-bttm-md">
@@ -119,6 +120,7 @@
 
                 <li><i class="fa-li fa fa-angle-right"></i>Please select at least one drone to deregister.</li>
                 <li><i class="fa-li fa fa-angle-right"></i>Please select at least one drone to transfer.</li>
+                <li><i class="fa-li fa fa-angle-right"></i>Drones may not be transferred at this time because none of the individuals for this business are Canadian citizens or permanent residents.</li>
 
             </ol>
         </div>
@@ -129,6 +131,7 @@
                         <summary>Registered</summary>
                         <p class="mrgn-tp-md">{<strong>3</strong>/no} drones are currently registered. Select a registration number to view the registration information. To deregister a drone, select the aircraft and press the <strong>Deregister</strong> button.</p>
                         <section class="panel panel-default panel-datatable">
+                            <h2 class="wb-inv">Registered</h2>
                             <header class="panel-heading pddng-tp-0">
                                 <div class="row">
                                     <div class="col-md-6"> </div>
@@ -187,8 +190,8 @@
                                         <!-- Only displayed if 1+ drones are registered -->
                                         <!-- Denoted as a link for prototype purposes only 
                                         <button class="btn btn-primary mrgn-tp-md" type="submit">Deregister</button>-->
-                                        <a href="deregister.html" class="btn btn-primary mrgn-tp-md" type="submit">Deregister</a>
-                                        <a href="transfer-oneIndividual.html" class="btn btn-default mrgn-tp-md" type="submit">Transfer</a>
+                                        <a href="deregister.html" class="btn btn-primary mrgn-tp-md">Deregister</a>
+                                        <a href="transfer-oneIndividual.html" class="btn btn-default mrgn-tp-md">Transfer</a>
 
                                     </div>
                                     <div class="col-md-4 col-xs-6 pddng-tp-sm pages text-center"> </div>
@@ -201,6 +204,7 @@
                         <summary>Deregistered</summary>
                         <p class="mrgn-tp-md">The following drones were deregistered and are no longer operational:</p>
                         <section class="panel panel-default panel-datatable">
+                            <h2 class="wb-inv">Deregistered</h2>
                             <div class="table-responsive">
                                 <table class="wb-tables table table-hover table-bordered" data-wb-tables='
         {"info" : false, "paging": false, "filter" : false, "order" : [[3,"desc"]],"columnDefs": [{ "orderable" : false, "targets":[4] },{"searchable" : false, "targets": []}],
@@ -269,7 +273,7 @@
             </div>
         </div>
     </main>
-    <footer role="contentinfo" id="wb-info">
+    <footer id="wb-info">
         <div id="transactFooter" class="landscape"></div>
         <div class="brand">
             <div class="container">
@@ -320,10 +324,7 @@
 
 
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
