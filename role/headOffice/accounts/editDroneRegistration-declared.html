@@ -122,17 +122,9 @@
         <h1 property="name" id="wb-cont"><i class="fas fa-drone"></i> Edit drone registration</h1>
         <p>All fields marked with an asterisk (<span class="mandatory-instructions">*</span>) are mandatory.</p>
         <form method="get" action="viewDrone-withSA-confirmSaved.html">
-            <fieldset class="mrgn-tp-sm">
-                <legend class="wb-inv">Does the drone have a safety assurance declaration or was it custom-built?</legend>
-                <div class="radio">
-                    <label for="purchased">
-                        <input type="radio" name="buildPurchase" value="radio" id="purchased" checked>
-                        This drone has a <strong>safety assurance declaration</strong></label>
-                </div>
-                <div class="form-group mrgn-lft-lg" id="purchaseInformation">
-
-                    <div class="form-group">
-                     <label for="makeModel" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Make/model: <strong class="required wb-inv">(required)</strong></label>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="makeModel" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Make/model: <strong class="required wb-inv">(required)</strong></label>
                     <select class="form-control display-block" id="makeModel" name="makeModel">
                         <option value="1">Aeryon Labs - Skyranger</option>
                         <option value="5">Draganfly - Commander</option>
@@ -154,42 +146,24 @@
 
                 </div>
 
-
+            </div>
+            <div class="row">
+                <div class="col-md-6">
                     <div class="form-group">
                         <label for="makeModelDescription">Nickname or description:</label>
                         <input name="makeModelDescription" type="text" id="makeModelDescription" value="Flying Burry" size="35" maxlength="50" class="form-control" />
                     </div>
+                </div>
+            </div>
 
-
+            <div class="row">
+                <div class="col-md-6">
                     <div class="form-group">
                         <label for="serialNumber">Serial #:</label>
                         <input name="serialNumber" id="serialNumber" type="text" size="35" class="form-control input-alpha-50" maxlength="50" value="12345678901234567890123456789012345678901234567890">
                     </div>
-
+                </div>
             </div>
-                <div class="radio">
-                    <label for="built">
-                        <input type="radio" name="buildPurchase" value="radio" id="built">
-                        This drone was <strong>built</strong> using either a kit, off-the-shelf or custom-built parts. </label>
-                </div>
-                <div class="form-group mrgn-lft-lg showHide" id="builtInformation">
-
-
-                    <div class="form-group">
-<div class="form-group">
-                        <label for="customMakeModelDescription"><span class="wb-inv">Custom-built </span>Nickname or description:</label>
-                        <input name="customMakeModelDescription" type="text" id="customMakeModelDescription" value="Flying Burry" size="35" maxlength="50" class="form-control" />
-                    </div>
-
-                    </div>
-
-                </div>
-            </fieldset>
-
-
-
-
-
 
 
             <div class="nav-button">
@@ -275,24 +249,7 @@
                 uppercase: true
             });
 
-
-            $(".showHide").hide();
-
-            $("#built").on("click", function() {
-                $("#builtInformation").fadeIn(300);
-                $("#purchaseInformation").hide();
-            });
-
-            $("#purchased").on("click", function() {
-                $("#builtInformation").hide();
-                $("#purchaseInformation").fadeIn(300);
-            });
-
         });
-
-
-
-
     </script>
     <!-- InstanceEndEditable -->
 </body>

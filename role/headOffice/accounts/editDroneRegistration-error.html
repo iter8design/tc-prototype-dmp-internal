@@ -134,48 +134,74 @@
         </div>
         <p>All fields marked with an asterisk (<span class="mandatory-instructions">*</span>) are mandatory.</p>
         <form method="get" action="viewDrone-withSA-confirmSaved.html">
-            <div class="row">
-                <div class="col-md-6">
-                    <label for="makeModel" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Make/model: <strong class="required wb-inv">(required)</strong></label>
-                    <select class="form-control display-block" id="makeModel" name="makeModel">
-                        <option value="1">Aeryon Labs - Skyranger</option>
-                        <option value="5">Draganfly - Commander</option>
-                        <option value="4">Draganfly - Guardian</option>
-                        <option value="2">Draganfly - X4ES</option>
-                        <option value="3">Draganfly - X4P</option>
-                        <option value="6">Epoc Unmanned - Stryder</option>
-                        <option value="7" selected="selected">Indro Robotics - Scout Mk III</option>
-                        <option value="8">Infinit Jib - Surveyor 630</option>
-                        <option value="9">Kesprey - Drone 1.0</option>
-                        <option value="10">Lockheed Martin - Indago 2</option>
-                        <option value="11">Lockheed Martin - Indago 3</option>
-                        <option value="12">Microdrones Canada - MD4-1000</option>
-                        <option value="13">SenseFly SA - ebee</option>
-                        <option value="14">SenseFly SA - ebee+</option>
-                        <option value="15">SenseFly SA - Albris</option>
-                        <option value="16">Silent Falcon UAS Technologies - Silent Falcon</option>
-                    </select>
-
+            <fieldset class="mrgn-tp-sm">
+                <legend class="wb-inv">Does the drone have a safety assurance declaration or was it custom-built?</legend>
+                <div class="radio">
+                    <label for="purchased">
+                        <input type="radio" name="buildPurchase" value="radio" id="purchased" checked>
+                        This drone has a <strong>safety assurance declaration</strong></label>
                 </div>
+                <div class="form-group mrgn-lft-lg" id="purchaseInformation">
 
-            </div>
-            <div class="row">
-                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="makeModel" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Make/model: <strong class="required wb-inv">(required)</strong></label>
+                        <select class="form-control display-block fieldError" id="makeModel" name="makeModel">
+                            <option value="1">Aeryon Labs - Skyranger</option>
+                            <option value="5">Draganfly - Commander</option>
+                            <option value="4">Draganfly - Guardian</option>
+                            <option value="2">Draganfly - X4ES</option>
+                            <option value="3">Draganfly - X4P</option>
+                            <option value="6">Epoc Unmanned - Stryder</option>
+                            <option value="7" selected="selected">Indro Robotics - Scout Mk III</option>
+                            <option value="8">Infinit Jib - Surveyor 630</option>
+                            <option value="9">Kesprey - Drone 1.0</option>
+                            <option value="10">Lockheed Martin - Indago 2</option>
+                            <option value="11">Lockheed Martin - Indago 3</option>
+                            <option value="12">Microdrones Canada - MD4-1000</option>
+                            <option value="13">SenseFly SA - ebee</option>
+                            <option value="14">SenseFly SA - ebee+</option>
+                            <option value="15">SenseFly SA - Albris</option>
+                            <option value="16">Silent Falcon UAS Technologies - Silent Falcon</option>
+                        </select>
+
+                    </div>
+
+
                     <div class="form-group">
                         <label for="makeModelDescription">Nickname or description:</label>
                         <input name="makeModelDescription" type="text" id="makeModelDescription" value="Flying Burry" size="35" maxlength="50" class="form-control fieldError" />
                     </div>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-md-6">
+
                     <div class="form-group">
                         <label for="serialNumber">Serial #:</label>
                         <input name="serialNumber" id="serialNumber" type="text" size="35" class="form-control input-alpha-50 fieldError" maxlength="50" value="12345678901234567890123456789012345678901234567890">
                     </div>
+
                 </div>
-            </div>
+                <div class="radio">
+                    <label for="built">
+                        <input type="radio" name="buildPurchase" value="radio" id="built">
+                        This drone was <strong>built</strong> using either a kit, off-the-shelf or custom-built parts. </label>
+                </div>
+                <div class="form-group mrgn-lft-lg showHide" id="builtInformation">
+
+
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="customMakeModelDescription"><span class="wb-inv">Custom-built </span>Nickname or description:</label>
+                            <input name="customMakeModelDescription" type="text" id="customMakeModelDescription" value="Flying Burry" size="35" maxlength="50" class="form-control fieldError" />
+                        </div>
+
+                    </div>
+
+                </div>
+            </fieldset>
+
+
+
+
+
 
 
             <div class="nav-button">
@@ -261,7 +287,24 @@
                 uppercase: true
             });
 
+
+            $(".showHide").hide();
+
+            $("#built").on("click", function() {
+                $("#builtInformation").fadeIn(300);
+                $("#purchaseInformation").hide();
+            });
+
+            $("#purchased").on("click", function() {
+                $("#builtInformation").hide();
+                $("#purchaseInformation").fadeIn(300);
+            });
+
         });
+
+
+
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
