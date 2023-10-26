@@ -1,4 +1,5 @@
-<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]>
+<!-->
 <html class="no-js" lang="en" dir="ltr">
 <!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
 <!--<![endif]-->
@@ -25,14 +26,14 @@
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
-		
+
 		<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
 		<script src="../js/jquery/1.11.1/jquery.min.js"></script>
 		<script src="../wet-boew/js/ie8-wet-boew.min.js"></script>
 		<![endif]-->
     <!--[if lte IE 9]>
-		
-		
+
+
 		<![endif]-->
     <noscript>
         <link rel="stylesheet" href="../../../../wet-boew/css/noscript.min.css" />
@@ -55,7 +56,8 @@
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
                     <object type="image/svg+xml" tabindex="-1" data="../../../../assets/sig-blk-en.svg">
                     </object>
-                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
+                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
+                </div>
                 <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
                     <h2 class="wb-inv">Language selection</h2>
                     <ul class="list-inline margin-bottom-none">
@@ -134,10 +136,11 @@
                 <label for="mtow" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Maximum takeoff weight: <strong class="required wb-inv">in kilograms (required)</strong> </label>
                 <div class="input-group">
                     <input type="text" id="mtow" name="mtow" size="5" class="form-control text-right" aria-describedby="suffix" style="width: auto;">
-                    <span class="input-group-addon" id="suffix" style="width: auto;">kilograms (kg)</span> </div>
+                    <span class="input-group-addon" id="suffix" style="width: auto;">kilograms (kg)</span>
+                </div>
             </div>
             <div class="form-group">
-                <div class="checkbox ">
+                <div class="checkbox gc-chckbxrdio">
                     <input name="safeRated" id="safeRated" type="checkbox" value="">
                     <label for="safeRated">Transport Canada has received a Manufacturer Declaration of <abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> Safety Assurance.</label>
                 </div>
@@ -148,38 +151,41 @@
                         <div class="panel-body">
                             <h2 class="hd-section"><span class="mandatory" title="This field is mandatory">*</span> <abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> safety assurance declaration</h2>
                             <div class="form-group">
-                                <fieldset>
+                                <fieldset class="gc-chckbxrdio">
                                     <legend class="wb-inv"><span class="mandatory" title="This field is mandatory">*</span> <abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> safety assurance declaration</legend>
-                                    <div class="checkbox">
+
+                                    <div class="checkbox gc-chckbxrdio">
                                         <input name="safeRating" id="controlledAirspace" type="checkbox" value="">
                                         <label for="controlledAirspace">Controlled airspace</label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="checkbox gc-chckbxrdio">
                                         <input name="safeRating" id="near" type="checkbox" value="">
                                         <label for="near"> Near people, within 100 <abbr title="feet">ft</abbr> (30 <abbr title="meters">m</abbr>) to 16.4 <abbr title="feet">ft</abbr> (5 <abbr title="meters">m</abbr>)</label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="checkbox gc-chckbxrdio">
                                         <input name="safeRating" id="over" type="checkbox" value="">
                                         <label for="over"> Over people, within 16.4 <abbr title="feet">ft</abbr> (5 <abbr title="meters">m</abbr>)</label>
                                     </div>
                                 </fieldset>
-                            </div>
-                            <div class="form-group">
-                                <label for="declarationDate" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Date of declaration (<abbr title="4 digit year, 2 digit month, 2 digit day">YYYY-MM-DD</abbr>)<strong class="required wb-inv">(required)</strong>:</label>
-                                <input type="text" id="declarationDate" name="declarationDate" size="10" class="form-control display-inline input-date">
-                            </div>
-                            <h2 class="hd-section">Office use</h2>
-                            <div class="form-group">
-                                <label for="tcRDIMS"><span class="mandatory" title="This field is mandatory.">*</span> Transport Canada RDIMS number: <strong class="required wb-inv">(required)</strong></label>
-                                <div class="form-inline">
-                                    <input type="text" id="tcRDIMS" name="tcRDIMS" size="10" class="form-control input-numeric-8">
-                                    <a href="#" data-url-root="http://mytc/rdims/" class="small mrgn-lft-md"><i class="fas fa-external-link mrgn-rght-sm"></i>View Manufacturer <abbr title="Remotely Piloted Aircraft System">RPAS</abbr> Safety Assurance Declaration (RDIMS)</a> </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="atsNumber"><abbr title="Activity tracking system">ATS</abbr> number (99-99-99999999):</label>
-                                <div class="input-group"> <span class="input-group-addon" id="prefix">ATS -</span>
-                                    <input type="text" id="atsNumber" name="atsNumber" size="14" maxlength="14" class="form-control input-custom-ats" aria-describedby="prefix" style="width: auto;" />
+                                <div class="form-group">
+                                    <label for="declarationDate" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Date of declaration (<abbr title="4 digit year, 2 digit month, 2 digit day">YYYY-MM-DD</abbr>)<strong class="required wb-inv">(required)</strong>:</label>
+                                    <input type="text" id="declarationDate" name="declarationDate" size="10" class="form-control display-inline input-date">
                                 </div>
+                                <h2 class="hd-section">Office use</h2>
+                                <div class="form-group">
+                                    <label for="tcRDIMS"><span class="mandatory" title="This field is mandatory.">*</span> Transport Canada RDIMS number: <strong class="required wb-inv">(required)</strong></label>
+                                    <div class="form-inline">
+                                        <input type="text" id="tcRDIMS" name="tcRDIMS" size="10" class="form-control input-numeric-8">
+                                        <a href="#" data-url-root="http://mytc/rdims/" class="small mrgn-lft-md"><i class="fas fa-external-link mrgn-rght-sm"></i>View Manufacturer <abbr title="Remotely Piloted Aircraft System">RPAS</abbr> Safety Assurance Declaration (RDIMS)</a>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="atsNumber"><abbr title="Activity tracking system">ATS</abbr> number (99-99-99999999):</label>
+                                    <div class="input-group"> <span class="input-group-addon" id="prefix">ATS -</span>
+                                        <input type="text" id="atsNumber" name="atsNumber" size="14" maxlength="14" class="form-control input-custom-ats" aria-describedby="prefix" style="width: auto;" />
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </section>
@@ -187,7 +193,8 @@
             </div>
             <div class="nav-button">
                 <button type="submit" class="btn btn-primary">Add drone</button>
-                <a href="#" class="btn btn-link mrgn-lft-md">Cancel</a> </div>
+                <a href="#" class="btn btn-link mrgn-lft-md">Cancel</a>
+            </div>
         </form>
         <hr>
         <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Manage drone list</a> <!-- InstanceEndEditable -->
@@ -208,12 +215,7 @@
             <div class="container">
                 <div class="row">
                     <nav class="col-md-10 ftr-urlt-lnk">
-                        <!--<h2 class="wb-inv">About this Web application</h2>
-          <ul>
-            <li><a href="#">Contact information</a></li>
-            <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
-            <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
-          </ul> -->
+
                     </nav>
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
                     <div class="col-xs-6 col-md-2 text-right">
@@ -224,51 +226,13 @@
             </div>
         </div>
     </footer>
-    <!--<footer role="contentinfo" id="wb-info">
-<nav role="navigation" class="container wb-navcurr">
-<h2 class="wb-inv">About government</h2>
-<ul class="list-unstyled colcount-sm-2 colcount-md-3">
-<li><a href="https://www.canada.ca/en/contact.html">Contact us</a></li>
-<li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
-<li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
-<li><a href="https://www.canada.ca/en/news.html">News</a></li>
-<li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
-<li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
-<li><a href="http://pm.gc.ca/eng">Prime Minister</a></li>
-<li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
-<li><a href="http://open.canada.ca/en/">Open government</a></li>
-</ul> </nav>
-<div class="brand">
-<div class="container">
-<div class="row">
-<nav class="col-md-10 ftr-urlt-lnk">
-<h2 class="wb-inv">About this site</h2>
-<ul>
-<li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
-<li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
-<li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
-<li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
-<li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
-</ul>
-</nav>
-<div class="col-xs-6 visible-sm visible-xs tofpg">
-<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
-</div>
-<div class="col-xs-6 col-md-2 text-right">
-<object type="image/svg+xml" tabindex="-1" role="img" data="../GCWeb/assets/wmms-blk.svg" aria-label="Symbol of the Government of Canada"></object>
-</div>
-</div>
-</div>
-</div>
-</footer>
--->
     <!--[if gte IE 9 | !IE ]><!-->
     <script src="../../../../js/jquery/2.2.4/jquery.js"></script>
     <script src="../../../../wet-boew/js/wet-boew.min.js"></script>
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
-		
+
 		<![endif]-->
     <script src="../../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
@@ -322,5 +286,4 @@
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-</html>
+<!-- InstanceEnd --></html>

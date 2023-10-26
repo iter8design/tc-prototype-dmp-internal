@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
-<!--[if gt IE 8]><!-->
+<!--[if gt IE 8]>
+<!-->
 <html class="no-js" lang="en" dir="ltr">
 <!-- InstanceBegin template="/Templates/Full Page Layout.dwt" codeOutsideHTMLIsLocked="false" -->
 <!--<![endif]-->
@@ -57,7 +58,8 @@
                 <div class="brand col-xs-9 col-sm-8 col-md-6">
                     <object type="image/svg+xml" tabindex="-1" data="../../../../assets/sig-blk-en.svg">
                     </object>
-                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></div>
+                    <span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span>
+                </div>
                 <section id="wb-lng" class="text-right col-xs-3 col-sm-4 col-md-6">
                     <h2 class="wb-inv">Language selection</h2>
                     <ul class="list-inline margin-bottom-none">
@@ -136,10 +138,11 @@
                 <label for="mtow" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Maximum takeoff weight: <strong class="required wb-inv">in kilograms (required)</strong> </label>
                 <div class="input-group">
                     <input type="text" id="mtow" name="mtow" size="5" class="form-control text-right" aria-describedby="suffix" style="width: auto;" value="1.39">
-                    <span class="input-group-addon" id="suffix" style="width: auto;">kilograms (kg)</span> </div>
+                    <span class="input-group-addon" id="suffix" style="width: auto;">kilograms (kg)</span>
+                </div>
             </div>
             <div class="form-group">
-                <div class="checkbox ">
+                <div class="checkbox gc-chckbxrdio">
                     <input name="safeRated" id="safeRated" type="checkbox" value="" checked>
                     <label for="safeRated">Transport Canada has received a Manufacturer Declaration of <abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> Safety Assurance.</label>
                 </div>
@@ -152,15 +155,15 @@
                             <div class="form-group">
                                 <fieldset>
                                     <legend class="wb-inv"><span class="mandatory" title="This field is mandatory">*</span> <abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> safety assurance declaration</legend>
-                                    <div class="checkbox">
+                                    <div class="checkbox gc-chckbxrdio">
                                         <input name="safeRating" id="controlledAirspace" type="checkbox" value="" checked>
                                         <label for="controlledAirspace">Controlled airspace</label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="checkbox gc-chckbxrdio">
                                         <input name="safeRating" id="near" type="checkbox" value="">
                                         <label for="near"> Near people, within 100 <abbr title="feet">ft</abbr> (30 <abbr title="meters">m</abbr>) to 16.4 <abbr title="feet">ft</abbr> (5 <abbr title="meters">m</abbr>)</label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="checkbox gc-chckbxrdio">
                                         <input name="safeRating" id="over" type="checkbox" value="">
                                         <label for="over"> Over people, within 16.4 <abbr title="feet">ft</abbr> (5 <abbr title="meters">m</abbr>)</label>
                                     </div>
@@ -175,7 +178,8 @@
                                 <label for="tcRDIMS"><span class="mandatory" title="This field is mandatory.">*</span> Transport Canada RDIMS number: <strong class="required wb-inv">(required)</strong></label>
                                 <div class="form-inline">
                                     <input type="text" id="tcRDIMS" name="tcRDIMS" size="10" class="form-control input-numeric-8" value="4983293">
-                                    <a href="#" data-url-root="http://mytc/rdims/" class="small mrgn-lft-md" id="link-rdims" target="_blank"><i class="fas fa-external-link mrgn-rght-sm"></i>View Manufacturer <abbr title="Remotely Piloted Aircraft System">RPAS</abbr> Safety Assurance Declaration (RDIMS)</a> </div>
+                                    <a href="#" data-url-root="http://mytc/rdims/" class="small mrgn-lft-md" id="link-rdims" target="_blank"><i class="fas fa-external-link mrgn-rght-sm"></i>View Manufacturer <abbr title="Remotely Piloted Aircraft System">RPAS</abbr> Safety Assurance Declaration (RDIMS)</a>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="atsNumber"><abbr title="Activity tracking system">ATS</abbr> number (99-99-99999999):</label>
@@ -193,7 +197,8 @@
             </div>
             <div class="nav-button">
                 <a href="#dlg-notification" class="btn btn-primary wb-lbx" id="btnSubmit">Submit</a>
-                <a href="#" class="btn btn-link mrgn-lft-md">Cancel</a> </div>
+                <a href="#" class="btn btn-link mrgn-lft-md">Cancel</a>
+            </div>
 
             <hr>
             <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Manage drone list</a>
@@ -213,7 +218,8 @@
                     -->
                     <a href="manageDroneList-viewSelected-confirmUpdated.html" class="btn btn-primary pull-left">Send email now</a>
                     <a href="manageDroneList-viewSelected-confirmUpdated.html" class="btn btn-default pull-left">Schedule email for later</a>
-                    <a href="#" class="popup-modal-dismiss btn btn-link pull-left">Let me think about this...</a> </footer>
+                    <a href="#" class="popup-modal-dismiss btn btn-link pull-left">Let me think about this...</a>
+                </footer>
             </section>
 
         </form>
@@ -236,12 +242,6 @@
             <div class="container">
                 <div class="row">
                     <nav class="col-md-10 ftr-urlt-lnk">
-                        <!--<h2 class="wb-inv">About this Web application</h2>
-          <ul>
-            <li><a href="#">Contact information</a></li>
-            <li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
-            <li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
-          </ul> -->
                     </nav>
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
                     <div class="col-xs-6 col-md-2 text-right">
@@ -332,6 +332,4 @@
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>

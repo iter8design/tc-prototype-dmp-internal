@@ -107,6 +107,12 @@ details.alert[open].alert-info {
     background-color: #dbedfe;
 }
 
+
+.alert > :first-child:not(details) {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .alert-dismissible .close {
     right: 15px;
 }
@@ -114,6 +120,16 @@ details.alert[open].alert-info {
 .equal {
     display: -webkit-flex;
     display: flex;
+}
+
+.gc-chckbxrdio.checkbox input[type=checkbox] + label,
+.gc-chckbxrdio.checkbox input[type=checkbox] + label + ul {
+    font-size: 16px;
+}
+
+.gc-chckbxrdio input[type=checkbox] + label,
+.gc-chckbxrdio input[type=radio] + label {
+    margin-left: 22px;
 }
 
 .input-group-addon {
@@ -600,6 +616,8 @@ main .alert-floating.alert-info .container {
 details.alert.alert-info,
 details.alert[open].alert-info {
     background-color: #dbedfe;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .box-shadow {
