@@ -149,7 +149,7 @@
                                 <fieldset class="mrgn-bttm-lg">
                                     <legend class="wb-inv"><span class="mandatory" title="This field is mandatory">*</span> <abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> safety assurance declaration</legend>
                                     <div class="checkbox gc-chckbxrdio">
-                                        <input name="safeRating" id="controlledAirspace" type="checkbox" value="" checked>
+                                        <input name="safeRating" id="controlledAirspace" type="checkbox" value="">
                                         <label for="controlledAirspace">922.04 - Controlled airspace</label>
                                     </div>
                                     <div class="checkbox gc-chckbxrdio">
@@ -164,15 +164,14 @@
                             </div>
                             <div class="form-group">
                                 <label for="declarationDate" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Date of declaration (<abbr title="4 digit year, 2 digit month, 2 digit day">YYYY-MM-DD</abbr>): <strong class="required wb-inv">(required)</strong></label>
-                                <input type="text" id="declarationDate" name="declarationDate" size="10" class="form-control display-inline input-date" value="2018-12-03">
+                                <input type="text" id="declarationDate" name="declarationDate" size="10" class="form-control display-inline input-date" value="">
                             </div>
                             <h3 class="hd-section">Office use</h3>
                             <div class="form-group">
                                 <label for="tcRDIMS"><span class="mandatory" title="This field is mandatory.">*</span> Link to supporting documentation: <strong class="required wb-inv">(required)</strong></label>
-                                <div class="form-inline">
-                                    <input type="url" id="declarationDoc" name="declarationDoc" size="25" class="form-control width100" value="" autocomplete="url">
 
-                                </div>
+                                <input type="url" id="declarationDoc" name="declarationDoc" size="25" class="form-control width100" value="" autocomplete="url">
+
                             </div>
                             <div class="form-group">
                                 <label for="atsNumber"><span class="wb-inv"><abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> Safety Assurance </span><abbr title="Activity tracking system">ATS</abbr> number (99-99-99999999):</label>
@@ -218,14 +217,14 @@
                                 </fieldset>
                             </div>
                             <div class="form-group">
-                                <label for="declarationDate" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Date of acceptance (<abbr title="4 digit year, 2 digit month, 2 digit day">YYYY-MM-DD</abbr>): <strong class="required wb-inv">(required)</strong></label>
+                                <label for="acceptanceDate" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Date of acceptance (<abbr title="4 digit year, 2 digit month, 2 digit day">YYYY-MM-DD</abbr>): <strong class="required wb-inv">(required)</strong></label>
                                 <input type="text" id="acceptanceDate" name="acceptanceDate" size="10" class="form-control display-inline input-date" value="">
                             </div>
                             <h3 class="hd-section">Office use</h3>
                             <div class="form-group">
                                 <label for="pvdLink"><span class="mandatory" title="This field is mandatory.">*</span> Link to supporting documentation: <strong class="required wb-inv">(required)</strong></label>
 
-                                <input type="text" id="pvdLink" name="pvdLink" size="10" class="form-control width100" value="http://mytc/">
+                                <input type="text" id="pvdLink" name="pvdLink" size="10" class="form-control width100" value="">
 
                             </div>
                             <div class="form-group">
@@ -308,10 +307,23 @@
         datePickerController.createDatePicker({
             formElements: {
                 "declarationDate": "%Y-%m-%d"
+
             },
             "lang": "en-US",
             rangeHigh: new Date()
         });
+
+        // Attach a datepicker to the above input element
+        datePickerController.createDatePicker({
+            formElements: {
+
+                "acceptanceDate": "%Y-%m-%d"
+            },
+            "lang": "en-US",
+            rangeHigh: new Date()
+        });
+
+
 
         new Cleave('.input-date', {
             date: true,
@@ -329,7 +341,10 @@
             delimiter: '-',
             numericOnly: true
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>

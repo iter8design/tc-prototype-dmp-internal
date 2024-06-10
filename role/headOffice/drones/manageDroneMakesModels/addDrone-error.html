@@ -142,15 +142,15 @@
         <form action="addDrone-error.html" method="get">
             <div class="form-group">
                 <label for="make"><span class="mandatory" title="This field is mandatory.">*</span> Make: <strong class="required wb-inv">(required)</strong></label>
-                <input type="text" id="make" name="make" size="30" class="form-control">
+                <input type="text" id="make" name="make" size="30" class="form-control fieldError">
             </div>
             <div class="form-group">
                 <label for="model"><span class="mandatory" title="This field is mandatory.">*</span> Model: <strong class="required wb-inv">(required)</strong></label>
-                <input type="text" id="model" name="model" size="30" class="form-control">
+                <input type="text" id="model" name="model" size="30" class="form-control fieldError">
             </div>
             <div class="form-group">
                 <label for="type" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Type: <strong class="required wb-inv">(required)</strong> </label>
-                <select class="form-control display-block" id="type" name="type">
+                <select class="form-control display-block fieldError" id="type" name="type">
                     <option value="0" selected="selected">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
                     <option value="1">Fixed-wing</option>
                     <option value="2">Hybrid</option>
@@ -173,7 +173,7 @@
                                 <fieldset class="mrgn-bttm-lg">
                                     <legend class="wb-inv"><span class="mandatory" title="This field is mandatory">*</span> <abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> safety assurance declaration</legend>
                                     <div class="checkbox gc-chckbxrdio">
-                                        <input name="safeRating" id="controlledAirspace" type="checkbox" value="" checked>
+                                        <input name="safeRating" id="controlledAirspace" type="checkbox" value="">
                                         <label for="controlledAirspace">922.04 - Controlled airspace</label>
                                     </div>
                                     <div class="checkbox gc-chckbxrdio">
@@ -188,20 +188,19 @@
                             </div>
                             <div class="form-group">
                                 <label for="declarationDate" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Date of declaration (<abbr title="4 digit year, 2 digit month, 2 digit day">YYYY-MM-DD</abbr>): <strong class="required wb-inv">(required)</strong></label>
-                                <input type="text" id="declarationDate" name="declarationDate" size="10" class="form-control display-inline input-date" value="2018-12-03">
+                                <input type="text" id="declarationDate" name="declarationDate" size="10" class="form-control display-inline input-date fieldError" value="">
                             </div>
                             <h3 class="hd-section">Office use</h3>
                             <div class="form-group">
                                 <label for="tcRDIMS"><span class="mandatory" title="This field is mandatory.">*</span> Link to supporting documentation: <strong class="required wb-inv">(required)</strong></label>
-                                <div class="form-inline">
-                                    <input type="url" id="declarationDoc" name="declarationDoc" size="25" class="form-control width100" value="" autocomplete="url">
 
-                                </div>
+                                <input type="url" id="declarationDoc" name="declarationDoc" size="25" class="form-control width100 fieldError" value="" autocomplete="url">
+
                             </div>
                             <div class="form-group">
                                 <label for="atsNumber"><span class="wb-inv"><abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> Safety Assurance </span><abbr title="Activity tracking system">ATS</abbr> number (99-99-99999999):</label>
                                 <div class="input-group"> <span class="input-group-addon" id="prefix">ATS -</span>
-                                    <input type="text" id="atsNumber" name="atsNumber" size="14" maxlength="14" class="form-control input-custom-ats" aria-describedby="prefix" style="width: auto;" />
+                                    <input type="text" id="atsNumber" name="atsNumber" size="14" maxlength="14" class="form-control input-custom-ats fieldError" aria-describedby="prefix" style="width: auto;" />
                                 </div>
                             </div>
                         </div>
@@ -242,20 +241,20 @@
                                 </fieldset>
                             </div>
                             <div class="form-group">
-                                <label for="declarationDate" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Date of acceptance (<abbr title="4 digit year, 2 digit month, 2 digit day">YYYY-MM-DD</abbr>): <strong class="required wb-inv">(required)</strong></label>
-                                <input type="text" id="acceptanceDate" name="acceptanceDate" size="10" class="form-control display-inline input-date" value="">
+                                <label for="acceptanceDate" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Date of acceptance (<abbr title="4 digit year, 2 digit month, 2 digit day">YYYY-MM-DD</abbr>): <strong class="required wb-inv">(required)</strong></label>
+                                <input type="text" id="acceptanceDate" name="acceptanceDate" size="10" class="form-control display-inline input-date fieldError" value="">
                             </div>
                             <h3 class="hd-section">Office use</h3>
                             <div class="form-group">
                                 <label for="pvdLink"><span class="mandatory" title="This field is mandatory.">*</span> Link to supporting documentation: <strong class="required wb-inv">(required)</strong></label>
 
-                                <input type="text" id="pvdLink" name="pvdLink" size="10" class="form-control width100" value="http://mytc/">
+                                <input type="text" id="pvdLink" name="pvdLink" size="10" class="form-control width100 fieldError" value="">
 
                             </div>
                             <div class="form-group">
                                 <label for="pvdAtsNumber"><span class="wb-inv">Pre-validated declaration </span><abbr title="Activity tracking system">ATS</abbr> number (99-99-99999999):</label>
                                 <div class="input-group"> <span class="input-group-addon" id="prefix">ATS -</span>
-                                    <input type="text" id="pvdAtsNumber" name="pvdAtsNumber" size="14" maxlength="14" class="form-control input-custom-ats" aria-describedby="prefix" style="width: auto;" />
+                                    <input type="text" id="pvdAtsNumber" name="pvdAtsNumber" size="14" maxlength="14" class="form-control input-custom-ats fieldError" aria-describedby="prefix" style="width: auto;" />
                                 </div>
                             </div>
                         </div>
@@ -332,10 +331,22 @@
         datePickerController.createDatePicker({
             formElements: {
                 "declarationDate": "%Y-%m-%d"
+
             },
             "lang": "en-US",
             rangeHigh: new Date()
         });
+
+        // Attach a datepicker to the above input element
+        datePickerController.createDatePicker({
+            formElements: {
+
+                "acceptanceDate": "%Y-%m-%d"
+            },
+            "lang": "en-US",
+            rangeHigh: new Date()
+        });
+
 
         new Cleave('.input-date', {
             date: true,

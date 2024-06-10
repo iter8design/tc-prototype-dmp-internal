@@ -136,7 +136,6 @@
 
                 <li><a href="#atsNumber"><i class="fa-li fa fa-angle-right"></i>The safety assurance <abbr title="Activity Tracking System">ATS</abbr> number entered must be in the 99-99-99999999 format.</a></li>
                 <li><a href="#atsNumber"><i class="fa-li fa fa-angle-right"></i>The pre-validated declaration <abbr title="Activity Tracking System">ATS</abbr> number entered must be in the 99-99-99999999 format.</a></li>
-                <li><i class="fa-li fa fa-angle-right"></i>The make/model entered has already been added to the drone list.</li>
             </ol>
         </div>
         <p>Please enter the following drone information. All fields marked with an asterisk (<span class="mandatory-instructions">*</span>) are mandatory.</p>
@@ -196,7 +195,7 @@
                             <div class="form-group">
                                 <label for="declarationLink"><span class="mandatory" title="This field is mandatory.">*</span> Link to supporting documentation: <strong class="required wb-inv">(required)</strong></label>
 
-                                <input type="url" id="declarationLink" name="declarationLink" size="25" class="form-control fullWidth fieldError" value="" autocomplete="url">
+                                <input type="url" id="declarationLink" name="declarationLink" size="25" class="form-control width100 fieldError" value="" autocomplete="url">
 
                             </div>
                             <div class="form-group">
@@ -256,7 +255,7 @@
                             <div class="form-group">
                                 <label for="atsNumber"><span class="wb-inv">Pre-validated declaration </span><abbr title="Activity tracking system">ATS</abbr> number (99-99-99999999):</label>
                                 <div class="input-group"> <span class="input-group-addon" id="prefix">ATS -</span>
-                                    <input type="text" id="atsNumber" name="atsNumber" size="14" maxlength="14" class="form-control input-custom-ats" aria-describedby="prefix" style="width: auto;" />
+                                    <input type="text" id="atsNumber" name="atsNumber" size="14" maxlength="14" class="form-control input-custom-ats fieldError" aria-describedby="prefix" style="width: auto;" />
                                 </div>
                             </div>
                         </div>
@@ -398,10 +397,7 @@
             delimiter: '-',
             numericOnly: true
         });
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd -->
-
-</html>
+<!-- InstanceEnd --></html>
