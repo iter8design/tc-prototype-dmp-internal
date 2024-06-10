@@ -11,7 +11,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Search results - Drone Management Portal Administration</title>
+    <title>View submitted drones - Drone Management Portal Administration</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -28,14 +28,14 @@
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
-		
+
 		<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
 		<script src="../js/jquery/1.11.1/jquery.min.js"></script>
 		<script src="../wet-boew/js/ie8-wet-boew.min.js"></script>
 		<![endif]-->
     <!--[if lte IE 9]>
-		
-		
+
+
 		<![endif]-->
     <noscript>
         <link rel="stylesheet" href="../../../../wet-boew/css/noscript.min.css" />
@@ -94,7 +94,8 @@
                 </nav>
             </div>
         </div>
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../../../includes/menus/menu-headOffice.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
+        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../../includes/menus/menu-headOffice.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
+
 
         <nav role="navigation" id="wb-bc" property="breadcrumb">
             <h2>You are here:</h2>
@@ -104,9 +105,8 @@
                         <li><a href="#">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
                         <li><a href="#">Drones</a></li>
-
-                        <li>Search registered & deregistered drones</li>
-                        <!-- InstanceEndEditable -->
+                        <li><a href="#">Manage drone list</a></li>
+                        <li>View submitted drones</li> <!-- InstanceEndEditable -->
                     </ol>
                 </div>
             </div>
@@ -114,53 +114,72 @@
     </header>
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont"><i class="fas fa-search"></i> Search registered & deregistered drones</h1>
-        <p>Enter at least one of the following search criteria and press the <strong>Search</strong> button.</p>
-        <form action="#" method="get">
-            <div class="form-group">
-                <label for="makeModelList" class="display-block">Make and model:</label>
-                <select class="form-control display-block" id="makeModelList" name="makeModelList" style="width: 100%">
-                    <option value="0" selected="selected">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
-                    <option value="1">Aeryon Labs - Skyranger</option>
-                    <option value="5">Draganfly - Commander</option>
-                    <option value="4">Draganfly - Guardian</option>
-                    <option value="2">Draganfly - X4ES</option>
-                    <option value="3">Draganfly - X4P</option>
-                    <option value="6">Epoc Unmanned - Stryder</option>
-                    <option value="7">Indro Robotics - Scout Mk III</option>
-                    <option value="8">Infinit Jib - Surveyor 630</option>
-                    <option value="9">Kesprey - Drone 1.0</option>
-                    <option value="10">Lockheed Martin - Indago 2</option>
-                    <option value="11">Lockheed Martin - Indago 3</option>
-                    <option value="12">Microdrones Canada - MD4-1000</option>
-                    <option value="13">SenseFly SA - ebee</option>
-                    <option value="14">SenseFly SA - ebee+</option>
-                    <option value="15">SenseFly SA - Albris</option>
-                    <option value="16">Silent Falcon UAS Technologies - Silent Falcon</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="serialNumber">Serial #:</label>
+        <h1 property="name" id="wb-cont"><i class="fas fa-paper-plane"></i> View submitted drones</h1>
+        <p>There are <strong>3</strong> submitted drones that require review:</p>
+        <form action="" method="get">
+            <section class="panel panel-default panel-datatable">
+                <header class="panel-heading pddng-tp-0">
+                    <div class="row">
+                        <div class="col-md-6"> </div>
+                        <div class="col-md-6 text-right text-left-sm text-left-xs">
+                            <div class="form-inline">
+                                <div class="form-group mrgn-bttm-0 mrgn-rght-sm pddng-panel-heading-tp">
+                                    <div class="tableFilter"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="table-responsive">
+                    <table class="wb-tables table table-hover table-bordered" data-wb-tables='
+        {"stateSave" : true, "info" : false, "filter" : true, "order" : [[3,"desc"]],"columnDefs": [{ "orderable" : false, "targets":[0] },{"searchable" : false, "targets": []}],
+"language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthMenu": [[10, 25, 50, -1], [25, 50, 100, "All"]]}'>
+                        <thead>
+                            <tr>
+                                <th scope="col" class="width5"><span class="wb-inv">Select</span></th>
+                                <th scope="col" class="width40">Make/model</th>
+                                <th scope="col" class="width10">Type</th>
+                                <th scope="col" class="width15 text-center">Date submitted<br>
+                                    <abbr title="4 digit year, 2 digit month, 2 digit day">(YYYY-MM-DD)</abbr>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center"><label for="drone1" class="wb-inv">DJI Phantom 4 - Rotary wing</label><input type="checkbox" id="drone1" name="makeModel"></td>
+                                <td><a href="viewSubmittedDrones-viewSelected.html">DJI Phantom 4</a></td>
+                                <td>Rotary wing</td>
 
-                <input name="serialNumber" id="serialNumber" type="text" size="25" class="form-control input-alpha-50" maxlength="50">
-            </div>
-            <div class="form-group">
-                <label for="registrationNumber">Registration #:</label>
+                                <td class="text-center">2018-10-10</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><label for="drone2" class="wb-inv">DJI Fantom 4 - Rotary wing</label><input type="checkbox" id="drone2" name="makeModel"></td>
+                                <td><a href="viewSubmittedDrones.html">DJI Fantom 4</a></td>
+                                <td>Rotary wing</td>
 
-                <div class="input-group"> <span class="input-group-addon" id="prefix">C-</span>
-                    <input type="text" class="form-control input-numeric-10" aria-describedby="prefix" name="registrationNumber" id="registrationNumber" size="10" maxlength="10" style="width: auto;">
+                                <td class="text-center">2018-10-10</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><label for="drone3" class="wb-inv">DJI Fantom Four - Rotary wing</label><input type="checkbox" id="drone3" name="makeModel"></td>
+                                <td><a href="viewSubmittedDrones-viewSelected.html">DJI Fantom Four</a></td>
+                                <td>Rotary wing</td>
+
+                                <td class="text-center">2018-10-10</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
+                <footer class="panel-footer">
+                    <div class="row">
 
-
-            <div class="nav-button">
-                <button type="submit" class="btn btn-primary">Search</button>
-            </div>
+                        <div class="col-md-6 col-xs-6 pddng-tp-sm pages"> <button class="btn btn-primary">Link to existing</button> <button class="btn btn-default">Add to drone list</button></div>
+                        <div class="col-md-6 col-xs-12 text-right text-left-sm text-left-xs displayOptions"></div>
+                    </div>
+                </footer>
+            </section>
         </form>
-        <hr />
-        <h2>Search results</h2>
-
-        <p>No results found.</p>
+        <hr>
+        <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Manage drone list</a>
 
 
         <!-- InstanceEndEditable -->
@@ -169,7 +188,7 @@
                 <dt>Date modified:&#32;</dt>
                 <dd>
                     <time property="dateModified">
-                        <!-- #BeginDate format:IS1 -->2020-02-20
+                        <!-- #BeginDate format:IS1 -->2019-10-10
                         <!-- #EndDate -->
                     </time>
                 </dd>
@@ -199,55 +218,26 @@
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
-		
+
 		<![endif]-->
     <script src="../../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
-    <script src="../../../../js/tc/select2-4.1.0/dist/js/select2.min.js"></script>
-    <script src="../../../../js/tc/cleave/cleave.min.js"></script>
-
-    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    <script>
+    <script type="text/javascript" src="../../../../js/tc/select2-4.1.0/dist/js/select2.min.js"></script>
+    <script type="text/javascript">
         $(document).on("wb-ready.wb", function(event) {
-
-            $('#makeModelList').select2({
-                /* ajax: {
-			url: "/public/includes/makeModel.json",
-			dataType: 'json',
-			delay: 250,
-			cache: true
-		  },
-		  processResults: function (data) {
-			  // Tranforms the top-level key of the response object from 'items' to 'results'
-			  return {
-				results: data.items
-			  };
-			},
-		  placeholder: 'Search for a make/model...',
-		  escapeMarkup: function (markup) { return markup; }, // let our custom formatter work  */
-                theme: "bootstrap",
-                allowClear: true,
-                placeholder: "<<< Select >>>",
-                minimumInputLength: 3,
-                escapeMarkup: function(markup) {
-                    return markup;
-                }
+            /* Datatable */
+            $('.dataTables_filter').appendTo('.panel-datatable .panel-heading .tableFilter');
+            $('.dataTables_length').appendTo('.panel-datatable footer.panel-footer .displayOptions');
+            $('.dataTables_wrapper .bottom').appendTo('.panel-datatable footer.panel-footer .pages');
+            $('.bottom, .top').addClass('dataTables_wrapper');
+            $('.panel-datatable footer.panel-footer').css('padding-top', '0');
+            $(".first.paginate_button, .last.paginate_button").hide();
+            $(".dataTables_filter input").addClass("form-control").css({
+                "margin-bottom": "0px"
+            });;
+            $(".dataTables_filter label").css({
+                "margin-bottom": "0px"
             });
-
-
-
-            /* Apply input masks */
-            if ($(".input-numeric-10").length) {
-                new Cleave('.input-numeric-10', {
-                    delimiter: '',
-                    blocks: [10],
-                    numericOnly: true
-                });
-            }
-
         });
     </script>
     <!-- InstanceEndEditable -->

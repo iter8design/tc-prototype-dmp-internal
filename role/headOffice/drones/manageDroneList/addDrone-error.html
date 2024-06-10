@@ -28,14 +28,14 @@
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
-		
+
 		<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
 		<script src="../js/jquery/1.11.1/jquery.min.js"></script>
 		<script src="../wet-boew/js/ie8-wet-boew.min.js"></script>
 		<![endif]-->
     <!--[if lte IE 9]>
-		
-		
+
+
 		<![endif]-->
     <noscript>
         <link rel="stylesheet" href="../../../../wet-boew/css/noscript.min.css" />
@@ -122,19 +122,19 @@
                 <li><a href="#model"><i class="fa-li fa fa-angle-right"></i>Please enter the model.</a></li>
                 <li><a href="#model"><i class="fa-li fa fa-angle-right"></i>The model entered may not be greater than 100 characters.</a></li>
                 <li><a href="#type"><i class="fa-li fa fa-angle-right"></i>Please select the type.</a></li>
-                <li><a href="#mtow"><i class="fa-li fa fa-angle-right"></i>Please enter the maximum takeoff weight.</a></li>
-                <li><a href="#mtow"><i class="fa-li fa fa-angle-right"></i>The maximum takeoff weight entered is not valid</a></li>
-                <li><a href="#mtow"><i class="fa-li fa fa-angle-right"></i>The maximum takeoff weight entered may only include up to 2 decimal points.</a></li>
-                <li><a href="#mtow"><i class="fa-li fa fa-angle-right"></i>The maximum takeoff weight entered may not exceed 25 kilograms.</a></li>
-                <li><a href="#mtow"><i class="fa-li fa fa-angle-right"></i>The maximum takeoff weight entered may not be less than 0.25 kilograms.</a></li>
-                <li><i class="fa-li fa fa-angle-right"></i>Because a manufacturer declaration has been submitted, please select at least one safety assurance rating.</li>
-                <li><i class="fa-li fa fa-angle-right"></i>Because the <strong>Over people, within 16.4ft (5m)</strong> rating was selected, <strong>Near people, within 100ft (30m) to 16.4ft (5m)</strong> must also be selected.</li>
+                <li><i class="fa-li fa fa-angle-right"></i>Because a manufacturer declaration has been submitted, please select at least one safety assurance or pre-validated declaration rating.</li>
+                <li><i class="fa-li fa fa-angle-right"></i>Because the <strong>922.06 - Over people</strong> rating was selected, <strong>922.05 - Near people</strong> must also be selected.</li>
                 <li><a href="#declarationDate"><i class="fa-li fa fa-angle-right"></i>Please enter the declaration date.</a></li>
                 <li><a href="#declarationDate"><i class="fa-li fa fa-angle-right"></i>The declaration date entered must be in the YYYY-MM-DD format.</a></li>
                 <li><a href="#declarationDate"><i class="fa-li fa fa-angle-right"></i>The declaration date entered may not be in the future.</a></li>
                 <li><a href="#declarationDate"><i class="fa-li fa fa-angle-right"></i>The declaration date entered may only occur after January 9, 2018.</a></li>
-                <li><a href="#tcRDIMS"><i class="fa-li fa fa-angle-right"></i>The Transport Canada RDIMS number must be 8 digits long.</a></li>
-                <li><a href="#atsNumber"><i class="fa-li fa fa-angle-right"></i>The <abbr title="Activity Tracking System">ATS</abbr> number entered must be in the 99-99-99999999 format.</a></li>
+                <li><a href="#declarationDate"><i class="fa-li fa fa-angle-right"></i>Please enter the acceptance date.</a></li>
+                <li><a href="#declarationDate"><i class="fa-li fa fa-angle-right"></i>The acceptance date entered must be in the YYYY-MM-DD format.</a></li>
+                <li><a href="#declarationDate"><i class="fa-li fa fa-angle-right"></i>The acceptance date entered may not be in the future.</a></li>
+                <li><a href="#declarationDate"><i class="fa-li fa fa-angle-right"></i>The acceptance date entered may only occur after January 1, 2025.</a></li>
+
+                <li><a href="#atsNumber"><i class="fa-li fa fa-angle-right"></i>The safety assurance <abbr title="Activity Tracking System">ATS</abbr> number entered must be in the 99-99-99999999 format.</a></li>
+                <li><a href="#atsNumber"><i class="fa-li fa fa-angle-right"></i>The pre-validated declaration <abbr title="Activity Tracking System">ATS</abbr> number entered must be in the 99-99-99999999 format.</a></li>
                 <li><i class="fa-li fa fa-angle-right"></i>The make/model entered has already been added to the drone list.</li>
             </ol>
         </div>
@@ -158,64 +158,106 @@
                     <option value="4">Rotary wing</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label for="mtow" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Maximum takeoff weight: <strong class="required wb-inv">in kilograms (required)</strong> </label>
-                <div class="input-group">
-                    <input type="text" id="mtow" name="mtow" size="5" class="form-control text-right fieldError" aria-describedby="suffix" style="width: auto;">
-                    <span class="input-group-addon" id="suffix" style="width: auto;">kilograms (kg)</span>
-                </div>
-            </div>
+
             <div class="form-group">
                 <div class="checkbox gc-chckbxrdio">
                     <input name="safeRated" id="safeRated" type="checkbox" value="" checked>
-                    <label for="safeRated">Transport Canada has received a Manufacturer Declaration of <abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> Safety Assurance.</label>
+                    <label for="safeRated">Transport Canada has received a Manufacturer Declaration of <abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> Safety Assurance or Pre-Validated Declaration.</label>
                 </div>
             </div>
-            <div class="row showHide" id="cn-safeRating">
-                <div class="col-md-12">
-                    <section class="panel panel-default bg-grey mrgn-lft-lg mrgn-rght-lg">
+            <div class="row wb-eqht-grd showHide" id="cn-safeRating">
+                <div class="col-md-6">
+                    <section class="panel panel-default bg-grey eqht-trgt">
                         <div class="panel-body">
-                            <h2 class="hd-section"><span class="mandatory" title="This field is mandatory">*</span> <abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> safety assurance declaration</h2>
+                            <h2 class="hd-section"><abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> safety assurance declaration</h2>
                             <div class="form-group">
-                                <fieldset>
+                                <fieldset class="mrgn-bttm-lg">
                                     <legend class="wb-inv"><span class="mandatory" title="This field is mandatory">*</span> <abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> safety assurance declaration</legend>
                                     <div class="checkbox gc-chckbxrdio">
-                                        <input name="safeRating" id="controlledAirspace" type="checkbox" value="">
-                                        <label for="controlledAirspace">Controlled airspace</label>
+                                        <input name="safeRating" id="controlledAirspace" type="checkbox" value="" checked>
+                                        <label for="controlledAirspace">922.04 - Controlled airspace</label>
                                     </div>
                                     <div class="checkbox gc-chckbxrdio">
                                         <input name="safeRating" id="near" type="checkbox" value="">
-                                        <label for="near">
-                                            Near people, within 100 <abbr title="feet">ft</abbr> (30 <abbr title="meters">m</abbr>) to 16.4 <abbr title="feet">ft</abbr> (5 <abbr title="meters">m</abbr>)</label>
+                                        <label for="near">922.05 - Near people</label>
                                     </div>
                                     <div class="checkbox gc-chckbxrdio">
                                         <input name="safeRating" id="over" type="checkbox" value="">
-                                        <label for="over">
-                                            Over people, within 16.4 <abbr title="feet">ft</abbr> (5 <abbr title="meters">m</abbr>)</label>
+                                        <label for="over">922.06 - Over people</label>
                                     </div>
                                 </fieldset>
                             </div>
                             <div class="form-group">
                                 <label for="declarationDate" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Date of declaration (<abbr title="4 digit year, 2 digit month, 2 digit day">YYYY-MM-DD</abbr>): <strong class="required wb-inv">(required)</strong></label>
-                                <input type="text" id="declarationDate" name="declarationDate" size="10" class="form-control display-inline input-date fieldError">
+                                <input type="text" id="declarationDate" name="declarationDate" size="10" class="form-control display-inline input-date fieldError" value="2018-12-03">
                             </div>
-                            <h2 class="hd-section">Office use</h2>
+                            <h3 class="hd-section">Office use</h3>
                             <div class="form-group">
-                                <label for="tcRDIMS"><span class="mandatory" title="This field is mandatory.">*</span> Transport Canada RDIMS number: <strong class="required wb-inv">(required)</strong></label>
-                                <div class="form-inline">
-                                    <input type="text" id="tcRDIMS" name="tcRDIMS" size="10" class="form-control fieldError input-numeric-8">
-                                    <a href="#" data-url-root="http://mytc/rdims/" class="small mrgn-lft-md"><i class="fas fa-external-link mrgn-rght-sm"></i>View Manufacturer <abbr title="Remotely Piloted Aircraft System">RPAS</abbr> Safety Assurance Declaration (RDIMS)</a>
-                                </div>
-                            </div>
+                                <label for="declarationLink"><span class="mandatory" title="This field is mandatory.">*</span> Link to supporting documentation: <strong class="required wb-inv">(required)</strong></label>
 
+                                <input type="url" id="declarationLink" name="declarationDoc" size="25" class="form-control width100 fieldError" value="" autocomplete="url">
+
+                            </div>
                             <div class="form-group">
-                                <label for="atsNumber"><abbr title="Activity tracking system">ATS</abbr> number (99-99-99999999):</label>
+                                <label for="atsNumber"><span class="wb-inv"><abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> Safety Assurance </span><abbr title="Activity tracking system">ATS</abbr> number (99-99-99999999):</label>
                                 <div class="input-group"> <span class="input-group-addon" id="prefix">ATS -</span>
                                     <input type="text" id="atsNumber" name="atsNumber" size="14" maxlength="14" class="form-control input-custom-ats fieldError" aria-describedby="prefix" style="width: auto;" />
                                 </div>
                             </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-6">
+                    <section class="panel panel-default bg-grey eqht-trgt">
+                        <div class="panel-body">
+                            <h2 class="hd-section">Pre-validated declaration</h2>
+                            <div class="form-group">
+                                <fieldset>
+                                    <legend class="wb-inv"><span class="mandatory" title="This field is mandatory">*</span> <abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> pre-validated declaration <span class="wb-inv">This field is mandatory</span></legend>
 
+                                    <div class="checkbox gc-chckbxrdio">
+                                        <input name="pvdRating" id="pvdRating922.07" type="checkbox" value="">
+                                        <label for="pvdRating922.07">922.07 - Safety and reliability</label>
+                                    </div>
+                                    <div class="checkbox gc-chckbxrdio">
+                                        <input name="pvdRating" id="pvdRating922.08" type="checkbox" value="">
+                                        <label for="pvdRating922.08">922.08 - Containment</label>
+                                    </div>
+                                    <div class="checkbox gc-chckbxrdio">
+                                        <input name="pvdRating" id="pvdRating922.09" type="checkbox" value="">
+                                        <label for="pvdRating922.09">922.09 - Command and control (C2) link</label>
+                                    </div>
+                                    <div class="checkbox gc-chckbxrdio">
+                                        <input name="pvdRating" id="pvdRating922.10" type="checkbox" value="">
+                                        <label for="pvdRating922.10">922.10 - Detect and avoid (DAA)</label>
+                                    </div>
+                                    <div class="checkbox gc-chckbxrdio">
+                                        <input name="pvdRating" id="pvdRating922.11" type="checkbox" value="">
+                                        <label for="pvdRating922.11">922.11 - Remote pilot station design</label>
+                                    </div>
+                                    <div class="checkbox gc-chckbxrdio">
+                                        <input name="pvdRating" id="pvdRating922.12" type="checkbox" value="">
+                                        <label for="pvdRating922.12">922.12 - Demonstrated environmental envelope</label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="form-group">
+                                <label for="declarationDate" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Date of acceptance (<abbr title="4 digit year, 2 digit month, 2 digit day">YYYY-MM-DD</abbr>): <strong class="required wb-inv">(required)</strong></label>
+                                <input type="text" id="acceptanceDate" name="acceptanceDate" size="10" class="form-control display-inline input-date fieldError" value="">
+                            </div>
+                            <h3 class="hd-section">Office use</h3>
+                            <div class="form-group">
+                                <label for="pvdLink"><span class="mandatory" title="This field is mandatory.">*</span> Link to supporting documentation: <strong class="required wb-inv">(required)</strong></label>
 
+                                <input type="text" id="pvdLink" name="pvdLink" size="10" class="form-control width100 fieldError" value="http://my-tc/">
+
+                            </div>
+                            <div class="form-group">
+                                <label for="atsNumber"><span class="wb-inv">Pre-validated declaration </span><abbr title="Activity tracking system">ATS</abbr> number (99-99-99999999):</label>
+                                <div class="input-group"> <span class="input-group-addon" id="prefix">ATS -</span>
+                                    <input type="text" id="atsNumber" name="atsNumber" size="14" maxlength="14" class="form-control input-custom-ats fieldError" aria-describedby="prefix" style="width: auto;" />
+                                </div>
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -306,7 +348,7 @@
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
-		
+
 		<![endif]-->
     <script src="../../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
@@ -364,7 +406,10 @@
             delimiter: '-',
             numericOnly: true
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>

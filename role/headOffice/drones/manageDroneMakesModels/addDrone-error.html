@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]-->
 <!--[if gt IE 8]>
 <!-->
@@ -11,7 +11,7 @@
     <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
     <!-- InstanceBeginEditable name="PageTitle" -->
-    <title>Edit drone - Drone Management Portal Administration</title>
+    <title>Add drone - Drone Management Portal Administration</title>
     <!-- InstanceEndEditable -->
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <!-- Meta data -->
@@ -102,10 +102,9 @@
                     <ol class="breadcrumb">
                         <li><a href="#">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
-                        <li><a href="#">Drones</a></li>
-                        <li><a href="#">Manage drone makes and models</a></li>
-                        <li><a href="#">DJI Phantom 4</a></li>
-                        <li>Edit drone</li>
+                        <li><a href="#">Administration</a></li>
+                        <li><a href="#">Manage drone makes & models</a></li>
+                        <li>Add drone</li>
                         <!-- InstanceEndEditable -->
                     </ol>
                 </div>
@@ -114,32 +113,55 @@
     </header>
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
-        <h1 property="name" id="wb-cont"><i class="fas fa-plane"></i> Edit drone</h1>
+        <h1 property="name" id="wb-cont"><i class="fas fa-plane"></i> Add drone</h1>
+        <div class="alert alert-danger mrgn-bttm-md">
+            <h2>Attention</h2>
+            <ol class="fa-ul">
+                <li><a href="#make"><i class="fa-li fa fa-angle-right"></i>Please enter the make.</a></li>
+                <li><a href="#make"><i class="fa-li fa fa-angle-right"></i>The make entered may not be greater than 100 characters.</a></li>
+                <li><a href="#model"><i class="fa-li fa fa-angle-right"></i>Please enter the model.</a></li>
+                <li><a href="#model"><i class="fa-li fa fa-angle-right"></i>The model entered may not be greater than 100 characters.</a></li>
+                <li><a href="#type"><i class="fa-li fa fa-angle-right"></i>Please select the type.</a></li>
+                <li><i class="fa-li fa fa-angle-right"></i>Because a manufacturer declaration has been submitted, please select at least one safety assurance or pre-validated declaration rating.</li>
+                <li><i class="fa-li fa fa-angle-right"></i>Because the <strong>922.06 - Over people</strong> rating was selected, <strong>922.05 - Near people</strong> must also be selected.</li>
+                <li><a href="#declarationDate"><i class="fa-li fa fa-angle-right"></i>Please enter the declaration date.</a></li>
+                <li><a href="#declarationDate"><i class="fa-li fa fa-angle-right"></i>The declaration date entered must be in the YYYY-MM-DD format.</a></li>
+                <li><a href="#declarationDate"><i class="fa-li fa fa-angle-right"></i>The declaration date entered may not be in the future.</a></li>
+                <li><a href="#declarationDate"><i class="fa-li fa fa-angle-right"></i>The declaration date entered may only occur after January 9, 2018.</a></li>
+                <li><a href="#declarationDate"><i class="fa-li fa fa-angle-right"></i>Please enter the acceptance date.</a></li>
+                <li><a href="#declarationDate"><i class="fa-li fa fa-angle-right"></i>The acceptance date entered must be in the YYYY-MM-DD format.</a></li>
+                <li><a href="#declarationDate"><i class="fa-li fa fa-angle-right"></i>The acceptance date entered may not be in the future.</a></li>
+                <li><a href="#declarationDate"><i class="fa-li fa fa-angle-right"></i>The acceptance date entered may only occur after January 1, 2025.</a></li>
+
+                <li><a href="#atsNumber"><i class="fa-li fa fa-angle-right"></i>The safety assurance <abbr title="Activity Tracking System">ATS</abbr> number entered must be in the 99-99-99999999 format.</a></li>
+                <li><a href="#atsNumber"><i class="fa-li fa fa-angle-right"></i>The pre-validated declaration <abbr title="Activity Tracking System">ATS</abbr> number entered must be in the 99-99-99999999 format.</a></li>
+                <li><i class="fa-li fa fa-angle-right"></i>The make/model entered has already been added to the drone list.</li>
+            </ol>
+        </div>
         <p>Please enter the following drone information. All fields marked with an asterisk (<span class="mandatory-instructions">*</span>) are mandatory.</p>
-        <form method="get" action="manageDroneList-viewSelected-confirmUpdated.html">
+        <form action="addDrone-error.html" method="get">
             <div class="form-group">
                 <label for="make"><span class="mandatory" title="This field is mandatory.">*</span> Make: <strong class="required wb-inv">(required)</strong></label>
-                <input type="text" id="make" name="make" size="30" class="form-control" value="DJI">
+                <input type="text" id="make" name="make" size="30" class="form-control">
             </div>
             <div class="form-group">
                 <label for="model"><span class="mandatory" title="This field is mandatory.">*</span> Model: <strong class="required wb-inv">(required)</strong></label>
-                <input type="text" id="model" name="model" size="30" class="form-control" value="Phantom 4">
+                <input type="text" id="model" name="model" size="30" class="form-control">
             </div>
             <div class="form-group">
                 <label for="type" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Type: <strong class="required wb-inv">(required)</strong> </label>
-                <select class="form-control display-block" id="type" name="type" required>
-                    <option value="0" selected>&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
+                <select class="form-control display-block" id="type" name="type">
+                    <option value="0" selected="selected">&lsaquo;&lsaquo;&lsaquo;Select&rsaquo;&rsaquo;&rsaquo;</option>
                     <option value="1">Fixed-wing</option>
                     <option value="2">Hybrid</option>
                     <option value="3">Lighter-than-air</option>
-                    <option value="4" selected>Rotary wing</option>
+                    <option value="4">Rotary wing</option>
                 </select>
             </div>
-
             <div class="form-group">
                 <div class="checkbox gc-chckbxrdio">
-                    <input name="safeRated" id="safeRated" type="checkbox" value="" checked>
-                    <label for="safeRated">Transport Canada has received a manufacturer declaration of <abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> Safety Assurance or a Pre-Validated Declaration</label>
+                    <input name="safeRated" id="safeRated" type="checkbox" value="">
+                    <label for="safeRated">Transport Canada has received a Manufacturer Declaration of <abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> Safety Assurance or a Pre-Validated Declaration</label>
                 </div>
             </div>
             <div class="row wb-eqht-grd showHide" id="cn-safeRating">
@@ -149,17 +171,17 @@
                             <h2 class="hd-section"><abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> safety assurance declaration</h2>
                             <div class="form-group">
                                 <fieldset class="mrgn-bttm-lg">
-                                    <legend class="wb-inv"><span class="mandatory" title="This field is mandatory">*</span> <abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> safety assurance declaration <span class="wb-inv">This field is mandatory</span></legend>
+                                    <legend class="wb-inv"><span class="mandatory" title="This field is mandatory">*</span> <abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> safety assurance declaration</legend>
                                     <div class="checkbox gc-chckbxrdio">
                                         <input name="safeRating" id="controlledAirspace" type="checkbox" value="" checked>
                                         <label for="controlledAirspace">922.04 - Controlled airspace</label>
                                     </div>
                                     <div class="checkbox gc-chckbxrdio">
-                                        <input name="safeRating" id="near" type="checkbox" value="" checked>
+                                        <input name="safeRating" id="near" type="checkbox" value="">
                                         <label for="near">922.05 - Near people</label>
                                     </div>
                                     <div class="checkbox gc-chckbxrdio">
-                                        <input name="safeRating" id="over" type="checkbox" value="" checked>
+                                        <input name="safeRating" id="over" type="checkbox" value="">
                                         <label for="over">922.06 - Over people</label>
                                     </div>
                                 </fieldset>
@@ -170,15 +192,16 @@
                             </div>
                             <h3 class="hd-section">Office use</h3>
                             <div class="form-group">
-                                <label for="declarationLink"><span class="mandatory" title="This field is mandatory.">*</span> Link to supporting documentation: <strong class="required wb-inv">(required)</strong></label>
+                                <label for="tcRDIMS"><span class="mandatory" title="This field is mandatory.">*</span> Link to supporting documentation: <strong class="required wb-inv">(required)</strong></label>
+                                <div class="form-inline">
+                                    <input type="url" id="declarationDoc" name="declarationDoc" size="25" class="form-control width100" value="" autocomplete="url">
 
-                                <input type="url" id="declarationLink" name="declarationLink" size="25" class="form-control fullWidth" value="" autocomplete="url">
-
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="declarationAtsNumber"><span class="wb-inv"><abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> Safety Assurance </span><abbr title="Activity tracking system">ATS</abbr> number (99-99-99999999):</label>
+                                <label for="atsNumber"><span class="wb-inv"><abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> Safety Assurance </span><abbr title="Activity tracking system">ATS</abbr> number (99-99-99999999):</label>
                                 <div class="input-group"> <span class="input-group-addon" id="prefix">ATS -</span>
-                                    <input type="text" id="declarationAtsNumber" name="atsNumber" size="14" maxlength="14" class="form-control input-custom-ats" aria-describedby="prefix" style="width: auto;" />
+                                    <input type="text" id="atsNumber" name="atsNumber" size="14" maxlength="14" class="form-control input-custom-ats" aria-describedby="prefix" style="width: auto;" />
                                 </div>
                             </div>
                         </div>
@@ -190,7 +213,7 @@
                             <h2 class="hd-section">Pre-validated declaration</h2>
                             <div class="form-group">
                                 <fieldset>
-                                    <legend class="wb-inv"><span class="mandatory" title="This field is mandatory">*</span> <abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> pre-validated declaration <span class="wb-inv">This field is mandatory</span></legend>
+                                    <legend class="wb-inv"><span class="mandatory" title="This field is mandatory">*</span> <abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> pre-validated declaration</legend>
 
                                     <div class="checkbox gc-chckbxrdio">
                                         <input name="pvdRating" id="pvdRating922.07" type="checkbox" value="">
@@ -224,61 +247,34 @@
                             </div>
                             <h3 class="hd-section">Office use</h3>
                             <div class="form-group">
-                                <label for="tcRDIMS"><span class="mandatory" title="This field is mandatory.">*</span> Link to supporting documentation: <strong class="required wb-inv">(required)</strong></label>
+                                <label for="pvdLink"><span class="mandatory" title="This field is mandatory.">*</span> Link to supporting documentation: <strong class="required wb-inv">(required)</strong></label>
 
-                                <input type="text" id="prevalidatedLink" name="tcRDIMS" size="10" class="form-control width100" value="4983293">
+                                <input type="text" id="pvdLink" name="pvdLink" size="10" class="form-control width100" value="http://mytc/">
 
                             </div>
                             <div class="form-group">
-                                <label for="atsNumber"><span class="wb-inv">Pre-validated declaration </span><abbr title="Activity tracking system">ATS</abbr> number (99-99-99999999):</label>
+                                <label for="pvdAtsNumber"><span class="wb-inv">Pre-validated declaration </span><abbr title="Activity tracking system">ATS</abbr> number (99-99-99999999):</label>
                                 <div class="input-group"> <span class="input-group-addon" id="prefix">ATS -</span>
-                                    <input type="text" id="atsNumber" name="atsNumber" size="14" maxlength="14" class="form-control input-custom-ats" aria-describedby="prefix" style="width: auto;" />
+                                    <input type="text" id="pvdAtsNumber" name="pvdAtsNumber" size="14" maxlength="14" class="form-control input-custom-ats" aria-describedby="prefix" style="width: auto;" />
                                 </div>
                             </div>
                         </div>
                     </section>
                 </div>
             </div>
-
-            <div class="alert alert-info">
-                <p>There are <strong>46</strong> drones of this type currently registered. By continuing, all certificates of registration will be updated accordingly. </p>
-            </div>
             <div class="nav-button">
-                <a href="#dlg-notification" class="btn btn-primary wb-lbx" id="btnSubmit">Submit</a>
+                <button type="submit" class="btn btn-primary">Add drone</button>
                 <a href="#" class="btn btn-link mrgn-lft-md">Cancel</a>
             </div>
-
-            <hr>
-            <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Manage drone list</a>
-
-            <section id="dlg-notification" class="mfp-hide modal-dialog modal-content overlay-def lbx-modal width40">
-                <header class="modal-header">
-                    <h2 class="modal-title">Send an email?</h2>
-                </header>
-                <div class=" modal-body">
-                    <p>Would you like us to send an email notification to the <strong>46</strong> registrants of this drone to inform them of the changes you've made? </p>
-                    <p>This will encourage registrants to reprint their certificates of registration and may not be needed depending on the type of change being made.</p>
-                </div>
-
-                <footer class="modal-footer">
-                    <!-- <button type="submit" class="btn btn-primary pull-left">Send email now</button>
-                    <button type="button" class="btn btn-default pull-left">Schedule email for later</button>
-                    -->
-                    <a href="manageDroneList-viewSelected-confirmUpdated.html" class="btn btn-primary pull-left">Send email now</a>
-                    <a href="manageDroneList-viewSelected-confirmUpdated.html" class="btn btn-default pull-left">Schedule email for later</a>
-                    <a href="#" class="popup-modal-dismiss btn btn-link pull-left">Let me think about this...</a>
-                </footer>
-            </section>
-
         </form>
-
-        <!-- InstanceEndEditable -->
+        <hr>
+        <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to Manage drone list</a> <!-- InstanceEndEditable -->
         <div class="datemod col-xs-12 mrgn-tp-lg">
             <dl id="wb-dtmd">
                 <dt>Date modified:&#32;</dt>
                 <dd>
                     <time property="dateModified">
-                        <!-- #BeginDate format:IS1 -->2018-11-21
+                        <!-- #BeginDate format:IS1 -->2018-11-23
                         <!-- #EndDate -->
                     </time>
                 </dd>
@@ -290,6 +286,7 @@
             <div class="container">
                 <div class="row">
                     <nav class="col-md-10 ftr-urlt-lnk">
+
                     </nav>
                     <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a></div>
                     <div class="col-xs-6 col-md-2 text-right">
@@ -300,7 +297,6 @@
             </div>
         </div>
     </footer>
-
     <!--[if gte IE 9 | !IE ]><!-->
     <script src="../../../../js/jquery/2.2.4/jquery.js"></script>
     <script src="../../../../wet-boew/js/wet-boew.min.js"></script>
@@ -321,12 +317,6 @@
                 $("#cn-safeRating").toggle(300);
             });
 
-            if ($("#safeRated").is(":checked")) {
-                $("#cn-safeRating").show();
-            } else {
-                $("#cn-safeRating").hide();
-            }
-
             $("#link-rdims").on('click', function(e) {
                 e.preventDefault();
                 var rdimsNum = $("#tcRDIMS").val();
@@ -337,19 +327,6 @@
                 }
 
             });
-
-            $("#btnSubmit").on("click", function(event) {
-                event.preventDefault();
-                var txtWaiting = "Please wait a moment...";
-                $(this).prepend("<i class='fas fa-circle-notch fa-spin mrgn-rght-sm'></i><span class='wb-inv'>" + txtWaiting + "</span>").attr('disabled', true);
-            });
-
-
-        });
-
-        $(".wb-lbx").on("mfpClose", function(event) {
-            $("#btnSubmit i, #btnSubmit span").remove();
-            $("#btnSubmit").attr('disabled', false);
         });
 
         // Attach a datepicker to the above input element

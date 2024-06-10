@@ -132,27 +132,27 @@
                 <div class="form-group mrgn-lft-lg" id="purchaseInformation">
 
                     <div class="form-group">
-                     <label for="makeModel" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Make/model: <strong class="required wb-inv">(required)</strong></label>
-                    <select class="form-control display-block" id="makeModel" name="makeModel">
-                        <option value="1">Aeryon Labs - Skyranger</option>
-                        <option value="5">Draganfly - Commander</option>
-                        <option value="4">Draganfly - Guardian</option>
-                        <option value="2">Draganfly - X4ES</option>
-                        <option value="3">Draganfly - X4P</option>
-                        <option value="6">Epoc Unmanned - Stryder</option>
-                        <option value="7" selected="selected">Indro Robotics - Scout Mk III</option>
-                        <option value="8">Infinit Jib - Surveyor 630</option>
-                        <option value="9">Kesprey - Drone 1.0</option>
-                        <option value="10">Lockheed Martin - Indago 2</option>
-                        <option value="11">Lockheed Martin - Indago 3</option>
-                        <option value="12">Microdrones Canada - MD4-1000</option>
-                        <option value="13">SenseFly SA - ebee</option>
-                        <option value="14">SenseFly SA - ebee+</option>
-                        <option value="15">SenseFly SA - Albris</option>
-                        <option value="16">Silent Falcon UAS Technologies - Silent Falcon</option>
-                    </select>
+                        <label for="makeModel" class="display-block"><span class="mandatory" title="This field is mandatory">*</span>Make/model: <strong class="required wb-inv">(required)</strong></label>
+                        <select class="form-control display-block" id="makeModel" name="makeModel">
+                            <option value="1">Aeryon Labs - Skyranger</option>
+                            <option value="5">Draganfly - Commander</option>
+                            <option value="4">Draganfly - Guardian</option>
+                            <option value="2">Draganfly - X4ES</option>
+                            <option value="3">Draganfly - X4P</option>
+                            <option value="6">Epoc Unmanned - Stryder</option>
+                            <option value="7" selected="selected">Indro Robotics - Scout Mk III</option>
+                            <option value="8">Infinit Jib - Surveyor 630</option>
+                            <option value="9">Kesprey - Drone 1.0</option>
+                            <option value="10">Lockheed Martin - Indago 2</option>
+                            <option value="11">Lockheed Martin - Indago 3</option>
+                            <option value="12">Microdrones Canada - MD4-1000</option>
+                            <option value="13">SenseFly SA - ebee</option>
+                            <option value="14">SenseFly SA - ebee+</option>
+                            <option value="15">SenseFly SA - Albris</option>
+                            <option value="16">Silent Falcon UAS Technologies - Silent Falcon</option>
+                        </select>
 
-                </div>
+                    </div>
 
 
                     <div class="form-group">
@@ -166,7 +166,7 @@
                         <input name="serialNumber" id="serialNumber" type="text" size="35" class="form-control input-alpha-50" maxlength="50" value="12345678901234567890123456789012345678901234567890">
                     </div>
 
-            </div>
+                </div>
                 <div class="radio">
                     <label for="built">
                         <input type="radio" name="buildPurchase" value="radio" id="built">
@@ -176,10 +176,10 @@
 
 
                     <div class="form-group">
-<div class="form-group">
-                        <label for="customMakeModelDescription"><span class="wb-inv">Custom-built </span>Nickname or description:</label>
-                        <input name="customMakeModelDescription" type="text" id="customMakeModelDescription" value="Flying Burry" size="35" maxlength="50" class="form-control" />
-                    </div>
+                        <div class="form-group">
+                            <label for="customMakeModelDescription"><span class="wb-inv">Custom-built </span>Nickname or description:</label>
+                            <input name="customMakeModelDescription" type="text" id="customMakeModelDescription" value="Flying Burry" size="35" maxlength="50" class="form-control" />
+                        </div>
 
                     </div>
 
@@ -193,8 +193,8 @@
 
 
             <div class="nav-button">
-                <a href="viewDrone-withSA-confirmSaved.html" class="btn btn-primary" id="btnSubmit">Submit</a>
-                <a href="viewDrone-withSA.html" class="btn btn-link mrgn-lft-md">Cancel</a>
+                <a href="viewDrone-confirmSaved.html" class="btn btn-primary" id="btnSubmit">Submit</a>
+                <a href="viewDrone.html" class="btn btn-link mrgn-lft-md">Cancel</a>
             </div>
         </form>
 
@@ -289,10 +289,6 @@
             });
 
         });
-
-
-
-
     </script>
     <!-- InstanceEndEditable -->
 </body>
