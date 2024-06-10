@@ -655,6 +655,54 @@ tr.separator-bttm th {
 }
 
 /*------------------------------------*\
+   Pills
+\*------------------------------------*/
+.pill-green,
+.pill-red,
+.pill-yellow,
+.pill-white,
+.pill-blue,
+.pill-grey {
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .05);
+    border: 1px solid #ccc;
+}
+
+.pill-status {
+    box-shadow: none;
+    text-transform: uppercase;
+    font-size: 10px;
+    display: inline-block;
+}
+
+.pill-blue {
+    background-color: #e1eefb;
+}
+
+.pill-green {
+    background-color: #dff0d8;
+}
+
+.pill-yellow {
+    background-color: #fcf8e3;
+}
+
+.pill-red {
+    background-color: #f2dede;
+}
+
+.pill-white {
+    background-color: #ffffff;
+}
+
+.pill-grey {
+    color: #000;
+    background-color: #ccc;
+    border: 1px solid #eee;
+}
+
+/*------------------------------------*\
     Background color
 \*------------------------------------*/
 
