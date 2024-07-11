@@ -28,14 +28,14 @@
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
-		
+
 		<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
 		<script src="../js/jquery/1.11.1/jquery.min.js"></script>
 		<script src="../wet-boew/js/ie8-wet-boew.min.js"></script>
 		<![endif]-->
     <!--[if lte IE 9]>
-		
-		
+
+
 		<![endif]-->
     <noscript>
         <link rel="stylesheet" href="../../../../wet-boew/css/noscript.min.css" />
@@ -116,7 +116,7 @@
         <div class="alert alert-success mrgn-bttm-md">
             <h2>Success</h2>
             <ol class="fa-ul">
-                <li><i class="fa-li fa fa-angle-right"></i>{make} {model} has been unpublished from the list of published drones.</li>
+                <li><i class="fa-li fa fa-angle-right"></i>{make} {model} has been unpublished from the list of drones.</li>
             </ol>
         </div>
         <p>There are <strong>2</strong> submitted drones that require review:</p>
@@ -135,11 +135,12 @@
                     </div>
                 </header>
                 <div class="table-responsive">
-                    <table class="wb-tables table table-hover table-bordered" data-wb-tables='
-        {"info" : false, "filter" : true, "order" : [[3,"desc"]],"columnDefs": [{ "orderable" : false, "targets":[] },{"searchable" : false, "targets": []}],
-"language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]}'>
+                    <table id="tblSubmittedDrones" class="wb-tables table table-hover table-bordered" data-wb-tables='
+        {"stateSave" : true, "info" : false, "filter" : true, "order" : [[3,"desc"]],"columnDefs": [{ "orderable" : false, "targets":[0] },{"searchable" : false, "targets": []}],
+"language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthMenu": [[10, 25, 50, -1], [25, 50, 100, "All"]]}'>
                         <thead>
                             <tr>
+                                <th scope="col" class="width5 selectAll text-center"><span class="wb-inv">Select</span></th>
                                 <th scope="col" class="width40">Make/model</th>
                                 <th scope="col" class="width10">Type</th>
                                 <th scope="col" class="width15 text-center">Date submitted<br>
@@ -149,13 +150,24 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><a href="#">DJI Fantom 4</a></td>
+                                <td class="text-center"><label for="drone1" class="wb-inv">DJI Phantom 4 - Rotary wing</label><input type="checkbox" id="drone1" name="makeModel"></td>
+                                <td><a href="viewSubmittedDrones-viewSelected.html">DJI Phantom 4</a></td>
                                 <td>Rotary wing</td>
+
                                 <td class="text-center">2018-10-10</td>
                             </tr>
                             <tr>
-                                <td><a href="#">DJI Fantom Four</a></td>
+                                <td class="text-center"><label for="drone2" class="wb-inv">DJI Fantom 4 - Rotary wing</label><input type="checkbox" id="drone2" name="makeModel"></td>
+                                <td><a href="viewSubmittedDrones.html">DJI Fantom 4</a></td>
                                 <td>Rotary wing</td>
+
+                                <td class="text-center">2018-10-10</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><label for="drone3" class="wb-inv">DJI Fantom Four - Rotary wing</label><input type="checkbox" id="drone3" name="makeModel"></td>
+                                <td><a href="viewSubmittedDrones-viewSelected.html">DJI Fantom Four</a></td>
+                                <td>Rotary wing</td>
+
                                 <td class="text-center">2018-10-10</td>
                             </tr>
                         </tbody>
@@ -163,7 +175,11 @@
                 </div>
                 <footer class="panel-footer">
                     <div class="row">
-                        <div class="col-md-6 col-xs-6 pddng-tp-sm pages"> </div>
+
+                        <div class="col-md-6 col-xs-6 pddng-tp-sm pages">
+                            <a href="linkDrones-bulk.html" class="btn btn-primary">Link to existing</a>
+                            <a href="viewSubmittedDrones-confirmAdded.html" class="btn btn-default">Add to drone list</a>
+                        </div>
                         <div class="col-md-6 col-xs-12 text-right text-left-sm text-left-xs displayOptions"></div>
                     </div>
                 </footer>
@@ -207,7 +223,7 @@
     <!--<![endif]-->
     <!--[if lt IE 9]>
 		<script src="../wet-boew/js/ie8-wet-boew2.min.js"></script>
-		
+
 		<![endif]-->
     <script src="../../../../GCWeb/js/theme.min.js"></script>
     <!-- InstanceBeginEditable name="CustomJS" -->
@@ -225,6 +241,34 @@
             });;
             $(".dataTables_filter label").css({
                 "margin-bottom": "0px"
+            });
+
+            //Add the select all checkbox
+            var selectAllStr = 'Select all';
+            $(".selectAll").html("<input id='selectAll' type='checkbox' value='' title='" + selectAllStr + "'><label for='selectAll' class='wb-inv'>" + selectAllStr + "</label>");
+            $("#selectAll").click(function() {
+                if ($(this).prop("checked")) {
+                    $("td>:checkbox").each(function() {
+                        $(this).prop("checked", false);
+                        fnHighlightSelectedRow($(this));
+                    });
+
+                    $("td>:checkbox").each(function() {
+                        $(this).prop("checked", true);
+                        fnHighlightSelectedRow($(this));
+                    });
+                } else {
+                    $("td>:checkbox").each(function() {
+                        $(this).prop("checked", false);
+                        fnHighlightSelectedRow($(this));
+                    });
+                }
+
+            });
+
+            //Bind the click event handler to the checkboxes
+            $("#tblSubmittedDrones tbody").on('click', "td>:checkbox", function() {
+                fnHighlightSelectedRow($(this));
             });
         });
     </script>

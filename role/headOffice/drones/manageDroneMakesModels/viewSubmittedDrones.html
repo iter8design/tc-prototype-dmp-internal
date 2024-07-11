@@ -131,12 +131,12 @@
                     </div>
                 </header>
                 <div class="table-responsive">
-                    <table class="wb-tables table table-hover table-bordered" data-wb-tables='
+                    <table id="tblSubmittedDrones" class="wb-tables table table-hover table-bordered" data-wb-tables='
         {"stateSave" : true, "info" : false, "filter" : true, "order" : [[3,"desc"]],"columnDefs": [{ "orderable" : false, "targets":[0] },{"searchable" : false, "targets": []}],
 "language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthMenu": [[10, 25, 50, -1], [25, 50, 100, "All"]]}'>
                         <thead>
                             <tr>
-                                <th scope="col" class="width5"><span class="wb-inv">Select</span></th>
+                                <th scope="col" class="width5 selectAll text-center"><span class="wb-inv">Select</span></th>
                                 <th scope="col" class="width40">Make/model</th>
                                 <th scope="col" class="width10">Type</th>
                                 <th scope="col" class="width15 text-center">Date submitted<br>
@@ -240,6 +240,34 @@
             });;
             $(".dataTables_filter label").css({
                 "margin-bottom": "0px"
+            });
+
+            //Add the select all checkbox
+            var selectAllStr = 'Select all';
+            $(".selectAll").html("<input id='selectAll' type='checkbox' value='' title='" + selectAllStr + "'><label for='selectAll' class='wb-inv'>" + selectAllStr + "</label>");
+            $("#selectAll").click(function() {
+                if ($(this).prop("checked")) {
+                    $("td>:checkbox").each(function() {
+                        $(this).prop("checked", false);
+                        fnHighlightSelectedRow($(this));
+                    });
+
+                    $("td>:checkbox").each(function() {
+                        $(this).prop("checked", true);
+                        fnHighlightSelectedRow($(this));
+                    });
+                } else {
+                    $("td>:checkbox").each(function() {
+                        $(this).prop("checked", false);
+                        fnHighlightSelectedRow($(this));
+                    });
+                }
+
+            });
+
+            //Bind the click event handler to the checkboxes
+            $("#tblSubmittedDrones tbody").on('click', "td>:checkbox", function() {
+                fnHighlightSelectedRow($(this));
             });
         });
     </script>
