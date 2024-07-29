@@ -93,7 +93,7 @@
                 </nav>
             </div>
         </div>
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../../../includes/menus/menu-headOffice.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
+        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../../includes/menus/menu-headOffice.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
 
         <nav role="navigation" id="wb-bc" property="breadcrumb">
             <h2>You are here:</h2>
@@ -170,19 +170,43 @@
                         <div class="panel-body">
                             <h2 class="hd-section"><abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> safety assurance declaration</h2>
                             <div class="form-group">
-                                <fieldset class="mrgn-bttm-lg">
+                                <fieldset>
                                     <legend class="wb-inv"><span class="mandatory" title="This field is mandatory">*</span> <abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> safety assurance declaration</legend>
                                     <div class="checkbox gc-chckbxrdio">
-                                        <input name="safeRating" id="controlledAirspace" type="checkbox" value="">
-                                        <label for="controlledAirspace">922.04 - Controlled airspace</label>
+                                        <input name="safeRating" id="safeRating922.04" type="checkbox" value="">
+                                        <label for="safeRating922.04">922.04 - Controlled airspace</label>
                                     </div>
                                     <div class="checkbox gc-chckbxrdio">
-                                        <input name="safeRating" id="near" type="checkbox" value="">
-                                        <label for="near">922.05 - Near people</label>
+                                        <input name="safeRating" id="safeRating922.05" type="checkbox" value="">
+                                        <label for="safeRating922.05">922.05 - Near people</label>
                                     </div>
                                     <div class="checkbox gc-chckbxrdio">
                                         <input name="safeRating" id="over" type="checkbox" value="">
                                         <label for="over">922.06 - Over people</label>
+                                    </div>
+                                    <div class="checkbox gc-chckbxrdio">
+                                        <input name="safeRating" id="safeRating922.07" type="checkbox" value="">
+                                        <label for="safeRating922.07">922.07 - Safety and reliability</label>
+                                    </div>
+                                    <div class="checkbox gc-chckbxrdio">
+                                        <input name="safeRating" id="safeRating922.08" type="checkbox" value="">
+                                        <label for="safeRating922.08">922.08 - Containment</label>
+                                    </div>
+                                    <div class="checkbox gc-chckbxrdio">
+                                        <input name="safeRating" id="safeRating922.09" type="checkbox" value="">
+                                        <label for="safeRating922.09">922.09 - Command and control (C2) link</label>
+                                    </div>
+                                    <div class="checkbox gc-chckbxrdio">
+                                        <input name="safeRating" id="safeRating922.10" type="checkbox" value="">
+                                        <label for="safeRating922.10">922.10 - Detect and avoid (DAA)</label>
+                                    </div>
+                                    <div class="checkbox gc-chckbxrdio">
+                                        <input name="safeRating" id="safeRating922.11" type="checkbox" value="">
+                                        <label for="safefRating922.11">922.11 - Remote pilot station design</label>
+                                    </div>
+                                    <div class="checkbox gc-chckbxrdio">
+                                        <input name="safeRating" id="safeating922.12" type="checkbox" value="">
+                                        <label for="safeRating922.12">922.12 - Demonstrated environmental envelope</label>
                                     </div>
                                 </fieldset>
                             </div>
@@ -213,6 +237,19 @@
                             <div class="form-group">
                                 <fieldset>
                                     <legend class="wb-inv"><span class="mandatory" title="This field is mandatory">*</span> <abbr title="Remotely Piloted Aircraft Systems">RPAS</abbr> pre-validated declaration</legend>
+
+                                    <div class="checkbox gc-chckbxrdio">
+                                        <input name="pvdRating" id="pvdRating922.04" type="checkbox" value="">
+                                        <label for="pvdRating9224">922.04 - Controlled airspace</label>
+                                    </div>
+                                    <div class="checkbox gc-chckbxrdio">
+                                        <input name="pvdRating" id="pvdRating922.05" type="checkbox" value="">
+                                        <label for="pvdRating922.05">922.05 - Near people</label>
+                                    </div>
+                                    <div class="checkbox gc-chckbxrdio">
+                                        <input name="pvdRating" id="pvdRating922.06" type="checkbox" value="">
+                                        <label for="pvdRating9226">922.06 - Over people</label>
+                                    </div>
 
                                     <div class="checkbox gc-chckbxrdio">
                                         <input name="pvdRating" id="pvdRating922.07" type="checkbox" value="">
@@ -262,7 +299,7 @@
                 </div>
             </div>
             <div class="nav-button">
-                <a href="manageDroneMakesModels-confirmAdded.html" class="btn btn-primary">Add drone</a>
+                <a href="manageDroneMakesModels-confirmPublished.html" class="btn btn-primary">Add drone</a>
                 <a href="manageDroneMakesModels.html" class="btn btn-link mrgn-lft-md">Cancel</a>
             </div>
         </form>

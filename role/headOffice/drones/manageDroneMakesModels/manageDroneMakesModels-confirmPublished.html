@@ -113,76 +113,70 @@
     <main role="main" property="mainContentOfPage" class="container">
 
         <h1 property="name" id="wb-cont"><i class="fas fa-edit"></i> Manage drone makes and models</h1>
+
+        <div class="alert alert-success mrgn-bttm-md">
+            <h2>Success</h2>
+            <ol class="fa-ul">
+                <li><i class="fa-li fa fa-angle-right"></i> {make} {model} drone has been successfully published.</li>
+            </ol>
+        </div>
         <p>The following drone makes & models have been registered or added by Transport Canada:</p>
-        <form method="get" action="manageDroneMakesModels-confirmPublished.html">
-            <section class="panel panel-default panel-datatable">
-                <header class="panel-heading pddng-tp-0">
-                    <!--<div class="row">
-                    <div class="col-md-6">
-                        <div class="form-inline">
-                            <div class="form-group mrgn-bttm-0 mrgn-rght-sm pddng-panel-heading-tp">
-                                <div class="tableFilter"></div>
-                            </div>
+
+        <section class="panel panel-default panel-datatable">
+            <header class="panel-heading pddng-tp-0">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2 class="">Drone makes & models</h2>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="pull-right mrgn-tp-md">
+                            <a href="addDrone.html" class="btn btn-primary mrgn-rght-md"><i class="fa-solid fa-circle-plus mrgn-rght-sm"></i>Add drone</a>
+                            <a href="#" class="btn btn-default"><i class="fa-solid fa-download mrgn-rght-sm"></i>Export</a>
+
                         </div>
 
                     </div>
-                    <div class="col-md-6 text-right text-left-sm text-left-xs pddng-panel-heading-tp">
-                        <button class="btn btn-primary"><i class="fa-solid fa-circle-plus mrgn-rght-sm"></i>Add drone</button>
-                    </div>
-                </div>-->
-                    <div class="row">
-                        <div class="col-md-8">
-                            <h2 class="">Drone makes & models</h2>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="pull-right mrgn-tp-md">
-                                <a href="addDrone.html" class="btn btn-primary mrgn-rght-md"><i class="fa-solid fa-circle-plus mrgn-rght-sm"></i>Add drone</a>
-                                <a href="#" class="btn btn-default"><i class="fa-solid fa-download mrgn-rght-sm"></i>Export</a>
-
-                            </div>
-
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>To find a manufacturer or a model, enter its make or model:</p>
+                        <div class="input-group"><label for="filter" class="wb-inv">Filter by...</label>
+                            <input id="filter" name="filter" class="form-control full-width" size="35">
+                            <span class="input-group-addon">
+                                <i class="fas fa-search"></i>
+                            </span>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <p>To find a manufacturer or a model, enter its make or model:</p>
-                            <div class="input-group"><label for="filter" class="wb-inv">Filter by...</label>
-                                <input id="filter" name="filter" class="form-control full-width" size="35">
-                                <span class="input-group-addon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </header>
-                <div class="table-responsive">
-                    <table id="tblMakeModels" class="wb-tables table table-hover table-bordered dataTable" data-wb-tables='
+                </div>
+            </header>
+            <div class="table-responsive">
+                <table id="tblMakeModels" class="wb-tables table table-hover table-bordered dataTable" data-wb-tables='
         {"info" : false, "filter" : true, "order" : [[1,"desc"]],"columnDefs": [{ "orderable" : false, "targets":[0] },{"searchable" : false, "targets": [0,3,4,5]}],
 "language": { "lengthMenu" : "Display _MENU_ per page", "search" : "<span class=\"wb-invisible\">Filter...</span>", "searchPlaceholder" : "Filter by...", "infoFiltered" : "(out of _MAX_ total)", "zeroRecords" : "No matching results"},"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]}'>
-                        <thead>
-                            <tr>
-                                <th scope="col" class="width5 text-center selectAll"><span class="wb-inv">Select</span></th>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="width5 text-center selectAll"><span class="wb-inv">Select</span></th>
 
-                                <th scope="col" class="width30">Make and model</th>
-                                <th scope="col" class="width10">Safety assurance declaration</th>
-                                <th scope="col" class="width10">Pre-validated declaration</th>
-                                <th scope="col" class="width10">Status</th>
-                                <th scope="col" class="width10">Date last registered <br> (YYYY-MM-DD)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="text-center"><label for="drone1" class="wb-inv"></label><input type="checkbox" id="drone1" name="makeModel"></td>
+                            <th scope="col" class="width30">Make and model</th>
+                            <th scope="col" class="width10">Safety assurance declaration</th>
+                            <th scope="col" class="width10">Pre-validated declaration</th>
+                            <th scope="col" class="width10">Status</th>
+                            <th scope="col" class="width10">Date last registered <br> (YYYY-MM-DD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center"><label for="drone1" class="wb-inv"></label><input type="checkbox" id="drone1" name="makeModel"></td>
 
-                                <td><a href="viewDroneDetails-published.html">{Make} {Model}</a></td>
-                                <td>Yes <i class="fa fa-info-circle text-info" data-toggle="popover" title="{Make} {Model} safety assurance declaration" data-content="
+                            <td><a href="viewDroneDetails.html">{Make} {Model}</a></td>
+                            <td>Yes <i class="fa fa-info-circle text-info" data-toggle="popover" title="{Make} {Model} safety assurance declaration" data-content="
                             <ul>
                             <li>922.04 - Controlled airspace</li>
                             <li>922.05 - Near people</li>
                             <li>922.06 - Over people</li>
                             </ul>
                                 " </i></td>
-                                <td>Yes <i class="fa fa-info-circle text-info" data-toggle="popover" title="{Make} {Model} pre-validated declaration" data-content="
+                            <td>Yes <i class="fa fa-info-circle text-info" data-toggle="popover" title="{Make} {Model} pre-validated declaration" data-content="
 
                               <ul>
                                   <li>922.07 - Safety and reliability</li>
@@ -193,38 +187,35 @@
                                 <li>922.12 - Demonstrated environmental envelope</li>
                                   </ul>" </i> </td>
 
-                                <td><span class="pill pill-green">Published</span></td>
-                                <td class="text-center">2021-01-03</td>
-                            </tr>
-                            <tr>
-                                <td class="text-center"><label for="drone2" class="wb-inv"></label><input type="checkbox" id="drone2" name="makeModel"></td>
+                            <td><span class="pill pill-green">Published</span></td>
+                            <td class="text-center">2021-01-03</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><label for="drone2" class="wb-inv"></label><input type="checkbox" id="drone2" name="makeModel"></td>
 
-                                <td><a href="viewDroneDetails-unpublished.html">{Make} {Model}</a></td>
-                                <td>No</td>
+                            <td><a href="viewDroneDetails.html">{Make} {Model}</a></td>
+                            <td>No</td>
 
-                                <td>No</td>
-                                <td><span class="pill pill-blue">Unpublished</span></td>
-                                <td class="text-center">Never</td>
-                            </tr>
-                        </tbody>
+                            <td>No</td>
+                            <td><span class="pill pill-blue">Unpublished</span></td>
+                            <td class="text-center">Never</td>
+                        </tr>
+                    </tbody>
 
-                    </table>
-                </div>
-                <footer class="panel-footer">
-                    <div class="row">
-                        <div class="col-md-4 col-xs-6 pddng-tp-sm">
-                            <!-- Enabled if 2 drones are selected -->
-                            <button class="btn btn-primary mrgn-tp-md" type="submit">Publish</button>
-                            <button class="btn btn-default mrgn-tp-md" type="submit">Unpublish</button>
-
-
-                        </div>
-                        <div class="col-md-4 col-xs-6 pddng-tp-sm pages text-center"> </div>
-                        <div class="col-md-4 col-xs-12 text-right text-left-sm text-left-xs displayOptions"></div>
+                </table>
+            </div>
+            <footer class="panel-footer">
+                <div class="row">
+                    <div class="col-md-4 col-xs-6 pddng-tp-sm">
+                        <!-- Enabled if 2 drones are selected -->
+                        <button class="btn btn-primary mrgn-tp-md" type="submit" disabled>Publish</button>
+                        <button class="btn btn-default mrgn-tp-md" type="submit" disabled>Unpublish</button>
                     </div>
-                </footer>
-            </section>
-        </form>
+                    <div class="col-md-4 col-xs-6 pddng-tp-sm pages text-center"> </div>
+                    <div class="col-md-4 col-xs-12 text-right text-left-sm text-left-xs displayOptions"></div>
+                </div>
+            </footer>
+        </section>
 
         <div class="datemod col-xs-12 mrgn-tp-lg">
             <dl id="wb-dtmd">

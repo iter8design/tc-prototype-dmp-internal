@@ -94,7 +94,7 @@
                 </nav>
             </div>
         </div>
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../../../includes/menus/menu-headOffice.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
+        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../../includes/menus/menu-headOffice.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
 
 
         <nav role="navigation" id="wb-bc" property="breadcrumb">
@@ -117,26 +117,13 @@
         <div class="alert alert-success mrgn-bttm-md">
             <h2>Success</h2>
             <ol class="fa-ul">
-                <li><i class="fa-li fa fa-angle-right"></i> {make} {model} drone has been successfully added to the drone list.</li>
+                <li><i class="fa-li fa fa-angle-right"></i> {make} {model} drone has been successfully unpublished.</li>
             </ol>
         </div>
         <p>The following drone makes & models have been registered or added by Transport Canada:</p>
 
         <section class="panel panel-default panel-datatable">
             <header class="panel-heading pddng-tp-0">
-                <!--<div class="row">
-                    <div class="col-md-6">
-                        <div class="form-inline">
-                            <div class="form-group mrgn-bttm-0 mrgn-rght-sm pddng-panel-heading-tp">
-                                <div class="tableFilter"></div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-6 text-right text-left-sm text-left-xs pddng-panel-heading-tp">
-                        <button class="btn btn-primary"><i class="fa-solid fa-circle-plus mrgn-rght-sm"></i>Add drone</button>
-                    </div>
-                </div>-->
                 <div class="row">
                     <div class="col-md-8">
                         <h2 class="">Drone makes & models</h2>
@@ -173,7 +160,6 @@
                             <th scope="col" class="width30">Make and model</th>
                             <th scope="col" class="width10">Safety assurance declaration</th>
                             <th scope="col" class="width10">Pre-validated declaration</th>
-                            <th scope="col" class="width10">Custom</th>
                             <th scope="col" class="width10">Status</th>
                             <th scope="col" class="width10">Date last registered <br> (YYYY-MM-DD)</th>
                         </tr>
@@ -200,7 +186,7 @@
                                   <li>922.11 - Remote pilot station design</li>
                                 <li>922.12 - Demonstrated environmental envelope</li>
                                   </ul>" </i> </td>
-                            <td>No</td>
+
                             <td><span class="pill pill-green">Published</span></td>
                             <td class="text-center">2021-01-03</td>
                         </tr>
@@ -209,7 +195,7 @@
 
                             <td><a href="viewDroneDetails.html">{Make} {Model}</a></td>
                             <td>No</td>
-                            <td>No</td>
+
                             <td>No</td>
                             <td><span class="pill pill-blue">Unpublished</span></td>
                             <td class="text-center">Never</td>

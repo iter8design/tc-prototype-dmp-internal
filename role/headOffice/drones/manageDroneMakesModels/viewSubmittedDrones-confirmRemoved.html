@@ -92,7 +92,7 @@
                 </nav>
             </div>
         </div>
-        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../../../includes/menus/menu-headOffice.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
+        <nav role="navigation" id="wb-sm" data-trgt="mb-pnl" data-ajax-replace="../../../../includes/menus/menu-headOffice.html" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement"></nav>
 
 
         <nav role="navigation" id="wb-bc" property="breadcrumb">
@@ -103,7 +103,6 @@
                         <li><a href="#">Home</a></li>
                         <!-- InstanceBeginEditable name="Breadcrumbs" -->
                         <li><a href="#">Drones</a></li>
-                        <li><a href="#">Manage drone list</a></li>
                         <li>View submitted drones</li> <!-- InstanceEndEditable -->
                     </ol>
                 </div>
@@ -116,8 +115,7 @@
         <div class="alert alert-success mrgn-bttm-md">
             <h2>Success</h2>
             <ol class="fa-ul">
-                <li><i class="fa-li fa fa-angle-right"></i> {make} {model} drone has been successfully added to the drone list.</li>
-                <li><i class="fa-li fa fa-angle-right"></i> {number} drones have been successfully added to the drone list.</li>
+                <li><i class="fa-li fa fa-angle-right"></i>{make} {model} has been removed from further consideration.</li>
             </ol>
         </div>
         <p>There are <strong>2</strong> submitted drones that require review:</p>
@@ -177,12 +175,16 @@
                 <footer class="panel-footer">
                     <div class="row">
 
-                        <div class="col-md-6 col-xs-6 pddng-tp-sm pages">
-                            <a href="linkDrones-bulk.html" class="btn btn-primary">Link to existing</a>
-                            <a href="viewSubmittedDrones-confirmAdded.html" class="btn btn-default">Add to drone list</a>
+                        <div class="col-md-9 col-xs9 pddng-tp-sm pages">
+                            <a href="linkDrones-bulk.html" class="btn btn-primary">Use existing drone</a>
+                            <a href="viewSubmittedDrones-confirmAdded.html" class="btn btn-default">Add drone to list</a>
+
+                            <a href="removeDrones-bulk.html" class="btn btn-link">Remove from consideration</a>
                         </div>
-                        <div class="col-md-6 col-xs-12 text-right text-left-sm text-left-xs displayOptions"></div>
+                        <div class="col-md-3 col-xs-3 text-right text-left-sm text-left-xs displayOptions"></div>
+
                     </div>
+
                 </footer>
             </section>
         </form>
@@ -194,7 +196,7 @@
                 <dt>Date modified:&#32;</dt>
                 <dd>
                     <time property="dateModified">
-                        <!-- #BeginDate format:IS1 -->2018-12-18
+                        <!-- #BeginDate format:IS1 -->2019-10-10
                         <!-- #EndDate -->
                     </time>
                 </dd>
@@ -217,6 +219,7 @@
             </div>
         </div>
     </footer>
+
     <!--[if gte IE 9 | !IE ]><!-->
     <script src="../../../../js/jquery/2.2.4/jquery.js"></script>
     <script src="../../../../wet-boew/js/wet-boew.min.js"></script>
