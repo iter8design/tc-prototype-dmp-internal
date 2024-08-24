@@ -117,8 +117,8 @@
     <main role="main" property="mainContentOfPage" class="container">
         <!-- InstanceBeginEditable name="Content" -->
         <h1 property="name" id="wb-cont"><i class="fas fa-plane"></i> DJI Phantom 4</h1>
-        <p>There are <strong>2</strong> drones of this type currently registered. Verify that the submitted make/model is not already listed, and select one of the following options:</p>
-        <form action="viewSubmittedDrones-confirmPublished.html" method="get">
+        <p>Verify that the submitted make/model is not already listed, and select one of the following options:</p>
+        <form action="viewSubmittedDrones-confirmAdded.html" method="get">
             <div class="row">
                 <div class="col-md-6">
                     <section class="panel panel-default">
@@ -141,7 +141,7 @@
                                     <option value="1">Fixed-wing</option>
                                     <option value="2">Hybrid</option>
                                     <option value="3">Lighter-than-air</option>
-                                    <option value="4">Rotary wing</option>
+                                    <option value="4" selected>Rotary wing</option>
                                 </select>
                             </div>
 
@@ -179,7 +179,7 @@
                             </select>
                         </div>
                         <footer class="panel-footer">
-                            <a href="#dlg-notification" class="btn btn-primary wb-lbx">Use existing drone</a>
+                            <a href="viewSubmittedDrones-confirmLinked.html" class="btn btn-primary wb-lbx">Use existing drone</a>
                         </footer>
                     </section>
                     <section class="panel panel-default">
@@ -190,7 +190,7 @@
                             <p>If this drone does not warrant being added to the list, select <strong>Remove from the submitted list</strong> to remove the drone from further consideration.</p>
                         </div>
                         <footer class="panel-footer">
-                            <button type="submit" class="btn btn-default">Remove from consideration</button>
+                            <a href="viewSubmittedDrones-confirmRemoved.html" class="btn btn-default">Remove from consideration</a>
                         </footer>
                     </section>
                 </div>
@@ -198,22 +198,6 @@
         </form>
         <hr>
         <a href="#"><i class="fas fa-reply mrgn-rght-sm"></i>Return to View submitted drones</a>
-
-        <!--<section id="dlg-notification" class="mfp-hide modal-dialog modal-content overlay-def lbx-modal width40">
-            <header class="modal-header">
-                <h2 class="modal-title">Send an email?</h2>
-            </header>
-            <div class=" modal-body">
-                <p>Would you like us to send an email notification to the <strong>2</strong> registrants of this drone to inform them of the changes you've made? </p>
-                <p>This will encourage registrants to reprint their certificates of registration and may not be needed depending on the type of change being made.</p>
-            </div>
-
-            <footer class="modal-footer">
-                <button type="submit" class="btn btn-primary pull-left">Send email now</button>
-                <button type="submit" class="btn btn-default pull-left">Schedule email for later</button>
-                <a href="#" class="popup-modal-dismiss btn btn-link pull-left">Let me think about this...</a>
-            </footer>
-        </section>-->
 
         <!-- InstanceEndEditable -->
         <div class="datemod col-xs-12 mrgn-tp-lg">

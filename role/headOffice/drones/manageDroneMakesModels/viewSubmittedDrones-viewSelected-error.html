@@ -128,7 +128,7 @@
                 <li><i class="fa-li fa fa-angle-right"></i>The make/model entered has already been added to the drone list.</li>
             </ol>
         </div>
-        <p>There are <strong>2</strong> drones of this type currently registered. Verify that the submitted make/model is not already listed, and select one of the following options:</p>
+        <p>Verify that the submitted make/model is not already listed, and select one of the following options:</p>
         <form action="viewSubmittedDrones-confirmAdded.html" method="get">
             <div class="row">
                 <div class="col-md-6">
@@ -152,7 +152,7 @@
                                     <option value="1">Fixed-wing</option>
                                     <option value="2">Hybrid</option>
                                     <option value="3">Lighter-than-air</option>
-                                    <option value="4">Rotary wing</option>
+                                    <option value="4" selected>Rotary wing</option>
                                 </select>
                             </div>
 
@@ -190,7 +190,7 @@
                             </select>
                         </div>
                         <footer class="panel-footer">
-                            <a href="#dlg-notification" class="btn btn-primary wb-lbx">Use existing drone</a>
+                            <a href="viewSubmittedDrones-confirmLinked.html" class="btn btn-primary wb-lbx">Use existing drone</a>
                         </footer>
                     </section>
                     <section class="panel panel-default">
@@ -201,7 +201,7 @@
                             <p>If this drone does not warrant being added to the list, select <strong>Remove from the submitted list</strong> to remove the drone from further consideration.</p>
                         </div>
                         <footer class="panel-footer">
-                            <button type="submit" class="btn btn-default">Remove from consideration</button>
+                            <a href="viewSubmittedDrones-confirmRemoved.html" class="btn btn-default">Remove from consideration</a>
                         </footer>
                     </section>
                 </div>
