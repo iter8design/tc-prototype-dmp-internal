@@ -142,7 +142,7 @@
                 <div class="radio">
                     <label for="purchased">
                         <input type="radio" name="buildPurchase" value="radio" id="purchased" checked>
-                        This drone has a <strong>safety assurance declaration</strong></label>
+                        This drone is on Transport Canada's list of drones.</label>
                 </div>
                 <div class="form-group mrgn-lft-lg" id="purchaseInformation">
 
@@ -177,7 +177,7 @@
 
 
                     <div class="form-group">
-                        <label for="serialNumber">Serial #:</label>
+                        <label for="serialNumber"><span class="mandatory">*</span>Serial #<span class="wb-inv">(required)</span>:</label>
                         <input name="serialNumber" id="serialNumber" type="text" size="35" class="form-control input-alpha-50 fieldError" maxlength="50" value="12345678901234567890123456789012345678901234567890">
                     </div>
 
@@ -304,7 +304,10 @@
             });
 
         });
+
     </script>
     <!-- InstanceEndEditable -->
 </body>
-<!-- InstanceEnd --></html>
+<!-- InstanceEnd -->
+
+</html>
